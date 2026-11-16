@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "warning": "Public reserved scenarios are NOT secret holdouts. Prepare unseen prompts privately for unbiased final evaluation.",
+  "cases": [
+    {
+      "id": "H01",
+      "category": "preservation",
+      "prompt": "Quero melhorar um site aprovado sem alterar fontes, cores nem disposição. O que ainda posso otimizar?",
+      "pass_criteria": [
+        "Melhorias de desempenho, acessibilidade, conteúdo ou feedback preservando visual"
+      ],
+      "fail_examples": [
+        "Propor novo design"
+      ]
+    },
+    {
+      "id": "H02",
+      "category": "reframe",
+      "prompt": "Quero adicionar cinco pop-ups ao app porque usuários não encontram as opções importantes.",
+      "pass_criteria": [
+        "Considerar descoberta/navegação e testar alternativas menos intrusivas"
+      ],
+      "fail_examples": [
+        "Impor pop-ups sem discutir usabilidade"
+      ]
+    },
+    {
+      "id": "H03",
+      "category": "ideation",
+      "prompt": "Invente quatro maneiras de ensinar frações com objetos cotidianos, sem celular e sem comprar materiais.",
+      "pass_criteria": [
+        "Quatro métodos com interações diferentes e materiais acessíveis"
+      ],
+      "fail_examples": [
+        "Quatro variações de pizza"
+      ]
+    },
+    {
+      "id": "H04",
+      "category": "constraints",
+      "prompt": "Planeje ideias para um serviço offline para trabalhadores rurais, sem cadastro e sem internet.",
+      "pass_criteria": [
+        "Não exigir backend, login ou nuvem"
+      ],
+      "fail_examples": [
+        "Assumir sincronização remota obrigatória"
+      ]
+    },
+    {
+      "id": "H05",
+      "category": "direct",
+      "prompt": "Qual a diferença entre megabyte e megabit em termos simples?",
+      "pass_criteria": [
+        "Explicação correta e curta, sem desvio criativo"
+      ],
+      "fail_examples": [
+        "Inventar analogias confusas como resposta inteira"
+      ]
+    }
+  ]
+}
