@@ -4,8 +4,8 @@ Contributions are welcome, particularly **reproducible examples** of generic, re
 
 1. Open an issue with the exact prompt, constraints, model/agent version, and the failure observed. Remove personal or secret information.
 2. Propose a minimal instruction change, not a broad new feature.
-3. Add or update a scenario in evals/evals.json (unless it should remain unseen for independent testing).
-4. Run python tests/validate_repo.py.
+3. Add or update a scenario in thinking-outside/evals/evals.json (unless it should remain unseen for independent testing).
+4. Run python tests/validate_repo.py and python -m unittest discover -s tests -v.
 5. Open a PR stating what was tested and what **was not** tested. Do not claim that a writing change improved creativity without behavioral evidence.
 
 Avoid copying third-party skill text; ideas and high-level techniques may be cited, but any licensed source must be respected.

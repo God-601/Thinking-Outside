@@ -1,6 +1,6 @@
 # Creative methods guide
 
-The operative, concise method guide lives at [references/methods.md](../references/methods.md). This document adds illustrations for maintainers.
+The operative, concise method guide lives at [references/methods.md](../thinking-outside/references/methods.md). This document adds illustrations for maintainers.
 
 ## Different mechanisms vs different skins
 
