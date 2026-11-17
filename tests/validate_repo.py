@@ -86,6 +86,14 @@ def validate_docs() -> None:
         require((ROOT / filename).is_file(), f"missing required file: {filename}")
     require(not (ROOT / "SKILL.md").exists(), "skill at repo root is noncanonical")
     require(not (ROOT / "evals/evals.json").exists(), "old evals.json conflicts with canonical one")
+    for path in ROOT.rglob("*.md"):
+        if ".git" in path.parts or "benchmarks" in path.relative_to(ROOT).parts:
+            continue
+        for target in re.findall(r"\]\(([^\s)]+)\)", path.read_text(encoding="utf-8")):
+            if target.startswith(("http:", "https:", "#", "mailto:")):
+                continue
+            local = target.split("#", 1)[0]
+            require((path.parent / local).exists(), f"broken local link in {path.relative_to(ROOT)}: {target}")
 
 
 def validate() -> None:

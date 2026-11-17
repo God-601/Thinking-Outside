@@ -19,6 +19,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
+import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -31,20 +33,22 @@ def score(record: dict) -> float:
     if set(ratings) != set(WEIGHTS):
         raise ValueError("Each record must rate all five criteria")
     for key, value in ratings.items():
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 5:
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 <= value <= 5:
             raise ValueError(f"Rating {key} must be numeric from 0 to 5")
     if not isinstance(record.get("critical_failure"), bool):
         raise ValueError("critical_failure must be a boolean")
     return sum(ratings[key] * weight for key, weight in WEIGHTS.items())
 
 
-def assess(data: dict) -> dict:
+def assess(data: dict, evidence_root: Path | None = None) -> dict:
     if not isinstance(data, dict) or not isinstance(data.get("records"), list):
         raise ValueError("Expected object with a records array")
     grouped = defaultdict(dict)
     critical = 0
     reviewers = set()
     evidence_missing = False
+    evidence_verified = True
+    evidence_root = (evidence_root or Path.cwd()).resolve()
     for r in data["records"]:
         case = r.get("case_id")
         if isinstance(case, bool) or not isinstance(case, int) or case not in range(1, 16):
@@ -63,6 +67,13 @@ def assess(data: dict) -> dict:
         reviewers.add(reviewer)
         if not isinstance(r.get("evidence"), str) or not r["evidence"].strip():
             evidence_missing = True
+            evidence_verified = False
+        else:
+            path = (evidence_root / r["evidence"]).resolve()
+            if not path.is_relative_to(evidence_root) or not path.is_file():
+                evidence_verified = False
+            elif hashlib.sha256(path.read_bytes()).hexdigest() != r.get("evidence_sha256"):
+                evidence_verified = False
         key = (case, repetition, reviewer)
         if condition in grouped[key]:
             raise ValueError(f"Duplicate rating for {key}, {condition}")
@@ -77,7 +88,17 @@ def assess(data: dict) -> dict:
             continue
         creative_pairs += 1
         creative_families.add(case)
-        diff = score(pair["thinking-outside"]) - score(pair["baseline"])
+        candidate, baseline = pair["thinking-outside"], pair["baseline"]
+        # Critical failures outrank weighted scores; invalid output cannot win.
+        if candidate["critical_failure"] or baseline["critical_failure"]:
+            if candidate["critical_failure"] == baseline["critical_failure"]:
+                ties += 1
+            elif candidate["critical_failure"]:
+                losses += 1
+            else:
+                wins += 1
+            continue
+        diff = score(candidate) - score(baseline)
         if diff > .15:
             wins += 1
         elif diff < -.15:
@@ -87,7 +108,10 @@ def assess(data: dict) -> dict:
     preference = (wins + .5 * ties) / creative_pairs if creative_pairs else 0
     provenance = data.get("provenance", {})
     real = isinstance(provenance, dict) and provenance.get("kind") == "real"
-    eligible = bool(real and not evidence_missing and critical == 0 and creative_pairs >= 15
+    independent_pairs = len({(case, repetition) for case, repetition, _ in grouped if case in CREATIVE})
+    human_blind = (provenance.get("review_kind") == "human" and provenance.get("blinded") is True)
+    eligible = bool(real and human_blind and evidence_verified and not evidence_missing
+                    and critical == 0 and independent_pairs >= 15
                     and len(creative_families) >= 5 and len(reviewers) >= 2
                     and preference >= .60)
     return {
@@ -95,6 +119,8 @@ def assess(data: dict) -> dict:
         "reviewers": len(reviewers), "wins": wins, "ties": ties, "losses": losses,
         "pairwise_preference": round(preference, 4), "critical_failures": critical,
         "evidence_missing": evidence_missing, "real_data_claimed": real,
+        "evidence_verified": evidence_verified, "human_blind_claimed": human_blind,
+        "independent_pairs": independent_pairs,
         "eligible_for_maintainer_review": eligible,
         "note": "Eligibility is NOT proof of unbiased evaluation or authorization to publish a release."
     }
