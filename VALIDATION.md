@@ -1,25 +1,9 @@
-# Validation report — v0.1.0 experimental
+# Validation status — pre-1.0 candidate
 
-## Structural checks
+Automatic validation checks repository structure, YAML frontmatter, Agent Skills directory naming, reference links, canonical evaluation data, unit tests and the external Agent Skills reference validator. Check GitHub Actions for actual results.
 
-The repository includes a standard SKILL.md entrypoint, a methods reference, documentation, 15 specified acceptance cases, five publicly reserved scenarios and a Python standard-library validation script.
+**Live agent behavioral evaluation:** not executed in this environment. Codex, Claude Code, OpenCode and Cursor are not accessible as authenticated CLI agents here.
 
-To validate structure locally: python tests/validate_repo.py.
+No measured creativity superiority, token reduction or satisfaction improvement is claimed. No stable 1.0 release should be published until docs/release-readiness.md criteria are satisfied.
 
-CI: .github/workflows/validate.yml runs the structural validator. CI results must be checked on the PR; presence of workflow YAML alone does not prove a pass.
-
-## Not yet verified
-
-- No actual Claude Code, Codex, OpenCode or Cursor behavioral evaluation completed.
-- No reliable data for creativity improvement, token savings or user satisfaction.
-- No proof of universal skill discovery/activation.
-- No blind A/B comparisons with Creative Ideation or Superpowers.
-- No v1.0 release.
-
-## Known limitations
-
-- The skill cannot force hidden reasoning, produce guaranteed novel ideas or add tools to an agent.
-- Without external search, market originality claims remain unverified.
-- Rejected ideas can only be remembered if the agent has the earlier context.
-- Every host may interpret and load the SKILL.md differently.
-- A human evaluator is needed for creativity/usefulness judgments; static checks cannot replace one.
+Public evaluation prompts are not unseen holdouts. Synthetic scoring fixtures in unit tests cannot demonstrate real model quality.

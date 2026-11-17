@@ -1,32 +1,20 @@
-# Architecture — minimal, testable, extensible
+# Architecture — minimal agent skill
 
-~~~text
-User goal + constraints
-        |
-Agent discovers SKILL.md (if supported)
-        |
-  Route task: direct / improve / explore / reframe
-        |
-  Optionally read references/methods.md
-        |
-  Critique mechanisms, feasibility and constraint adherence
-        |
-  User-facing result / request for approval on material scope change
-~~~
+A request activates the skill only if the host exposes it. The skill routes the task toward direct response, targeted improvement, creative exploration, persistent-problem troubleshooting or selective problem reframing.
 
-## Why a small skill first
+The installation directory is thinking-outside/ (matching frontmatter name). The repository name may retain capitals.
 
-The original idea is a **thinking behavior**, not a dashboard. Keeping it in SKILL.md with one methods reference lets us test the incremental effect against the base model before adding layers that could obscure causality or waste context.
+## Runtime
 
-The skill does not intercept other agents, read their private states, force method invocation or persist memory. The host agent decides whether/when to load the instructions according to its own skill mechanism.
+- thinking-outside/SKILL.md: compact core behavior
+- thinking-outside/references/methods.md: on-demand methods
+- thinking-outside/references/quality.md: failure patterns
+- thinking-outside/references/examples.md: illustrative contrasts
 
-## Optional future components — NOT adopted
+Evaluation data are provided alongside the skill for development, but do not need to be loaded into model context during ordinary tasks.
 
-- Method retrieval based on task type (after usage evidence).
-- Curated examples of high-quality vs generic ideas.
-- Benchmark utilities (if evaluation volume justifies it).
-- Domain-specific companion guides (only if general behavior fails in a documented domain).
+## Limits
 
-## Integration boundaries
+No server, database, external model, memory service or MCP is required. The skill cannot secretly alter model intelligence, ensure novelty or guarantee consistent activation across clients.
 
-Thinking Outside supplies **creative candidate generation and critique**. A Blender, Roblox, programming or safety skill remains authoritative for technical validation, format requirements, and domain-specific safe practice. Real-world facts require sources; creativity cannot replace checking.
+Specialized skills remain responsible for correctness and safe implementation. User approvals take precedence over creative reframing.

@@ -1,21 +1,14 @@
-# Compatibility status
+# Compatibility targets (not verified)
 
-This is an **Agent Skills-style** repository. SKILL.md uses YAML frontmatter with a lowercase hyphenated name and a plain description.
+| Client | Status |
+|---|---|
+| Codex | Untested host behavior |
+| Claude Code | Untested host behavior |
+| OpenCode | Untested host behavior |
+| Cursor | Untested host behavior |
 
-| Agent | Goal | Status |
-|---|---|---|
-| Codex | Discover and follow skill | Not tested |
-| Claude Code | Discover and follow skill | Not tested |
-| OpenCode | Discover and follow skill | Not tested |
-| Cursor | Discover and follow skill | Not tested |
-| Other Agent Skills-compatible hosts | Best-effort | Not tested |
+For each client, copy the canonical thinking-outside/ directory into a supported skill location, using current official client documentation.
 
-## Test each host separately
+Record exact version, model, directory and whether automatic or explicit invocation loaded the skill. Run a creative case plus a no-ideation case (such as T13) and a safety/constraint case (T15 or T07). Preserve actual outputs and report failures.
 
-1. Install the same directory according to the host's **current official** skill-loading documentation.
-2. Record version, model, skill-loading path, flags and whether skill activation is explicit or automatic.
-3. Verify that a creative request activates the intended behavior, and a narrow factual request does not create unsolicited brainstorming.
-4. Run at least two samples from evals/evals.json; compare to no-skill runs.
-5. Record omissions and incompatibilities rather than implying identical support.
-
-**Important:** Installation path, activation and behavior vary by host. A markdown file alone does not grant new model capabilities, tools or private cross-session memory.
+Do not claim universal compatibility merely because the YAML frontmatter parses successfully.
