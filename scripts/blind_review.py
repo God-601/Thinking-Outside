@@ -87,10 +87,12 @@ def summarize(run_dir):
     for r in records:
         by_pair[(r["case_id"], r["repetition"])][r["condition"]] = r
     conditions = sorted(manifest["plan"]["conditions"])
+    creative_ids = {c["id"] for c in manifest["plan"]["cases"] if c.get("creative", False)}
     for i, a in enumerate(conditions):
         for b in conditions[i+1:]:
-            wins = ties = losses = 0
-            for pair in by_pair.values():
+            wins = ties = losses = cw = ct = cl = 0
+            per_case = defaultdict(list)
+            for (case_id, _), pair in by_pair.items():
                 ra, rb = pair[a], pair[b]
                 if ra["critical_failure"] or rb["critical_failure"]:
                     diff = int(rb["critical_failure"]) - int(ra["critical_failure"])
@@ -98,12 +100,23 @@ def summarize(run_dir):
                     diff = ra["weighted"] - rb["weighted"]
                 if diff > .15:
                     wins += 1
+                    if case_id in creative_ids:
+                        cw += 1
                 elif diff < -.15:
                     losses += 1
+                    if case_id in creative_ids:
+                        cl += 1
                 else:
                     ties += 1
+                    if case_id in creative_ids:
+                        ct += 1
+                if case_id in creative_ids:
+                    per_case[case_id].append(1 if diff > .15 else 0 if diff < -.15 else .5)
             comparisons[f"{a}_vs_{b}"] = {"wins": wins, "ties": ties, "losses": losses,
-                                           "preference": (wins + .5 * ties) / len(by_pair)}
+                "preference": (wins + .5 * ties) / len(by_pair),
+                "creative": {"wins": cw, "ties": ct, "losses": cl,
+                    "preference": (cw + .5 * ct) / (cw + ct + cl) if cw + ct + cl else None,
+                    "per_case_preference": {c: statistics.mean(v) for c, v in per_case.items()}}}
     means = {}
     for condition in conditions:
         rs = [r for r in records if r["condition"] == condition]

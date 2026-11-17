@@ -32,14 +32,14 @@ def events(stdout):
     return result
 
 
-def result_of(stdout, returncode):
+def result_of(stdout, returncode, allow_tools=False):
     data = events(stdout)
     completed = [e for e in data if e.get("type") == "turn.completed"]
     answers = [e["item"]["text"] for e in data if e.get("type") == "item.completed"
                and e.get("item", {}).get("type") == "agent_message"]
     tool_calls = [e for e in data if e.get("type") == "item.started"
                   and e.get("item", {}).get("type") in ("command_execution", "mcp_tool_call", "web_search")]
-    ok = returncode == 0 and bool(completed) and bool(answers) and not tool_calls
+    ok = returncode == 0 and bool(completed) and bool(answers) and (allow_tools or not tool_calls)
     return {"status": "ok" if ok else "failed", "answer": "\n\n".join(answers),
             "usage": completed[-1].get("usage", {}) if completed else {},
             "tool_calls": len(tool_calls), "returncode": returncode}
@@ -71,6 +71,9 @@ def run_plan(plan_path):
         if auth.exists():
             shutil.copy2(auth, task_home / "auth.json")
         env = dict(os.environ, CODEX_HOME=str(task_home))
+        native = plan.get("native_skill")
+        if native:
+            shutil.copytree(root / native, task_home / "skills/thinking-outside")
         disabled = list((Path.home() / ".agents/skills").glob("*/SKILL.md"))
         disabled += list((source_home / "skills").glob("**/SKILL.md"))
         # System skills are seeded in CODEX_HOME by the CLI. Disable their future paths too.
@@ -90,8 +93,10 @@ def run_plan(plan_path):
         context = json.loads(audit.stdout)
         context_text = "\n".join(c.get("text", "") for m in context for c in m.get("content", []))
         # Fail closed on leaked discovery catalogs or inherited user/project instructions.
-        if "### Available skills\n-" in context_text or "# AGENTS.md instructions" in context_text:
+        if (not native and "### Available skills\n-" in context_text) or "# AGENTS.md instructions" in context_text:
             raise RuntimeError("Global skill/instruction contamination detected")
+        if native and "thinking-outside/SKILL.md" not in context_text:
+            raise RuntimeError("Native skill not discovered")
         version = subprocess.check_output([cli, "--version"], text=True).strip()
         manifest = {"started_utc": datetime.now(timezone.utc).isoformat(), "cli": version,
                     "plan": plan, "context_sha256": digest(context_text),
@@ -110,6 +115,9 @@ def run_plan(plan_path):
             prompt = ("Complete a tarefa abaixo em português. Não utilize ferramentas nem leia arquivos. "
                       "Não execute mudanças externas. Responda ao pedido em até 650 palavras, salvo limite menor pedido. "
                       "Não mencione a condição experimental nem nomes de skills.\n")
+            if native:
+                prompt = ("Responda à tarefa em português. Você pode ler a skill quando pertinente, "
+                          "mas não altere arquivos nem execute outras ações externas.\n")
             if instruction:
                 prompt += "\n<skill-instructions>\n" + instruction + "\n</skill-instructions>\n"
             prompt += "\n<tarefa>\n" + case["prompt"] + "\n</tarefa>"
@@ -119,7 +127,7 @@ def run_plan(plan_path):
                                        "--skip-git-repo-check", "--json", *config, "-"],
                                       input=prompt, cwd=task_home, env=env, capture_output=True,
                                       text=True, encoding="utf-8", timeout=plan.get("timeout", 240))
-                result = result_of(proc.stdout, proc.returncode)
+                result = result_of(proc.stdout, proc.returncode, allow_tools=bool(native))
                 (out / (run_id + ".jsonl")).write_text(proc.stdout, encoding="utf-8")
                 (out / (run_id + ".stderr.txt")).write_text(proc.stderr, encoding="utf-8")
             except subprocess.TimeoutExpired:

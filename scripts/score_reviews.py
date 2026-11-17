@@ -107,6 +107,8 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
             ties += 1
     preference = (wins + .5 * ties) / creative_pairs if creative_pairs else 0
     provenance = data.get("provenance", {})
+    if not isinstance(provenance, dict):
+        raise ValueError("provenance must be an object")
     real = isinstance(provenance, dict) and provenance.get("kind") == "real"
     independent_pairs = len({(case, repetition) for case, repetition, _ in grouped if case in CREATIVE})
     human_blind = (provenance.get("review_kind") == "human" and provenance.get("blinded") is True)

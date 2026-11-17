@@ -71,6 +71,12 @@ class QualityTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 assess(data)
 
+    def test_invalid_provenance_rejected(self):
+        data = make_review()
+        data["provenance"] = "real"
+        with self.assertRaises(ValueError):
+            assess(data)
+
     def test_critical_failure_blocks(self):
         r = assess(make_review(kind="real", fail=True))
         self.assertGreater(r["critical_failures"], 0)
