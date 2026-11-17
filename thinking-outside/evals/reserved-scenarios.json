@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "warning": "Public reserved scenarios are NOT secret holdouts. Prepare unseen prompts privately for unbiased final evaluation.",
+  "warning": "Public examples are NOT unseen holdouts. Create a private test set when evaluating a frozen release candidate.",
   "cases": [
     {
       "id": "H01",

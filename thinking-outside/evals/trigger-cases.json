@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "description": "Expected discovery behavior; must be measured in an actual host, not inferred from text.",
+  "should_trigger": [
+    "me dá 8 ideias de sistemas diferentes pra um jogo de pega-pega no Roblox, sem XP ou missões",
+    "Tenho uma arquitetura que dá bug sempre. Pense em formas realmente diferentes de resolver sem reescrever tudo.",
+    "Quero ideias de um produto que as pessoas realmente usem; não me dê mais um chatbot.",
+    "Estou preso numa solução ruim. Questione as suposições que fiz e encontre outra abordagem.",
+    "Como posso tornar um remix mais original mantendo 150 BPM e os mesmos instrumentos?",
+    "Preciso melhorar a aparência de um asset no Blender sem aumentar seu orçamento de triângulos.",
+    "Give me five unconventional but practical methods to teach fractions to children.",
+    "Quero expandir esse conceito sem copiar as mecânicas de jogos populares.",
+    "Faça um brainstorming profundo de um SaaS com R$0 de infraestrutura e público brasileiro.",
+    "Não gostei das sugestões anteriores. Todas eram iguais. Encontre mecanismos diferentes."
+  ],
+  "should_not_trigger": [
+    "Quanto é 6 vezes 8? Responda só o número.",
+    "Troque apenas a cor do botão de vermelho para verde e não mude mais nada.",
+    "Explique a diferença entre milhão e bilhão em uma frase.",
+    "Arrume apenas a vírgula nesta frase, sem reescrever: Ontem eu fui ao mercado e comprei maçãs.",
+    "Quais são as propriedades da raiz quadrada? Quero as fórmulas corretas.",
+    "Me diga o horário agora em Tokyo.",
+    "Quero a previsão do tempo para amanhã em Maceió.",
+    "Calcule 12% de 250.",
+    "Corrija o erro de sintaxe nesta linha: print('Hello'",
+    "Não faça brainstorming, siga o plano que já aprovei exatamente.",
+    "Crie um resumo factual de uma decisão judicial sem especular.",
+    "Preciso de recomendações seguras de criptografia comprovada para pagamentos reais."
+  ]
+}
