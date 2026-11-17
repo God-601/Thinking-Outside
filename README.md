@@ -59,7 +59,7 @@ Veja também [avaliação de comportamento](docs/benchmark.md) e [critérios par
 python tests/validate_repo.py
 python -m unittest discover -s tests -p "test_*.py" -v
 # Validação de referência, após instalar skills-ref:
-skills-ref validate ./thinking-outside
+agentskills validate ./thinking-outside
 ~~~
 
 Isso valida arquivos e cenários, **não** avalia a criatividade de um modelo. Os testes comportamentais A/B são separados.

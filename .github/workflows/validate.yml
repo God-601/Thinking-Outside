@@ -23,4 +23,4 @@ jobs:
       - name: Install official Agent Skills reference validator
         run: python -m pip install skills-ref
       - name: Validate canonical installed skill
-        run: skills-ref validate ./thinking-outside
+        run: agentskills validate ./thinking-outside
