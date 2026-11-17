@@ -31,6 +31,13 @@ class BenchmarkTest(unittest.TestCase):
         self.assertEqual(result_of(stdout, 0)["usage"]["input_tokens"], 40)
         self.assertEqual(result_of(stdout, 1)["status"], "failed")
 
+    def test_completed_only_or_unrecognized_tool_is_rejected(self):
+        for kind in ("command_execution", "file_change", "future_tool"):
+            stdout = stream({"type": "item.completed", "item": {"type": kind}},
+                            {"type": "item.completed", "item": {"type": "agent_message", "text": "answer"}},
+                            {"type": "turn.completed", "usage": {}})
+            self.assertEqual(result_of(stdout, 0)["status"], "failed")
+
     def test_blinding_preserves_all_answers_without_condition_names(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

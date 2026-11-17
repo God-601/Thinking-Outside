@@ -37,8 +37,9 @@ def result_of(stdout, returncode, allow_tools=False):
     completed = [e for e in data if e.get("type") == "turn.completed"]
     answers = [e["item"]["text"] for e in data if e.get("type") == "item.completed"
                and e.get("item", {}).get("type") == "agent_message"]
-    tool_calls = [e for e in data if e.get("type") == "item.started"
-                  and e.get("item", {}).get("type") in ("command_execution", "mcp_tool_call", "web_search")]
+    tool_calls = {e.get("item", {}).get("id", str(i)) for i, e in enumerate(data)
+                  if e.get("type") in ("item.started", "item.completed")
+                  and e.get("item", {}).get("type") not in ("agent_message", "reasoning", "error")}
     ok = returncode == 0 and bool(completed) and bool(answers) and (allow_tools or not tool_calls)
     return {"status": "ok" if ok else "failed", "answer": "\n\n".join(answers),
             "usage": completed[-1].get("usage", {}) if completed else {},
@@ -61,12 +62,19 @@ def run_plan(plan_path):
                 text = (root / instruction).read_text(encoding="utf-8") if instruction else ""
                 tasks.append((case, repetition, condition, text))
     random.Random(plan["order_seed"]).shuffle(tasks)
+    if "include_runs" in plan:
+        requested = set(plan["include_runs"])
+        tasks = [t for t in tasks if f'{t[0]["id"]}-{t[1]}-{t[2]}' in requested]
+        if len(tasks) != len(requested) or not tasks:
+            raise ValueError("include_runs must identify existing unique runs")
     cli = shutil.which("codex")
     if not cli:
         raise RuntimeError("codex CLI unavailable")
     source_home = Path(os.environ.get("CODEX_HOME", Path.home() / ".codex"))
     with tempfile.TemporaryDirectory(prefix="to-benchmark-") as scratch:
         task_home = Path(scratch)
+        workspace = task_home / "workspace"
+        workspace.mkdir()
         auth = source_home / "auth.json"
         if auth.exists():
             shutil.copy2(auth, task_home / "auth.json")
@@ -85,8 +93,10 @@ def run_plan(plan_path):
         config = ["-c", settings, "-c", 'model=' + json.dumps(plan["model"]),
                   "-c", 'model_reasoning_effort=' + json.dumps(plan["effort"]),
                   "-c", "features.apps=false", "-c", "features.remote_plugin=false"]
+        if not native:
+            config += ["-c", "features.shell_tool=false", "-c", 'web_search="disabled"']
         audit = subprocess.run([cli, "debug", "prompt-input", *config, "probe"],
-                               cwd=task_home, env=env, capture_output=True, text=True,
+                               cwd=workspace, env=env, capture_output=True, text=True,
                                encoding="utf-8", timeout=120)
         if audit.returncode:
             raise RuntimeError("Context audit failed: " + audit.stderr[-1000:])
@@ -103,6 +113,7 @@ def run_plan(plan_path):
                     "context_chars": len(context_text), "disabled_skill_paths": len(disabled),
                     "isolation": "temporary CODEX_HOME; catalogs disabled; fresh exec per sample",
                     "temperature": "CLI default; not exposed", "runs": len(tasks)}
+        manifest["tool_policy"] = "native read-only" if native else "shell disabled; web disabled; reject every tool event"
         manifest["instruction_sha256"] = {condition: digest(instruction) for _, _, condition, instruction in tasks}
         for condition, source in plan["conditions"].items():
             if source:
@@ -123,14 +134,33 @@ def run_plan(plan_path):
             prompt += "\n<tarefa>\n" + case["prompt"] + "\n</tarefa>"
             start = time.monotonic()
             try:
+                native_context = None
+                if native:
+                    check = subprocess.run([cli, "debug", "prompt-input", *config, prompt],
+                                           cwd=workspace, env=env, capture_output=True,
+                                           text=True, encoding="utf-8", timeout=120)
+                    if check.returncode:
+                        raise RuntimeError("Native context audit failed")
+                    visible = json.loads(check.stdout)
+                    visible_text = "\n".join(c.get("text", "") for m in visible for c in m.get("content", []))
+                    skill_text = (task_home / "skills/thinking-outside/SKILL.md").read_text(encoding="utf-8")
+                    native_context = {"sha256": digest(visible_text), "chars": len(visible_text),
+                                      "full_skill_in_prompt": skill_text in visible_text}
+                    (out / (run_id + ".context.json")).write_text(check.stdout, encoding="utf-8")
                 proc = subprocess.run([cli, "exec", "--ignore-user-config", "--ephemeral",
                                        "--skip-git-repo-check", "--json", *config, "-"],
-                                      input=prompt, cwd=task_home, env=env, capture_output=True,
+                                      input=prompt, cwd=workspace, env=env, capture_output=True,
                                       text=True, encoding="utf-8", timeout=plan.get("timeout", 240))
                 result = result_of(proc.stdout, proc.returncode, allow_tools=bool(native))
+                if native_context is not None:
+                    result["native_context"] = native_context
                 (out / (run_id + ".jsonl")).write_text(proc.stdout, encoding="utf-8")
                 (out / (run_id + ".stderr.txt")).write_text(proc.stderr, encoding="utf-8")
-            except subprocess.TimeoutExpired:
+            except subprocess.TimeoutExpired as exc:
+                def decoded(value):
+                    return value.decode("utf-8", errors="replace") if isinstance(value, bytes) else value or ""
+                (out / (run_id + ".jsonl")).write_text(decoded(exc.output), encoding="utf-8")
+                (out / (run_id + ".stderr.txt")).write_text(decoded(exc.stderr), encoding="utf-8")
                 result = {"status": "timeout", "answer": "", "usage": {}}
             result.update(id=run_id, case_id=case["id"], repetition=repetition,
                           condition=condition, seconds=round(time.monotonic() - start, 3),
