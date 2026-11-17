@@ -19,6 +19,21 @@ class BenchmarkTest(unittest.TestCase):
         stdout = stream({"type": "item.completed", "item": {"type": "agent_message", "text": "partial"}})
         self.assertEqual(result_of(stdout, 0)["status"], "failed")
 
+    def test_usage_limit_is_distinguished_from_model_failure(self):
+        stdout = stream({"type": "turn.failed", "error": {"message": "You’ve hit your usage limit."}})
+        self.assertEqual(result_of(stdout, 1)["status"], "quota")
+
+    def test_core_prompts_and_snapshot_match_canonical_utf8(self):
+        root = Path(__file__).resolve().parents[1]
+        read = lambda path: (root / path).read_text(encoding="utf-8")
+        plan = json.loads(read("benchmarks/core-plan.json"))
+        evals = json.loads(read("thinking-outside/evals/evals.json"))["evals"]
+        self.assertEqual([(c["id"], c["prompt"], c["rubric"]) for c in plan["cases"]],
+                         [(f'T{e["id"]:02}', e["prompt"], e["expectations"]) for e in evals])
+        snapshot = "\n".join(read("thinking-outside/" + p) for p in
+                             ("SKILL.md", "references/methods.md", "references/quality.md"))
+        self.assertEqual(read("benchmarks/" + plan["conditions"]["C"]), snapshot)
+
     def test_tools_disqualify_controlled_no_tool_run(self):
         stdout = stream({"type": "item.started", "item": {"type": "command_execution"}},
                         {"type": "item.completed", "item": {"type": "agent_message", "text": "answer"}},
@@ -50,6 +65,11 @@ class BenchmarkTest(unittest.TestCase):
             prepare(root)
             mapping = json.loads((root / "blind-map.json").read_text())
             self.assertEqual(set(mapping["case-r1"].values()), {"A", "C"})
+            prepare(root)
+            (root / "reviews").mkdir()
+            (root / "reviews" / "manifest.json").write_text("{}")
+            with self.assertRaisesRegex(ValueError, "Review already started"):
+                prepare(root)
             (root / "C.json").unlink()
             with self.assertRaises(ValueError):
                 prepare(root)

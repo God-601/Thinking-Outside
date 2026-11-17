@@ -18,19 +18,21 @@ def prepare(run_dir):
     plan = manifest["plan"]
     cases = {c["id"]: c for c in plan["cases"]}
     groups = defaultdict(list)
-    for path in run_dir.glob("*.json"):
-        if path.name == "manifest.json":
+    for path in sorted(run_dir.glob("*.json")):
+        if path.name in {"manifest.json", "review-plan.json", "blind-map.json", "summary.json"} or path.name.endswith(".context.json"):
             continue
         run = json.loads(path.read_text(encoding="utf-8"))
         if run.get("status") != "ok":
             raise ValueError(f"Incomplete run: {path.name}")
         groups[(run["case_id"], run["repetition"])].append(run)
-    if len(groups) != len(cases) * plan["repetitions"]:
+    expected = {(case_id, repetition) for case_id in cases
+                for repetition in range(1, plan["repetitions"] + 1)}
+    if not expected or groups.keys() != expected:
         raise ValueError("Missing groups")
     rng = random.Random(9173)
     tasks, mapping = [], {}
     for (case_id, repetition), runs in sorted(groups.items()):
-        if len(runs) != len(plan["conditions"]):
+        if len(runs) != len(plan["conditions"]) or {r["condition"] for r in runs} != set(plan["conditions"]):
             raise ValueError("Unbalanced conditions")
         rng.shuffle(runs)
         task_id = f"{case_id}-r{repetition}"
@@ -56,6 +58,8 @@ def prepare(run_dir):
     review_plan = {"model": plan["model"], "effort": plan["effort"], "repetitions": 1,
                    "order_seed": 922, "workers": 3, "timeout": 240, "output": "reviews",
                    "conditions": {"judge": None}, "cases": tasks}
+    if (run_dir / "reviews" / "manifest.json").exists():
+        raise ValueError("Review already started; preserve its original blind map")
     (run_dir / "review-plan.json").write_text(json.dumps(review_plan, ensure_ascii=False, indent=2), encoding="utf-8")
     (run_dir / "blind-map.json").write_text(json.dumps(mapping, indent=2), encoding="utf-8")
 

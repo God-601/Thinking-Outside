@@ -10,7 +10,7 @@ license: MIT
 
 ## Choose effort and method according to the task
 
-- **Direct:** clear factual, tightly scoped or safety-critical task. Answer accurately; do not force brainstorming.
+- **Direct:** clear factual, tightly scoped or safety-critical task. Answer accurately. If a requested edit cannot be inspected, ask for the smallest missing artifact needed to make it.
 - **Improve:** preserve approved or working parts; explore small targeted improvements with real benefit.
 - **Explore:** user wants ideas; seek structurally different mechanisms before selecting.
 - **Unstick:** approaches keep failing; identify competing hypotheses and diagnostic experiments instead of speculative rewrites.
@@ -28,13 +28,11 @@ Ask a targeted question only if the missing information could materially change 
 
 Identify the conventional route and its specific limitation for this goal. Keep it if it works; familiarity alone is not a defect. If alternatives could help, explore different causal routes before investing in names, themes or presentation.
 
-For a difficult exploration, vary the part that controls the outcome: who acts, what information is available, what changes the state, when it happens, or which incentive/feedback closes the loop. Choose axes relevant to the task, not all of them. An alternative should change a decision or causal dependency, not just a parameter.
+For a difficult exploration, start from a bottleneck and a resource or behavior already present in the task. Generate alternatives that intervene at different points: who acts, what information changes a decision, or what triggers a state change. Keep only axes that matter for the requested outcome.
 
 Use [methods](references/methods.md) only if a specific obstacle needs a move. A contradiction may need separation in time or conditions; a saturated solution space may need a distant mechanism transfer. State where an analogy stops working. Combine moves only if the first leaves an identifiable gap.
 
-When candidates converge, reopen the mechanism space once: remove the shared dependency, change an actor's role, or invert the sequence while retaining hard constraints. Do not endlessly regenerate or automatically discard a useful conventional solution.
-
-Scale exploration to complexity and importance. Do not overthink a trivial request or waste context on decorative idea lists.
+When candidates converge, regenerate once under the assumption that their shared dependency is unavailable. Keep hard constraints and any useful conventional option.
 
 ## Question assumptions carefully
 
@@ -47,7 +45,7 @@ When it might help, ask whether the request addresses a symptom rather than the 
 Check each promising idea:
 1. **Mechanism:** how does it actually work?
 2. **Diversity:** strip names and describe each idea as trigger → action/state change → result. If two descriptions have the same dependency and failure mode, merge them; replace with a different causal route when the requested breadth warrants it. Different domains or labels alone do not establish diversity.
-3. **Usefulness:** who benefits, and how?
+3. **Usefulness:** show who benefits and which detail from this task makes the mechanism work. If swapping the domain nouns leaves it equally applicable, specify an actor, resource or decision that makes it actionable here.
 4. **Feasibility:** does it meet budget, platform, hardware, time, safety and domain constraints?
 5. **Evidence:** is novelty or expected impact researched, or a hypothesis?
 

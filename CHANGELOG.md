@@ -1,5 +1,13 @@
 # Changelog
 
+## Unreleased candidate
+
+- Compare mechanisms by causal dependency and require task-specific details that make alternatives actionable.
+- Load abstract examples only for diagnosis and retry convergent ideation once with the shared dependency removed.
+- Rebuild benchmark prompts from canonical Portuguese data and check them against the source in CI.
+- Preserve blind review mappings, validate matched conditions, and stop scheduling calls after an explicit usage-limit error.
+- Record real Codex CLI evidence and the outstanding requirements for 1.0.
+
 ## Unreleased — 0.9 release-candidate hardening
 - Move installable SKILL.md into canonical thinking-outside/ folder.
 - Improve adaptive idea generation, filtering, selection and problem reframing.

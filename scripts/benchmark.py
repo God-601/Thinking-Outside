@@ -15,6 +15,7 @@ import random
 import shutil
 import subprocess
 import tempfile
+from threading import Event
 import time
 
 
@@ -41,14 +42,16 @@ def result_of(stdout, returncode, allow_tools=False):
                   if e.get("type") in ("item.started", "item.completed")
                   and e.get("item", {}).get("type") not in ("agent_message", "reasoning", "error")}
     ok = returncode == 0 and bool(completed) and bool(answers) and (allow_tools or not tool_calls)
-    return {"status": "ok" if ok else "failed", "answer": "\n\n".join(answers),
+    limit = any("usage limit" in str(e.get("error", e.get("message", ""))).lower()
+                for e in data if e.get("type") in ("error", "turn.failed"))
+    return {"status": "ok" if ok else "quota" if limit else "failed", "answer": "\n\n".join(answers),
             "usage": completed[-1].get("usage", {}) if completed else {},
             "tool_calls": len(tool_calls), "returncode": returncode}
 
 
 def run_plan(plan_path):
     plan_path = Path(plan_path).resolve()
-    plan = json.loads(plan_path.read_text(encoding="utf-8"))
+    plan = json.loads(plan_path.read_text(encoding="utf-8-sig"))
     root = plan_path.parent
     out = (root / plan["output"]).resolve()
     out.mkdir(parents=True, exist_ok=True)
@@ -119,8 +122,11 @@ def run_plan(plan_path):
             if source:
                 shutil.copy2(root / source, out / (condition + ".instruction.md"))
         (out / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2), encoding="utf-8")
+        quota = Event()
 
         def run(task):
+            if quota.is_set():
+                return "skipped_quota"
             case, repetition, condition, instruction = task
             run_id = f'{case["id"]}-{repetition}-{condition}'
             prompt = ("Complete a tarefa abaixo em português. Não utilize ferramentas nem leia arquivos. "
@@ -152,6 +158,8 @@ def run_plan(plan_path):
                                       input=prompt, cwd=workspace, env=env, capture_output=True,
                                       text=True, encoding="utf-8", timeout=plan.get("timeout", 240))
                 result = result_of(proc.stdout, proc.returncode, allow_tools=bool(native))
+                if result["status"] == "quota":
+                    quota.set()
                 if native_context is not None:
                     result["native_context"] = native_context
                 (out / (run_id + ".jsonl")).write_text(proc.stdout, encoding="utf-8")

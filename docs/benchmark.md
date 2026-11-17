@@ -4,7 +4,11 @@
 
 ## Conditions
 
-A: base model without a creative skill. B: same model with Thinking Outside. Optional: Creative Ideation and Superpowers Brainstorming on tasks each is intended to address.
+A: base model without a creative skill. B: same model with the previous Thinking Outside. C: same model with the candidate. Compare Creative Ideation and Superpowers Brainstorming separately.
+
+From the repository root, run `python scripts/benchmark.py benchmarks/core-plan.json`, followed by `python scripts/blind_review.py prepare benchmarks/runs/candidate-core`. Run the generated `review-plan.json` with the same executor, then use `blind_review.py summarize` on the original run directory. The judge is a model and its ratings are exploratory. Use a fresh output directory for each attempt and retain partial attempts separately. The executor expects UTF-8 and stops scheduling after a usage-limit error.
+
+See the [benchmark results](benchmark-results.md) for evidence and limitations.
 
 Keep prompts, model version, tool access and response budgets comparable. Run in clean sessions. Note any differences and confirm the skill actually loaded.
 

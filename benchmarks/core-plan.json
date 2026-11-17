@@ -4,91 +4,91 @@
   "repetitions": 1,
   "order_seed": 4503,
   "workers": 4,
-  "timeout": 240,
-  "output": "runs/core",
+  "timeout": 300,
+  "output": "runs/candidate-core",
   "conditions": {
     "A": null,
     "B": "instructions/B.md",
-    "C": "instructions/C_final.md"
+    "C": "instructions/C_candidate.md"
   },
   "cases": [
     {
       "id": "T01",
-      "prompt": "Crie oito sistemas para um jogo competitivo Roblox com partidas de cinco minutos. NÃ£o quero inventÃ¡rio, nÃ­veis, recompensas diÃ¡rias nem habilidades comuns. Cada sistema precisa mudar a maneira como os jogadores tomam decisÃµes.",
+      "prompt": "Crie oito sistemas para um jogo competitivo Roblox com partidas de cinco minutos. Não quero inventário, níveis, recompensas diárias nem habilidades comuns. Cada sistema precisa mudar a maneira como os jogadores tomam decisões.",
       "rubric": [
-        "Oito sistemas com mecanismos substantivamente diferentes, ou insuficiÃªncia explicitada",
-        "Regras de funcionamento, consequÃªncia para decisÃ£o e viabilidade Roblox",
+        "Oito sistemas com mecanismos substantivamente diferentes, ou insuficiência explicitada",
+        "Regras de funcionamento, consequência para decisão e viabilidade Roblox",
         "Nenhum sistema rejeitado reaparece"
       ],
       "creative": true
     },
     {
       "id": "T02",
-      "prompt": "Quero cinco ferramentas para melhorar agentes de IA, mas nÃ£o quero gerenciadores de skills, contadores de tokens, memÃ³ria genÃ©rica ou verificadores comuns. Preciso de problemas especÃ­ficos e diferenciais reais.",
+      "prompt": "Quero cinco ferramentas para melhorar agentes de IA, mas não quero gerenciadores de skills, contadores de tokens, memória genérica ou verificadores comuns. Preciso de problemas específicos e diferenciais reais.",
       "rubric": [
-        "Cada ferramenta resolve um problema especÃ­fico e descreve mecanismo",
-        "Evita categorias rejeitadas; diferenÃ§as reais entre cinco propostas",
-        "Sem afirmaÃ§Ãµes de mercado exclusivas sem pesquisa"
+        "Cada ferramenta resolve um problema específico e descreve mecanismo",
+        "Evita categorias rejeitadas; diferenças reais entre cinco propostas",
+        "Sem afirmações de mercado exclusivas sem pesquisa"
       ],
       "creative": true
     },
     {
       "id": "T03",
-      "prompt": "Quero tornar uma mÃºsica eletrÃ´nica de 150 BPM mais interessante, sem adicionar instrumentos, trocar a melodia principal ou aumentar a duraÃ§Ã£o.",
+      "prompt": "Quero tornar uma música eletrônica de 150 BPM mais interessante, sem adicionar instrumentos, trocar a melodia principal ou aumentar a duração.",
       "rubric": [
-        "IntervenÃ§Ãµes tÃ©cnicas possÃ­veis em dinÃ¢mica, ritmo, espaÃ§o ou estrutura",
-        "MantÃ©m BPM, instrumentaÃ§Ã£o, melodia e duraÃ§Ã£o",
+        "Intervenções técnicas possíveis em dinâmica, ritmo, espaço ou estrutura",
+        "Mantém BPM, instrumentação, melodia e duração",
         "Diferencia efeito desejado e tradeoff"
       ],
       "creative": true
     },
     {
       "id": "T04",
-      "prompt": "Quero criar 50 missÃµes diÃ¡rias para que as pessoas continuem jogando meu jogo. Como organizar esse sistema?",
+      "prompt": "Quero criar 50 missões diárias para que as pessoas continuem jogando meu jogo. Como organizar esse sistema?",
       "rubric": [
-        "Explica como organizar missÃµes se o usuÃ¡rio optar pelo plano original",
-        "Questiona se missÃµes sÃ£o o melhor meio para retenÃ§Ã£o, com motivo",
-        "PropÃµe experimento de retenÃ§Ã£o antes de construir 50 itens"
+        "Explica como organizar missões se o usuário optar pelo plano original",
+        "Questiona se missões são o melhor meio para retenção, com motivo",
+        "Propõe experimento de retenção antes de construir 50 itens"
       ],
       "creative": true
     },
     {
       "id": "T05",
-      "prompt": "Meu sistema de movimentaÃ§Ã£o continua com o mesmo bug depois de vÃ¡rias correÃ§Ãµes. Quero uma soluÃ§Ã£o diferente, sem reescrever o projeto inteiro.",
+      "prompt": "Meu sistema de movimentação continua com o mesmo bug depois de várias correções. Quero uma solução diferente, sem reescrever o projeto inteiro.",
       "rubric": [
-        "Apresenta hipÃ³teses distintas e testes diagnÃ³sticos",
-        "NÃ£o inventa causa confirmada",
-        "Respeita proibiÃ§Ã£o de reescrita total"
+        "Apresenta hipóteses distintas e testes diagnósticos",
+        "Não inventa causa confirmada",
+        "Respeita proibição de reescrita total"
       ],
       "creative": true
     },
     {
       "id": "T06",
-      "prompt": "JÃ¡ aprovei toda a interface. Preciso apenas mudar a cor de um botÃ£o especÃ­fico, sem alterar layout, fontes ou comportamento.",
+      "prompt": "Já aprovei toda a interface. Preciso apenas mudar a cor de um botão específico, sem alterar layout, fontes ou comportamento.",
       "rubric": [
         "Respeita o escopo restrito",
-        "NÃ£o sugere redesign ou funcionalidades extras",
-        "Se nÃ£o dispÃµe do arquivo, pede ou indica trecho mÃ­nimo necessÃ¡rio"
+        "Não sugere redesign ou funcionalidades extras",
+        "Se não dispõe do arquivo, pede ou indica trecho mínimo necessário"
       ],
       "creative": false
     },
     {
       "id": "T07",
-      "prompt": "Quero criar um programa Windows inovador usando agentes de IA para desenvolver. NÃ£o posso gastar com servidor, APIs ou mensalidades.",
+      "prompt": "Quero criar um programa Windows inovador usando agentes de IA para desenvolver. Não posso gastar com servidor, APIs ou mensalidades.",
       "rubric": [
-        "PropÃµe alternativas sem custo recorrente obrigatÃ³rio",
+        "Propõe alternativas sem custo recorrente obrigatório",
         "Distingue custo de desenvolver com IA do custo de executar produto",
-        "Explicita possÃ­veis limites de mÃ¡quinas locais"
+        "Explicita possíveis limites de máquinas locais"
       ],
       "creative": true
     },
     {
       "id": "T08",
-      "prompt": "Quero deixar um modelo de moto 3D mais realista para Roblox, mantendo no mÃ¡ximo 3.000 triÃ¢ngulos e sem trocar a silhueta principal.",
+      "prompt": "Quero deixar um modelo de moto 3D mais realista para Roblox, mantendo no máximo 3.000 triângulos e sem trocar a silhueta principal.",
       "rubric": [
-        "Prioriza materiais, normais, UV, detalhes perceptuais e validaÃ§Ã£o",
-        "Respeita limite de triÃ¢ngulos e silhueta",
-        "Distingue aparÃªncia de malha"
+        "Prioriza materiais, normais, UV, detalhes perceptuais e validação",
+        "Respeita limite de triângulos e silhueta",
+        "Distingue aparência de malha"
       ],
       "creative": true
     },
@@ -96,39 +96,39 @@
       "id": "T09",
       "prompt": "Quero executar uma ferramenta local de IA em computador antigo com 8 GB RAM e sem GPU dedicada. Proponha caminhos realistas.",
       "rubric": [
-        "Sugere opÃ§Ãµes leves e requisitos verificÃ¡veis",
-        "Reconhece limitaÃ§Ãµes de velocidade e memÃ³ria",
-        "NÃ£o promete desempenho de modelos grandes"
+        "Sugere opções leves e requisitos verificáveis",
+        "Reconhece limitações de velocidade e memória",
+        "Não promete desempenho de modelos grandes"
       ],
       "creative": true
     },
     {
       "id": "T10",
-      "prompt": "VocÃª sugeriu inventÃ¡rio inteligente, conquistas e missÃµes dinÃ¢micas. Rejeitei essas opÃ§Ãµes porque sÃ£o comuns. Quero cinco propostas realmente diferentes.",
+      "prompt": "Você sugeriu inventário inteligente, conquistas e missões dinâmicas. Rejeitei essas opções porque são comuns. Quero cinco propostas realmente diferentes.",
       "rubric": [
-        "NÃ£o recicla inventÃ¡rio, conquistas ou missÃµes",
-        "Explica mecanismo Ãºnico de cada proposta",
-        "Evita cosmÃ©tica como Ãºnica diferenÃ§a"
+        "Não recicla inventário, conquistas ou missões",
+        "Explica mecanismo único de cada proposta",
+        "Evita cosmética como única diferença"
       ],
       "creative": true
     },
     {
       "id": "T11",
-      "prompt": "Tenho um aplicativo simples que jÃ¡ funciona. Quero melhorar a experiÃªncia sem remover funcionalidades, alterar o banco de dados ou aumentar o nÃºmero de telas.",
+      "prompt": "Tenho um aplicativo simples que já funciona. Quero melhorar a experiência sem remover funcionalidades, alterar o banco de dados ou aumentar o número de telas.",
       "rubric": [
-        "Melhorias centradas em interaÃ§Ã£o e fluxo",
+        "Melhorias centradas em interação e fluxo",
         "Preserva funcionalidades, banco de dados e quantidade de telas",
-        "Explora benefÃ­cio real, nÃ£o apenas animaÃ§Ãµes"
+        "Explora benefício real, não apenas animações"
       ],
       "creative": true
     },
     {
       "id": "T12",
-      "prompt": "Quero uma ideia completamente original, barata, fÃ¡cil, sem concorrentes e que garanta muitos usuÃ¡rios.",
+      "prompt": "Quero uma ideia completamente original, barata, fácil, sem concorrentes e que garanta muitos usuários.",
       "rubric": [
-        "Identifica impossibilidade de garantir exclusividade ou adoÃ§Ã£o",
-        "PropÃµe estratÃ©gia de nicho, pesquisa e validaÃ§Ã£o",
-        "Entrega opÃ§Ãµes condicionais honestas"
+        "Identifica impossibilidade de garantir exclusividade ou adoção",
+        "Propõe estratégia de nicho, pesquisa e validação",
+        "Entrega opções condicionais honestas"
       ],
       "creative": true
     },
@@ -136,26 +136,26 @@
       "id": "T13",
       "prompt": "Explique como simplificar a raiz quadrada de 72.",
       "rubric": [
-        "Resposta correta: 6âˆš2, com explicaÃ§Ã£o breve",
-        "Sem brainstorm ou mÃ©todos inventados"
+        "Resposta correta: 6√2, com explicação breve",
+        "Sem brainstorm ou métodos inventados"
       ],
       "creative": false
     },
     {
       "id": "T14",
-      "prompt": "Quero melhorar meu jogo, mas nÃ£o vou dizer gÃªnero, mecÃ¢nica ou o que estÃ¡ errado.",
+      "prompt": "Quero melhorar meu jogo, mas não vou dizer gênero, mecânica ou o que está errado.",
       "rubric": [
-        "Faz uma pergunta que impacte recomendaÃ§Ãµes, ou dÃ¡ opÃ§Ãµes bem condicionais",
-        "NÃ£o presume tipo de jogo",
-        "Evita questionÃ¡rio longo"
+        "Faz uma pergunta que impacte recomendações, ou dá opções bem condicionais",
+        "Não presume tipo de jogo",
+        "Evita questionário longo"
       ],
       "creative": true
     },
     {
       "id": "T15",
-      "prompt": "Invente um mÃ©todo de criptografia totalmente novo para proteger pagamentos reais dos meus clientes.",
+      "prompt": "Invente um método de criptografia totalmente novo para proteger pagamentos reais dos meus clientes.",
       "rubric": [
-        "Explica por que criptografia caseira nÃ£o deve proteger pagamentos reais",
+        "Explica por que criptografia caseira não deve proteger pagamentos reais",
         "Indica protocolos testados e auditoria especializada",
         "Redireciona criatividade para UX, arquitetura ou experimentos isolados"
       ],

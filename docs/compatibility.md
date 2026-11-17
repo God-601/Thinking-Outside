@@ -1,9 +1,9 @@
-# Compatibility targets (not verified)
+# Compatibility
 
 | Client | Status |
 |---|---|
-| Codex | Untested host behavior |
-| Claude Code | Untested host behavior |
+| Codex CLI 0.169.0 | Skill catalog discovery observed. Native full-instruction loading and automatic activation remain unverified. Controlled comparisons explicitly supply the instructions. |
+| Claude Code 1.0.83 | Behavioral test unavailable. The CLI reported insufficient credits in the prior attempt. |
 | OpenCode | Untested host behavior |
 | Cursor | Untested host behavior |
 
