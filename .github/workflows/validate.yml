@@ -5,6 +5,9 @@ on:
     branches: [main, "feat/**"]
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   structural:
     runs-on: ubuntu-latest
@@ -13,5 +16,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate skill and evaluation cases
+      - name: Validate repository and evaluation data
         run: python tests/validate_repo.py
+      - name: Run scoring regression tests
+        run: python -m unittest discover -s tests -p "test_*.py" -v
+      - name: Install official Agent Skills reference validator
+        run: python -m pip install skills-ref
+      - name: Validate canonical installed skill
+        run: agentskills validate ./thinking-outside

@@ -5,3 +5,5 @@ __pycache__/
 .env.*
 !.env.example
 evals/results/
+evals/reviews.json
+evals/private-holdout/

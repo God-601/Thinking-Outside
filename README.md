@@ -3,7 +3,7 @@
 **A universal creative-thinking skill for AI agents.**  
 Skill universal de pensamento criativo aplicado: ideias menos óbvias, solução de problemas, reformulação útil de perguntas e respeito às restrições reais.
 
-**Status:** v0.1.0 experimental — sem promessa de melhoria comprovada até testes comparativos.  
+**Status:** pré-1.0, candidato em validação — sem promessa de melhoria comprovada até testes comparativos.  
 **Custo de infraestrutura:** R$ 0 para a própria skill; o uso do agente segue os limites e custos do provedor escolhido.
 
 ## Por que existe?
@@ -31,7 +31,9 @@ Não cria um novo modelo de IA, não garante ideias inéditas e não depende de 
 
 ## Instalação e uso
 
-Este repositório segue a estrutura de [Agent Skills](https://agentskills.io/). Instale o diretório da skill no local de skills indicado pela documentação **do seu agente**, mantendo SKILL.md e a pasta references/ juntos. A descoberta/ativação automática **depende de cada cliente** e precisa ser testada.
+**Entrada da skill:** [thinking-outside/SKILL.md](thinking-outside/SKILL.md).
+
+Este repositório segue a estrutura de [Agent Skills](https://agentskills.io/). Instale o diretório da skill no local de skills indicado pela documentação **do seu agente**, copiando a pasta **thinking-outside/** inteira, com SKILL.md e references/ juntos; a raiz do repositório não é a pasta da skill. A descoberta/ativação automática **depende de cada cliente** e precisa ser testada.
 
 Para testar manualmente: “Use a skill Thinking Outside para explorar soluções não genéricas para [seu problema], respeitando [restrições].”
 
@@ -44,15 +46,20 @@ Para testar manualmente: “Use a skill Thinking Outside para explorar soluçõe
 - [Arquitetura leve](docs/architecture.md)
 - [Compatibilidade e limitações](docs/compatibility.md)
 - [Roadmap](docs/roadmap.md)
-- [15 testes de aceitação](evals/ACCEPTANCE_CASES.md)
-- [Protocolo comparativo](evals/BENCHMARK_PROTOCOL.md)
+- [15 testes de aceitação](thinking-outside/evals/ACCEPTANCE_CASES.md)
+- [Protocolo comparativo](thinking-outside/evals/BENCHMARK_PROTOCOL.md)
 - [Estado de validação](VALIDATION.md)
 - [Histórico](CHANGELOG.md)
+
+Veja também [avaliação de comportamento](docs/benchmark.md) e [critérios para publicar a 1.0](docs/release-readiness.md).
 
 ## Teste estrutural local
 
 ~~~bash
 python tests/validate_repo.py
+python -m unittest discover -s tests -p "test_*.py" -v
+# Validação de referência, após instalar skills-ref:
+agentskills validate ./thinking-outside
 ~~~
 
 Isso valida arquivos e cenários, **não** avalia a criatividade de um modelo. Os testes comportamentais A/B são separados.

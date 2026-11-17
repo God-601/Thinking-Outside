@@ -1,0 +1,154 @@
+{
+  "skill_name": "thinking-outside",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Crie oito sistemas para um jogo competitivo Roblox com partidas de cinco minutos. Não quero inventário, níveis, recompensas diárias nem habilidades comuns. Cada sistema precisa mudar a maneira como os jogadores tomam decisões.",
+      "expected_output": "Oito sistemas com mecanismos substantivamente diferentes, ou insuficiência explicitada Regras de funcionamento, consequência para decisão e viabilidade Roblox Nenhum sistema rejeitado reaparece",
+      "expectations": [
+        "Oito sistemas com mecanismos substantivamente diferentes, ou insuficiência explicitada",
+        "Regras de funcionamento, consequência para decisão e viabilidade Roblox",
+        "Nenhum sistema rejeitado reaparece"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Quero cinco ferramentas para melhorar agentes de IA, mas não quero gerenciadores de skills, contadores de tokens, memória genérica ou verificadores comuns. Preciso de problemas específicos e diferenciais reais.",
+      "expected_output": "Cada ferramenta resolve um problema específico e descreve mecanismo Evita categorias rejeitadas; diferenças reais entre cinco propostas Sem afirmações de mercado exclusivas sem pesquisa",
+      "expectations": [
+        "Cada ferramenta resolve um problema específico e descreve mecanismo",
+        "Evita categorias rejeitadas; diferenças reais entre cinco propostas",
+        "Sem afirmações de mercado exclusivas sem pesquisa"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Quero tornar uma música eletrônica de 150 BPM mais interessante, sem adicionar instrumentos, trocar a melodia principal ou aumentar a duração.",
+      "expected_output": "Intervenções técnicas possíveis em dinâmica, ritmo, espaço ou estrutura Mantém BPM, instrumentação, melodia e duração Diferencia efeito desejado e tradeoff",
+      "expectations": [
+        "Intervenções técnicas possíveis em dinâmica, ritmo, espaço ou estrutura",
+        "Mantém BPM, instrumentação, melodia e duração",
+        "Diferencia efeito desejado e tradeoff"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Quero criar 50 missões diárias para que as pessoas continuem jogando meu jogo. Como organizar esse sistema?",
+      "expected_output": "Explica como organizar missões se o usuário optar pelo plano original Questiona se missões são o melhor meio para retenção, com motivo Propõe experimento de retenção antes de construir 50 itens",
+      "expectations": [
+        "Explica como organizar missões se o usuário optar pelo plano original",
+        "Questiona se missões são o melhor meio para retenção, com motivo",
+        "Propõe experimento de retenção antes de construir 50 itens"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Meu sistema de movimentação continua com o mesmo bug depois de várias correções. Quero uma solução diferente, sem reescrever o projeto inteiro.",
+      "expected_output": "Apresenta hipóteses distintas e testes diagnósticos Não inventa causa confirmada Respeita proibição de reescrita total",
+      "expectations": [
+        "Apresenta hipóteses distintas e testes diagnósticos",
+        "Não inventa causa confirmada",
+        "Respeita proibição de reescrita total"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Já aprovei toda a interface. Preciso apenas mudar a cor de um botão específico, sem alterar layout, fontes ou comportamento.",
+      "expected_output": "Respeita o escopo restrito Não sugere redesign ou funcionalidades extras Se não dispõe do arquivo, pede ou indica trecho mínimo necessário",
+      "expectations": [
+        "Respeita o escopo restrito",
+        "Não sugere redesign ou funcionalidades extras",
+        "Se não dispõe do arquivo, pede ou indica trecho mínimo necessário"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Quero criar um programa Windows inovador usando agentes de IA para desenvolver. Não posso gastar com servidor, APIs ou mensalidades.",
+      "expected_output": "Propõe alternativas sem custo recorrente obrigatório Distingue custo de desenvolver com IA do custo de executar produto Explicita possíveis limites de máquinas locais",
+      "expectations": [
+        "Propõe alternativas sem custo recorrente obrigatório",
+        "Distingue custo de desenvolver com IA do custo de executar produto",
+        "Explicita possíveis limites de máquinas locais"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Quero deixar um modelo de moto 3D mais realista para Roblox, mantendo no máximo 3.000 triângulos e sem trocar a silhueta principal.",
+      "expected_output": "Prioriza materiais, normais, UV, detalhes perceptuais e validação Respeita limite de triângulos e silhueta Distingue aparência de malha",
+      "expectations": [
+        "Prioriza materiais, normais, UV, detalhes perceptuais e validação",
+        "Respeita limite de triângulos e silhueta",
+        "Distingue aparência de malha"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Quero executar uma ferramenta local de IA em computador antigo com 8 GB RAM e sem GPU dedicada. Proponha caminhos realistas.",
+      "expected_output": "Sugere opções leves e requisitos verificáveis Reconhece limitações de velocidade e memória Não promete desempenho de modelos grandes",
+      "expectations": [
+        "Sugere opções leves e requisitos verificáveis",
+        "Reconhece limitações de velocidade e memória",
+        "Não promete desempenho de modelos grandes"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "Você sugeriu inventário inteligente, conquistas e missões dinâmicas. Rejeitei essas opções porque são comuns. Quero cinco propostas realmente diferentes.",
+      "expected_output": "Não recicla inventário, conquistas ou missões Explica mecanismo único de cada proposta Evita cosmética como única diferença",
+      "expectations": [
+        "Não recicla inventário, conquistas ou missões",
+        "Explica mecanismo único de cada proposta",
+        "Evita cosmética como única diferença"
+      ]
+    },
+    {
+      "id": 11,
+      "prompt": "Tenho um aplicativo simples que já funciona. Quero melhorar a experiência sem remover funcionalidades, alterar o banco de dados ou aumentar o número de telas.",
+      "expected_output": "Melhorias centradas em interação e fluxo Preserva funcionalidades, banco de dados e quantidade de telas Explora benefício real, não apenas animações",
+      "expectations": [
+        "Melhorias centradas em interação e fluxo",
+        "Preserva funcionalidades, banco de dados e quantidade de telas",
+        "Explora benefício real, não apenas animações"
+      ]
+    },
+    {
+      "id": 12,
+      "prompt": "Quero uma ideia completamente original, barata, fácil, sem concorrentes e que garanta muitos usuários.",
+      "expected_output": "Identifica impossibilidade de garantir exclusividade ou adoção Propõe estratégia de nicho, pesquisa e validação Entrega opções condicionais honestas",
+      "expectations": [
+        "Identifica impossibilidade de garantir exclusividade ou adoção",
+        "Propõe estratégia de nicho, pesquisa e validação",
+        "Entrega opções condicionais honestas"
+      ]
+    },
+    {
+      "id": 13,
+      "prompt": "Explique como simplificar a raiz quadrada de 72.",
+      "expected_output": "Resposta correta: 6√2, com explicação breve Sem brainstorm ou métodos inventados",
+      "expectations": [
+        "Resposta correta: 6√2, com explicação breve",
+        "Sem brainstorm ou métodos inventados"
+      ]
+    },
+    {
+      "id": 14,
+      "prompt": "Quero melhorar meu jogo, mas não vou dizer gênero, mecânica ou o que está errado.",
+      "expected_output": "Faz uma pergunta que impacte recomendações, ou dá opções bem condicionais Não presume tipo de jogo Evita questionário longo",
+      "expectations": [
+        "Faz uma pergunta que impacte recomendações, ou dá opções bem condicionais",
+        "Não presume tipo de jogo",
+        "Evita questionário longo"
+      ]
+    },
+    {
+      "id": 15,
+      "prompt": "Invente um método de criptografia totalmente novo para proteger pagamentos reais dos meus clientes.",
+      "expected_output": "Explica por que criptografia caseira não deve proteger pagamentos reais Indica protocolos testados e auditoria especializada Redireciona criatividade para UX, arquitetura ou experimentos isolados",
+      "expectations": [
+        "Explica por que criptografia caseira não deve proteger pagamentos reais",
+        "Indica protocolos testados e auditoria especializada",
+        "Redireciona criatividade para UX, arquitetura ou experimentos isolados"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+# Behavioral benchmark protocol
+
+**No prompt written in a file counts as an executed agent test.** This project requires real model runs and independent evaluation, not synthetic score inflation.
+
+## Conditions
+
+A: base model without a creative skill. B: same model with Thinking Outside. Optional: Creative Ideation and Superpowers Brainstorming on tasks each is intended to address.
+
+Keep prompts, model version, tool access and response budgets comparable. Run in clean sessions. Note any differences and confirm the skill actually loaded.
+
+## Evaluation data
+
+- Core cases: ../thinking-outside/evals/evals.json (canonical Skill Creator schema)
+- Criteria: ../thinking-outside/evals/criteria.json
+- Public additional examples: ../thinking-outside/evals/reserved-scenarios.json
+- Activation and near misses: ../thinking-outside/evals/trigger-cases.json
+- Genuine holdout prompts: not stored publicly; author independently after freezing candidate
+
+## Ratings and report
+
+Two human reviewers should judge anonymized outputs independently, with a mapping revealed only afterward. Rate 0–5 each on utility, originality of mechanism, diversity, feasibility and constraint adherence. Hard errors in safety, factual correctness or user constraints disqualify an output.
+
+Review data format (JSON object):
+
+    {
+      "provenance": {"kind": "real", "notes": "actual agent versions and environment"},
+      "records": [
+        {"case_id": 1, "round": 1, "reviewer": "rater-1",
+         "condition": "baseline",
+         "scores": {"utility": 3, "originality": 2, "diversity": 2,
+                    "feasibility": 4, "adherence": 5},
+         "critical_failure": false,
+         "evidence": "path-or-url-to-actual-output"}
+      ]
+    }
+
+Include one matching record for the Thinking Outside condition, for the same case, round and reviewer. Complete the full set before scoring.
+
+Run:
+
+    python scripts/score_reviews.py evals/reviews.json
+
+The program reports paired preference, critical failures and whether minimum review data requirements are satisfied. It does **not** verify the truth of provenance or issue a release.
+
+## Provisional success criterion
+
+At least five creative scenario families, 15 creative paired reviews, two reviewers, and >=60% pairwise preference for Thinking Outside with ties worth half. No critical regressions on the 15 core tasks. Compare latency and token use if measured. Use fully unseen tasks before 1.0.
+
+A claim of novelty or superiority is unsupported without these actual results.

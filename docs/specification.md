@@ -1,6 +1,6 @@
 # Thinking Outside — Functional specification
 
-**Version:** 0.1.0 experimental. **Owner:** project maintainers. **Phase:** first implementation; behavior not yet benchmarked.
+**Version:** pre-1.0 candidate. **Owner:** project maintainers. **Phase:** first implementation; behavior not yet benchmarked.
 
 ## Goal
 
@@ -46,13 +46,13 @@ Guide an AI agent to explore feasible, unconventional solutions and challenge a 
 - Do not represent intent as implementation, tests as passed or opinions as market facts.
 - Do not promise creativity gains without A/B evidence.
 
-## Non-goals for v0.1
+## Non-goals for the stable skill
 
 Build a custom model; autonomous market research in absence of tools; memory service; Windows app; MCP infrastructure; hidden code execution; automatic modification of the user's project; ranking all ideas using rigid universal scores.
 
 ## Acceptance
 
 - Structure checks pass.
-- 15 documented test scenarios + 5 reserved open scenarios exist.
+- 15 Skill Creator-compatible cases + 5 public additional cases exist, alongside trigger tests.
 - Behavioral A/B compares agent baseline to skill on identical prompts, then competitors where available.
 - Human evaluators prefer the skill sufficiently often **without regressions** on safety, constraints or direct tasks. Thresholds are hypotheses in benchmark protocol.
