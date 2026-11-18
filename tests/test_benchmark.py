@@ -31,7 +31,7 @@ class BenchmarkTest(unittest.TestCase):
         self.assertEqual([(c["id"], c["prompt"], c["rubric"]) for c in plan["cases"]],
                          [(f'T{e["id"]:02}', e["prompt"], e["expectations"]) for e in evals])
         # Freeze C as a historical control; the installed entrypoint now tracks D.
-        self.assertEqual(plan["conditions"]["C"], "instructions/C.md")
+        self.assertEqual(plan["conditions"]["C"], "instructions/C_candidate.md")
         self.assertIn("## Explore mechanisms before polishing",
                       read("benchmarks/" + plan["conditions"]["C"]))
         self.assertEqual(read("thinking-outside/SKILL.md"),
