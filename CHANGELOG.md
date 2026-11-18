@@ -2,6 +2,9 @@
 
 ## Unreleased candidate
 
+- Add repeated evidence across eight task families, two review bundles, a project-local Codex check and a manual Claude procedure.
+- Require independent human reviewers to score the same answer artifacts. Support explicit holdout case IDs in the review scorer.
+
 - Record the five-family final comparison, Codex integration check and review handoff. Validate a local candidate installation ZIP.
 
 - Refine hybrid D's exploration and measurable tests. Record repeated fresh comparisons and a successful explicit Codex activation probe.

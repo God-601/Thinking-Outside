@@ -7,6 +7,8 @@ The candidate ZIP contains revised D as `thinking-outside/SKILL.md`, its three o
 3. In Codex, use `.agents/skills/` in the project or the configured Codex skills folder. Start a fresh session and invoke `$thinking-outside`. For a direct-answer check, ask for one arithmetic result without naming the skill.
 4. For a current Claude Code client, use `.claude/skills/` in the project or `~/.claude/skills/`. Start a fresh session and use `/thinking-outside`. Live verification in the available Claude Code client is blocked. See the [official Claude Code skill instructions](https://code.claude.com/docs/en/skills).
 
+Use the [manual Claude verification prompts](claude-manual-check.md) to record explicit, automatic and direct behavior independently.
+
 ## Release draft
 
 **Title:** Thinking Outside 1.0

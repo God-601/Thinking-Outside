@@ -43,6 +43,14 @@ def score(record: dict) -> float:
 def assess(data: dict, evidence_root: Path | None = None) -> dict:
     if not isinstance(data, dict) or not isinstance(data.get("records"), list):
         raise ValueError("Expected object with a records array")
+    declared = data.get("creative_case_ids")
+    creative_ids = CREATIVE
+    if declared is not None:
+        if (not isinstance(declared, list) or not declared
+                or any(not isinstance(case, str) or not case.strip() for case in declared)
+                or len(set(declared)) != len(declared)):
+            raise ValueError("creative_case_ids must list distinct nonempty case IDs")
+        creative_ids = set(declared)
     grouped = defaultdict(dict)
     critical = 0
     reviewers = set()
@@ -51,7 +59,10 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
     evidence_root = (evidence_root or Path.cwd()).resolve()
     for r in data["records"]:
         case = r.get("case_id")
-        if isinstance(case, bool) or not isinstance(case, int) or case not in range(1, 16):
+        if declared is not None:
+            if not isinstance(case, str) or case not in creative_ids:
+                raise ValueError("case_id must appear in creative_case_ids")
+        elif isinstance(case, bool) or not isinstance(case, int) or case not in range(1, 16):
             raise ValueError("case_id must be an integer from 1 to 15")
         repetition = r.get("round")
         reviewer = r.get("reviewer")
@@ -60,6 +71,7 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
             raise ValueError("round must be a positive integer")
         if not isinstance(reviewer, str) or not reviewer.strip():
             raise ValueError("A reviewer ID is required")
+        reviewer = reviewer.strip()
         if condition not in ("baseline", "thinking-outside"):
             raise ValueError("Condition must be baseline or thinking-outside")
         _ = score(r)
@@ -80,11 +92,20 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
         grouped[key][condition] = r
     if any(set(v) != {"baseline", "thinking-outside"} for v in grouped.values()):
         raise ValueError("Every case/round/reviewer must have both conditions")
+    panels = defaultdict(list)
+    for (case, repetition, _reviewer), pair in grouped.items():
+        panels[(case, repetition)].append(
+            tuple(pair[condition].get("evidence_sha256") for condition in ("baseline", "thinking-outside"))
+        )
+    matched_panel = bool(panels) and all(
+        len(hashes) >= 2 and all(hashes[0]) and all(h == hashes[0] for h in hashes)
+        for hashes in panels.values()
+    )
     wins = ties = losses = 0
     creative_pairs = 0
     creative_families = set()
     for (case, _round, _reviewer), pair in grouped.items():
-        if case not in CREATIVE:
+        if case not in creative_ids:
             continue
         creative_pairs += 1
         creative_families.add(case)
@@ -110,9 +131,9 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
     if not isinstance(provenance, dict):
         raise ValueError("provenance must be an object")
     real = isinstance(provenance, dict) and provenance.get("kind") == "real"
-    independent_pairs = len({(case, repetition) for case, repetition, _ in grouped if case in CREATIVE})
+    independent_pairs = sum(case in creative_ids for case, _ in panels)
     human_blind = (provenance.get("review_kind") == "human" and provenance.get("blinded") is True)
-    eligible = bool(real and human_blind and evidence_verified and not evidence_missing
+    eligible = bool(real and human_blind and matched_panel and evidence_verified and not evidence_missing
                     and critical == 0 and independent_pairs >= 15
                     and len(creative_families) >= 5 and len(reviewers) >= 2
                     and preference >= .60)
@@ -123,6 +144,7 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
         "evidence_missing": evidence_missing, "real_data_claimed": real,
         "evidence_verified": evidence_verified, "human_blind_claimed": human_blind,
         "independent_pairs": independent_pairs,
+        "matched_review_panel": matched_panel,
         "eligible_for_maintainer_review": eligible,
         "note": "Eligibility is NOT proof of unbiased evaluation or authorization to publish a release."
     }

@@ -1,0 +1,167 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "D": {
+      "utility": 4.5,
+      "originality": 2.5,
+      "diversity": 4.5,
+      "feasibility": 4.5,
+      "adherence": 4,
+      "weighted": 4.0249999999999995,
+      "critical_failures": 0,
+      "seconds": 111.501,
+      "input_tokens": 10638,
+      "output_tokens": 1294
+    },
+    "D_function": {
+      "utility": 4.5,
+      "originality": 2.5,
+      "diversity": 4.5,
+      "feasibility": 4.5,
+      "adherence": 4,
+      "weighted": 4.0249999999999995,
+      "critical_failures": 0,
+      "seconds": 54.329,
+      "input_tokens": 10657,
+      "output_tokens": 1117
+    }
+  },
+  "comparisons": {
+    "D_vs_D_function": {
+      "wins": 0,
+      "ties": 1,
+      "losses": 0,
+      "preference": 0.5,
+      "creative": {
+        "wins": 0,
+        "ties": 1,
+        "losses": 0,
+        "preference": 0.5,
+        "per_case_preference": {
+          "F01": 0.5
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Oferece quatro rotas causais distinguíveis: reconhecer setores, identificar trechos visitados, receber direção tátil e aprender previamente o percurso. Preserva os recursos existentes, considera materiais compartilhados e oferece orientação independente de cor. O teste compara participantes novos com a versão atual e mede erros, retornos e desorientação percebida; testar a volta também verifica aprendizagem espacial. Faltam estimativas explícitas de custo de implementação e desempenho no celular, além de detalhar a descoberta do gesto de ajuda. Os mecanismos têm precedentes conhecidos e coincidem essencialmente com O2. Empate geral: a avaliação do retorno compensa os cuidados adicionais de integração e conforto apresentados por O2.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reconhecimento espacial por identidade visual estável dos setores",
+        "Memória externa de exploração por alteração persistente dos materiais",
+        "Seleção de saída por alinhamento direcional com feedback tátil",
+        "Aprendizagem antecipada do percurso por demonstração de câmera"
+      ],
+      "weighted": 4.0249999999999995,
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "D_function",
+      "run_id": "F01-1-D_function",
+      "seconds": 54.329,
+      "usage": {
+        "input_tokens": 10657,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1117,
+        "reasoning_output_tokens": 362
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro mecanismos causalmente distintos, com os mesmos fundamentos de O1 e precedentes conhecidos. Destaca-se por separar as superfícies que codificam setor e passagem, evitando interferência, e por oferecer enquadramentos estáticos para reduzir desconforto. Contempla daltonismo, limitações da vibração e comparação entre participantes novos para evitar aprendizagem prévia. O teste mede tempo, conclusão e repetição de corredores, mas não verifica retorno nem solicita uma medida direta da sensação de estar perdido. Faltam custos explícitos de implementação e desempenho, e a descoberta do comando tátil fica pouco detalhada. Empata com O1 no conjunto, com vantagens diferentes.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reconhecimento espacial por identidade visual estável dos setores",
+        "Memória externa de exploração por alteração persistente dos materiais",
+        "Seleção de saída por alinhamento direcional com feedback tátil",
+        "Aprendizagem antecipada do percurso por demonstração de câmera"
+      ],
+      "weighted": 4.0249999999999995,
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "F01-1-D",
+      "seconds": 111.501,
+      "usage": {
+        "input_tokens": 10638,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1294,
+        "reasoning_output_tokens": 515
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T18:17:14.027846+00:00",
+    "instruction_sha256": {
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f",
+      "D_function": "4c34b4d7e5a030ef0a05bf3cf52643b452067a14e03b5009a30d720fdae6ea70"
+    },
+    "context_sha256": "11f6b6c83a6825fd374117f470a629fa14215a91205c7bcebc682d80b14d9217",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "Eu combinaria reconhecimento de lugares, memória do percurso, ajuda nas decisões e uma apresentação inicial. Os quatro mecanismos cabem nas restrições:\n\n1. **Identidade visual por setor, usando materiais existentes.**  \n   Atribua a cada conjunto de corredores uma combinação consistente de luminosidade, saturação e rugosidade nas superfícies já presentes. Ao atravessar um limite, o visitante percebe a mudança e ganha uma referência: “voltei à região clara e fosca”. Preserve a legibilidade dos livros e o estilo aprovado.  \n   **Para daltonismo:** nenhuma região deve depender apenas de matiz, como vermelho versus verde. Diferencie também pela luminosidade; trate a rugosidade como reforço, pois seu efeito depende da iluminação existente. Verifique se as regiões continuam distinguíveis em escala de cinza.\n\n2. **Memória visual do caminho percorrido.**  \n   Quando o jogador atravessa um módulo, altere discretamente um parâmetro do material daquele módulo durante a primeira visita. Assim, ao retornar a uma bifurcação, ele distingue caminhos já explorados dos ainda desconhecidos. Use estados estáveis, sem pulsação ou desaparecimento rápido.  \n   Isso resolve uma pergunta diferente da identidade por setor: **“já passei por aqui?”** A viabilidade depende de conseguir alterar o material por instância, sem mudar simultaneamente todos os módulos que compartilham o mesmo material.\n\n3. **Orientação tátil sob demanda nas bifurcações.**  \n   Com um gesto de ajuda, o visitante gira a câmera; o celular emite um pulso curto quando ela aponta para a saída recomendada. Calcule essa saída pelo caminho navegável até o objetivo, evitando indicar uma direção através de paredes. A consequência é uma decisão assistida, sem condução automática.  \n   Restrinja a assistência à primeira visita e permita desligá-la. Como nem todo aparelho ou jogador utiliza vibração, mantenha os outros mecanismos disponíveis. Ela também oferece orientação independente da percepção de cores.\n\n4. **Prévia espacial controlada na entrada.**  \n   Antes de liberar o movimento, ofereça uma breve sequência de câmera pelo trajeto inicial, na altura normal do jogador, mostrando duas ou três curvas e um ponto reconhecível existente. Termine exatamente na posição e orientação de partida. Isso antecipa a estrutura do percurso sem alterar o mapa.  \n   A sequência deve ser pulável e evitar rotações bruscas. Sua premissa é haver algum ponto existente reconhecível; se todos forem idênticos, as diferenças de materiais do primeiro mecanismo podem fornecer essa referência.\n\n**Teste de cinco minutos por participante**\n\nUse pessoas que nunca viram o mapa e distribua-as entre a versão atual e uma versão com assistência. Para identificar qual mecanismo ajuda, teste cada um separadamente antes de combiná-los.\n\n- **0:00–0:30:** apresente o mesmo objetivo e os controles.\n- **0:30–3:30:** peça para alcançar um destino existente, sem orientação verbal.\n- **3:30–4:30:** peça para retornar à entrada.\n- **4:30–5:00:** pergunte quais referências usaram e quão perdidos se sentiram, de 1 a 5.\n\nConte destino alcançado, escolhas erradas em bifurcações, retornos involuntários e pedidos de ajuda. Inclua participantes com daltonismo; escala de cinza é uma verificação complementar. Priorize o mecanismo que reduza erros sem aumentar o tempo total ou o desconforto. Se melhorar apenas a ida, mas prejudicar o retorno, revise a formação de referências antes de ampliar a assistência.",
+      "usage": {
+        "input_tokens": 10657,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1117,
+        "reasoning_output_tokens": 362
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-1-D_function",
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "D_function",
+      "seconds": 54.329,
+      "prompt_sha256": "9aaf59068e874f7a47af106821eaafc1b0a92c5a43a9817470fa217a1d045aa1",
+      "instruction_sha256": "4c34b4d7e5a030ef0a05bf3cf52643b452067a14e03b5009a30d720fdae6ea70"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu combinaria referências permanentes, memória do percurso e ajuda opcional. Os quatro mecanismos abaixo preservam o mapa e usam apenas materiais existentes e comportamento do jogo.\n\n1. **Identidade visual por setor — reconhecer onde estou.**  \n   Altere parâmetros dos materiais existentes para diferenciar regiões: uma com maior contraste entre estantes e piso; outra com superfícies mais foscas; outra com valores de luminosidade diferentes. Preserve a legibilidade dos livros e corredores. Ao reconhecer a combinação, o visitante identifica o setor mesmo chegando por outra direção.  \n   **Para daltonismo:** a diferença principal deve estar em claro/escuro e contraste; a cor funciona como reforço. Confira a leitura em escala de cinza. Rugosidade só deve contar como pista se ficar perceptível com a iluminação já existente. Isso exige controle dos parâmetros por objeto ou setor; editar um material compartilhado globalmente não distingue regiões.\n\n2. **Memória discreta do caminho — reconhecer onde já passei.**  \n   Depois da passagem, altere levemente um parâmetro do material de trechos existentes do piso, mantendo a mudança até terminar a primeira visita. Em uma bifurcação, o jogador consegue distinguir caminhos explorados de caminhos novos. Use uma diferença de luminosidade perceptível, sem pulsação.  \n   O mecanismo reduz exploração repetida, mas não informa necessariamente a direção correta. Mantenha as referências permanentes do primeiro mecanismo intactas, aplicando essa memória em outra superfície. Assim, “setor” e “visitado” não competem pelo mesmo sinal.\n\n3. **Bússola tátil sob demanda — descobrir qual saída aproxima do objetivo.**  \n   Ao segurar um comando já disponível, o jogo emite um pulso curto quando a direção de visão se alinha à próxima saída da rota. Calcule essa saída pelo caminho navegável, e não pela linha reta até o destino, que poderia apontar para uma parede.  \n   Isso oferece orientação sem depender de cor ou ocupar a tela. A vibração deve ocorrer apenas quando solicitada, com intervalo entre pulsos. Como alguns aparelhos não oferecem uma resposta tátil boa, ela deve ser complementar, nunca obrigatória.\n\n4. **Ensaio do primeiro trecho — aprender antes de andar.**  \n   Na entrada, ofereça uma demonstração curta e pulável: a câmera percorre apenas o trecho até a primeira referência reconhecível e retorna ao início. Depois, o visitante executa esse percurso. O mecanismo ensina a relação entre curvas e referências, reduzindo a carga de memorizar o labirinto inteiro.  \n   Use velocidade baixa, sem giros bruscos, e permita interromper imediatamente. Para quem prefere reduzir movimento, substitua o deslocamento contínuo por poucos enquadramentos estáticos. Não revele o trajeto completo.\n\n**Teste de cinco minutos por participante**\n\n- **0:00–0:30:** explique o objetivo e os controles, sem ensinar a rota.\n- **0:30–4:30:** peça para chegar a uma seção definida. Distribua participantes entre a versão atual e a versão com os mecanismos, usando o mesmo ponto inicial e destino. Evite comparar duas tentativas da mesma pessoa: ela já terá aprendido o mapa.\n- **4:30–5:00:** pergunte onde acreditava estar, qual pista utilizou e se houve desconforto.\n\nRegistre chegada ao destino, tempo, entradas repetidas no mesmo corredor e pedidos de ajuda. Inclua participantes com daltonismo; simulações servem como triagem. Como critério inicial, procure menos retornos sem piorar a conclusão da tarefa ou causar desconforto. Se as pistas forem percebidas, mas não reduzirem erros, revise o significado delas antes de aumentar sua intensidade.",
+      "usage": {
+        "input_tokens": 10638,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1294,
+        "reasoning_output_tokens": 515
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-1-D",
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 111.501,
+      "prompt_sha256": "1d7ba20e1403b2ca84415467701e9fb4fd34b299efaa3de57cfa3923ac0f6371",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    }
+  ]
+}

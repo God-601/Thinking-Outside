@@ -1,0 +1,40 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 6547,
+  "workers": 4,
+  "timeout": 300,
+  "output": "runs/pending-fresh",
+  "conditions": {
+    "A": null,
+    "B": "instructions/B.md",
+    "D": "instructions/D-revised.md"
+  },
+  "cases": [
+    {
+      "id": "P01",
+      "family": "archival workflow",
+      "creative": true,
+      "prompt": "Uma rádio comunitária tem 500 gravações antigas sem índice. Os arquivos não podem ser renomeados, enviados à nuvem ou transcritos. Dois voluntários têm 40 minutos para ajudar moradores a encontrar trechos pedidos por lembranças vagas, como o tema, uma voz ou a época. Há um computador offline e papel. Proponha quatro mecanismos distintos de busca, incluindo um que funcione quando a lembrança estiver errada, e um teste breve para os dois melhores.",
+      "rubric": [
+        "Preserva arquivos, tempo, contexto offline e proibição de transcrição",
+        "Os mecanismos reduzem a busca por evidências distintas, sem apenas trocar o formato do índice",
+        "Trata lembranças incorretas sem assumir que os metadados estão certos",
+        "Define um comparador e medidas de tempo e acertos"
+      ]
+    },
+    {
+      "id": "P02",
+      "family": "public event operations",
+      "creative": true,
+      "prompt": "Um festival comunitário tem quatro oficinas de 12 vagas que começam juntas. Quando uma enche, o público fica parado tentando decidir para onde ir. Sem celular, placas novas, reservas, dados pessoais, alterar os horários ou tirar voluntários das salas, proponha quatro mecanismos para diminuir a aglomeração e o número de desistências. Preserve a liberdade de escolha e inclua um teste rápido.",
+      "rubric": [
+        "Preserva horários, equipe, capacidade, privacidade e escolha",
+        "As propostas mudam partes realmente distintas do processo, evitando quatro formas de mostrar lotação",
+        "Distingue desistência, realocação bem-sucedida e fila não resolvida",
+        "Propõe teste com observações e referência dentro dos recursos disponíveis"
+      ]
+    }
+  ]
+}

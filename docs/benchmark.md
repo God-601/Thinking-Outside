@@ -42,6 +42,8 @@ Review data format (JSON object):
 
 Include one matching record for the Thinking Outside condition, for the same case, round and reviewer. Evidence paths are relative to the working directory and must remain inside it. Complete the full set before scoring.
 
+For a holdout-only panel, put the frozen string case IDs in top-level `creative_case_ids` and use those IDs verbatim in the records. Score A/D and B/D separately with the appropriate control mapped to `baseline`. Use the same answer artifact digest for both reviewers of each case and round.
+
 Run:
 
     python scripts/score_reviews.py evals/reviews.json
@@ -50,6 +52,6 @@ The program reports paired preference, critical failures and whether minimum rev
 
 ## Provisional success criterion
 
-At least five creative scenario families, 15 creative paired reviews, two reviewers, and >=60% pairwise preference for Thinking Outside with ties worth half. No critical regressions on the 15 core tasks. Compare latency and token use if measured. Use fully unseen tasks before 1.0.
+At least five creative scenario families, 15 distinct case/repetition pairs scored by two reviewers on identical answer artifacts, and >=60% pairwise preference for Thinking Outside with ties worth half. No critical regressions on the 15 core tasks. Compare latency and token use if measured. Use fully unseen tasks before 1.0.
 
 A claim of novelty or superiority is unsupported without these actual results.

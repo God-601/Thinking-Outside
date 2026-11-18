@@ -51,6 +51,23 @@ class QualityTest(unittest.TestCase):
                 path.write_text("Synthetic test fixture, not model evidence")
                 r["evidence_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
             self.assertTrue(assess(data, root)["eligible_for_maintainer_review"])
+            named = dict(data, creative_case_ids=[f"F{i:02}" for i in range(1, 6)],
+                records=[dict(r, case_id=f'F{r["case_id"]:02}') for r in data["records"]])
+            self.assertTrue(assess(named, root)["eligible_for_maintainer_review"])
+            named["creative_case_ids"].pop()
+            with self.assertRaisesRegex(ValueError, "must appear"):
+                assess(named, root)
+            disjoint = dict(data, records=[r for r in data["records"]
+                if r["reviewer"] == ("a" if r["case_id"] < 3 else "b")])
+            result = assess(disjoint, root)
+            self.assertEqual(result["independent_pairs"], 15)
+            self.assertFalse(result["eligible_for_maintainer_review"])
+            path.write_text("A different answer scored by only one reviewer")
+            r["evidence_sha256"] = hashlib.sha256(path.read_bytes()).hexdigest()
+            result = assess(data, root)
+            self.assertTrue(result["evidence_verified"])
+            self.assertFalse(result["matched_review_panel"])
+            self.assertFalse(result["eligible_for_maintainer_review"])
             path.write_text("tampered")
             self.assertFalse(assess(data, root)["eligible_for_maintainer_review"])
 

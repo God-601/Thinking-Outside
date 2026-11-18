@@ -53,6 +53,8 @@ Para testar manualmente: “Use a skill Thinking Outside para explorar soluçõe
 
 Veja também o [protocolo](docs/benchmark.md), os [resultados medidos](docs/benchmark-results.md) e os [critérios para publicar a 1.0](docs/release-readiness.md).
 
+Para revisar a 1.0, veja a [lista de verificações e os testes manuais](docs/review-1.0.md).
+
 ## Teste estrutural local
 
 ~~~bash

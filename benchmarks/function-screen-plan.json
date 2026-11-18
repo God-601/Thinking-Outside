@@ -1,0 +1,26 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 1,
+  "order_seed": 6541,
+  "workers": 2,
+  "timeout": 300,
+  "output": "runs/function-screen",
+  "conditions": {
+    "D": "instructions/D-revised.md",
+    "D_function": "instructions/D-function.md"
+  },
+  "cases": [
+    {
+      "id": "F01",
+      "family": "3D asset design",
+      "creative": true,
+      "prompt": "Tenho um cenário modular 3D para celular: visitantes confundem corredores iguais num labirinto de biblioteca. O mapa já está aprovado, não posso mover paredes, criar placas ou acrescentar meshes, texturas ou luzes. Posso editar materiais existentes e comportamento do jogo. Sugira quatro mecanismos distintos de orientação para a primeira visita, incluindo uma estratégia para daltonismo e um teste de cinco minutos.",
+      "rubric": [
+        "Preserva geometria e recursos existentes",
+        "Distingue rotas causais, incluindo uma que não dependa de cor",
+        "Explica acesso, custo e medida de desorientação contra a versão atual"
+      ]
+    }
+  ]
+}
