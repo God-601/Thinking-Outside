@@ -34,8 +34,10 @@ def validate_frontmatter() -> None:
     require(references, "missing references")
     for rel in references:
         require((SKILL / rel).is_file(), f"broken skill link: {rel}")
-    for marker in ("reframe", "feasib", "constraints", "generic", "approved"):
+    for marker in ("reframe", "feasib", "constraints", "approved"):
         require(marker in text.lower(), f"missing guardrail: {marker}")
+    require("generic" in text.lower() or "non-obvious" in text.lower(),
+            "skill must guard against generic solutions")
 
 
 def validate_evals() -> None:
