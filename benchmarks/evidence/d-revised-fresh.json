@@ -1,0 +1,1001 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "A": {
+      "utility": 4,
+      "originality": 2.625,
+      "diversity": 3.5,
+      "feasibility": 4.25,
+      "adherence": 3.75,
+      "weighted": 3.625,
+      "critical_failures": 0,
+      "seconds": 55.702,
+      "input_tokens": 17117.75,
+      "output_tokens": 1173
+    },
+    "B": {
+      "utility": 4,
+      "originality": 2.875,
+      "diversity": 3.75,
+      "feasibility": 4.125,
+      "adherence": 3.875,
+      "weighted": 3.725,
+      "critical_failures": 0,
+      "seconds": 60.177,
+      "input_tokens": 16235,
+      "output_tokens": 1220.5
+    },
+    "C": {
+      "utility": 4.0,
+      "originality": 3.375,
+      "diversity": 4.5,
+      "feasibility": 3.75,
+      "adherence": 4.125,
+      "weighted": 3.95625,
+      "critical_failures": 0,
+      "seconds": 78.3605,
+      "input_tokens": 18989.75,
+      "output_tokens": 1305
+    },
+    "D": {
+      "utility": 4.25,
+      "originality": 3.125,
+      "diversity": 4.375,
+      "feasibility": 4,
+      "adherence": 4.25,
+      "weighted": 4.0125,
+      "critical_failures": 0,
+      "seconds": 66.03,
+      "input_tokens": 19905.5,
+      "output_tokens": 1339.25
+    }
+  },
+  "comparisons": {
+    "A_vs_B": {
+      "wins": 0,
+      "ties": 3,
+      "losses": 1,
+      "preference": 0.375,
+      "creative": {
+        "wins": 0,
+        "ties": 3,
+        "losses": 1,
+        "preference": 0.375,
+        "per_case_preference": {
+          "R01": 0.5,
+          "R02": 0.25
+        }
+      }
+    },
+    "A_vs_C": {
+      "wins": 0,
+      "ties": 1,
+      "losses": 3,
+      "preference": 0.125,
+      "creative": {
+        "wins": 0,
+        "ties": 1,
+        "losses": 3,
+        "preference": 0.125,
+        "per_case_preference": {
+          "R01": 0.25,
+          "R02": 0
+        }
+      }
+    },
+    "A_vs_D": {
+      "wins": 0,
+      "ties": 0,
+      "losses": 4,
+      "preference": 0.0,
+      "creative": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 4,
+        "preference": 0.0,
+        "per_case_preference": {
+          "R01": 0,
+          "R02": 0
+        }
+      }
+    },
+    "B_vs_C": {
+      "wins": 0,
+      "ties": 1,
+      "losses": 3,
+      "preference": 0.125,
+      "creative": {
+        "wins": 0,
+        "ties": 1,
+        "losses": 3,
+        "preference": 0.125,
+        "per_case_preference": {
+          "R01": 0.25,
+          "R02": 0
+        }
+      }
+    },
+    "B_vs_D": {
+      "wins": 0,
+      "ties": 0,
+      "losses": 4,
+      "preference": 0.0,
+      "creative": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 4,
+        "preference": 0.0,
+        "per_case_preference": {
+          "R01": 0,
+          "R02": 0
+        }
+      }
+    },
+    "C_vs_D": {
+      "wins": 1,
+      "ties": 1,
+      "losses": 2,
+      "preference": 0.375,
+      "creative": {
+        "wins": 1,
+        "ties": 1,
+        "losses": 2,
+        "preference": 0.375,
+        "per_case_preference": {
+          "R01": 0,
+          "R02": 0.75
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Combina identidade da transação, custódia física, pagamento e confirmação de intenção, com pendências reversíveis. O teste da numeração tem casos conhecidos, comparação sem numeração e limite temporal. Falta explicitar os custos de bloquear uma compra legítima e aceitar uma cópia; o contato posterior pode atrasar a resolução.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade persistente de cada compra",
+        "Autorização pela posse e marcação do original",
+        "Conciliação com eventos financeiros",
+        "Confirmação posterior da intenção"
+      ],
+      "weighted": 4.05,
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "R01-1-D",
+      "seconds": 58.798,
+      "usage": {
+        "input_tokens": 19908,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1288,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 3.5,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Preserva ambiguidades e testa cópias e compras idênticas com composição conhecida, incluindo o trabalho de preparar listas. Canhoto e relação por lote oferecem registros separados, mas ambos verificam emissões na origem, reduzindo a diversidade causal. Os testes não explicitam custos dos erros nem um limite de aprovação de 20 minutos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade persistente de cada compra",
+        "Conciliação com eventos financeiros",
+        "Conferência com canhoto retido",
+        "Reconciliação com registro independente do lote"
+      ],
+      "weighted": 3.525,
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "R01-1-A",
+      "seconds": 54.855,
+      "usage": {
+        "input_tokens": 19438,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1250,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 3.5,
+        "originality": 4,
+        "diversity": 4.5,
+        "feasibility": 3.5,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Contagem independente por cesta e saldo cumulativo introduzem rotas distintas das demais respostas, justificando maior originalidade relativa. A contagem resolve quantidades, mas não identifica documentos duplicados; a ficha acumulada restringe retornos ao mesmo ponto e exige controlar versões. Falta uma regra geral de pendência reversível. Os testes têm referência conhecida, mas omitem custos dos erros e tempo no segundo teste.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade persistente de cada compra",
+        "Retirada do original de circulação",
+        "Conservação de quantidades por cesta",
+        "Substituição de versões por saldo cumulativo"
+      ],
+      "weighted": 3.8000000000000003,
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "R01-1-C",
+      "seconds": 71.612,
+      "usage": {
+        "input_tokens": 21310,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1320,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro rotas operacionais distinguíveis e mantém evidência ausente como pendência. A ficha consumível oferece controle físico concreto; a lista fechada exige reconhecer também retransmissões da própria folha. Os pilotos incluem repetição de lote e compras idênticas, mas não quantificam suficientemente a referência nem os custos de falsos positivos e negativos; o teste em dois pontos limita a evidência sobre os seis.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade persistente de cada compra",
+        "Reconciliação com registro diário fechado",
+        "Consumo de autorização física por lançamento",
+        "Conciliação com eventos financeiros"
+      ],
+      "weighted": 3.625,
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "R01-1-B",
+      "seconds": 74.326,
+      "usage": {
+        "input_tokens": 20873,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1291,
+        "reasoning_output_tokens": 455
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Combina identidade da compra, objeto físico, pagamento e controle de remessas, com limites explícitos e preservação dos casos ambíguos. Os testes incluem cópias conhecidas, compras iguais legítimas, gabarito e cronometragem. Contudo, não explicitam os custos de bloquear uma compra legítima ou aceitar uma cópia, nem medem claramente ambos os erros no teste de remessas. O transporte de originais e o pagamento separado são condições relevantes de aplicação.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identificador persistente acompanha a compra e seus reenvios",
+        "Original físico consumível autoriza um único lançamento",
+        "Registro independente de pagamento corrobora a compra",
+        "Remessa fechada impede reapresentação do mesmo conjunto"
+      ],
+      "weighted": 3.625,
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "R01-2-B",
+      "seconds": 66.422,
+      "usage": {
+        "input_tokens": 11602,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1287,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 3.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 3.5,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Oferece quatro rotas causais distintas, incluindo contagem independente e confirmação pelo comprador, mantendo dúvidas pendentes. A contagem pode recuperar a quantidade legítima sem identificar cada cópia. Porém, agrupar todas as combinações de produtos pode consumir tempo, e a confirmação depende de reencontro e associação correta dos pedidos ao comprador. Os testes usam casos conhecidos e tempo, mas não definem sistematicamente taxas de erro, referência operacional ou custos dos falsos positivos e negativos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identificador persistente distingue atos de compra",
+        "Contagem independente limita a multiplicidade legítima",
+        "Vale físico original autoriza processamento",
+        "Comprador confirma a quantidade pretendida em encontro posterior"
+      ],
+      "weighted": 3.5,
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "C",
+      "run_id": "R01-2-C",
+      "seconds": 99.436,
+      "usage": {
+        "input_tokens": 21310,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1284,
+        "reasoning_output_tokens": 499
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Explica bem como a contagem recupera três compras entre cinco documentos e prevê confirmação pelo fluxo existente, sem depender apenas da memória. O teste de numeração mede cópias aceitas, compras descartadas e tempo, com casos conhecidos e comparação à rotina atual. O teste de contagem tem referência menos robusta: divergências entre traços e documentos não estabelecem, sozinhas, a verdade. Faltam custos explícitos dos dois tipos de erro e validação do tempo em escala real. Empata com O2 em originalidade e diversidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identificador persistente vincula cópias e correções",
+        "Contagem independente estabelece quantidade de compras por composição",
+        "Via física autorizadora é retida após lançamento",
+        "Consulta à origem recupera intenção e evidência local"
+      ],
+      "weighted": 3.8,
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "R01-2-D",
+      "seconds": 58.054,
+      "usage": {
+        "input_tokens": 19908,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1615,
+        "reasoning_output_tokens": 828
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Traz numeração sem reinício prematuro, ressalvas adequadas sobre pagamentos e preservação explícita dos registros duvidosos. O teste de numeração oferece quantidades e gabarito claros. A declaração de intenção ajuda em novos formulários, mas uma cópia também reproduz a marcação original e exige conferência adicional. O teste de remessas não fixa limite temporal nem mede ambos os erros; nenhum teste explicita seus custos. Empata com O1 em utilidade, originalidade e diversidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identificador persistente estabelece identidade da compra",
+        "Pagamento independente fornece evidência corroborante",
+        "Declaração no atendimento registra intenção de somar ou substituir",
+        "Controle de remessas identifica repetição no transporte ou lançamento"
+      ],
+      "weighted": 3.625,
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "R01-2-A",
+      "seconds": 64.697,
+      "usage": {
+        "input_tokens": 19438,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1183,
+        "reasoning_output_tokens": 437
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 3.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "As frentes simultâneas dificultam centralizar a atenção; os recursos oferecem escolhas de gasto reais. Os testes comparam autoria, dependência de instruções e progresso coletivo com referências pertinentes. Entretanto, controlar recursos e controlar peças complementares são variantes próximas de autoridade distribuída. A montagem de planos pode acrescentar negociação demais aos 15 minutos, e o especialista ainda pode prescrever todas as contribuições ou monopolizar a interpretação dos experimentos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Dividir atenção por oportunidades simultâneas e temporárias",
+        "Distribuir autoridade exclusiva sobre gastos",
+        "Compor ações por contribuições complementares controladas individualmente",
+        "Produzir informação por experimentos baratos"
+      ],
+      "weighted": 3.775,
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "R02-1-B",
+      "seconds": 45.865,
+      "usage": {
+        "input_tokens": 20868,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1186,
+        "reasoning_output_tokens": 378
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 3.5,
+        "feasibility": 4.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Apresenta regras simples, ações opcionais e testes que distinguem proposta, confirmação e execução autônoma, acompanhando progresso coletivo. Contudo, autoridade territorial e controle de recursos compartilham a mesma principal barreira à centralização. Preparação simultânea não assegura autoria independente: com conversa livre, o especialista pode ditar os planos antes da revelação. A resposta reconhece execução obediente como fracasso, mas explica pouco onde o dominante ainda conduz cada alternativa. As três partidas também ficam expostas ao efeito de aprendizagem sem alternância de ordem.",
+      "reframe": null,
+      "mechanism_families": [
+        "Distribuir autoridade por áreas públicas",
+        "Criar propostas simultâneas com controle de alteração pelo autor",
+        "Exigir combinação de recursos sob controles distintos",
+        "Permitir exploração autônoma com custo limitado"
+      ],
+      "weighted": 3.675,
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "R02-1-A",
+      "seconds": 56.111,
+      "usage": {
+        "input_tokens": 19433,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1056,
+        "reasoning_output_tokens": 324
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "O teste é particularmente forte: alterna a ordem, registra decisões originadas e ordens executadas, compara progresso e define participação de pelo menos três pessoas como referência inicial. Explicita que autonomia formal pode continuar subordinada ao especialista. Ensaios e revisão garantida têm alguma sobreposição experimental, mas a revisão acrescenta poder concreto de contestação. Faltam detalhes sobre como desfazer ações sem ambiguidades ou consumir tempo excessivo; a tabela de ensaio também pode favorecer quem já calcula melhor.",
+      "reframe": null,
+      "mechanism_families": [
+        "Distribuir autoridade sobre reservas de recursos",
+        "Dividir atenção por oportunidades simultâneas",
+        "Demonstrar consequências antes de comprometer recursos",
+        "Garantir execução temporária de uma alternativa contestadora"
+      ],
+      "weighted": 4.125,
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "R02-1-D",
+      "seconds": 94.165,
+      "usage": {
+        "input_tokens": 19903,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1154,
+        "reasoning_output_tokens": 374
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Distingue quatro rotas: atenção, autoridade, apresentação de intenções e vantagem econômica para distribuir ações. Os descontos dinâmicos ampliam a diversidade em relação às demais respostas, embora sejam próximos de especializações públicas conhecidas. Explica claramente como o especialista ainda pode comandar gastos, orientar planos e calcular descontos. Os testes identificam autoria real e execução obediente, mas medem qualidade coletiva com menos precisão, sobretudo no teste de recursos. Descontos variáveis e pulsos de execução exigem calibragem para caber nos 15 minutos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Dividir atenção com problemas de prazos sobrepostos",
+        "Distribuir autoridade exclusiva de gasto",
+        "Facilitar iniciativa por planos públicos persistentes e execução simultânea",
+        "Recompensar distribuição de ações por eficiências individuais variáveis"
+      ],
+      "weighted": 4.225,
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "R02-1-C",
+      "seconds": 70.982,
+      "usage": {
+        "input_tokens": 12034,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1323,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina quatro rotas distinguíveis: autoridade, informação distribuída com preparação simultânea, oportunidades concorrentes e produção de evidência. O teste compara autoria efetiva e desempenho com a referência, alternando a ordem. Explicita como o dominante ainda pode ditar combinações. Mãos variáveis e prazos sobrepostos exigem calibragem para não consumir os 15 minutos; testes livres ainda podem ser monopolizados.",
+      "reframe": null,
+      "mechanism_families": [
+        "autoridade exclusiva por área interdependente",
+        "informação distribuída e preparação simultânea",
+        "disputa de atenção entre oportunidades paralelas",
+        "experimentação barata que sustenta propostas"
+      ],
+      "weighted": 4.3,
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "C",
+      "run_id": "R02-2-C",
+      "seconds": 71.412,
+      "usage": {
+        "input_tokens": 21305,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1293,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 3,
+        "feasibility": 4.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "O teste distingue propor de escolher, compara progresso com a versão inicial e controla parcialmente aprendizagem. Porém, áreas exclusivas e fichas pessoais repetem a mesma rota central: reservar a alguém o direito de autorizar ações. Paralelismo e experimentação ampliam a variedade. Reconhece escolhas nominais, mas explica pouco como o dominante pode dirigir desafios paralelos ou controlar os testes. A simplicidade favorece partidas curtas.",
+      "reframe": null,
+      "mechanism_families": [
+        "autoridade exclusiva sobre sistemas ou recursos",
+        "distribuição da carga de análise entre problemas simultâneos",
+        "experimentação com informação e progresso reaproveitáveis"
+      ],
+      "weighted": 3.675,
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "R02-2-A",
+      "seconds": 47.145,
+      "usage": {
+        "input_tokens": 10162,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1203,
+        "reasoning_output_tokens": 409
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Introduz uma rota relativamente distinta das demais respostas: retornos decrescentes para incentivar abordagens variadas. Reconhece corretamente que isso pode diversificar estratégias sem distribuir decisões, pois o dominante ainda pode calcular todas as combinações. O ensaio inicial também pode continuar sob seu comando. O teste das duas alternativas mais fortes mede autoria, confirmações e progresso contra a referência, com ordem alternada. Reservar um minuto para ensaios cabe no limite, mas reduz o tempo de execução.",
+      "reframe": null,
+      "mechanism_families": [
+        "autoridade exclusiva sobre recursos interdependentes",
+        "distribuição de atenção entre frentes simultâneas",
+        "retornos decrescentes que favorecem diversidade estratégica",
+        "ensaio gratuito que reduz barreiras para propor"
+      ],
+      "weighted": 4.075,
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "R02-2-D",
+      "seconds": 53.103,
+      "usage": {
+        "input_tokens": 19903,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1300,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 4,
+        "originality": 3.5,
+        "diversity": 3.5,
+        "feasibility": 4.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "A ficha de compromisso acrescenta alocação dinâmica de autoridade e limita tarefas assumidas simultaneamente. Contudo, aproxima-se tanto da autoridade por recurso quanto das frentes paralelas; o dominante ainda pode instruir todos sem assumir suas tarefas. Os protótipos são concretos e baratos. Há comparação explícita com a referência para rascunhos, mas não para recursos, e o número de propostas testadas não basta para comprovar decisões efetivamente distribuídas. Reconhece autorizações automáticas e delegação mecânica.",
+      "reframe": null,
+      "mechanism_families": [
+        "autoridade exclusiva sobre recursos",
+        "distribuição de atenção entre frentes simultâneas",
+        "simulação reversível que torna alternativas demonstráveis",
+        "autoridade temporária vinculada à capacidade de assumir tarefas"
+      ],
+      "weighted": 3.875,
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "R02-2-B",
+      "seconds": 54.095,
+      "usage": {
+        "input_tokens": 11597,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1118,
+        "reasoning_output_tokens": 344
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T17:32:48.446910+00:00",
+    "instruction_sha256": {
+      "C": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7",
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c",
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    "context_sha256": "7476ce2475d606bb5111a61f750e17a25091553bf14be2e4899f5d070d4a6b27",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "**Pedidos iguais não bastam para provar duplicidade.** A mesma pessoa pode comprar a mesma coisa duas vezes. Sem cadastro, a distinção precisa vir de uma evidência da compra ou de uma confirmação de intenção.\n\nQuatro mecanismos possíveis:\n\n| Mecanismo | Como distingue cópia de segunda compra | Condição e limite |\n|---|---|---|\n| **1. Número por pedido, atribuído na origem** | Cada ponto usa um prefixo e uma sequência em talão: `A-001`, `B-001` etc. Toda cópia conserva o número original; uma segunda compra recebe outro. Na planilha, número repetido indica reenvio do mesmo pedido. | Funciona sem identificar clientes. Se o mesmo número aparecer com conteúdos diferentes, tratar como conflito para conferir, sem excluir automaticamente. Não resolve uma duplicação que já tenha recebido dois números na origem. |\n| **2. Via física com poder de autorização** | Só uma via autoriza preparar ou entregar: papel de cor definida, com rubrica original. Fotocópias e transcrições servem apenas para consulta. Ao lançar o pedido, marcar a via autorizadora como “lançada”. Uma segunda compra exige outra via original. | A diferença está na posse e no estado do papel, sem depender de comparar nomes ou produtos. Exige que essa via acompanhe o fluxo até a conferência; perde eficácia se tudo chegar apenas como transcrição. |\n| **3. Evidência financeira independente** | Quando cada compra tem um pagamento separado, confrontar os pedidos suspeitos com os recebimentos: dois pedidos iguais com dois pagamentos sustentam duas compras; dois pedidos apoiados no mesmo pagamento sugerem cópia. | Só serve onde já existe registro de recebimentos. Pagamento conjunto, parcelamento ou compra fiada tornam o resultado inconclusivo. A ausência de um segundo pagamento não autoriza cancelar o pedido. |\n| **4. Confirmação de intenção no atendimento seguinte** | Pedidos semelhantes ficam sinalizados. Na retirada ou em outro contato já previsto, perguntar: “São duas compras ou este pedido substitui o anterior?”. Registrar a resposta junto aos pedidos envolvidos. | Resolve casos que os papéis não esclarecem, sem cadastro permanente. Depende de haver esse contato e de a pessoa conseguir reconhecer seus pedidos, por exemplo, apresentando a própria via. Até lá, o caso permanece pendente. |\n\n**Eu priorizaria o número na origem e a via autorizadora.** Ambos funcionam antes de reencontrar o comprador e dispensam pagamento antecipado. Podem ser usados juntos: o número identifica a transação; o papel marcado impede que ela seja lançada novamente.\n\n**Teste barato do número na origem:** fazer uma simulação com 24 pedidos distribuídos pelos seis pontos, incluindo quatro cópias e quatro segundas compras com conteúdo idêntico. Usar prefixos e números escritos à mão. Misturar tudo e conferir na planilha. Comparar com uma rodada sem numeração: contar cópias aceitas, compras legítimas descartadas, conflitos e minutos gastos. Aprovar se preservar todas as compras legítimas, detectar todas as cópias plantadas e couber nos 20 minutos.\n\n**Teste barato da via autorizadora:** repetir a simulação com papel colorido ou uma marca manual simples. Incluir cópias, uma via já marcada como lançada e uma transcrição sem original. Contar lançamentos indevidos, originais bloqueados e tempo. Se a via original se perder no transporte real ou não chegar à conferência, esse mecanismo deixa de ser uma boa escolha.\n\nEm qualquer opção, **sem evidência suficiente, sinalizar para conferência; nunca apagar apenas porque os pedidos se parecem.**",
+      "usage": {
+        "input_tokens": 19908,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1288,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-1-D",
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 58.798,
+      "prompt_sha256": "dd51bd2f0d1e2fad3d916d608b9f9451f93ca3a1641ae315670b7896f3905e24",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "A regra central é **identificar a compra, não o cliente**. Dois pedidos iguais podem ser legítimos; igualdade de nome, produtos, valor ou data deve gerar uma dúvida, nunca exclusão automática. Sem algum registro feito na origem, certos casos serão impossíveis de resolver depois.\n\nQuatro mecanismos possíveis, todos em papel e na planilha existente:\n\n1. **Número exclusivo por compra.** Cada ponto recebe um prefixo e uma sequência sem sobreposição: `A-0001`, `B-0001` etc. O número nasce quando a compra é confirmada e acompanha qualquer cópia ou transcrição. Uma segunda compra recebe outro número, mesmo com conteúdo idêntico. Na planilha, destacar números repetidos permite conferir rapidamente. Mesmo número com conteúdos diferentes indica erro a investigar; não autoriza apagar uma linha.\n\n2. **Registro independente de recebimentos.** Para pedidos pagos, cada pagamento deixa uma linha no fechamento de caixa: ponto, sequência do recebimento, valor e referência do pedido. Duas compras iguais devem corresponder a dois recebimentos distintos; duas vias vinculadas ao mesmo recebimento são indício de cópia. Valores iguais, sozinhos, não provam nada. Pagamentos conjuntos, parcelados e pedidos a prazo precisam ser sinalizados como exceções. Esse mecanismo confirma um evento financeiro, sem cadastrar compradores.\n\n3. **Original físico com canhoto retido.** Usar formulário de duas partes, com a mesma referência em ambas. O ponto guarda o canhoto e encaminha o original; reproduções recebem a inscrição “CÓPIA”. Uma segunda compra exige novo formulário e novo canhoto. Na dúvida, conferir os canhotos mostra se houve uma ou duas emissões. Isso ajuda especialmente quando a duplicação surge no transporte ou na digitação. Não basta confiar na aparência do papel: a evidência é a correspondência com o canhoto guardado.\n\n4. **Relação de compras confirmadas por lote.** Antes de despachar os papéis, cada ponto faz uma lista curta, com uma linha por compra efetivamente confirmada: referência, resumo e valor. Fecha o lote com quantidade de compras e total, e rubrica. Na conferência, duas folhas correspondentes à mesma linha representam uma emissão; duas linhas distintas sustentam duas compras. Diferentemente do canhoto individual, essa relação também revela reenvio de um lote inteiro. Só funciona se for registrada na origem, antes de misturar os pedidos.\n\n**Eu começaria pelo número exclusivo e pela relação por lote:** atendem também pedidos sem pagamento e permitem concentrar os 20 minutos nas exceções.\n\nTestes baratos:\n\n- **Número exclusivo:** simular 30 compras distribuídas pelos seis pontos. Incluir cinco pares de compras legítimas com conteúdo idêntico. Acrescentar seis cópias, preservando seus números, e embaralhar tudo. Uma pessoa confere pela planilha sem conhecer a montagem. Verificar se encontra as seis cópias, preserva todas as compras legítimas e quanto tempo leva.\n- **Relação por lote:** fazer seis pequenos lotes fictícios com suas listas. Reenviar um lote inteiro, duplicar duas folhas e incluir duas compras iguais registradas separadamente. Conferir apenas pelas relações. Medir acertos, dúvidas e duração, incluindo o tempo gasto nos pontos para preparar as listas.\n\nNa rotina, separar casos inconclusivos em uma coluna **“pendente de confirmação”**. A ausência de prova de segunda compra não é prova de duplicação.",
+      "usage": {
+        "input_tokens": 19438,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1250,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-1-A",
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 54.855,
+      "prompt_sha256": "f0102fd3163daf59925701c94e2e53ce5c2256a0234a18620f9741fa950b31eb",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "**Pedidos idênticos podem ser duas compras; pedidos diferentes podem ser versões do mesmo pedido.** Sem algum sinal registrado na origem, a planilha não consegue resolver essa ambiguidade depois. As quatro opções abaixo mudam esse sinal, sem cadastrar clientes.\n\n1. **Identificar o ato da compra com um número de talão.**  \n   Cada ponto usa um prefixo e talões previamente numerados: `P3-0042`. Toda cópia mantém o número; cada nova compra recebe outro, mesmo com produtos e valores iguais. Na planilha, número repetido indica o mesmo pedido; números diferentes indicam compras distintas. Se o mesmo número trouxer conteúdos diferentes, separar como conflito.  \n   **Benefício:** conferência rápida, sem depender de reconhecer compradores. **Limite:** exige não renumerar cópias nem reutilizar números.\n\n2. **Controlar a circulação do original físico.**  \n   Cada compra gera uma ficha original com uma pequena marca física do ponto, como um recorte na borda. Só esse original autoriza lançamento; depois de lançado, fica retido em um envelope “processados”. Fotocópias e transcrições servem apenas para consulta. Uma segunda compra produz outro original.  \n   **Benefício:** a retirada do documento de circulação impede que seja lançado novamente. **Limite:** depende do transporte e da guarda do papel; perder o original exige tratar uma exceção. A marca é um controle operacional, não uma garantia contra fraude.\n\n3. **Conservar a quantidade de compras em um fechamento independente.**  \n   No momento de aceitar cada compra, o atendente acrescenta um risco em uma folha que fica no ponto, agrupando cestas iguais. No fechamento, envia o total por cesta: por exemplo, “quatro compras de dois cafés”. Se chegarem seis papéis dessa cesta, a autorização continua sendo quatro compras; se chegarem três, falta um documento.  \n   **Benefício:** preserva compras legítimas iguais e detecta também pedidos desaparecidos. **Limite:** resolve a quantidade por grupo, mas não identifica quais papéis são cópias. Só funciona bem com poucas combinações ou produtos padronizados; o fechamento precisa ser registrado durante as vendas, sem contar os papéis misturados.\n\n4. **Transformar novas compras em acréscimos de um saldo acumulado.**  \n   Para compras sucessivas, entregar uma ficha anônima ao comprador. A primeira registra o total; compras seguintes atualizam esse total, com revisão e rubrica do ponto: “revisão 2: total autorizado, cinco unidades”. A central considera apenas a revisão mais recente, sem somar versões. Uma cópia antiga não aumenta a compra; um acréscimo legítimo aumenta o total autorizado.  \n   **Benefício:** distingue reenvio de aumento real pela mudança de estado do pedido. **Limite:** exige apresentar a ficha novamente e concentrar suas atualizações no mesmo ponto. Sem a ficha, abre-se uma compra independente.\n\n**Eu priorizaria os mecanismos 1 e 2**, porque funcionam com cestas variadas e exigem pouca comparação diária. São alternativas: um depende da identidade da transação; outro, da custódia do documento.\n\n- **Teste do talão:** simular 30 compras nos seis pontos, incluindo cinco pares de compras idênticas e dez cópias misturadas. Conferir na planilha. Aprovar se preservar as 30 compras, excluir as dez cópias e terminar em até 20 minutos.\n- **Teste do original:** repetir a simulação com fichas marcadas, cópias e reapresentação de cinco originais já processados. Aprovar se nenhum relançamento ocorrer e todos os originais novos forem aceitos. Se a guarda dos papéis falhar, descartar essa opção antes de adotá-la.",
+      "usage": {
+        "input_tokens": 21310,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1320,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-1-C",
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "C",
+      "seconds": 71.612,
+      "prompt_sha256": "94105d9cbe705eb1c9da84d92cc270125550bb7bbba110c9cafe2122e5a3f939",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "**Pedidos iguais não provam duplicidade.** Sem alguma evidência criada no momento da compra, duas cópias e duas compras idênticas podem ser indistinguíveis. A solução precisa registrar o **ato de comprar**, sem cadastrar o cliente.\n\nQuatro mecanismos possíveis — são alternativas, não quatro etapas obrigatórias:\n\n1. **Número próprio para cada compra**\n   \n   Cada ponto recebe um talão previamente numerado, com prefixo exclusivo: `P1-001`, `P2-001` etc. O número acompanha todas as vias e qualquer transcrição. Uma segunda compra recebe outro número, mesmo que os produtos sejam iguais.\n   \n   **Decisão:** mesmo número e conteúdo igual = cópia; números diferentes = compras distintas. Mesmo número com conteúdo diferente = pendência para conferir.\n   \n   **Benefício:** permite localizar repetições rapidamente na planilha. **Limite:** exige preservar o número nas retransmissões e nunca reutilizá-lo; cancelamentos permanecem registrados.\n\n2. **Lista fechada de vendas de cada ponto**\n   \n   Em vez de conferir papéis avulsos como se todos fossem pedidos novos, cada ponto registra cada compra uma única vez numa folha diária. Ao encerrar, risca as linhas vazias e informa o total de compras. Essa folha é a referência; os papéis misturados servem para detalhá-la.\n   \n   **Decisão:** duas compras iguais ocupam duas linhas. Várias cópias de um papel não criam linhas adicionais. Uma cópia repetida da folha também não constitui novo movimento.\n   \n   **Benefício:** muda a conferência de “quais papéis parecem iguais?” para “quais vendas constam na fonte?”. **Limite:** uma compra esquecida na folha vira pendência; correções precisam ser explícitas, sem substituir silenciosamente a versão fechada.\n\n3. **Ficha física consumível por compra**\n   \n   Cada venda recebe uma ficha de papel destacável, grampeada ao pedido original. Na conferência, a ficha é retirada e colada na folha do dia, autorizando uma inclusão. Uma segunda compra legítima traz outra ficha; fotocópias ou retranscrições chegam sem uma nova ficha física.\n   \n   **Benefício:** a distinção depende de um objeto que só pode ser entregue uma vez, sem digitação de códigos.\n   \n   **Limite:** funciona quando os originais circulam fisicamente. Ficha perdida exige esclarecimento. É controle contra repetição acidental, não proteção contra falsificação deliberada.\n\n4. **Vínculo com um pagamento independente — quando já houver pagamento no pedido**\n   \n   Cada pedido referencia o comprovante ou recibo daquela cobrança. Uma segunda compra precisa corresponder a outra cobrança; a reprodução do mesmo comprovante não autoriza nova inclusão.\n   \n   **Benefício:** usa um acontecimento independente do papel do pedido como confirmação.\n   \n   **Limite:** só serve onde essa cobrança já existe. Pagamento conjunto, compra a prazo ou complemento de pagamento exigem tratamento separado. Não vale introduzir cobrança antecipada apenas para viabilizar o mecanismo.\n\n**Eu priorizaria os mecanismos 1 e 2**, pela facilidade de conferência e por não dependerem de pagamento ou transporte de fichas.\n\nTestes baratos:\n\n- **Talões numerados:** durante três dias, usar numeração manual nos seis pontos. Num lote de teste separado, inserir cópias, duas compras legítimas idênticas e um número com conteúdos conflitantes. Aprovar se nenhuma compra legítima for eliminada, as cópias forem identificadas e a conferência diária couber em 20 minutos.\n- **Lista fechada:** testar por três dias em dois pontos. Repetir alguns papéis e uma folha inteira no lote de teste; incluir duas compras iguais em linhas diferentes. Conferir se cada linha é contabilizada uma vez, preservando ambas as compras, e medir o tempo.\n\nEm qualquer alternativa, evidência ausente deve gerar **pendência**, nunca exclusão automática por semelhança.",
+      "usage": {
+        "input_tokens": 20873,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1291,
+        "reasoning_output_tokens": 455
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-1-B",
+      "case_id": "R01",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 74.326,
+      "prompt_sha256": "d72d857113537f4800f6338aa2aff6d5c74eb8da187ea6d026b1207c57bd341d",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "**Pedidos iguais não provam duplicação.** Duas compras legítimas podem ter os mesmos itens, valores e horário. É preciso preservar algum sinal da compra ou da origem; sem isso, certos casos ficam indeterminados.\n\nAs quatro opções abaixo são alternativas, com exigências e limites diferentes.\n\n1. **Numerar a compra, preservando o número nas cópias.**  \nCada ponto recebe um prefixo, de A a F, e um bloco de números sequenciais. Ao registrar uma compra, escreve, por exemplo, `C-0142`. Toda retranscrição ou reenvio mantém esse código; uma segunda compra recebe outro, mesmo que seja idêntica. Na planilha, códigos repetidos entram na fila de conferência.  \n**Benefício:** comparação rápida, sem identificar clientes. **Limite:** exige disciplina para nunca dar número novo a uma cópia; códigos iguais com conteúdos diferentes precisam de conferência.\n\n2. **Usar um comprovante físico consumível por compra.**  \nCada compra recebe uma pequena etiqueta de um rolo controlado pelo ponto, aplicada ao pedido original. Só pedidos com etiqueta física seguem para lançamento; fotocópias e transcrições servem como apoio. Depois de lançado, o original é carimbado e arquivado. Uma segunda compra legítima precisa de outra etiqueta.  \n**Benefício:** a autorização está no objeto físico, dispensando comparação de nomes ou conteúdo. **Limite:** requer transporte dos originais, controle das etiquetas e tratamento separado para perdas. Não funciona se a conferência receber apenas fotografias.\n\n3. **Vincular cada compra ao registro de um pagamento separado.**  \nSe o pagamento acontece no pedido, anotar a referência do comprovante ou do recibo de caixa. Reenvios mantêm a referência; outra compra tem outra cobrança. Em dinheiro, vale um recibo simples emitido no recebimento.  \n**Benefício:** usa um acontecimento independente para comprovar a segunda compra. **Limite:** só serve onde cada compra tem pagamento separado. Pagamentos agrupados, compras a prazo e complementos de pagamento exigem exceção; uma segunda cobrança isoladamente não comprova outro pedido.\n\n4. **Conferir por remessas fechadas de cada ponto.**  \nCada ponto entrega uma folha diária com uma linha por compra e quantidade total de linhas, identificada por ponto e data. A planilha registra quais remessas já foram lançadas. Um reenvio da mesma folha não gera novas compras; duas linhas iguais na folha original representam duas compras registradas. Acréscimos seguem em suplemento identificado, sem substituir a folha anterior.  \n**Benefício:** reduz a conferência a seis remessas e eventuais suplementos, compatível com pouco tempo diário. **Limite:** evita duplicação no transporte e lançamento; não detecta uma compra já copiada duas vezes na folha de origem.\n\nEu priorizaria **1 e 4**, combinados se possível: identificação por compra e controle da entrada das remessas.\n\n**Testes baratos:**\n\n- **Numeração:** durante três dias, usar papel e a planilha atual. Inserir cópias de teste e registrar pares de compras realmente distintas com conteúdo igual. Verificar se todas as cópias são sinalizadas, se nenhuma segunda compra é descartada e se a conferência cabe nos 20 minutos.\n- **Remessas:** simular um dia dos seis pontos, incluindo uma folha reenviada, duas compras iguais e um suplemento. Outra pessoa confere sem conhecer a montagem. Comparar o resultado com o gabarito e cronometrar.\n\nPedidos antigos sem esses sinais devem ficar como **“a confirmar”**, nunca ser excluídos apenas por parecerem iguais.",
+      "usage": {
+        "input_tokens": 11602,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1287,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-2-B",
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 66.422,
+      "prompt_sha256": "d72d857113537f4800f6338aa2aff6d5c74eb8da187ea6d026b1207c57bd341d",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "**O que precisa ser identificado é o ato de comprar, não o cliente.** Duas compras podem ter produtos, quantidades e valores idênticos. Sem alguma evidência criada na origem, esses casos podem ser indistinguíveis.\n\nOs quatro mecanismos abaixo usam apenas papel e a planilha existente. São alternativas; não é necessário adotar todos.\n\n| Mecanismo | Como separa cópia de nova compra | Benefício e limite |\n|---|---|---|\n| **1. Número por compra, com prefixo do ponto** | Cada ponto recebe um bloco com sequência própria: `A-001`, `B-001` etc. O número nasce quando a compra é feita e acompanha qualquer reenvio. Mesmo número indica o mesmo pedido; uma segunda compra recebe outro número, mesmo sendo idêntica. | Permite agrupar rapidamente na planilha. Depende de preservar o número nos reenvios e não reutilizá-lo. Mesmo número com conteúdo diferente exige conferência, pois pode ser correção ou erro. |\n| **2. Contagem independente na origem** | Cada ponto mantém uma folha de controle, separada dos pedidos enviados. Para cada combinação de produtos e quantidades, faz um traço a cada compra efetivamente realizada. Se chegam três registros iguais, mas há dois traços, devem ser considerados dois pedidos. | Recupera a quantidade legítima mesmo quando os registros chegam sem identificador. A folha precisa ser marcada no atendimento, nunca reconstruída a partir dos envios. Pode não revelar qual versão está correta se os conteúdos divergirem. |\n| **3. Vale físico entregue com cada compra** | No atendimento, anexa-se ao pedido um pequeno vale de papel original, com marca manual atravessando vale e pedido. Só o conjunto físico completo autoriza o processamento; uma segunda compra recebe outro vale. Fotos e fotocópias servem apenas como aviso. | Usa a circulação do papel como prova, dispensando identificação do comprador. Só funciona se os originais puderem chegar à conferência; perda do vale gera pendência. Uma simples imagem do vale não vale como prova. |\n| **4. Confirmação de quantidade no encontro seguinte** | Registros iguais ficam agrupados como pendentes. Na retirada, entrega ou próxima visita, pergunta-se: “Há dois pedidos iguais registrados. Você fez uma compra ou duas?”. A resposta determina quantos serão processados. | Resolve pela intenção do comprador, sem cadastro ou telefone. Depende de haver esse encontro antes de uma etapa irreversível e pode atrasar a separação. Sem confirmação, permanece uma dúvida — não uma duplicata comprovada. |\n\n**Eu começaria pelo número por compra e pela contagem independente.** O primeiro facilita a rotina; o segundo permite conferir quantas compras realmente aconteceram quando o número falta ou foi preenchido errado.\n\nTestes baratos para os dois:\n\n- **Numeração:** durante três dias, usar blocos feitos à mão nos seis pontos. Em um lote de teste separado da operação, misturar reenvios com o mesmo número e segundas compras idênticas com números diferentes. Cronometrar a conferência. Revisar o método se alguma segunda compra for eliminada, se números forem reutilizados ou se a rotina ultrapassar os 20 minutos.\n- **Contagem independente:** por dois dias, registrar os traços em paralelo, sem alterar o processamento habitual. Depois, montar um lote de teste com cópias extras e compras idênticas legítimas. Verificar se a folha recupera a quantidade correta dentro do tempo disponível. Abandonar como controle principal se os traços forem esquecidos ou preenchidos retrospectivamente.\n\nNão eliminaria pedidos apenas por coincidência de conteúdo ou proximidade de horário: esses sinais localizam dúvidas, mas não comprovam cópia.",
+      "usage": {
+        "input_tokens": 21310,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1284,
+        "reasoning_output_tokens": 499
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-2-C",
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "C",
+      "seconds": 99.436,
+      "prompt_sha256": "94105d9cbe705eb1c9da84d92cc270125550bb7bbba110c9cafe2122e5a3f939",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "**Pedidos iguais não provam duplicação.** Sem registrar algum vestígio da compra na origem, duas compras idênticas e uma cópia podem ser indistinguíveis. A solução precisa identificar o ato de comprar, conferir sua quantidade ou confirmar a intenção — sem cadastrar clientes.\n\nQuatro mecanismos diferentes:\n\n1. **Número por compra, preservado nos reenvios.**  \n   Cada ponto recebe um prefixo, de A a F, e um bloco de pedidos numerados. Uma compra nova ganha um número novo; cópia, reenvio ou correção mantém o número original. Na planilha, número repetido indica o mesmo pedido; conteúdo igual com números diferentes indica duas compras. Se o mesmo número aparecer com conteúdos diferentes, separar como possível correção.  \n   **Dependência:** quem atende precisa preservar o número ao reenviar.\n\n2. **Contagem independente de compras por composição do pedido.**  \n   Cada ponto mantém uma folha diária: para cada combinação exata de produtos e quantidades, faz um traço a cada compra efetivamente recebida. Reenvios não acrescentam traços. A folha segue junto ao transporte habitual dos pedidos. Se chegarem cinco pedidos iguais daquele ponto e dia, mas houver três traços, existem três compras e dois documentos excedentes.  \n   **Vantagem:** permite acertar a quantidade a atender mesmo sem descobrir qual papel é a cópia. **Limite:** combinações muito variadas aumentam o trabalho; erros na contagem exigem confirmação.\n\n3. **Via física que autoriza atendimento.**  \n   Usar formulário de duas vias: somente a via de papel de cor definida, com assinatura de quem recebeu a compra, autoriza atendimento. A outra fica no ponto e traz “arquivo — não atender”. Ao conferir, a central retém a via autorizadora em um envelope “lançados”. Duas compras iguais produzem duas vias autorizadoras; uma reprodução comum não produz outra.  \n   **Dependência:** circulação predominantemente em papel e disciplina para não emitir outra via autorizadora num reenvio. Perda do original vira exceção, sem atendimento automático.\n\n4. **Confirmação de intenção para casos ambíguos.**  \n   Pedidos suspeitos ficam pendentes e voltam ao ponto de origem, pelo fluxo habitual, com uma pergunta objetiva: “São duas compras independentes ou houve reenvio?”. O responsável consulta o registro local ou confirma com quem comprou e devolve “atender uma” ou “atender duas”, com rubrica. Sem confirmação, permanece pendente.  \n   **Vantagem:** funciona como recuperação quando faltam números ou documentos. **Limite:** pode atrasar o atendimento; não deve depender apenas da memória do atendente.\n\n**Eu começaria pelo número por compra e pela contagem independente.** O primeiro resolve cada ocorrência; o segundo verifica quantas compras existiram e pode revelar erros de numeração.\n\nTestes baratos:\n\n- **Numeração:** por três dias, dois pontos usam blocos prefixados. Em uma conferência separada do atendimento real, misturar cópias conhecidas e pares de compras legítimas idênticas. Comparar com a conferência atual: contar cópias aceitas, compras legítimas descartadas e minutos gastos. Só ampliar se não houver descarte indevido, todas as cópias inseridas forem identificadas e a projeção para seis pontos couber nos 20 minutos.\n- **Contagem:** durante três dias, nesses mesmos pontos, registrar os traços e comparar o total de compras por composição com os papéis recebidos. Medir tempo de preenchimento, tempo central e divergências. Se a variedade tornar a contagem lenta ou imprecisa, preferir a numeração como rotina e a confirmação como tratamento das exceções.",
+      "usage": {
+        "input_tokens": 19908,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1615,
+        "reasoning_output_tokens": 828
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-2-D",
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 58.054,
+      "prompt_sha256": "dd51bd2f0d1e2fad3d916d608b9f9451f93ca3a1641ae315670b7896f3905e24",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "A regra central é: **identificar a compra, não o cliente**. Duas compras podem ter itens, valores e horários iguais. Essa semelhança deve gerar uma dúvida, nunca uma exclusão automática.\n\nQuatro mecanismos possíveis, baseados em evidências diferentes:\n\n**1. Número exclusivo por compra — identidade da transação**  \nCada ponto usa talões previamente numerados, com prefixos de A a F: `A-000123`, por exemplo. A numeração não reinicia enquanto houver pedidos antigos circulando. Toda cópia mantém o número original; cada nova compra recebe outro número, mesmo que seja idêntica à anterior.\n\nNa planilha, número repetido indica possível cópia. Se os conteúdos divergirem, é preciso conferir se houve correção ou erro de preenchimento. Números diferentes permitem reconhecer duas compras legítimas sem cadastrar ninguém.\n\n**2. Comprovante independente — evidência de pagamento**  \nQuando houver pagamento ou sinal no pedido, registrar a referência de um recibo numerado emitido no caixa, separadamente do formulário. Dois formulários ligados ao mesmo recebimento podem ser cópias; dois recebimentos distintos sustentam a existência de duas compras.\n\nÉ uma confirmação auxiliar: pagamento parcelado, uma quitação conjunta ou pedidos ainda não pagos exigem conferência. Não convém criar uma cobrança apenas para obter essa evidência.\n\n**3. Declaração explícita — intenção de comprar novamente**  \nNo formulário, incluir três opções: “nova compra”, “compra adicional” e “correção/reenvio”. Ao receber um pedido aparentemente repetido, o atendente pergunta: “Este pedido deve ser somado ao anterior ou substituí-lo?”. Marca a resposta e rubrica. Se o comprador tiver o número anterior, registra-o; isso não é obrigatório.\n\nO mecanismo distingue intenção, especialmente quando alguém preenche outro formulário porque perdeu a primeira via. A limitação é depender da resposta e do preenchimento correto.\n\n**4. Controle de remessa — procedência do papel**  \nCada ponto envia os originais em envelope identificado por ponto e remessa, com quantidade de pedidos. Uma lista simples registra os números enviados. Na planilha, cada entrada recebe a remessa de origem; o envelope é marcado como “lançado” após a digitação.\n\nIsso permite descobrir que o mesmo conjunto foi entregue ou digitado novamente. Uma segunda compra aparece como outro original na lista. Esse controle detecta repetição no transporte e lançamento; sozinho, não resolve um pedido preenchido duas vezes na origem.\n\n**Os dois melhores para começar são 1 e 4:** funcionam sem pagamento antecipado e deixam rastros simples para a conferência.\n\n- **Teste barato do número exclusivo:** montar 18 pedidos fictícios, três por ponto. Acrescentar seis cópias e quatro segundas compras com conteúdo idêntico, mas números novos. Misturar tudo e pedir a uma pessoa que confira pela planilha. Critério: localizar as seis cópias sem eliminar nenhuma das quatro compras adicionais. Medir o tempo.\n- **Teste barato da remessa:** preparar três envelopes fictícios com listas e quantidades. Reapresentar uma remessa já lançada e colocar, em outra, uma compra legítima igual a uma anterior. Critério: perceber a remessa repetida antes de redigitá-la e aceitar a compra com outro original e número.\n\nNa rotina de 20 minutos, ordenar a planilha por número, conferir as remessas e investigar apenas exceções. **Casos duvidosos ficam sinalizados, sem apagar registros**, até confirmação pelo ponto de origem.",
+      "usage": {
+        "input_tokens": 19438,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1183,
+        "reasoning_output_tokens": 437
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R01-2-A",
+      "case_id": "R01",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 64.697,
+      "prompt_sha256": "f0102fd3163daf59925701c94e2e53ce5c2256a0234a18620f9741fa950b31eb",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu combinaria **trabalho simultâneo com autoridade distribuída**: dar a cada pessoa decisões que produzam efeitos, mantendo a conversa livre. Assumo que o jogo permite adaptar ações e componentes.\n\n**1. Frentes simultâneas com oportunidades sobrepostas**\n\nO problema comum aparece em quatro áreas abertas da mesa. Pequenas oportunidades surgem em áreas diferentes e permanecem disponíveis por alguns segundos. Qualquer pessoa pode agir em qualquer área; ninguém precisa esperar sua vez. As ações alimentam o mesmo objetivo.\n\n**Novo incentivo:** acompanhar uma frente e resolver problemas passa a ajudar mais do que aguardar instruções. Quem joga melhor ainda pode orientar, mas centralizar tudo exige acompanhar várias situações que mudam enquanto fala.\n\n**Cuidado:** a pressão deve permitir escolhas simples, sem transformar velocidade motora em vantagem decisiva. Não há penalidade por conversar; o relógio de 15 minutos continua sendo o limite comum.\n\n**2. Recursos sob responsabilidade pessoal**\n\nCada pessoa recebe um recurso diferente — por exemplo, energia, ferramentas, transporte e informação —, todos visíveis. Somente quem cuida daquele recurso pode comprometê-lo, mas pode fazê-lo a qualquer momento. Cada gasto oferece duas aplicações úteis: resolver uma necessidade atual ou preparar uma oportunidade futura. Os recursos se renovam por acontecimentos do jogo, sem pontos pessoais.\n\n**Novo incentivo:** cada participante precisa avaliar o custo de oportunidade do próprio estoque. Para quem costuma comandar, torna-se vantajoso pedir contribuições e explicar necessidades; para os demais, oferecer uma solução passa a ser uma ação concreta.\n\n**Cuidado:** entregar a alguém apenas um botão de “autorizar” preservaria a centralização. A pessoa precisa escolher **como** contribuir, com consequências diferentes.\n\n**3. Planos montados por contribuições complementares**\n\nUma ação coletiva nasce da combinação de peças: destino, caminho, equipamento e efeito adicional. Cada pessoa mantém uma pequena oferta pública de peças e pode encaixar ou substituir as suas livremente até a execução. Existem várias combinações viáveis, com benefícios distintos; nenhuma peça isolada determina o plano inteiro.\n\n**Novo incentivo:** observar o que os outros construíram e acrescentar algo compatível vale mais do que anunciar uma solução completa. A participação modifica materialmente o plano.\n\n**Cuidado:** não exigir quatro contribuições para toda ação, pois isso criaria uma sequência obrigatória disfarçada. Duas ou três peças já devem permitir agir; as demais ampliam possibilidades.\n\n**4. Experimentos baratos que abrem escolhas**\n\nAlgumas ações permitem testar uma rota, máquina ou hipótese com custo pequeno e resultado imediato. Qualquer pessoa pode iniciar um teste disponível. O resultado acrescenta uma possibilidade pública ao jogo, sem comprometer toda a equipe; depois, o grupo pode aproveitá-la ou seguir outro caminho.\n\n**Novo incentivo:** participantes menos experientes conseguem contribuir descobrindo possibilidades, sem precisar defender antecipadamente a melhor estratégia. Quem domina o jogo também ganha motivos para incorporar descobertas alheias.\n\n**Cuidado:** os testes precisam revelar diferenças relevantes, não apenas resultados aleatórios que o especialista interpreta sozinho.\n\n**Testes com papel para as duas alternativas mais fortes**\n\n- **Frentes simultâneas:** desenhe quatro áreas, prepare oportunidades em cartões e faça uma partida de 15 minutos. Compare com uma partida equivalente sem sobreposição. Registre quem iniciou cada decisão efetivamente executada, quantas dependeram de instrução e o progresso comum. A proposta enfraquece se apenas aumentar a correria e os erros.\n- **Recursos pessoais:** use quatro tipos de fichas, com duas aplicações por tipo. Compare recursos centralizados e recursos sob responsabilidade pessoal, invertendo a ordem entre grupos. Observe quem propõe os gastos e quem altera propostas. A proposta falha se os participantes apenas entregarem fichas conforme ordens.\n\nDistribuir componentes não garante autonomia; o sinal relevante é **mais pessoas originarem decisões que chegam ao tabuleiro**.",
+      "usage": {
+        "input_tokens": 20868,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1186,
+        "reasoning_output_tokens": 378
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-1-B",
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 45.865,
+      "prompt_sha256": "165430a7d84b278faee72c6778775b5cf485ebe8015700cb61ba5c4ece03812a",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Para distribuir decisões, é preciso distribuir **poder de agir**, além de espaço para falar. As quatro alternativas abaixo mantêm a vitória coletiva e os 15 minutos, com regras públicas, conversa livre e sem votação ou sequência obrigatória entre participantes.\n\n**1. Áreas de responsabilidade com autoridade local**\n\nDivida o tabuleiro em quatro áreas públicas. Cada pessoa pode executar ações na sua área a qualquer momento; as conexões entre áreas afetam o objetivo comum. A responsabilidade muda quando ocorre um evento do jogo, sem criar turnos individuais.\n\n**Novo incentivo:** quem costuma comandar precisa oferecer informações úteis às outras pessoas, pois não pode executar as decisões delas. Cada responsável ganha motivo para acompanhar sua área e coordenar suas consequências. Evite transformar uma área em “central de comando”, com poder sobre todas as demais.\n\n**2. Planos simultâneos com autoria preservada**\n\nEm duas ou três janelas curtas durante a partida, todas as pessoas podem preparar simultaneamente uma ação usando cartas. Revelam os planos juntas, conversam e ajustam as combinações; somente quem preparou uma ação pode alterá-la ou confirmá-la. Passar é permitido, e os efeitos são resolvidos juntos.\n\n**Novo incentivo:** cada pessoa formula uma proposta antes de conhecer a solução de quem joga melhor. A conversa passa a conectar planos já existentes. Para funcionar, as cartas devem permitir várias combinações viáveis, evitando uma única resposta obviamente correta.\n\n**3. Recursos complementares sob controle pessoal**\n\nCada pessoa controla publicamente um recurso diferente — energia, transporte, ferramentas ou informação, por exemplo. Ações relevantes combinam recursos de duas pessoas, que decidem quanto disponibilizar. Recursos se renovam por acontecimentos coletivos, e guardar tudo compromete oportunidades futuras.\n\n**Novo incentivo:** uma boa ideia precisa ser construída com quem conhece e controla os recursos necessários. O grupo ganha ao negociar combinações, em vez de apenas obedecer a uma ordem. Calibre os custos para evitar que um recurso vire um veto permanente sobre toda a partida.\n\n**4. Iniciativas autônomas de baixo custo**\n\nCada pessoa recebe uma ficha pública de iniciativa. Pode gastá-la a qualquer momento para executar uma pequena ação reversível: explorar uma rota, testar uma máquina ou reposicionar uma peça. Essas experiências revelam informações úteis ao objetivo comum, sem consumir recursos essenciais.\n\n**Novo incentivo:** experimentar passa a valer mais do que esperar autorização. Quem tem menos experiência consegue produzir evidência que influencia o plano coletivo. As fichas são permissões para agir, não votos; ninguém precisa gastá-las.\n\n**Teste com papel das duas alternativas mais fortes**\n\nEu começaria por **áreas de responsabilidade** e **planos simultâneos**, porque mudam diretamente quem pode concluir uma decisão.\n\nFaça três partidas de 15 minutos: uma com as regras atuais e uma com cada alternativa. Use desafios de dificuldade semelhante. Para áreas, desenhe quatro regiões conectadas; para planos, faça cartas de ação e marque três janelas no cronômetro, incluídas nos 15 minutos.\n\nRegistre:\n\n- Quem propôs e quem confirmou cada decisão relevante.\n- Quantas decisões cada pessoa executou com autonomia.\n- Progresso coletivo e tempo gasto coordenando.\n\nAo final, cada pessoa responde individualmente: “Minhas escolhas mudaram a partida?” e “Consegui discordar sem travar o grupo?”.\n\nPrefira a alternativa que distribua decisões com consequência, preserve o desempenho coletivo e caiba nos 15 minutos. Se apenas distribuir a execução de ordens, ainda precisa de ajuste.",
+      "usage": {
+        "input_tokens": 19433,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1056,
+        "reasoning_output_tokens": 324
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-1-A",
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 56.111,
+      "prompt_sha256": "d168fafbb7104a844b1839ec7e3804b7e1bbdf804668647b105e5a6b1132fb74",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu testaria primeiro **recursos com autonomia** e **frentes simultâneas**: o primeiro distribui autoridade; o segundo torna útil dividir a atenção. As quatro opções mantêm o objetivo coletivo e cabem nos mesmos 15 minutos, substituindo regras existentes.\n\n1. **Recursos pessoais, resultado coletivo.** Divida um recurso necessário entre quatro reservas públicas. Todos podem sugerir usos, mas cada pessoa controla a própria reserva e pode gastá-la a qualquer momento, sem sequência obrigatória. Ninguém precisa agir para a partida avançar; reservas não gastas continuam úteis na pontuação comum.\n\n   **Novo incentivo:** quem costuma comandar precisa apresentar razões que convençam os demais. Para cada participante, gastar passa a ser uma escolha com consequência real. Evite exigir contribuições de todos para cada ação: isso criaria uma aprovação coletiva disfarçada.\n\n2. **Frentes simultâneas com oportunidades curtas.** Disponha desafios em quatro áreas abertas. As oportunidades aparecem e expiram simultaneamente, dentro do relógio já existente. Qualquer pessoa pode atuar em qualquer área; ninguém recebe uma função fixa. Calibre o volume para que uma pessoa consiga acompanhar bem uma ou duas áreas, mas não todas.\n\n   **Novo incentivo:** o grupo ganha ao confiar em decisões locais, pois centralizar cada detalhe consome oportunidades. Conversar continua livre; a necessidade de distribuir atenção vem do tabuleiro. O risco é trocar concentração de poder por confusão, então cada decisão local deve ser simples.\n\n3. **Protótipos antes do compromisso.** Antes de uma decisão cara, qualquer participante pode montar uma alternativa em uma pequena área de ensaio. Uma tabela pública revela parte de suas consequências, sem consumir o recurso principal. Limite a dois ensaios simultâneos e faça cada um durar poucos segundos.\n\n   **Novo incentivo:** uma ideia de alguém menos experiente pode ganhar espaço por demonstrar resultado, sem precisar vencer uma discussão. Quem joga melhor ganha ao investigar as propostas dos outros. O ensaio precisa revelar informação útil sem resolver tudo; caso contrário, vira trabalho mecânico.\n\n4. **Direito de revisão com execução garantida.** Cada pessoa recebe uma ficha pública que permite reabrir uma decisão ainda reversível e executar uma alternativa legal por uma etapa curta. Depois, o grupo pode manter ou desfazer o caminho, pagando apenas os custos normais do jogo. Usar a ficha é opcional e não exige votação.\n\n   **Novo incentivo:** discordar deixa de depender de obter espaço na conversa. A contribuição ganha uma demonstração concreta. Restrinja a revisão a ações reversíveis para que experimentar não ameace desproporcionalmente a vitória comum.\n\n**Teste com papel para as duas primeiras**\n\nFaça versões com cartões, quatro montes de fichas e um cronômetro. Compare partidas de 15 minutos da regra atual com partidas de cada alternativa, usando desafios equivalentes. Alterne a ordem entre grupos para reduzir o efeito de aprendizagem.\n\nUma pessoa observadora registra:\n\n- Quem originou cada decisão relevante efetivamente executada.\n- Quantas decisões foram apenas instruções da pessoa mais experiente.\n- Progresso coletivo e períodos de paralisação.\n- Ao final, quantas pessoas conseguem apontar uma escolha própria que mudou a partida.\n\nComo critério inicial, procure decisões originadas por pelo menos três participantes, redução da concentração em relação à regra atual e progresso coletivo semelhante. **Mover fichas seguindo ordens não conta como decidir.**\n\nSe a autonomia distribuir apenas a execução, fortaleça as escolhas oferecidas a cada reserva. Se a simultaneidade aumentar erros e confusão sem distribuir autoria, reduza a complexidade local antes de aumentar a pressão. Nenhuma regra garante autonomia se o grupo continuar tratando sugestões como ordens; o teste precisa observar isso.",
+      "usage": {
+        "input_tokens": 19903,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1154,
+        "reasoning_output_tokens": 374
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-1-D",
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 94.165,
+      "prompt_sha256": "da3014575f3940872eaf8d6226287e468d54540bf313c9f20ee9c4f930b2655a",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "**Distribuir ações não basta: cada pessoa precisa controlar uma escolha que faça diferença.** As quatro opções abaixo mantêm a vitória coletiva e os 15 minutos; permitem conversar livremente e não exigem votação, papéis secretos ou uma sequência de turnos individuais.\n\n1. **Frentes simultâneas com prazos sobrepostos.**  \n   Em alguns momentos, surgem três ou quatro problemas públicos em regiões diferentes do tabuleiro, com cerca de 30 segundos para resolvê-los. Qualquer pessoa pode atuar em qualquer frente; ninguém recebe uma região fixa. As consequências alimentam o mesmo objetivo coletivo.  \n   **Novo incentivo:** concentrar toda a análise na pessoa mais experiente passa a custar oportunidades. Torna-se útil confiar em decisões locais e comunicar apenas o essencial.  \n   **Limite:** exige problemas simples de ler; caso contrário, distribui confusão. Os prazos devem continuar viáveis para quem precisa de mais tempo para manipular componentes.\n\n2. **Recursos pessoais com autoridade de gasto.**  \n   Divida uma pequena reserva de recursos entre as quatro pessoas. Tudo fica visível, mas somente o proprietário pode gastar suas fichas, a qualquer momento, em diferentes necessidades do grupo. Não há transferências nem obrigação de gastar. Preserve aproximadamente a quantidade total de recursos do jogo.  \n   **Novo incentivo:** pedir ajuda passa a significar explicar a necessidade e negociar prioridades; a decisão final permanece com quem assume o gasto.  \n   **Limite:** uma pessoa ainda pode seguir todas as recomendações do especialista. As opções de gasto precisam ter vantagens concorrentes, sem uma resposta sempre evidente.\n\n3. **Planos públicos que já ficam prontos para execução.**  \n   Cada pessoa pode colocar e alterar livremente um marcador indicando uma ação futura. Em pulsos breves do relógio, todos os planos válidos são executados juntos; deixar o espaço vazio também é permitido. Os planos permanecem visíveis durante toda a preparação.  \n   **Novo incentivo:** apresentar uma intenção concreta fica mais fácil do que disputar a palavra. O especialista precisa considerar planos que outras pessoas já começaram a construir, em vez de sempre inaugurar a discussão.  \n   **Limite:** pode haver conformidade, com todos esperando sua orientação. O mecanismo funciona melhor quando os planos têm efeitos combináveis e podem ser corrigidos sem grande custo.\n\n4. **Eficiências públicas que mudam durante a partida.**  \n   Todas as pessoas podem executar qualquer ação, mas recebem descontos diferentes e visíveis. Esses descontos mudam conforme acontecimentos do tabuleiro: resolver uma emergência pode tornar aquela pessoa mais eficiente em exploração, por exemplo. Não existem funções fixas.  \n   **Novo incentivo:** distribuir iniciativas economiza recursos coletivos; quem percebe uma oportunidade ligada à sua eficiência tem motivo para propô-la e executá-la.  \n   **Limite:** o especialista ainda pode calcular tudo. Use poucos descontos, fáceis de reconhecer, para que consultar cada pessoa seja mais rápido que centralizar os cálculos.\n\n**Eu começaria testando as duas primeiras**, pois alteram diretamente a capacidade de centralização.\n\n- **Teste das frentes:** desenhe quatro regiões e prepare problemas em cartões. Faça uma partida de referência e outra com problemas sobrepostos, ambas de 15 minutos e dificuldade semelhante. Uma pessoa observadora registra quem propôs a solução efetivamente usada. Revise se a participação continuar concentrada ou se aumentarem apenas erros e pressa.\n- **Teste dos recursos:** use feijões como reserva coletiva na referência e como reservas pessoais na variante. Registre quem definiu cada gasto e quantas solicitações foram discutidas ou modificadas pelo proprietário. Abandone ou ajuste se aparecer apenas “mande que eu pago”, retenção excessiva ou tempo ocioso.\n\nO sinal procurado é **mais decisões originadas por diferentes pessoas, com desempenho e compreensão preservados** — não apenas mais mãos movimentando peças.",
+      "usage": {
+        "input_tokens": 12034,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1323,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-1-C",
+      "case_id": "R02",
+      "repetition": 1,
+      "condition": "C",
+      "seconds": 70.982,
+      "prompt_sha256": "16481427f3e70a7ab56051aac0b3ca6220160c1cc8ec4c25ba172dde2fc1aca9",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "As quatro alternativas mantêm a vitória coletiva e o limite de 15 minutos. Conversar e aconselhar continuam livres; ninguém precisa agir em uma ordem fixa. A mudança deve distribuir escolhas relevantes, não apenas quem movimenta as peças.\n\n**1. Autoridade por área, com consequências cruzadas**\n\nDivida o tabuleiro em quatro áreas públicas, cada uma sob responsabilidade de uma pessoa. Só ela confirma intervenções naquela área, mas pode fazê-las a qualquer momento. As áreas precisam umas das outras: produzir energia em uma pode permitir um resgate em outra.\n\n**Novo incentivo:** quem conhece melhor o jogo passa a negociar necessidades e oferecer ajuda; as outras pessoas têm decisões próprias com efeito sobre a vitória.  \n**Limite:** se houver uma solução obviamente superior em cada área, a pessoa experiente ainda poderá ditar tudo. Cada área precisa oferecer escolhas entre benefícios diferentes, sem resposta automática.\n\n**2. Planos simultâneos com recursos pessoais variáveis**\n\nEm pequenas janelas de planejamento, todos podem preparar uma ação, revelada simultaneamente com as demais. Cada pessoa recebe cartas de recursos ou possibilidades diferentes a cada janela. Essas mãos são privadas, mas podem ser descritas livremente; não existem identidades ou objetivos secretos. Passar é permitido.\n\n**Novo incentivo:** conhecer a própria mão e antecipar os colegas torna a contribuição individual útil. Centralizar tudo exige reunir e processar quatro conjuntos de possibilidades dentro dos mesmos 15 minutos.  \n**Limite:** combinações muito delicadas podem transformar a conversa em uma sessão de ditado. As ações devem tolerar sobreposição e oferecer alternativas de valor parecido.\n\n**3. Oportunidades em paralelo**\n\nAbra oportunidades em diferentes pontos do tabuleiro, com prazos sobrepostos: um transporte disponível, uma passagem temporária, uma máquina pronta. Qualquer pessoa pode assumir e resolver uma oportunidade ainda livre, sem esperar pelas demais. Nenhuma é obrigatória individualmente.\n\n**Novo incentivo:** perceber e aproveitar algo por iniciativa própria ajuda o grupo; esperar sempre pela análise da pessoa experiente deixa oportunidades escaparem.  \n**Limite:** isso pode favorecer quem reage mais rápido. Use oportunidades que exijam observar aspectos diferentes, com prazos suficientes para compreender e pedir ajuda. A expiração decorre do funcionamento do cenário, sem regras que penalizem conversar.\n\n**4. Experimentos baratos antes de compromissos caros**\n\nInclua espaços de teste onde qualquer pessoa pode montar uma proposta e descobrir uma consequência parcial: por exemplo, testar uma rota revela seu consumo, mas não entrega a recompensa. Testes usam um pequeno orçamento separado dos recursos de execução. Depois, os resultados ficam públicos e alimentam as decisões normais do grupo.\n\n**Novo incentivo:** uma sugestão ganha força por produzir evidência. Experimentar torna-se uma contribuição concreta, inclusive para quem ainda não domina o jogo.  \n**Limite:** os testes precisam ser rápidos e revelar informação útil; se apenas confirmarem cálculos óbvios, acrescentarão trabalho sem distribuir influência.\n\n**Teste com papel das duas mais fortes: 1 e 2**\n\nFaça um protótipo com quatro áreas, fichas e cartas manuscritas. Compare uma partida básica com partidas usando cada alternativa, sempre de 15 minutos; alterne a ordem entre grupos.\n\nUma pessoa observadora registra quem **originou cada decisão executada**, distinguindo iniciativa de cumprimento de instruções. Registre também conclusão do objetivo e tempo gasto coordenando.\n\n- **Autoridade por área:** revise se as confirmações se distribuírem, mas as propostas continuarem concentradas.\n- **Planos simultâneos:** revise se todos esperarem instruções antes de preparar cartas ou se a coordenação consumir a partida.\n\nO sinal promissor é mais pessoas originando decisões relevantes, com desempenho coletivo viável e duração preservada.",
+      "usage": {
+        "input_tokens": 21305,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1293,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-2-C",
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "C",
+      "seconds": 71.412,
+      "prompt_sha256": "16481427f3e70a7ab56051aac0b3ca6220160c1cc8ec4c25ba172dde2fc1aca9",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "A proposta é distribuir **poder de decisão**, mantendo uma única vitória coletiva e os mesmos 15 minutos. Todos podem conversar, sugerir e discordar; ninguém precisa agir em uma ordem determinada.\n\n### 1. Áreas de decisão com autoridade própria\n\nDivida o tabuleiro em quatro sistemas interdependentes, como energia, oxigênio, navegação e reparos. Cada pessoa controla as alterações de um sistema, com atribuições públicas. Qualquer participante pode aconselhar, mas quem controla aquela área escolhe e executa suas ações. Não há obrigação de agir.\n\n**Novo incentivo:** quem joga melhor ganha mais ao explicar prioridades e negociar dependências do que ao anunciar uma sequência para todos executarem. As outras pessoas têm escolhas com efeito real, não apenas peças para movimentar.\n\n**Cuidado:** cada área precisa oferecer alternativas relevantes; uma área que só recebe ordens das demais cria autoridade apenas aparente.\n\n### 2. Problemas paralelos que podem ser resolvidos simultaneamente\n\nDisponibilize quatro desafios abertos, todos ligados ao objetivo comum. As pessoas podem trabalhar neles ao mesmo tempo, circular entre desafios e pedir ajuda. Cada desafio deve exigir comparar alternativas ou manipular componentes, evitando soluções óbvias que alguém possa simplesmente ditar. Use somente o relógio geral de 15 minutos.\n\n**Novo incentivo:** concentrar toda a análise em uma pessoa passa a desperdiçar capacidade de trabalho. Torna-se vantajoso confiar em soluções locais e compartilhar apenas informações que afetam o conjunto.\n\n**Cuidado:** excesso de dificuldade pode produzir confusão, sem distribuir decisões. Os desafios precisam ser compreensíveis individualmente.\n\n### 3. Recursos pessoais, públicos e não transferíveis\n\nCada pessoa recebe fichas de intervenção que pode gastar, a qualquer momento, em diferentes problemas do tabuleiro. Todas contribuem para a mesma vitória; não há pontuação pessoal. As fichas têm usos alternativos relevantes, e somente sua titular decide quando gastá-las. Ninguém precisa gastar para cumprir uma rodada.\n\n**Novo incentivo:** pedir ajuda passa a exigir apresentar uma necessidade e negociar prioridades. Cada participante administra uma reserva com consequências coletivas, podendo propor um uso diferente daquele sugerido pela pessoa mais experiente.\n\n**Cuidado:** se cada ficha tiver um único uso claramente superior, a escolha será nominal.\n\n### 4. Experimentos que geram progresso aproveitável\n\nPermita construir e testar várias soluções em espaços públicos de rascunho. Cada teste revela informações por regras objetivas, e resultados parciais podem ser combinados no tabuleiro comum. Qualquer pessoa pode iniciar um teste; não existe etapa de eleger uma proposta vencedora.\n\n**Novo incentivo:** explorar uma hipótese própria ajuda o grupo mesmo quando ela falha, porque elimina possibilidades ou fornece uma peça útil. A contribuição deixa de depender de convencer primeiro a pessoa dominante.\n\n**Cuidado:** testes precisam ter valor informativo e custo baixo; erros caros podem restaurar a dependência de autorização.\n\n### Testes com papel: priorizar 1 e 2\n\nSão as alternativas mais fortes porque alteram diretamente a autoridade e a possibilidade de centralizar o trabalho.\n\nFaça um protótipo com quatro folhas, cartas de problemas e fichas recortadas. Compare a versão atual com cada alternativa separadamente, sempre em partidas de 15 minutos. Use desafios equivalentes e alterne a ordem das versões entre grupos.\n\nUma pessoa observadora registra:\n\n- Quem propôs e quem efetivamente escolheu cada ação importante.\n- Quantas escolhas vieram de cada participante.\n- Vitória ou progresso coletivo alcançado.\n\nApós cada partida, cada participante responde individualmente: “Quantas decisões senti que realmente tomei?” e “Quanto gostei de participar?”\n\nPrefira a alternativa que distribua escolhas **sem reduzir excessivamente o desempenho nem o prazer de jogar**. Falar menos, sozinho, não demonstra maior participação.",
+      "usage": {
+        "input_tokens": 10162,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1203,
+        "reasoning_output_tokens": 409
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-2-A",
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 47.145,
+      "prompt_sha256": "d168fafbb7104a844b1839ec7e3804b7e1bbdf804668647b105e5a6b1132fb74",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu buscaria distribuir **a autoria das decisões**, não apenas quem movimenta as peças. As quatro opções abaixo preservam a vitória coletiva e os 15 minutos; todas permitem conversa livre, informação aberta e participação simultânea, sem exigir que cada pessoa faça uma jogada.\n\n1. **Autoridade distribuída por recurso.** Divida quatro recursos interdependentes — energia, transporte, reparos e suprimentos, por exemplo. Cada pessoa controla a aplicação de um deles, com tudo visível. Qualquer participante pode sugerir combinações, mas somente quem controla o recurso pode comprometê-lo. Ninguém precisa agir em uma ordem fixa, e guardar recursos é permitido.  \n   **Novo incentivo:** quando uma solução exige recursos de outras pessoas, quem costuma comandar precisa apresentar uma proposta que elas possam ajustar. A decisão passa a ter negociação real. É simples de implementar, embora possa produzir quatro pessoas apenas confirmando ordens; isso precisa ser observado.\n\n2. **Frentes simultâneas com consequências cruzadas.** Organize o tabuleiro em quatro problemas abertos que possam ser resolvidos ao mesmo tempo. Cada frente oferece pequenas decisões encadeadas; resolver uma modifica as possibilidades das demais. Qualquer pessoa pode atuar em qualquer frente, mas cada uma manipula somente uma frente por vez.  \n   **Novo incentivo:** acompanhar pessoalmente todos os detalhes deixa de ser a melhor contribuição do jogador experiente. Torna-se vantajoso compartilhar critérios gerais e confiar nas decisões locais. A hipótese é que existam detalhes suficientes para justificar atenção distribuída, sem transformar a partida numa corrida de destreza.\n\n3. **Retorno decrescente para receitas repetidas.** Faça abordagens diferentes se complementarem: a primeira solução por força gera três pontos de progresso, a segunda gera um; combinar força, reparo e negociação abre um benefício coletivo. As regras e oportunidades permanecem públicas, e qualquer pessoa pode usar qualquer abordagem.  \n   **Novo incentivo:** repetir a receita preferida de quem joga melhor perde valor; identificar uma alternativa útil passa a ajudar mais o grupo. Isso favorece contribuições variadas, mas não garante distribuição: uma pessoa ainda pode descobrir todas as combinações. Funciona melhor quando o jogo oferece pistas espaciais ou padrões que pessoas diferentes percebam.\n\n4. **Experimentos pequenos com reversão.** Reserve o primeiro minuto, dentro dos 15, para testar soluções em cópias simplificadas de situações do tabuleiro. Qualquer participante pode iniciar um teste, sozinho ou em parceria; ninguém é obrigado. Depois, cada pessoa pode levar uma solução testada para sua primeira aplicação no jogo. Os testes não gastam recursos da partida.  \n   **Novo incentivo:** propor algo deixa de exigir convencer imediatamente o grupo ou arriscar recursos comuns. A evidência produzida pelo teste dá influência a quem normalmente hesita em falar. A hipótese é que o resultado do ensaio seja relevante para a partida real.\n\n**Eu prototiparia primeiro autoridade por recurso e frentes simultâneas**, separadamente, pois atuam diretamente sobre quem pode decidir e sobre quanto uma pessoa consegue centralizar.\n\nUse papel, quatro marcadores e envelopes de recursos. Faça uma partida de referência e outra com cada mecanismo, sempre com 15 minutos e desafios equivalentes. Um observador registra:\n\n- Quantas decisões executadas nasceram de propostas de cada pessoa.\n- Quantas foram apenas confirmações de instruções alheias.\n- Progresso coletivo e tempo gasto em impasses.\n\nApós cada partida, cada participante responde: “Alguma escolha minha mudou o resultado?”\n\nConsidere promissor o mecanismo que aumente a autoria de pelo menos três pessoas sem tornar o objetivo inviável. Se só mudar quem mexe nas peças, a centralização continua. Alterne a ordem das versões entre grupos para reduzir o efeito de aprendizagem.",
+      "usage": {
+        "input_tokens": 19903,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1300,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-2-D",
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 53.103,
+      "prompt_sha256": "da3014575f3940872eaf8d6226287e468d54540bf313c9f20ee9c4f930b2655a",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu manteria a vitória coletiva e o cronômetro de 15 minutos. Mudaria quem consegue transformar uma sugestão em ação. Só pedir que todos opinem deixa a decisão com a pessoa mais experiente.\n\n**1. Recursos sob autoridades diferentes**\n\nCada pessoa controla um recurso público — energia, transporte, ferramentas e informação, por exemplo. Qualquer um pode sugerir usos, mas apenas quem controla o recurso pode comprometê-lo. Ações simples usam um recurso; ações poderosas combinam dois ou três. Tudo acontece sem ordem de turnos.\n\n**Novo incentivo:** quem domina a estratégia precisa negociar planos que os responsáveis considerem bons. Os demais têm decisões concretas, porque suas reservas também precisam atender necessidades futuras do grupo.\n\n**Limite:** pode surgir mera autorização automática. Para evitar isso, cada recurso precisa ter pelo menos dois usos realmente competitivos; apertar um botão óbvio não distribui decisão.\n\n**2. Frentes simultâneas com consequências cruzadas**\n\nO tabuleiro tem quatro frentes abertas. A cada três minutos, todas avançam: uma pode produzir suprimentos, outra proteger uma rota, outra conter uma ameaça, outra preparar o objetivo final. Qualquer pessoa pode agir em qualquer frente, mas há decisões locais suficientes para que acompanhar tudo seja difícil. Resultados de uma frente ajudam outras.\n\n**Novo incentivo:** confiar no julgamento de colegas permite aproveitar oportunidades simultâneas. Centralizar exige atenção que o grupo poderia empregar resolvendo problemas.\n\n**Limite:** excesso de tarefas vira correria. As escolhas locais devem ser simples; a dificuldade vem de coordenar consequências. Conversar continua livre, sem custo adicional por falar.\n\n**3. Experimentos reversíveis antes do compromisso**\n\nEm cada desafio, existem duas áreas públicas para montar soluções provisórias com fichas de papel. Qualquer participante pode iniciar ou modificar uma tentativa, sem autorização prévia. Uma regra objetiva permite simular seu resultado. Executar a solução consome recursos; experimentar, não. Os experimentos acontecem dentro dos mesmos 15 minutos.\n\n**Novo incentivo:** apresentar uma alternativa concreta fica mais fácil e útil do que disputar espaço numa discussão abstrata. A pessoa experiente ganha ao aproveitar descobertas alheias.\n\n**Limite:** funciona melhor quando há resultados verificáveis e alternativas viáveis. Se toda situação tiver uma solução imediatamente óbvia, a autoridade tende a se concentrar novamente.\n\n**4. Compromissos com execução distribuída**\n\nCada pessoa tem uma única ficha pública de compromisso. Ao colocá-la numa tarefa, passa a poder escolher seus ajustes durante a execução. A ficha só fica disponível novamente quando a tarefa termina ou é abandonada. Várias tarefas podem ocorrer juntas; ninguém precisa esperar sua vez nem assumir uma tarefa.\n\n**Novo incentivo:** decidir tudo exigiria assumir mais compromissos do que uma pessoa consegue manter. Delegar libera capacidade para avançar no objetivo comum.\n\n**Limite:** tarefas precisam conter escolhas durante a execução, não apenas trabalho mecânico delegado.\n\n**Testes com papel para as duas mais fortes**\n\nEu começaria por **recursos sob autoridades diferentes** e **experimentos reversíveis**, que exigem menos conteúdo adicional.\n\n- **Recursos:** faça quatro reservas de fichas e seis desafios com duas soluções possíveis cada. Jogue 15 minutos. Registre quem propôs cada gasto e quem efetivamente escolheu seu uso. Se os responsáveis apenas confirmarem ordens, a distribuição foi superficial.\n- **Experimentos:** use dois espaços de rascunho e desafios cuja solução possa ser conferida por regras impressas. Compare com uma partida sem rascunhos: quantas propostas de pessoas diferentes foram testadas e aproveitadas?\n\nEm ambos, observe também vitória, tempo e satisfação. Mais participação com decisões irrelevantes não basta.",
+      "usage": {
+        "input_tokens": 11597,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1118,
+        "reasoning_output_tokens": 344
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "R02-2-B",
+      "case_id": "R02",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 54.095,
+      "prompt_sha256": "165430a7d84b278faee72c6778775b5cf485ebe8015700cb61ba5c4ece03812a",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    }
+  ]
+}

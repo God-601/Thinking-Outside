@@ -1,0 +1,49 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 6411,
+  "workers": 4,
+  "timeout": 300,
+  "output": "runs/final-fresh",
+  "conditions": {
+    "A": null,
+    "B": "instructions/B.md",
+    "D": "instructions/D-revised.md"
+  },
+  "cases": [
+    {
+      "id": "F01",
+      "family": "3D asset design",
+      "creative": true,
+      "prompt": "Tenho um cenário modular 3D para celular: visitantes confundem corredores iguais num labirinto de biblioteca. O mapa já está aprovado, não posso mover paredes, criar placas ou acrescentar meshes, texturas ou luzes. Posso editar materiais existentes e comportamento do jogo. Sugira quatro mecanismos distintos de orientação para a primeira visita, incluindo uma estratégia para daltonismo e um teste de cinco minutos.",
+      "rubric": [
+        "Preserva geometria e recursos existentes",
+        "Distingue rotas causais, incluindo uma que não dependa de cor",
+        "Explica acesso, custo e medida de desorientação contra a versão atual"
+      ]
+    },
+    {
+      "id": "F02",
+      "family": "music production",
+      "creative": true,
+      "prompt": "Um podcast gravado em mono tem duas vozes parecidas e interrupções difíceis de acompanhar. Os dois locutores assinaram aprovação das palavras, da ordem e da duração. Não pode regravar, remover fala, adicionar voz ou música, nem fazer versão estéreo. Proponha quatro edições com mecanismos distintos para deixar claro quem falou e quando houve interrupção. Diga como testar em alto-falante de telefone.",
+      "rubric": [
+        "Preserva palavras, ordem, mono e duração",
+        "Distingue mecanismos de inteligibilidade e identidade vocal",
+        "Considera sobreposição e artefatos, propõe teste comparativo viável"
+      ]
+    },
+    {
+      "id": "F03",
+      "family": "education",
+      "creative": true,
+      "prompt": "Onze aprendizes de desenho técnico acertam exemplos de escala na aula, mas erram quando veem uma planta de um cômodo desconhecido. Há uma aula de 25 minutos, somente papel e lápis. Sem lista de mais exercícios, aplicativos ou trocar a prova, proponha quatro maneiras diferentes de promover transferência e um teste curto que separe compreensão de imitação.",
+      "rubric": [
+        "Quatro intervenções causais diferentes que cabem em 25 minutos",
+        "Evita trocar a prova, repetir exercícios ou pressupor aplicativos",
+        "Usa referência e medida que distinguem compreensão de repetição"
+      ]
+    }
+  ]
+}

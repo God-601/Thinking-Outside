@@ -1,0 +1,1048 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "A": {
+      "utility": 4.333333333333333,
+      "originality": 2.5833333333333335,
+      "diversity": 4.25,
+      "feasibility": 4.083333333333333,
+      "adherence": 4.75,
+      "weighted": 3.9916666666666667,
+      "critical_failures": 0,
+      "seconds": 58.38783333333333,
+      "input_tokens": 16358.333333333334,
+      "output_tokens": 1032.6666666666667
+    },
+    "B": {
+      "utility": 4.416666666666667,
+      "originality": 2.6666666666666665,
+      "diversity": 4.583333333333333,
+      "feasibility": 4.166666666666667,
+      "adherence": 4.666666666666667,
+      "weighted": 4.1,
+      "critical_failures": 0,
+      "seconds": 60.32333333333333,
+      "input_tokens": 17793.333333333332,
+      "output_tokens": 1096.5
+    },
+    "D": {
+      "utility": 4.416666666666667,
+      "originality": 2.6666666666666665,
+      "diversity": 4.333333333333333,
+      "feasibility": 4.166666666666667,
+      "adherence": 4.75,
+      "weighted": 4.0625,
+      "critical_failures": 0,
+      "seconds": 62.143166666666666,
+      "input_tokens": 19921.666666666668,
+      "output_tokens": 1127
+    }
+  },
+  "comparisons": {
+    "A_vs_B": {
+      "wins": 1,
+      "ties": 4,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 4,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "F01": 0.25,
+          "F02": 0.5,
+          "F03": 0.75
+        }
+      }
+    },
+    "A_vs_D": {
+      "wins": 0,
+      "ties": 3,
+      "losses": 3,
+      "preference": 0.25,
+      "creative": {
+        "wins": 0,
+        "ties": 3,
+        "losses": 3,
+        "preference": 0.25,
+        "per_case_preference": {
+          "F01": 0.25,
+          "F02": 0.25,
+          "F03": 0.25
+        }
+      }
+    },
+    "B_vs_D": {
+      "wins": 1,
+      "ties": 4,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 4,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "F01": 0.75,
+          "F02": 0.5,
+          "F03": 0.25
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro funções causais bem diferenciadas: reconhecer regiões, identificar exploração prévia, consultar a próxima saída e recuperar uma decisão anterior. O retorno assistido distingue esta proposta das demais, embora tenha precedentes em navegação de jogos. Explica acionamento, alternativas de acesso e limitações de materiais compartilhados, áudio mono e movimento automatizado. O teste compara visitantes novos com a versão atual e mede erros, repetições e retorno sem ajuda. Falta estimar custo de implementação e desempenho no celular; também seria necessário definir qual cruzamento recuperar para evitar retornar a uma decisão pouco útil.",
+      "reframe": null,
+      "mechanism_families": [
+        "Aparência regional estável permite reconhecer lugares",
+        "Estado persistente dos materiais revela trechos já explorados",
+        "Consulta multimodal informa a próxima saída caminhável",
+        "Retorno assistido reduz o custo de uma escolha errada"
+      ],
+      "weighted": 4.225,
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "F01-1-B",
+      "seconds": 77.389,
+      "usage": {
+        "input_tokens": 20887,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1166,
+        "reasoning_output_tokens": 411
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 2.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Preserva os recursos visuais, oferece orientação independente de cor e detalha acesso voluntário, limitações de vibração, áudio mono e desconforto de câmera. Entretanto, bússola tátil, chamado sonoro e reenquadramento executam essencialmente a mesma função: revelar a próxima saída correta. A variedade de canais oferece redundância de acesso, mas menor diversidade causal. O teste usa grupos independentes e indicadores adequados contra a versão atual; a avaliação de dependência fica enfraquecida por não explicitar a retirada das ajudas no retorno. Custos de implementação e desempenho permanecem pouco desenvolvidos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Aparência regional estável permite reconhecer lugares",
+        "Feedback tátil revela alinhamento com a próxima saída",
+        "Som direcional atrai para a próxima saída",
+        "Reenquadramento da câmera destaca a próxima saída"
+      ],
+      "weighted": 3.4,
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "F01-1-D",
+      "seconds": 60.078,
+      "usage": {
+        "input_tokens": 19922,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1158,
+        "reasoning_output_tokens": 410
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 3.5,
+        "feasibility": 3.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Combina reconhecimento regional, histórico de exploração e indicação de percurso, com câmera disponível como alternativa independente de cor. A pista material e o reenquadramento repetem a função de indicar a saída, embora usem canais diferentes; sua originalidade empata com O2. O teste compara grupos novos, registra desorientação e examina participantes daltônicos separadamente. A viabilidade depende de controle dos materiais por trecho, condição não explicitada; acabamento discreto pode ser difícil de perceber no celular. Também falta esclarecer que a câmera deve orientar pela rota caminhável, estimar custos e retirar ajudas para medir aprendizado no retorno.",
+      "reframe": null,
+      "mechanism_families": [
+        "Aparência regional estável permite reconhecer lugares",
+        "Mudança contextual de material destaca a saída recomendada",
+        "Estado persistente dos materiais revela exploração prévia",
+        "Câmera indica a direção e vibração confirma a escolha"
+      ],
+      "weighted": 3.525,
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "F01-1-A",
+      "seconds": 40.545,
+      "usage": {
+        "input_tokens": 10172,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 728,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro rotas causais claras: reconhecimento regional, memória externa do percurso, indicação direcional e aprendizagem espacial por prévia. Preserva os recursos permitidos, contempla daltonismo por luminosidade e explicita custos de materiais por segmento, suporte à vibração e movimento de câmera. O teste soma cinco minutos e mede erros, retornos e tempo contra uma condição sem assistência. Porém, testar ambas as condições na mesma pessoa contamina a comparação da primeira visita; alternar a ordem reduz, mas não elimina esse problema. Os mecanismos têm precedentes conhecidos e coincidem amplamente com O3.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade regional por parâmetros dos materiais",
+        "Registro persistente dos segmentos percorridos",
+        "Consulta háptica da próxima saída navegável",
+        "Aprendizagem espacial por demonstração da câmera"
+      ],
+      "weighted": 4.2,
+      "case_id": "F01",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "F01-2-B",
+      "seconds": 61.723,
+      "usage": {
+        "input_tokens": 11607,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1072,
+        "reasoning_output_tokens": 397
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Combina identidade regional, referência sonora global, consulta direcional e aprendizagem ativa por visita e retorno. A referência sonora fixa e a tarefa de retorno diferenciam o conjunto das demais respostas, embora sejam técnicas conhecidas. Explicita acesso aos comandos e limitações de áudio, vibração e materiais compartilhados. O teste de cinco minutos compara grupos de visitantes novos e inclui transferência sem ajuda, oferecendo a comparação mais limpa com a versão atual. A execução depende de som reutilizável, espacialização adequada e marcos já reconhecíveis; essas condições são declaradas, mas não verificadas. O custo de implementação e desempenho poderia ser mais concreto. A meta de 30% é apresentada como critério inicial, sem evidência que a sustente.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade regional por parâmetros dos materiais",
+        "Referência espacial global por fonte sonora fixa",
+        "Consulta háptica da próxima saída navegável",
+        "Aprendizagem das conexões por exploração guiada e retorno"
+      ],
+      "weighted": 4.325,
+      "case_id": "F01",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "F01-2-D",
+      "seconds": 48.984,
+      "usage": {
+        "input_tokens": 19922,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 971,
+        "reasoning_output_tokens": 255
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Oferece os mesmos quatro mecanismos centrais de O1, com alternativas úteis de acesso: escolha entre som e vibração, prévia repetível e enquadramentos estáticos para desconforto com movimento. A estratégia para daltonismo combina luminosidade e sinais auditivos, e o teste soma cinco minutos, compara visitantes novos na versão atual e na proposta e registra desorientação. As assinaturas sonoras e a dupla modalidade direcional reforçam mecanismos existentes, sem constituir novas rotas causais. Faltam explicitar custos de materiais por módulo, disponibilidade dos sons e limitações da orientação sonora sem fones. Empata com O1 em originalidade e diversidade; acrescentar modalidades não torna seu mecanismo central mais original.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade regional por materiais e assinaturas sonoras",
+        "Registro persistente dos segmentos percorridos",
+        "Consulta sonora e háptica da próxima saída navegável",
+        "Aprendizagem espacial por demonstração da câmera"
+      ],
+      "weighted": 4.125,
+      "case_id": "F01",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "F01-2-A",
+      "seconds": 93.573,
+      "usage": {
+        "input_tokens": 19452,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1148,
+        "reasoning_output_tokens": 374
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina quatro rotas causais distintas e preserva palavras, ordem, duração e mono. Separa reconhecimento vocal, atenção à entrada e detecção de interrupções; propõe comparação alternada e mede compreensão das duas falas. Reconhece artefatos da separação e mascaramento pela ambiência. O estalo único informa o evento, mas depende das outras pistas para identificar quem interrompeu. Três intervenções dependem de isolamento vocal satisfatório. Os mecanismos são convencionais e próximos aos das demais respostas; empata na avaliação global.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade vocal por contraste espectral constante",
+        "Atenção à entrada por automação de intensidade",
+        "Identidade por reflexões curtas e proximidade percebida",
+        "Detecção de interrupção por sinal sonoro convencional"
+      ],
+      "weighted": 4.1,
+      "case_id": "F02",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "F02-1-B",
+      "seconds": 74.067,
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1228,
+        "reasoning_output_tokens": 567
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Preserva as restrições e oferece quatro mecanismos distintos, com sinais que codificam tanto a interrupção quanto seu autor. O teste no telefone controla volume percebido, mede palavras de ambas as vozes, falsas interrupções e incômodo, além de conferir duração e alinhamento. Falta explicitar alternância ou aleatorização da apresentação. A viabilidade de três tratamentos depende da separação vocal, reconhecida como incerta; a ambiência pode mascarar consoantes. Compartilha mecanismos convencionais com as demais respostas e empata na avaliação global.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade vocal por contraste espectral constante",
+        "Atenção à entrada por hierarquia de intensidade",
+        "Identidade por assinatura de ambiência curta",
+        "Evento e autor por sinais sonoros distintos"
+      ],
+      "weighted": 4.1,
+      "case_id": "F02",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "F02-1-A",
+      "seconds": 56.146,
+      "usage": {
+        "input_tokens": 19458,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1052,
+        "reasoning_output_tokens": 357
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro rotas distintas, preservando posições das falas, duração e mono. Compara intervenções separadamente, alterna apresentação, iguala volume percebido e mede identidade, interrupções e compreensão. Explicita que sinais podem funcionar sem separação e não recuperam palavras já encobertas. Sinalizar todos os turnos amplia a identificação, mas aumenta a exposição a ruído e exige inferir a interrupção pela simultaneidade; três tratamentos continuam condicionados ao isolamento vocal. Os mecanismos são convencionais e semelhantes aos das outras respostas; empata na avaliação global.",
+      "reframe": null,
+      "mechanism_families": [
+        "Identidade vocal por contraste espectral constante",
+        "Atenção à entrada por automação de intensidade",
+        "Identidade por distância acústica percebida",
+        "Identificação de entradas por sinais sonoros distintos"
+      ],
+      "weighted": 4.1,
+      "case_id": "F02",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "F02-1-D",
+      "seconds": 75.717,
+      "usage": {
+        "input_tokens": 19928,
+        "cached_input_tokens": 19712,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1228,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 3.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina identidade espectral, destaque da entrada, sinalização explícita e identidade por ambiência. A reflexão curta diferencia esta proposta das demais, embora seja um recurso conhecido e possa piorar a inteligibilidade. Reconhece corretamente a dependência de separação nas sobreposições. O teste controla volume, varia a ordem e mede identidade, compreensão e falsos alarmes. A viabilidade é limitada pela separação de fontes e pela possibilidade de a ambiência borrar sílabas ou desaparecer no telefone. Os cliques são compatíveis com a proibição de voz e música adicionais.",
+      "reframe": null,
+      "mechanism_families": [
+        "Contraste espectral estável para reconhecer o locutor",
+        "Contraste de níveis para destacar o início da interrupção",
+        "Sinais não verbais associados ao locutor entrante",
+        "Contraste de reflexões para criar identidade acústica"
+      ],
+      "weighted": 4.125,
+      "case_id": "F02",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "F02-2-D",
+      "seconds": 47.584,
+      "usage": {
+        "input_tokens": 19928,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1177,
+        "reasoning_output_tokens": 403
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Distingue corretamente equalização e alteração da frequência fundamental como pistas de identidade, além de usar níveis e redução de caudas para esclarecer interrupções. A desreverberação oferece uma rota diferente das outras respostas, mas depende de uma condição ausente do enunciado: reverberação relevante na gravação. Assim, pode deixar apenas três intervenções úteis. Trata os riscos de separação e artefatos e propõe comparação individual e combinada, com referência manual e transcrição. Faltou variar explicitamente a ordem de apresentação. Os mecanismos são conhecidos e majoritariamente compartilhados com as demais propostas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Contraste espectral estável para reconhecer o locutor",
+        "Distanciamento da frequência fundamental para distinguir vozes",
+        "Contraste de níveis para destacar o início da interrupção",
+        "Redução da persistência reverberante para tornar fronteiras temporais mais nítidas"
+      ],
+      "weighted": 3.95,
+      "case_id": "F02",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "F02-2-A",
+      "seconds": 57.181,
+      "usage": {
+        "input_tokens": 19458,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1073,
+        "reasoning_output_tokens": 369
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Entrega quatro mecanismos identificáveis, preservando posições e duração e usando efeitos não musicais compatíveis com as restrições. Explica que processar individualmente uma mistura sobreposta não basta e oferece sinalização como alternativa quando a separação falha. O teste varia a ordem, controla volume e inclui compreensão, falsos alarmes e incômodo prolongado. A principal limitação é a dependência de separação limpa para três intervenções; meio semitom também pode ser insuficiente para distinguir as vozes. A combinação é útil, mas seus componentes são conhecidos e compartilhados com O1 e O2. Empata com O1 em utilidade e com O2 em viabilidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Contraste espectral estável para reconhecer o locutor",
+        "Distanciamento da frequência fundamental para distinguir vozes",
+        "Contraste de níveis para destacar o início da interrupção",
+        "Sinais não verbais associados ao locutor entrante"
+      ],
+      "weighted": 4.1,
+      "case_id": "F02",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "F02-2-B",
+      "seconds": 44.047,
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1075,
+        "reasoning_output_tokens": 400
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Articula quatro mecanismos distinguíveis: analogia com distância familiar, contraste de características, diagnóstico de erro e produção inversa. O teste tem referência explícita, resultados corretos e critérios que separam cálculo de interpretação. Os 25 minutos estão distribuídos e dispensam régua. A preparação e as transições deixam pouca margem; além disso, mudança de escala e rotação já foram trabalhadas, limitando a evidência de transferência para além do ensinado. Os mecanismos são conhecidos e praticamente coincidem com os de O2.",
+      "reframe": null,
+      "mechanism_families": [
+        "Correspondência entre uma distância familiar e a relação de escala",
+        "Contraste para separar estrutura relevante de aparência",
+        "Diagnóstico de erro para controlar unidades e plausibilidade",
+        "Produção e reconstrução inversas para estabelecer reversibilidade"
+      ],
+      "weighted": 4.075,
+      "case_id": "F03",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "F03-1-D",
+      "seconds": 65.341,
+      "usage": {
+        "input_tokens": 19915,
+        "cached_input_tokens": 18432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1035,
+        "reasoning_output_tokens": 295
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina os mesmos quatro mecanismos de O1, com bom uso de registros individuais e correspondência explícita entre objeto familiar e planta desconhecida. O teste altera os valores e exige previsão antes de nova conta, com respostas corretas e preservação da dimensão real. A divisão soma 25 minutos e usa apenas papel e lápis, embora quatro minutos por intervenção sejam apertados. A mudança inesperada repete uma relação já praticada, de modo que fornece evidência de compreensão, mas não separação conclusiva de imitação. Empata com O1 nas dimensões avaliadas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Contraste de escalas para identificar a dimensão real invariável",
+        "Analogia explícita entre objeto familiar e planta desconhecida",
+        "Diagnóstico de erro para controlar unidades e plausibilidade",
+        "Conversão inversa para reconstruir a relação de escala"
+      ],
+      "weighted": 4.075,
+      "case_id": "F03",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "F03-1-B",
+      "seconds": 57.902,
+      "usage": {
+        "input_tokens": 11600,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1128,
+        "reasoning_output_tokens": 343
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Oferece referência próxima e itens de transferência, distinguindo erro aritmético de conceitual. A tradução entre frase, tabela e transformação, seguida de recuperação sem apoio, diferencia a proposta das demais, embora sejam estratégias conhecidas. Há alguma sobreposição entre comparar invariantes e explicar mudança de escala; a terceira intervenção também incorpora conversão inversa. Cabe nominalmente em 25 minutos, com transições apertadas. O teste está correto, mas reproduz relações e sentidos de conversão já trabalhados, restringindo a força da inferência sobre transferência.",
+      "reframe": null,
+      "mechanism_families": [
+        "Comparação de contextos para selecionar informações relevantes",
+        "Contraste de raciocínios para justificar o sentido da operação",
+        "Tradução entre representações para ampliar pistas de recuperação",
+        "Recuperação sem apoio e autoexplicação para organizar o procedimento"
+      ],
+      "weighted": 4.075,
+      "case_id": "F03",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "F03-1-A",
+      "seconds": 43.939,
+      "usage": {
+        "input_tokens": 19445,
+        "cached_input_tokens": 18432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 978,
+        "reasoning_output_tokens": 219
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Combina previsão, construção inversa, identificação de invariantes e diagnóstico de erro, com distribuição explícita dos 25 minutos. O teste cruza cálculo, unidades e justificativas, mas reutiliza os mesmos números e transformações trabalhados, limitando a separação entre compreensão e imitação recente. Desenhar um segmento com comprimento métrico sem régua nem referência fornecida também reduz a viabilidade. Os mecanismos são conhecidos, embora a combinação seja consistente.",
+      "reframe": null,
+      "mechanism_families": [
+        "Previsão e confronto de concepções sobre representação e realidade",
+        "Construção inversa da relação proporcional",
+        "Separação entre variações superficiais e mudanças relevantes",
+        "Diagnóstico de erro e verificação de unidades"
+      ],
+      "weighted": 3.9,
+      "case_id": "F03",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "F03-2-B",
+      "seconds": 46.812,
+      "usage": {
+        "input_tokens": 20880,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 910,
+        "reasoning_output_tokens": 163
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Explicita a referência entre centímetros desenhados e reais, compara transformações e retira apoios para estimular escolha autônoma do procedimento. Cabe nos 25 minutos e mantém os materiais previstos. A deformação desigual no teste acrescenta uma situação capaz de revelar compreensão das condições de uma escala única. Comparação e previsão, porém, exploram relações próximas, e a retirada gradual de pistas ocorre em apenas uma passagem breve. Originalidade empata com as demais: são mecanismos pedagógicos estabelecidos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Explicitação do princípio proporcional e de suas condições",
+        "Comparação de transformações para identificar invariantes",
+        "Previsão individual e revisão por explicação entre pares",
+        "Retirada de apoios e construção de roteiro autônomo"
+      ],
+      "weighted": 4.175,
+      "case_id": "F03",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "F03-2-A",
+      "seconds": 58.943,
+      "usage": {
+        "input_tokens": 10165,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1217,
+        "reasoning_output_tokens": 430
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Fornece todas as medidas por escrito, evitando depender de instrumentos ausentes, e organiza exatamente 25 minutos. Articula comparação estrutural, inferência inversa, análise de erro e decisão prática. O teste muda a escala para 1:40 e combina duas direções de cálculo com justificativa qualitativa, oferecendo boa evidência de transferência. A decisão sobre o móvel acrescenta finalidade, mas exige pouco além do cálculo habitual; o teste ainda admite reprodução das relações recém-ensinadas. Empata com O2 em utilidade e com ambas em originalidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Comparação que dissocia aparência e estrutura proporcional",
+        "Reconstrução inversa da escala a partir de medidas correspondentes",
+        "Análise de erro com verificação de plausibilidade",
+        "Aplicação da escala a uma decisão concreta"
+      ],
+      "weighted": 4.35,
+      "case_id": "F03",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "F03-2-D",
+      "seconds": 75.155,
+      "usage": {
+        "input_tokens": 19915,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1193,
+        "reasoning_output_tokens": 395
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T17:56:24.629325+00:00",
+    "instruction_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "B": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c",
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    "context_sha256": "ccb9ad4d9976264ea85554cee55efd51a870e7acf9fbe9e319bb1b2a55884f8f",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "Eu combinaria referências permanentes, memória do percurso, indicação de destino e recuperação de erros. Os quatro mecanismos preservam o mapa e usam apenas materiais existentes e comportamento.\n\n1. **Identidade visual estável por região**  \n   Diferencie grupos de corredores alterando luminosidade, cor e rugosidade dos materiais existentes. A transição deve coincidir com cruzamentos já presentes: o visitante percebe que saiu da região clara e entrou na escura, por exemplo. Isso cria referências para formar um mapa mental.  \n   **Daltonismo:** faça a distinção principal por luminosidade; use cor como reforço. Confira também em escala de cinza e não dependa apenas de brilho especular, que varia com a câmera.  \n   **Limite:** regiões precisam ter parâmetros de material controláveis separadamente. Se tudo compartilhar um único material sem possibilidade de sobrescrita por módulo, esta opção fica limitada.\n\n2. **Memória visual do caminho recente**  \n   Ao atravessar um trecho, altere discretamente um parâmetro do material existente para indicar “já passei aqui”. Preserve essa marca durante a primeira visita e mantenha as referências regionais reconhecíveis — por exemplo, reservando paredes para regiões e piso para histórico, caso essas superfícies existam. O benefício é detectar voltas e distinguir caminhos explorados.  \n   **Limite:** isso mostra histórico, não a direção correta. Use somente dois estados bem distinguíveis; um gradiente temporal exigiria interpretação demais. Também depende de controle por trecho.\n\n3. **Consulta sonora de direção nos cruzamentos**  \n   Um comando já disponível, como manter pressionada a interação, reproduz um sinal na direção da próxima saída da rota até o objetivo. Calcule a rota pela conectividade dos corredores: apontar diretamente para o destino pode mandar o jogador contra uma parede. Ative apenas sob demanda, com orientação complementar por vibração ou fala curta, como “segunda passagem à esquerda”.  \n   **Benefício:** orienta sem alterar a aparência nem depender de cores.  \n   **Limite:** áudio espacial perde eficácia com som mono; vibração pode não estar disponível. Ofereça modalidades alternativas.\n\n4. **Retorno assistido à última decisão**  \n   Registre os cruzamentos atravessados. Quando o visitante pedir ajuda, ofereça retornar pelo caminho percorrido até o último cruzamento, com deslocamento assistido cancelável, velocidade normal e colisões habituais. Isso reduz o custo de errar e incentiva explorar. Desative o registro ao encerrar a visita inicial.  \n   **Limite:** automatizar movimento reduz autonomia e pode incomodar; exija acionamento voluntário e permita interrupção imediata.\n\n**Teste de cinco minutos por participante**\n\nUse pessoas que ainda não conhecem o cenário, divididas entre versão atual e versão com orientação, com o mesmo destino e ponto inicial.\n\n- **0:00–0:30:** explique controles e objetivo, sem ensinar o caminho.\n- **0:30–3:30:** peça que encontrem o destino. Registre tempo, entradas erradas, cruzamentos repetidos e pedidos de ajuda.\n- **3:30–4:30:** desligue as ajudas temporárias e peça retorno ao cruzamento anterior. Isso diferencia aprendizado de dependência.\n- **4:30–5:00:** pergunte quais referências usaram e onde ficaram confusos.\n\nInclua participantes com daltonismo; escala de cinza serve como checagem complementar. Procure menos erros e repetições, sem piorar o retorno sem ajuda. Se o conjunto funcionar, teste cada mecanismo separadamente para descobrir quais realmente contribuem.",
+      "usage": {
+        "input_tokens": 20887,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1166,
+        "reasoning_output_tokens": 411
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-1-B",
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 77.389,
+      "prompt_sha256": "fb8012104e30e99b4ac361f93975fbd626010e5ed1cb8a1ddfa48f4cf4c9eceb",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu combinaria **identidade dos lugares com ajuda sob demanda**, mantendo o mapa e todos os elementos existentes. Quatro mecanismos distintos:\n\n1. **Setores reconhecíveis pelos materiais.**  \n   Ao entrar numa região, o visitante encontra uma combinação estável de propriedades nos materiais existentes: madeira clara e fosca, madeira escura e fosca, acabamento intermediário mais brilhante. A mudança permite reconhecer “voltei ao setor claro”, mesmo com corredores geometricamente iguais. Aplique as combinações a grupos existentes de estantes, sem criar desenhos, texturas ou elementos que funcionem como placas. Evite uma identidade diferente por corredor: poucas regiões são mais fáceis de memorizar.  \n   **Para daltonismo:** diferencie principalmente pela luminosidade; cor e rugosidade servem como reforço. Verifique se as diferenças continuam perceptíveis em tons de cinza e sob a iluminação atual. A rugosidade sozinha pode desaparecer dependendo do ângulo.\n\n2. **Bússola tátil acionada pelo jogador.**  \n   Durante uma ação de consulta usando um comando já disponível, a vibração indica alinhamento: dois pulsos curtos quando o personagem está voltado para a próxima saída correta; um pulso longo quando está voltado para outra direção. Assim, o jogador pode girar e procurar a resposta sem acrescentar interface visual. O cálculo deve apontar para o **próximo trecho de uma rota caminhável**, evitando indicar um objetivo através da parede. É uma ajuda independente da percepção de cores, mas depende de suporte a vibração e deve poder ser desativada.\n\n3. **Chamado sonoro nos pontos de decisão.**  \n   Após uma hesitação numa bifurcação, um som breve parece vir de dentro do corredor recomendado. Isso transforma uma escolha abstrata em “seguir aquele som”. O emissor pode ser apenas lógico, sem mesh, com áudio sintetizado pelo jogo. Posicione-o antes da próxima curva para evitar sugestões através de paredes. Use como apoio opcional: alto-falantes de celular, reprodução mono e ambientes barulhentos podem prejudicar a localização. Não dependa desse canal para completar a visita.\n\n4. **Sugestão por movimento de câmera.**  \n   Se houver repetição de uma bifurcação ou longa hesitação, ofereça uma breve orientação da câmera para a saída recomendada, aproveitando a visão do próprio cenário. O jogador identifica qual passagem seguir sem precisar interpretar um código. A sugestão deve exigir aceitação por um comando existente, parar ao receber movimento contrário e nunca deslocar o personagem. Limite-a à primeira visita e permita desativação por desconforto com movimento.\n\n**Teste de cinco minutos por participante**\n\nCompare grupos de visitantes novos: um com a experiência atual e outro com a combinação proposta. Cada pessoa vê apenas uma versão, evitando aprendizado prévio do labirinto.\n\n- **30 segundos:** explique os controles e apresente um destino.\n- **3 minutos:** deixe a pessoa procurar o destino sem ajuda do moderador.\n- **1 minuto:** peça que retorne a uma bifurcação anterior, para avaliar reconhecimento.\n- **30 segundos:** pergunte onde se confundiu e qual pista utilizou.\n\nRegistre conclusão no prazo, entradas em corredores incorretos, bifurcações revisitadas e consultas às ajudas. Inclua pessoas com daltonismo; simulação visual é uma verificação complementar. Adote a combinação se reduzir erros sem aumentar desconforto ou dependência contínua das dicas. Se apenas acelerar a chegada, mas piorar o retorno, ajuste as ajudas para favorecer reconhecimento dos lugares.",
+      "usage": {
+        "input_tokens": 19922,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1158,
+        "reasoning_output_tokens": 410
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-1-D",
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 60.078,
+      "prompt_sha256": "1d7ba20e1403b2ca84415467701e9fb4fd34b299efaa3de57cfa3923ac0f6371",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Para a primeira visita, eu combinaria quatro mecanismos que ajudam o jogador a reconhecer lugares e entender o caminho, sem alterar o mapa ou adicionar recursos visuais.\n\n1. **Identidade de cada setor por materiais existentes.** Diferencie alas usando combinações de cor, luminosidade e acabamento: uma área clara e fosca, outra escura e brilhante, por exemplo. Aplique as diferenças em superfícies já presentes, como estantes ou pisos, mantendo consistência dentro de cada setor. Evite variações aleatórias: o visitante precisa aprender que determinada aparência corresponde a determinada região.\n\n2. **Pistas nas decisões de percurso.** Nas bifurcações, altere discretamente a luminosidade ou a saturação do material existente no lado que conduz ao primeiro objetivo. A pista pode aparecer após alguns segundos de hesitação e desaparecer depois da escolha. Use mudanças graduais, sem flashes, e preserve o aspecto normal dos trechos sem relevância. Isso oferece ajuda contextual sem transformar todo o percurso em uma trilha permanente.\n\n3. **Memória visual do caminho percorrido.** Depois que o jogador atravessar um trecho, mude levemente o acabamento dos materiais daquele trecho, tornando-o mais fosco ou mais claro. A mudança deve persistir durante a visita, permitindo distinguir “já passei aqui” de “ainda não explorei”. Reserve uma propriedade visual diferente daquela usada para identificar setores; por exemplo, luminosidade para setores e acabamento para histórico. Verifique no celular se a diferença continua perceptível com a câmera em movimento.\n\n4. **Orientação pelo comportamento da câmera e feedback tátil.** Na primeira visita, ao chegar a uma bifurcação e ficar parado, ofereça um reenquadramento suave na direção do objetivo, acionado pelo comando de interação já existente. Um pulso curto de vibração pode confirmar a entrada no corredor correto. Não altere a direção enquanto o jogador estiver conduzindo a câmera; permita desativar o auxílio e a vibração. Essa opção fornece orientação sem depender dos materiais.\n\n**Estratégia para daltonismo:** nenhuma informação essencial deve depender apenas de matiz, especialmente de pares vermelho–verde. Combine diferenças claras de luminosidade com acabamento e mantenha disponível o auxílio de câmera. Teste também em escala de cinza e com simulações de protanopia, deuteranopia e tritanopia. Simulações são uma triagem; quando possível, valide com jogadores daltônicos. Como brilho e reflexos dependem do ângulo, não os use como único sinal.\n\n**Teste de cinco minutos por participante:** use visitantes que nunca viram o mapa e compare a versão atual com a proposta entre participantes diferentes, evitando que o aprendizado favoreça a segunda tentativa.\n\n- **0:00–0:30:** explique os controles e dê um destino, sem explicar as pistas.\n- **0:30–3:00:** peça que encontre o destino. Registre tempo, entradas em corredores errados, retornos ao mesmo local e uso de ajuda.\n- **3:00–4:15:** peça que volte ao ponto inicial, observando se reconhece o trajeto.\n- **4:15–5:00:** pergunte quais pistas percebeu, onde ficou confuso e sua confiança de orientação, de 1 a 5.\n\nConsidere a proposta promissora se reduzir erros e retornos involuntários sem aumentar desconforto ou dependência do auxílio. Analise também os resultados dos participantes daltônicos separadamente, para que a média não esconda dificuldades.",
+      "usage": {
+        "input_tokens": 10172,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 728,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-1-A",
+      "case_id": "F01",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 40.545,
+      "prompt_sha256": "663467d0347d0ba9ccfa271c0e118cad51ed6a8dee3532f346e27d852b989dc9",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Usaria quatro mecanismos complementares, mantendo o mapa e todos os recursos visuais existentes. Na primeira visita, eles ajudam a reconhecer lugares, lembrar o percurso e escolher uma saída.\n\n1. **Identidade visual por região, nos materiais existentes.** Diferencie conjuntos de corredores por combinações de luminosidade e rugosidade: uma região clara e fosca, outra intermediária, outra escura, preservando a legibilidade. Aplique essas características consistentemente às superfícies existentes, para que o visitante reconheça “em que parte da biblioteca estou”. **Para daltonismo, a distinção principal deve funcionar em escala de cinza**; matiz pode ser um reforço. Evite depender de brilho especular, que varia com a câmera e a iluminação. O custo é alterar parte da aparência aprovada; diferenças discretas demais podem passar despercebidas.\n\n2. **Memória do próprio caminho.** Ao atravessar um segmento, o jogo muda suavemente um parâmetro do material do piso existente, deixando os trechos visitados com uma luminosidade diferente dos inéditos. O estado permanece durante a visita. Isso permite reconhecer retornos e ciclos sem desenhar setas ou acrescentar elementos. A regra precisa ser estável: “piso com esta aparência significa que já passei aqui”. Exige controlar o material por segmento e verificar o custo de instâncias no celular; se tudo compartilhar um único material indivisível, essa implementação precisará de adaptação.\n\n3. **Consulta de direção por vibração.** Com o visitante parado numa bifurcação, um gesto nos controles existentes ativa ajuda: enquanto ele gira a câmera, um pulso curto confirma quando olha para o corredor que leva ao objetivo atual. O cálculo usa as conexões transitáveis do mapa, evitando apontar através de paredes. Isso responde “por onde continuo?” sem exigir distinguir cores. Não vibraria continuamente, para evitar ruído e dependência. Depende de suporte e configuração de vibração; os demais mecanismos precisam continuar úteis quando ela estiver desativada.\n\n4. **Prévia curta do percurso, pela câmera.** Na entrada, ofereça uma apresentação pulável de poucos segundos, mostrando o trajeto até a primeira referência reconhecível ou bifurcação importante. Use a própria câmera e o cenário, com movimento lento, sem cortes desorientadores, terminando exatamente na posição inicial de controle. A pessoa recebe uma sequência espacial para reconhecer durante a caminhada. O limite é a memória: mostrar o labirinto inteiro sobrecarregaria o visitante. Para quem evita movimento de câmera, permita pular a apresentação.\n\n**Teste de cinco minutos por participante:** reserve 30 segundos para explicar os controles; 90 segundos para encontrar um destino sem assistência; 90 segundos para outro destino de dificuldade semelhante com os mecanismos; 60 segundos para pedir que identifique a região e aponte o caminho de volta; e 30 segundos para feedback.\n\nAlterne entre participantes a ordem das condições e dos destinos, reduzindo o efeito de aprendizagem. Registre escolhas erradas nas bifurcações, retornos involuntários, tempo e consultas à ajuda. Inclua participantes com daltonismo. Esse teste serve como triagem do conjunto; para descobrir qual mecanismo contribuiu, depois teste cada um separadamente.",
+      "usage": {
+        "input_tokens": 11607,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1072,
+        "reasoning_output_tokens": 397
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-2-B",
+      "case_id": "F01",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 61.723,
+      "prompt_sha256": "fb8012104e30e99b4ac361f93975fbd626010e5ed1cb8a1ddfa48f4cf4c9eceb",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu usaria quatro mecanismos que atuam em pontos diferentes da orientação, mantendo a geometria e todos os recursos visuais existentes.\n\n1. **Identidade dos setores pelos materiais.** Ao entrar em cada região, o visitante encontra uma combinação consistente de luminosidade e acabamento: madeira clara e fosca, madeira escura e fosca, acabamento intermediário mais polido, por exemplo. Isso transforma corredores semelhantes em regiões reconhecíveis. Edite apenas parâmetros dos materiais existentes; se um material for compartilhado pelo mapa inteiro, confirme se o jogo permite alterar seus parâmetros por instância. **Para daltonismo, a distinção principal deve sobreviver em escala de cinza**, sem depender de vermelho versus verde. No celular, priorize diferenças de luminosidade: reflexos podem desaparecer conforme a câmera ou a qualidade gráfica.\n\n2. **Uma referência sonora fixa.** Use um som já disponível, associado a um destino importante, como a entrada ou o balcão. Sua direção e intensidade ajudam o jogador a perceber quando está se aproximando, afastando ou circulando em torno desse ponto. O mecanismo oferece uma referência global mesmo quando os corredores parecem iguais. Pressupõe áudio espacial utilizável no aparelho; limite a propagação entre paredes para não sugerir passagens inexistentes. Funciona como complemento, pois parte dos visitantes jogará sem som.\n\n3. **Consulta tátil nas bifurcações.** Durante a primeira visita, permita manter pressionado um comando existente de ajuda. Perto de uma bifurcação, o aparelho vibra quando a câmera aponta para a saída que leva ao objetivo atual pelo caminho transitável. Um pulso curto pode confirmar o alinhamento; dois pulsos podem indicar chegada. Assim, o visitante consulta uma direção sem receber instruções contínuas. Calcule a orientação pela próxima saída da rota, não pela linha reta até o destino, que poderia apontar através de uma parede. Depende de vibração disponível e habilitada.\n\n4. **Familiarização por marcos e retorno.** Organize a primeira tarefa para visitar dois ou três pontos já distinguíveis no cenário e depois retornar a um deles. Nas primeiras bifurcações, uma ajuda opcional pode orientar brevemente a câmera para um marco existente, devolvendo imediatamente o controle. Na volta, retire essa assistência. O mecanismo ensina relações entre lugares — “este corredor liga aquele salão à entrada” — em vez de apenas conduzir até uma recompensa. Pressupõe que existam alguns elementos reconhecíveis; não exige alterar o mapa.\n\n**Teste de cinco minutos por participante**\n\nCompare visitantes novos em duas versões: a atual e a assistida. Cada pessoa joga apenas uma versão, evitando que o aprendizado contamine a comparação.\n\n- **0:00–0:30:** apresentar o mesmo objetivo, sem explicar o caminho.\n- **0:30–3:30:** localizar um destino e retornar à entrada.\n- **3:30–4:30:** alcançar um segundo ponto com as ajudas direcionais desligadas.\n- **4:30–5:00:** perguntar quais referências usou e onde ficou confuso.\n\nRegistre escolhas erradas nas bifurcações, retornos involuntários, tempo e consultas à ajuda. Como critério inicial, busque **30% menos escolhas erradas**, sem piorar o trecho sem assistência. Se melhorar apenas enquanto há orientação, ajuste a familiarização. Inclua pessoas com daltonismo e participantes sem áudio para verificar a cobertura das alternativas.",
+      "usage": {
+        "input_tokens": 19922,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 971,
+        "reasoning_output_tokens": 255
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-2-D",
+      "case_id": "F01",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 48.984,
+      "prompt_sha256": "1d7ba20e1403b2ca84415467701e9fb4fd34b299efaa3de57cfa3923ac0f6371",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu combinaria quatro mecanismos que respondem a perguntas diferentes: **onde estou, por onde passei, para onde seguir e como os trechos se conectam**. Todos usam apenas materiais existentes e comportamento do jogo.\n\n1. **Setores reconhecíveis pelos materiais — “onde estou?”**  \n   Divida o mapa em poucas regiões visuais, alterando a cor-base e a luminosidade dos materiais das estantes ou paredes existentes. Mantenha a identidade de cada setor consistente em seus corredores. Use transições nas junções já existentes para tornar perceptível a passagem entre regiões. Evite emissão, que poderia funcionar como iluminação adicional.\n\n   **Para daltonismo:** não dependa da diferença entre matizes. Escolha setores também distinguíveis pela luminosidade e confira sua leitura em escala de cinza. Reforce a entrada de cada setor com uma assinatura sonora curta e diferente, como um, dois ou três toques. Ofereça controle de volume e vibração; nenhuma informação essencial deve depender apenas da cor.\n\n2. **Memória do percurso — “por onde passei?”**  \n   Após a travessia, mude discretamente o material dos módulos de piso existentes, deixando os corredores visitados reconhecíveis. O efeito acompanha o percurso real, sem desenhar setas nem criar marcas ou texturas. Preserve o contraste com áreas ainda não exploradas e mantenha essa memória durante a primeira visita.\n\n   A distinção precisa ser inequívoca: explique uma vez que “piso mais claro significa trecho já visitado”. Isso ajuda a identificar voltas e explorar alternativas, sem revelar automaticamente a solução.\n\n3. **Consulta direcional por som e vibração — “qual saída devo experimentar?”**  \n   Disponibilize um gesto de ajuda. Quando acionado numa bifurcação, ele indica a saída correspondente ao próximo trecho de uma rota válida: um som espacial aponta sua direção, e uma vibração curta confirma quando o personagem está voltado para ela. Calcule a orientação pelo caminho navegável, para não apontar através das paredes.\n\n   Use a ajuda sob demanda, sem pulsos contínuos. No celular, permita escolher som, vibração ou ambos; a orientação deve funcionar também sem fones.\n\n4. **Prévia curta do percurso — “como esses lugares se conectam?”**  \n   No início da primeira visita, ofereça uma demonstração opcional de poucos segundos: a câmera percorre o primeiro trecho, atravessa uma bifurcação e retorna ao jogador. Mostre as mudanças de setor e o destino imediato, preservando a altura e o sentido de deslocamento usados no jogo.\n\n   Isso ensina a relação espacial entre corredores, enquanto os outros mecanismos ajudam durante a exploração. Permita pular ou repetir; evite movimentos rápidos e ofereça uma sequência de enquadramentos estáticos para quem sente enjoo.\n\n**Teste de cinco minutos por participante**\n\n- **0:00–0:30:** apresente os controles e um destino; explique apenas como pedir ajuda.\n- **0:30–2:00:** peça que encontre o destino. Registre tempo, entradas erradas, voltas e pedidos de ajuda.\n- **2:00–3:00:** peça que retorne ao início, observando se reconhece setores e trechos visitados.\n- **3:00–4:30:** indique outro destino, permitindo usar todos os recursos.\n- **4:30–5:00:** pergunte quais referências ajudaram e peça que descreva o caminho de volta.\n\nCompare participantes novos usando a versão atual e a proposta. Inclua pessoas com daltonismo; simulações servem como verificação complementar. Procure reduzir voltas e erros, sem aumentar desconforto ou dependência da ajuda.",
+      "usage": {
+        "input_tokens": 19452,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1148,
+        "reasoning_output_tokens": 374
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F01-2-A",
+      "case_id": "F01",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 93.573,
+      "prompt_sha256": "663467d0347d0ba9ccfa271c0e118cad51ed6a8dee3532f346e27d852b989dc9",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu manteria todas as palavras, sua sequência e os tempos originais. As quatro intervenções abaixo seriam sobrepostas ao áudio, sem alongar o episódio e com saída mono.\n\n1. **Dar uma assinatura de timbre a cada locutor.** Aplicar equalizações suaves e constantes: uma voz um pouco mais encorpada; a outra, mais definida nos médios. A diferença deve ajudar o ouvinte a reconhecer quem voltou a falar, sem transformar as vozes em personagens. Evitar depender dos graves profundos ou dos agudos extremos, que o telefone reproduz mal. **Teste:** tocar trechos curtos em ordem aleatória, após apresentar as duas vozes, e pedir que ouvintes identifiquem o locutor.\n\n2. **Organizar o volume durante as sobreposições.** Usar automação para destacar levemente quem inicia a interrupção, mantendo a outra fala audível. Depois desse início, equilibrar os níveis para preservar a compreensão das duas contribuições. O mecanismo é dirigir a atenção no instante da entrada, sem apagar quem já falava. **Teste:** pedir ao ouvinte que indique quem começou a falar primeiro e quem entrou depois, além de repetir palavras de ambos. Se uma fala desaparecer perceptualmente, reduzir a diferença de volume.\n\n3. **Criar uma diferença discreta de ambiente.** Manter uma voz seca e aplicar à outra reflexões muito curtas, em volume baixo, produzindo uma pequena diferença de proximidade. Isso oferece uma pista de identidade independente do timbre, mesmo em mono. Não usar reverberação longa: ela pode embaralhar as interrupções. Conter qualquer cauda dentro da duração aprovada. **Teste:** comparar com e sem o efeito no telefone. Só manter se melhorar a identificação sem prejudicar consoantes ou aumentar o esforço de escuta.\n\n4. **Marcar interrupções com um sinal não musical.** Sobrepor um pequeno estalo abafado, sempre igual, exatamente quando uma voz entra enquanto a outra continua. Uma nota na descrição explica a convenção. O sinal comunica **quando houve interrupção**; as assinaturas vocais ajudam a reconhecer quem entrou. Não acrescenta voz nem música, mas pode cansar se houver muitas ocorrências. **Teste:** verificar quantas interrupções os ouvintes detectam corretamente e quantas vezes confundem o sinal com defeito da gravação.\n\nHá uma condição técnica importante: **equalização, volume e ambiente por locutor exigem acesso separado às vozes**. Se existir apenas o arquivo mono misturado, a separação por processamento será uma estimativa, especialmente nas sobreposições. Aplicar tratamentos individuais apenas onde essa separação não cortar sílabas nem criar artefatos audíveis.\n\nPara o teste final, usar o **alto-falante do telefone, sem fones**, em volume habitual, primeiro em ambiente silencioso e depois com ruído cotidiano leve. Comparar o original e cada intervenção isolada, com ordem alternada e ouvintes que não conheçam o episódio. Medir três coisas: identificação do locutor, detecção das interrupções e compreensão das palavras. A combinação final deve melhorar as duas primeiras sem sacrificar a terceira.",
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1228,
+        "reasoning_output_tokens": 567
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F02-1-B",
+      "case_id": "F02",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 74.067,
+      "prompt_sha256": "fab81681367c40510634318b6bf8f16f9ea136ca64007a7321ae5107a3c637d6",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Manteria todas as palavras, sua ordem e seus tempos originais, inclusive nas sobreposições, com a mesma duração total e saída mono. As quatro edições usariam mecanismos diferentes e poderiam ser combinadas com moderação:\n\n1. **Distinguir as vozes pelo espectro.** Aplicar equalizações discretas e constantes: uma voz um pouco mais encorpada; a outra, mais clara na região de presença. Isso cria uma identidade sonora sem mudar altura, velocidade ou pronúncia. Evitaria diferenças baseadas apenas nos graves, que o telefone reproduz mal.\n\n2. **Organizar a atenção durante as interrupções pelo volume.** Usar automação suave para tornar perceptível a entrada de quem interrompe, reduzindo ligeiramente a outra voz durante a sobreposição. A fala de fundo precisa continuar compreensível: nada de silenciar, cortar sílabas ou usar redução automática agressiva. O mecanismo aqui é a hierarquia de intensidade, preservando o instante real de cada entrada.\n\n3. **Criar uma assinatura acústica para um dos locutores.** Manter uma voz seca e aplicar à outra uma ambiência muito curta, discreta e mono, sem eco separado perceptível. A diferença de textura pode ajudar a reconhecer quem fala. É uma opção condicionada ao teste: se a ambiência mascarar consoantes ou confundir as sobreposições, deve ser descartada. Sua cauda precisa terminar dentro da duração aprovada.\n\n4. **Marcar as interrupções com sinais não verbais e não musicais.** Sobrepor um clique curto e suave exatamente no início de cada interrupção, com duas texturas distinguíveis — por exemplo, um toque opaco para A e um estalo leve para B. Assim, o sinal informa tanto o evento quanto quem entrou. Não acrescenta voz, música ou tempo; deve ocupar um nível que não encubra nenhuma palavra. Uma legenda escrita na descrição pode explicar a convenção.\n\n**Condição técnica:** equalização, volume e ambiência por pessoa exigem acesso individual às vozes. Se existe apenas uma mistura mono, separar os locutores pode produzir artefatos, especialmente nas interrupções. Qualquer separação deve ser conferida contra o original; se apagar ou alterar fonemas, não serve para este material. Não basta processar toda a mistura como se cada voz estivesse isolada.\n\n**Teste em alto-falante de telefone**\n\nPrepararia amostras com trocas rápidas, interrupções e fala simultânea, mantendo o mesmo volume percebido entre original e versões editadas. Reproduziria no alto-falante integrado, em volume confortável, primeiro em ambiente silencioso e depois com ruído cotidiano moderado.\n\nSem mostrar a forma de onda ou a transcrição, pediria a ouvintes que:\n\n- Identifiquem A ou B em trechos selecionados, após ouvir uma referência de cada voz.\n- Marquem quando perceberam uma interrupção e quem interrompeu.\n- Transcrevam palavras das duas vozes nas sobreposições.\n- Avaliem esforço, naturalidade e incômodo dos sinais.\n\nCompararia acertos, falsas interrupções e palavras compreendidas. Só adotaria uma edição se ela melhorar a identificação sem prejudicar a compreensão de nenhum locutor. Ao final, conferiria também duração, alinhamento das falas e saída mono.",
+      "usage": {
+        "input_tokens": 19458,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1052,
+        "reasoning_output_tokens": 357
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F02-1-A",
+      "case_id": "F02",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 56.146,
+      "prompt_sha256": "2d7069824e7b5ec362721a8176e8ea9c93454b6634e42ef618f81281980cc98d",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu manteria todas as palavras nas posições e durações originais, sem cortar pausas nem deslocar falas. As quatro edições abaixo usam mecanismos diferentes e podem ser testadas separadamente antes de combinar as melhores.\n\n1. **Dar uma assinatura de timbre a cada locutor.** Aplicar uma equalização discreta e constante: uma voz mais encorpada; a outra, mais clara, sem exagerar nos agudos. A repetição dessa diferença ajuda o ouvinte a reconhecer quem fala, mesmo sem perceber conscientemente o tratamento. Evitar depender de graves profundos, que o telefone reproduz mal. Nas sobreposições, isso exige separar as vozes com qualidade suficiente; tratar a mistura inteira não diferencia os locutores.\n\n2. **Organizar a atenção pelo volume durante as interrupções.** Quando alguém entrar por cima, destacar suavemente sua entrada e reduzir um pouco a voz que já estava falando, mantendo ambas inteligíveis. Depois, devolver os níveis habituais. Esse contraste sinaliza o momento da interrupção e permite acompanhar a mudança de turno. A redução deve ser pequena: se esconder palavras, a edição falhou. Também depende de conseguir tratar as vozes separadamente nos trechos simultâneos.\n\n3. **Criar uma diferença de distância acústica em mono.** Manter uma voz seca e próxima; dar à outra reflexões muito curtas e discretas, como uma pequena diferença de ambiente. A pista aqui é a sensação de distância, não a altura tonal ou o volume. Não usar caudas longas de reverberação, que embaralhariam as interrupções. É a opção mais incerta: só vale mantê-la se a diferença sobreviver ao alto-falante do telefone sem prejudicar a compreensão. Qualquer efeito deve caber na duração existente.\n\n4. **Sobrepor pequenos sinais não musicais nas entradas.** Usar um clique seco para um locutor e um pequeno ruído de textura diferente para o outro, sempre no começo de cada turno. Durante uma fala em andamento, o sinal de entrada do outro identifica também a interrupção. Os sinais seriam breves, discretos e sobrepostos ao áudio, sem inserir tempo, voz ou música. Esse recurso pode funcionar mesmo sem separar as vozes, desde que seja possível identificar corretamente quem entrou. É preciso verificar se não encobre consoantes nem se torna cansativo.\n\n**Como testar no alto-falante de telefone**\n\nSelecionar trechos com troca normal de turno, interrupção curta e fala simultânea prolongada. Comparar o original com cada edição usando o mesmo telefone, volume percebido equivalente e ordem de apresentação alternada. Testar em ambiente silencioso e com ruído cotidiano moderado, sem fones.\n\nApós uma breve familiarização com as duas vozes, pedir a pessoas que não conhecem o episódio para:\n\n- Identificar quem disse frases previamente escolhidas.\n- Marcar quando perceberam uma interrupção.\n- Transcrever palavras nos trechos sobrepostos.\n- Avaliar esforço e incômodo.\n\nContar acertos de locutor, interrupções detectadas, falsos alarmes e palavras compreendidas. Manter apenas tratamentos que melhorem a identificação **sem reduzir a compreensão**. Se a separação do mono produzir vozes metálicas ou apagar sílabas, descartar esse processamento; os sinais sobrepostos continuam sendo uma alternativa, embora não resolvam palavras já encobertas na gravação.",
+      "usage": {
+        "input_tokens": 19928,
+        "cached_input_tokens": 19712,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1228,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F02-1-D",
+      "case_id": "F02",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 75.717,
+      "prompt_sha256": "94fece67411fc809d0876c3f327737f9b75cf109aae0be49aceb2f4178946af8",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu manteria o arquivo mono, com as mesmas palavras, na mesma ordem e nos mesmos instantes, preservando a duração total. As quatro edições abaixo usam pistas diferentes; devem ser testadas separadamente antes de combinadas.\n\nHá uma limitação importante: no mono, durante a sobreposição, as duas vozes estão misturadas. Processar cada locutor exige separação de fontes, que pode produzir artefatos. Nos turnos isolados, a edição pode ser manual; nas interrupções, qualquer separação precisa ser conferida contra o original.\n\n1. **Contraste de timbre para identificar os locutores.**  \n   Aplicar equalizações discretas e consistentes: uma voz ligeiramente mais encorpada; a outra, com mais presença nos médios. A entrada de cada pessoa passa a carregar uma assinatura reconhecível, sem mudar velocidade ou altura da voz. O contraste deve funcionar nos médios reproduzidos pelo telefone, sem depender de graves profundos. Evitar alterações que prejudiquem consoantes ou tornem alguma voz estridente.\n\n2. **Automação de volume para revelar a tomada de turno.**  \n   Quando alguém começa a interromper, destacar suavemente sua entrada e reduzir um pouco a voz que já estava falando. Isso chama atenção para o início da interrupção sem deslocar nenhuma fala. Depois, devolver o equilíbrio. Essa edição exige fontes suficientemente separadas durante a sobreposição; abaixar a mistura inteira não resolve. A redução deve ser pequena: ambas as falas precisam continuar audíveis e compreensíveis, sem transformar uma interrupção ambígua em aparente cessão da palavra.\n\n3. **Marcadores não musicais para sinalizar eventos.**  \n   Sobrepor um clique seco e discreto no instante em que começa uma interrupção. Dois timbres de clique podem indicar qual locutor entrou, com a convenção explicada na descrição do episódio. O mecanismo é uma sinalização explícita, independente da semelhança entre as vozes, e pode funcionar sem separação de fontes. Não acrescentar tempo nem cobrir consoantes. Evitar sequências rítmicas ou sons tonais que funcionem como música.\n\n4. **Contraste de ambiência para criar uma identidade acústica.**  \n   Manter uma voz seca e dar à outra uma reflexão de sala muito curta, discreta e inteiramente mono. A diferença entre “próxima” e “levemente ambientada” oferece uma pista diferente da equalização. Não usar eco perceptível, atraso da fala original ou cauda que ultrapasse o término do arquivo. É a opção mais incerta: se a ambiência borrar palavras ou desaparecer no telefone, descartá-la.\n\n**Teste em alto-falante de telefone**\n\nSelecionar trechos com alternância rápida e interrupções, além de alguns sem sobreposição. Comparar o original com cada edição, mantendo o mesmo volume percebido. Usar o alto-falante do próprio aparelho, sem fones, em ambiente silencioso e com ruído doméstico moderado.\n\nCom alguns ouvintes que não conheçam o episódio, apresentar primeiro uma amostra identificada de cada locutor. Depois, alternar a ordem das versões e pedir:\n\n- Quem falou cada trecho?\n- Em que instante começou a interrupção e quem entrou?\n- Quais palavras conseguiram entender?\n- Alguma pista distraiu ou cansou?\n\nContar acertos de identidade, interrupções detectadas, falsos alarmes e palavras compreendidas. Só manter uma edição se melhorar a atribuição ou a detecção **sem reduzir a compreensão**. Por fim, conferir duração, alinhamento das falas e ausência de palavras perdidas ou criadas por artefatos.",
+      "usage": {
+        "input_tokens": 19928,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1177,
+        "reasoning_output_tokens": 403
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F02-2-D",
+      "case_id": "F02",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 47.584,
+      "prompt_sha256": "94fece67411fc809d0876c3f327737f9b75cf109aae0be49aceb2f4178946af8",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu manteria o áudio em mono, com as mesmas palavras, na mesma ordem e nos mesmos instantes de início e fim. As quatro edições abaixo usam mecanismos diferentes e podem ser combinadas. Nas sobreposições, qualquer tratamento por locutor depende de conseguir isolar cada voz sem artefatos; se isso falhar, é melhor preservar o trecho.\n\n1. **Equalização diferente para cada locutor — identidade pelo espectro.** Aplicar ajustes suaves e constantes: destacar um pouco o corpo de uma voz e a presença da outra, sem deixá-las abafadas ou estridentes. Isso oferece uma assinatura reconhecível a cada pessoa. As diferenças precisam estar na faixa que o telefone reproduz bem, aproximadamente entre 500 Hz e 4 kHz; diferenças apenas nos graves dificilmente ajudarão.\n\n2. **Pequeno deslocamento de altura — identidade pela frequência fundamental.** Testar uma alteração discreta em uma das vozes, preservando formantes e duração. O objetivo é aumentar a distância perceptiva entre elas sem criar uma voz caricata. Esse mecanismo muda a altura das notas da fala; a equalização anterior muda o equilíbrio entre frequências. Descartar o ajuste se prejudicar a naturalidade ou a identidade vocal. Como a aprovação informada cobre palavras, ordem e duração, ela não deve ser interpretada automaticamente como aprovação dessa mudança de voz.\n\n3. **Automação de volume nas sobreposições — interrupção pela relação de níveis.** Quando alguém começar a interromper, reduzir suavemente a voz que já estava falando, por exemplo, em 2–4 dB, mantendo ambas audíveis. Recuperar o nível ao terminar a sobreposição. Assim, o começo da nova intervenção ganha destaque sem apagar a fala anterior. Não deslocar entradas, encurtar frases ou inserir pausas; conferir especialmente consoantes e palavras curtas.\n\n4. **Redução de reverberação — entradas e finais mais definidos.** Se houver som de sala, reduzir moderadamente suas caudas. A reverberação prolonga sílabas e pode esconder o instante em que outra pessoa entra. Esse tratamento atua na persistência temporal do som, tornando a troca mais nítida. Usar com parcimônia: processamento excessivo pode produzir uma voz metálica ou eliminar finais fracos. Se a gravação já estiver seca, não há benefício em forçar essa edição.\n\n**Teste no alto-falante do telefone**\n\nPreparar trechos com troca normal, interrupção curta e fala simultânea prolongada. Comparar o original com cada edição isolada e depois com a combinação, sempre com volume percebido equivalente.\n\nReproduzir pelo alto-falante integrado, sem fones, em volume confortável, primeiro em ambiente silencioso e depois com ruído cotidiano leve. Pedir a ouvintes que não conheçam a conversa para:\n\n- identificar quem fala, usando rótulos A e B após ouvirem uma apresentação de cada voz;\n- marcar quando perceberam uma interrupção;\n- transcrever as palavras nos trechos sobrepostos;\n- avaliar naturalidade e esforço para acompanhar.\n\nConferir as respostas contra uma referência revisada manualmente. Adotar apenas ajustes que melhorem a identificação e a percepção das interrupções **sem diminuir o reconhecimento das palavras**. Por fim, verificar que a exportação continua mono, com duração e posições das falas preservadas, sem distorção.",
+      "usage": {
+        "input_tokens": 19458,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1073,
+        "reasoning_output_tokens": 369
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F02-2-A",
+      "case_id": "F02",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 57.181,
+      "prompt_sha256": "2d7069824e7b5ec362721a8176e8ea9c93454b6634e42ef618f81281980cc98d",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Manteria cada palavra na posição original e a duração total intacta. As quatro edições abaixo podem ser combinadas, mas devem ser testadas separadamente para saber o que realmente ajuda.\n\n1. **Diferenciar o timbre por equalização.** Dar a um locutor um som discretamente mais encorpado e ao outro mais presença nos médios, sem prejudicar consoantes. Isso cria uma assinatura auditiva para reconhecer quem entra, inclusive após uma interrupção. O limite é não tornar uma voz abafada ou estridente; graves profundos ajudam pouco no alto-falante de telefone.\n\n2. **Separar ligeiramente a altura das vozes.** Aplicar uma pequena mudança fixa de altura a um dos locutores, preservando a duração e, quando possível, os formantes para manter a naturalidade. O mecanismo é diferente da equalização: altera a frequência fundamental, criando outra pista de identidade. Começaria com meio semitom e só aumentaria se necessário. Descartaria o tratamento se produzisse voz artificial ou alterasse a expressividade.\n\n3. **Criar um foco de volume nas interrupções.** Nos trechos sobrepostos, reduzir discretamente a voz que já estava falando durante o início da entrada do outro locutor, com transições suaves. Isso destaca a chegada da segunda fala sem cortar ou deslocar palavras. A redução deve ser pequena o suficiente para que ambas continuem compreensíveis. Evitaria compressão geral agressiva, que pode deixar as duas vozes disputando o mesmo espaço.\n\n4. **Marcar entradas com sinais não verbais.** Sobrepor um estalo curto e suave para as entradas de A e um pequeno ruído seco, de textura diferente, para B. Nas interrupções, o sinal coincide exatamente com o começo da fala entrante; nas demais entradas, pode ser omitido após uma breve apresentação da associação. São efeitos não musicais, sem voz adicional e sem aumentar a duração. A vantagem é explicitar o evento; o custo é acrescentar uma convenção que o ouvinte precisa aprender. Os sinais não podem encobrir a primeira sílaba.\n\n**Limitação importante do mono:** as três primeiras propostas exigem tratar os locutores separadamente. Nas sobreposições, isso depende de uma separação de fontes suficientemente limpa. Se ela apagar consoantes, criar sons metálicos ou misturar identidades, manteria o trecho original e usaria a sinalização não verbal. Não aplicaria um tratamento individual ao bloco inteiro com as duas vozes.\n\n**Teste no alto-falante de telefone:** preparar trechos de 20–40 segundos com alternâncias simples e interrupções difíceis, todos com a mesma duração e volume percebido. Comparar o original e cada tratamento em ordem variada, no mesmo telefone e volume, primeiro em silêncio e depois com ruído ambiente leve.\n\nSem mostrar quem fala, pedir a ouvintes que indiquem **A ou B em cada entrada**, marquem quando perceberam uma interrupção e repitam algumas palavras das sobreposições. Comparar acertos, falsos alarmes e esforço de escuta. A edição só passa se melhorar a identificação sem reduzir a compreensão das palavras; conferir também naturalidade e incômodo após alguns minutos.",
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1075,
+        "reasoning_output_tokens": 400
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F02-2-B",
+      "case_id": "F02",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 44.047,
+      "prompt_sha256": "fab81681367c40510634318b6bf8f16f9ea136ca64007a7321ae5107a3c637d6",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu usaria os 25 minutos para tornar explícito **o que permanece válido quando a aparência da planta muda**. Acertar exemplos conhecidos ainda não mostra se os aprendizes compreendem a relação entre desenho e dimensão real.\n\nAs quatro intervenções abaixo usam uma mesma planta esquemática, feita a lápis, sem depender de régua nem de medidas tomadas no papel. Organize os onze em três trios e uma dupla, alternando quem explica.\n\n1. **Construir uma ponte entre uma distância conhecida e a planta — 4 minutos.**  \n   Cada grupo escolhe uma distância familiar, como a largura de uma mesa, e atribui a ela uma medida hipotética explícita. Depois representa essa distância em uma escala escolhida. Antes de calcular, responde: “Qual medida pertence ao papel? Qual pertence ao objeto? O que o denominador relaciona?”. Em seguida, aplica a mesma explicação a uma parede do cômodo desconhecido. O mecanismo é ligar a notação abstrata a duas grandezas identificáveis, sem depender de reconhecer o ambiente.\n\n2. **Contrastar aparência e estrutura — 5 minutos.**  \n   Faça duas versões esquemáticas da mesma planta, mantendo as medidas indicadas e a escala, mas girando a orientação e mudando a posição dos móveis. Os grupos identificam o que muda visualmente e o que continua determinando as dimensões reais. Depois, mantenha o cômodo e altere a escala: eles preveem se o desenho deverá aumentar ou diminuir. O contraste separa pistas decorativas das relações relevantes.\n\n3. **Investigar um erro plausível — 5 minutos.**  \n   Apresente uma resolução fictícia que interprete corretamente a escala, mas termine com uma conversão de unidade errada. Cada grupo precisa localizar a primeira passagem inválida, corrigi-la e explicar como detectar o problema sem refazer toda a conta. Pergunte também: “O resultado combina com o tamanho possível de um cômodo?”. Isso trabalha controle do raciocínio, em vez de apenas reprodução de procedimentos.\n\n4. **Produzir no sentido inverso — 5 minutos.**  \n   Agora forneça dimensões reais e uma escala. Os aprendizes criam um pequeno cômodo esquemático, anotando quais seriam as medidas no desenho. Um colega recebe a representação e reconstrói as dimensões reais, justificando a relação usada. Nos trios, o terceiro verifica a correspondência; na dupla, alternam os papéis. A inversão exige tratar a escala como uma relação reversível. Os traços podem ser aproximados: valem as medidas anotadas.\n\n**Teste individual de transferência — 6 minutos**\n\nEntregue uma planta inédita em “L”, sem móveis, com escala **1:50** e um segmento cuja medida no desenho esteja explicitamente indicada como **4 cm**.\n\nPeça:\n\n- A dimensão real desse segmento e uma justificativa com unidades.\n- A medida que ele teria ao redesenhar o mesmo cômodo em **1:100**, explicando primeiro se aumentaria ou diminuiria.\n- Se girar a folha altera alguma dimensão real, e por quê.\n\nRespostas esperadas: **2 m; 2 cm; nenhuma alteração**.\n\nAvalie separadamente relação entre grandezas, previsão e cálculo. Acertar só a primeira conta é compatível com imitação; justificar a mudança de escala e a invariância à rotação fornece evidência mais forte de compreensão. Uma relação correta com erro aritmético pede apoio diferente de uma inversão sistemática entre papel e realidade.",
+      "usage": {
+        "input_tokens": 19915,
+        "cached_input_tokens": 18432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1035,
+        "reasoning_output_tokens": 295
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F03-1-D",
+      "case_id": "F03",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 65.341,
+      "prompt_sha256": "447f7df201dfe2ec2067f9d7fd75de339bb6b9e1cbd6cc0e944a5a6387c89ad1",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu usaria os 25 minutos para trabalhar **a relação entre desenho e realidade**, variando o que o aprendiz precisa decidir. O acerto nos exemplos sugere uma dificuldade de transferência, mas ainda não revela sua causa.\n\n**Organização:** 2 minutos de abertura, quatro intervenções de 4 minutos e um teste individual de 7 minutos. Forme quatro duplas e um trio; todos registram suas próprias respostas. Os croquis podem ser feitos à mão livre, com comprimentos informados por escrito, sem régua.\n\n1. **Comparar para descobrir o que permanece.**  \n   Cada grupo desenha dois croquis esquemáticos do mesmo cômodo: em um, uma parede ocupa 6 cm na escala 1:50; no outro, ocupa 3 cm na escala 1:100. A tarefa é discutir: “O que mudou? O que precisa continuar igual?”. Depois, cada aprendiz escreve uma frase relacionando comprimento no papel, escala e comprimento real.  \n   **Mecanismo:** distinguir a relação constante das aparências do desenho. Ajuda a evitar a ideia de que uma parede desenhada maior necessariamente representa uma parede real maior. Exija justificativa: somente observar os dois números pode virar outra regra decorada.\n\n2. **Construir uma ponte com algo conhecido.**  \n   Cada aprendiz inventa uma representação reduzida de um objeto familiar, como uma mesa, e anota o significado de “1 cm representa…”. O colega identifica, na planta do cômodo desconhecido, os elementos equivalentes: medida desenhada, fator de escala e medida real. Depois, o autor explica essa correspondência sem mencionar a mesa.  \n   **Mecanismo:** recuperar um conhecimento acessível e explicitar onde ele se aplica em outro contexto. A ponte precisa terminar na planta para não criar dependência do exemplo familiar.\n\n3. **Investigar um erro plausível.**  \n   Apresente oralmente: “Uma parede ocupa 4 cm em uma planta 1:50. Um aprendiz disse que ela mede 200 metros”. Os grupos localizam o ponto exato do erro, corrigem a afirmação e explicam como poderiam desconfiar dela antes de terminar a conta. Cada integrante registra sua explicação antes da conversa.  \n   **Mecanismo:** desenvolver controle sobre unidades e plausibilidade, além da execução da operação. Isso também permite detectar quem calcula corretamente, mas não interpreta o resultado.\n\n4. **Inverter o sentido da tarefa.**  \n   Agora o aprendiz assume o papel de quem produz a planta: precisa representar uma parede real de 3 m em 1:50. Antes de calcular, prevê o que aconteceria ao desenho se passasse para 1:100. O colega verifica se a previsão combina com a explicação.  \n   **Mecanismo:** reconstruir a relação no sentido inverso, rompendo a dependência da sequência “ver escala, multiplicar”. Não é necessário desenhar com precisão; basta indicar o comprimento pretendido.\n\n**Teste curto: uma situação nova e uma mudança inesperada.**\n\nIndividualmente, apresente um croqui de formato diferente dos anteriores: uma parede mede **4,5 cm no papel**, em **1:80**. Peça a medida real e uma explicação com unidades. Após registrarem, acrescente: “O mesmo cômodo será redesenhado em 1:40. Sem refazer a primeira conta, explique o que acontece com essa parede no papel”.\n\nRespostas esperadas: **3,6 m; o comprimento desenhado dobra, chegando a 9 cm; a parede real permanece igual**.\n\nAcertar apenas 3,6 m é compatível com imitação. Articular unidades, prever a mudança e preservar a dimensão real oferece evidência mais forte de compreensão e transferência.",
+      "usage": {
+        "input_tokens": 11600,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1128,
+        "reasoning_output_tokens": 343
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F03-1-B",
+      "case_id": "F03",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 57.902,
+      "prompt_sha256": "755eba6828f98d0569c0224f3729070fa80f6ac536f255205990479a591e4062",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "O problema sugere que os aprendizes reconhecem o formato dos exemplos, mas ainda não identificam quando e por que usar a relação de escala. Eu usaria os 25 minutos para trabalhar essa relação, sem acrescentar uma lista de exercícios. Organize os onze em quatro duplas e um trio, com registros individuais.\n\n**1. Comparar contextos para encontrar o que permanece — 4 minutos**\n\nEm papel, apresente uma planta familiar e outra de um cômodo desconhecido, ambas com uma parede representada por 4 cm na escala 1:50. Peça que circulem informações necessárias e risquem detalhes irrelevantes ao cálculo: nome do ambiente, posição dos móveis, orientação da folha.\n\nCada grupo completa: “Embora os cômodos sejam diferentes, podemos usar a mesma relação porque…”.\n\nIsso favorece a transferência ao separar a estrutura matemática da aparência do problema.\n\n**2. Contrastar um raciocínio correto com um erro plausível — 5 minutos**\n\nPara a mesma parede, apresente duas respostas: “4 × 50 = 200 cm reais” e “4 ÷ 50 = 0,08 cm reais”. Antes de calcular, cada aprendiz escolhe qual resultado pode fazer sentido e explica.\n\nDepois, os colegas discutem: “O que representa o 50?” e “A parede real deveria ser maior ou menor que seu desenho?”. Fechem com a interpretação: **1 cm no papel corresponde a 50 cm reais**.\n\nO contraste ensina a reconhecer as condições de uso da operação, em vez de apenas lembrar uma conta.\n\n**3. Traduzir a mesma relação entre representações — 5 minutos**\n\nSem mudar o cômodo, cada grupo expressa sua escala de três formas: uma frase, uma pequena tabela “papel ↔ realidade” e uma seta indicando a transformação entre as medidas. Em seguida, usa essas representações no sentido inverso: dada a parede real, como obter seu comprimento no desenho?\n\nEssa tradução cria caminhos para recuperar o conceito quando a questão não apresenta o mesmo formato da aula.\n\n**4. Explicar uma mudança e retirar o apoio — 5 minutos**\n\nPergunte: “Se redesenharmos o mesmo cômodo de 1:50 para 1:100, o que muda? O que permanece?”. Cada aprendiz prevê a resposta antes de calcular e a defende para um colega.\n\nDepois, escondam as anotações e escrevam individualmente uma orientação para alguém que verá uma planta desconhecida: como identificar os dados, decidir o sentido da conversão e conferir o resultado.\n\nIsso combina mudança de perspectiva com recuperação sem modelo disponível.\n\n**Teste individual — 6 minutos**\n\nEntregue um papel com três itens, sem exemplos resolvidos:\n\n1. **Referência próxima:** na escala 1:50, uma parede mede 3 cm no papel. Qual é seu comprimento real?\n2. **Transferência:** numa planta de um cômodo nunca visto, uma parede real de 2 m será desenhada em 1:100. Quantos centímetros ocupará? Explique o significado da escala e sua escolha de operação.\n3. **Julgamento:** “Ao passar de 1:50 para 1:100, o desenho dobra de tamanho.” Concorda? Justifique sem depender de uma fórmula.\n\nRespostas esperadas: **150 cm; 2 cm; o desenho fica com metade das dimensões lineares**.\n\nAcertar apenas o primeiro item é compatível com imitação. Resolver a conversão inversa e justificar a mudança de escala fornece evidência mais forte de compreensão. Uma relação correta com erro aritmético deve ser registrada separadamente de um erro conceitual.",
+      "usage": {
+        "input_tokens": 19445,
+        "cached_input_tokens": 18432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 978,
+        "reasoning_output_tokens": 219
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F03-1-A",
+      "case_id": "F03",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 43.939,
+      "prompt_sha256": "a9de85e1cfb1bc39846bf4649f012e94fb2539fcbc76fa0cd01ffa51dc3ccf73",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Acertar exemplos e errar uma planta desconhecida pode indicar dependência do formato apresentado. A hipótese precisa ser verificada: a dificuldade também pode estar em interpretar a planta ou converter unidades.\n\nUsaria **uma única planta simples de um cômodo inventado**, desenhada no papel, durante as quatro intervenções. Assim, a aula muda o modo de pensar sobre escala sem virar uma lista de exercícios.\n\n**1. Prever antes de calcular — 4 minutos**  \nApresente a mesma parede representada em 1:50 e 1:100. Antes de medir ou fazer contas, cada aprendiz registra: “Em qual desenho a parede fica maior? O tamanho real muda?”. Depois, discutem em duplas, com um trio.\n\nO mecanismo é vincular escala à relação entre representação e realidade. A previsão torna visível uma contradição que uma conta decorada pode esconder. Exija uma justificativa; acertar por palpite não basta.\n\n**2. Construir a representação no sentido inverso — 5 minutos**  \nInforme que uma parede real mede 4 metros e peça que desenhem um segmento correspondente em 1:100, marcando seu comprimento. Em seguida, cada um explica a um colega como conferir se o segmento representa aquela parede.\n\nO mecanismo é inverter o percurso habitual: partir do objeto para produzir o desenho. Isso exige coordenar unidades e proporção, em vez de apenas reproduzir uma operação aplicada a uma medida da planta. Use somente esse segmento, sem gastar tempo desenhando o cômodo inteiro.\n\n**3. Descobrir o que pode mudar sem mudar a relação — 5 minutos**  \nOs colegas giram a folha e acrescentam uma porta, móveis ou outra posição para o nome do cômodo. Cada aprendiz aponta quais mudanças interferem no cálculo da parede e quais não interferem. Pergunte também o que aconteceria se o desenho inteiro fosse ampliado, mantendo escrita a escala antiga.\n\nO mecanismo é distinguir características superficiais de informações matematicamente relevantes. O benefício é reconhecer a mesma relação em plantas visualmente diferentes.\n\n**4. Diagnosticar um raciocínio alheio — 4 minutos**  \nEscreva: “Na escala 1:50, uma parede de 3 cm no papel mede 150 m, porque multipliquei por 50”. Peça que localizem o ponto exato do erro e façam uma correção que preserve o que está certo.\n\nO mecanismo é avaliar significado e coerência: multiplicar está correto, mas o resultado inicial é **150 cm**, equivalentes a **1,5 m**. Evite aceitar apenas “a resposta certa”; a tarefa é explicar o erro.\n\n**Teste individual de transferência — 7 minutos**\n\nEm outra folha, apresente uma planta desconhecida, girada e com detalhes diferentes:\n\n- **Previsão:** “Uma parede aparece com 3 cm em 1:50. Se a mesma parede for representada em 1:100, ficará maior, menor ou igual? Explique antes de calcular.”\n- **Cálculo:** “Qual é o comprimento real dessa parede? Mostre as unidades.”\n- **Perturbação:** “Uma copiadora dobra todas as medidas do desenho, mas conserva a inscrição ‘1:50’. Essa inscrição continua correta? Justifique.”\n\n**Leitura dos resultados:** cálculo correto com justificativas contraditórias sugere imitação; previsão, cálculo e explicação da ampliação coerentes oferecem evidência de compreensão. Raciocínio proporcional correto com erro de conversão aponta uma dificuldade mais específica. O teste orienta o próximo ensino, sem alterar a prova.",
+      "usage": {
+        "input_tokens": 20880,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 910,
+        "reasoning_output_tokens": 163
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F03-2-B",
+      "case_id": "F03",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 46.812,
+      "prompt_sha256": "755eba6828f98d0569c0224f3729070fa80f6ac536f255205990479a591e4062",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "O acerto nos exemplos pode depender de pistas da aula, como números familiares e uma sequência decorada. A proposta é trabalhar **uma única planta simples**, desenhada no papel, mudando a maneira de analisá-la. As quatro estratégias ocupam 19 minutos; o teste individual, os seis restantes.\n\n**1. Explicitar o princípio e suas condições — 4 minutos**\n\nApresente uma planta retangular de 4 cm por 3 cm, em escala 1:50. Pense em voz alta: “Cada centímetro no papel representa 50 centímetros reais. Antes de calcular, preciso identificar o que está no papel, o que é real e colocar as medidas na mesma unidade”.\n\nPeça que cada aprendiz escreva, com suas palavras, o significado de 1:50 e indique essas duas grandezas na planta. Destaque que uma escala única exige a mesma proporção em todas as direções.\n\n**Como promove transferência:** torna explícita a relação que deve ser reconhecida em qualquer planta, independentemente do cômodo ou da aparência.\n\n**2. Comparar para distinguir o essencial — 5 minutos**\n\nNo quadro de papel ou nas próprias folhas, represente o mesmo cômodo com a planta girada e, depois, com todas as dimensões do desenho reduzidas à metade. Pergunte: “Qual mudança altera a escala? Qual apenas altera a apresentação?”.\n\nOrganize quatro duplas e um trio. Cada grupo deve justificar sua resposta apontando o que mudou no papel e o que permaneceu no cômodo real. Discuta especialmente a ideia equivocada de que girar a planta altera suas medidas.\n\n**Como promove transferência:** ensina a separar características superficiais da relação proporcional relevante.\n\n**3. Fazer previsões e confrontar explicações — 5 minutos**\n\nAntes de qualquer conta, peça uma previsão: “Se redesenharmos esse mesmo cômodo em 1:100, ele ocupará mais ou menos espaço no papel?”. Cada aluno registra sua previsão; depois, explica ao parceiro usando uma parede como evidência. No trio, o terceiro verifica a coerência e os papéis se alternam.\n\nSó então confirmem numericamente: a parede real de 2 m passa de 4 cm para 2 cm no papel. Quem mudar de resposta registra por quê.\n\n**Como promove transferência:** exige produzir e revisar uma explicação, em vez de acompanhar uma solução pronta.\n\n**4. Retirar gradualmente as pistas — 5 minutos**\n\nApresente uma planta esquemática de outro cômodo, com posição e contorno diferentes, mas com escala e medidas suficientes. Inicialmente, ofereça apenas duas perguntas: “O que preciso descobrir?” e “Que relação liga desenho e realidade?”. Depois, cubra essas perguntas e peça que cada aprendiz escreva seu próprio roteiro de decisão, sem fazer todas as contas.\n\n**Como promove transferência:** pratica reconhecer e escolher o procedimento em uma situação desconhecida, com menos apoio externo.\n\n**Teste individual — 6 minutos, sem consultar o roteiro**\n\n1. Uma parede mede 4 cm numa planta 1:50. Quanto mede realmente? Explique o significado da escala.\n2. A planta inteira é reduzida à metade. Qual será a nova escala? A parede real mudou? Justifique.\n3. Outra cópia foi esticada: a largura dobrou, mas o comprimento permaneceu igual. É possível atribuir uma única escala à cópia? Por quê?\n\n**Respostas esperadas:** 2 m; 1:100, sem mudança real; não, pois as direções passaram a ter proporções diferentes.\n\nAcertar apenas o primeiro item sugere domínio do procedimento habitual. Resolver os demais com justificativas proporcionais oferece evidência mais forte de compreensão e transferência; um erro aritmético isolado não deve apagar uma explicação conceitualmente correta.",
+      "usage": {
+        "input_tokens": 10165,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1217,
+        "reasoning_output_tokens": 430
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F03-2-A",
+      "case_id": "F03",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 58.943,
+      "prompt_sha256": "a9de85e1cfb1bc39846bf4649f012e94fb2539fcbc76fa0cd01ffa51dc3ccf73",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "O foco é fazer os aprendizes reconhecerem a relação entre desenho e realidade, mesmo quando mudam o cômodo, a orientação ou a pergunta. As quatro propostas abaixo cabem na mesma aula e usam apenas papel e lápis. **Todas as medidas são informadas por escrito; os esboços não precisam estar em escala.**\n\n**Abertura — 2 minutos**\n\nApresente um cômodo desconhecido, em formato de L, e pergunte individualmente: “O que você precisa saber para descobrir o comprimento real de uma parede?” Recolha respostas rápidas, sem corrigir ainda. Isso revela se procuram a escala ou dependem da aparência do desenho.\n\n**1. Comparar estruturas, não aparências — 4 minutos**\n\nApresente três pequenos esboços: dois visualmente diferentes na escala 1:50 e outro parecido com um deles, mas em 1:100. Em quatro duplas e um trio, os aprendizes decidem quais permitem usar a mesma relação entre centímetros no papel e centímetros reais.\n\nCada grupo completa: “Estes dois funcionam do mesmo jeito porque…”.\n\n**Mecanismo:** a semelhança visual deixa de ser uma pista confiável; eles precisam identificar a relação que permanece válida entre contextos.\n\n**2. Trabalhar de trás para frente — 4 minutos**\n\nInforme: “Uma parede real mede 3 metros e será representada por 6 centímetros”. Individualmente, cada aprendiz determina a escala e escreve uma instrução para alguém representar outra parede desse cômodo. Depois, um colega verifica a instrução.\n\n**Mecanismo:** inverter a direção da tarefa exige reconstruir a relação, em vez de repetir a sequência usada nos exemplos da aula. A instrução precisa explicitar unidades.\n\n**3. Investigar um erro plausível — 4 minutos**\n\nApresente duas respostas fictícias para uma parede de 4 cm na escala 1:50:\n\n- “Na realidade, mede 200 cm.”\n- “Na realidade, mede 0,08 cm, porque dividi por 50.”\n\nOs grupos devem localizar a decisão equivocada e explicar por que o resultado é incompatível com uma redução. Não basta votar na resposta correta.\n\n**Mecanismo:** transformar o erro em objeto de análise torna explícito quando multiplicar ou dividir e oferece uma verificação de plausibilidade.\n\n**4. Usar a escala para tomar uma decisão — 4 minutos**\n\nEm outro cômodo desconhecido, informe uma parede de 3 cm na escala 1:50. Um móvel de 1,40 m precisa caber junto dela. Cada aprendiz decide se cabe e justifica. Em seguida, pergunte oralmente: “Se girarmos a planta no papel, sua decisão muda?”\n\n**Mecanismo:** a escala passa a servir a uma decisão concreta; a rotação testa se a orientação foi confundida com uma propriedade relevante.\n\n**Teste individual — 5 minutos**\n\nUse um novo esboço irregular, sem nomes de cômodos, na escala **1:40**:\n\n1. Uma parede está indicada como 3 cm no desenho. Qual seu comprimento real? Mostre a relação e as unidades.\n2. Outra parede mede 2 m reais. Quantos centímetros deve ter no desenho?\n3. Um colega afirma: “Se redesenhar em 1:80, essa mesma parede ficará maior no papel”. Você concorda? Explique, mesmo sem calcular.\n\n**Como interpretar:** respostas esperadas: **1,20 m; 5 cm; discordar, pois a representação ficará menor**. Acertar apenas a primeira sugere execução de procedimento. Acertar as duas direções e justificar a terceira fornece evidência mais forte de compreensão.\n\n**Fechamento — 2 minutos:** retome as respostas iniciais e peça uma frase: “O que pode mudar na planta sem mudar a relação de escala?”",
+      "usage": {
+        "input_tokens": 19915,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1193,
+        "reasoning_output_tokens": 395
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "F03-2-D",
+      "case_id": "F03",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 75.155,
+      "prompt_sha256": "447f7df201dfe2ec2067f9d7fd75de339bb6b9e1cbd6cc0e944a5a6387c89ad1",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    }
+  ]
+}

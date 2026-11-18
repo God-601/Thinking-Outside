@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "provenance": "Independent challenge generation before candidate evaluation; no model responses or intended solutions are included.",
+  "cases": [
+    {
+      "id": "H01",
+      "domain": "software",
+      "creative": true,
+      "prompt": "Um aplicativo de vistoria funciona em dois notebooks sem rede. Ambos podem editar a mesma ficha durante três dias; depois os arquivos são reunidos por pendrive. As fichas incluem medidas, fotos e observações que podem se contradizer. Precisamos preservar a autoria e permitir concluir uma vistoria, sem escolher silenciosamente a última edição. Não podemos contratar servidor nem trocar o formato SQLite existente. Proponha três abordagens com mecanismos realmente diferentes, indique o principal custo de cada uma e escolha um experimento pequeno para decidir entre elas. Você só precisa explicar o projeto; não use ferramentas.",
+      "constraints": [
+        "Operação offline em dois notebooks por três dias",
+        "Reunião dos dados por pendrive",
+        "Preservar autoria e informação conflitante",
+        "Não resolver conflitos silenciosamente pela última edição",
+        "Sem servidor contratado ou substituição do SQLite",
+        "Três mecanismos distintos e um experimento de decisão"
+      ],
+      "rubric": "Premiar estratégias distintas de coordenação ou reconciliação, descrição concreta do tratamento de conflito e teste com edições concorrentes; penalizar três nomes para a mesma regra, perda de dados e dependência de conexão."
+    },
+    {
+      "id": "H02",
+      "domain": "Roblox",
+      "creative": true,
+      "prompt": "Estou projetando uma experiência cooperativa Roblox para quatro desconhecidos. A rodada dura quatro minutos em uma sala fixa e bem iluminada. Ninguém pode usar voz, texto livre ou depender de reconhecer cores. Quero que jogadores precisem interpretar as ações uns dos outros, mas uma pessoa parada não pode impedir todos de terminar. Considere celular e atraso de 200 ms. Proponha três sistemas cooperativos que funcionem por mecanismos diferentes, explique como cada um lida com a pessoa parada e descreva um teste barato de compreensão. Não use ferramentas nem escreva código.",
+      "constraints": [
+        "Quatro jogadores e rodada de quatro minutos",
+        "Sala fixa e bem iluminada",
+        "Sem voz ou texto livre",
+        "Compreensão independente de reconhecimento de cores",
+        "Um jogador parado não bloqueia a conclusão",
+        "Compatível com celular e atraso de 200 ms",
+        "Três mecanismos distintos e teste de compreensão"
+      ],
+      "rubric": "Examinar a dependência cooperativa real e as decisões que cada mecanismo altera; a acessibilidade e a recuperação de ausência precisam ser operacionais, sem simplesmente eliminar a cooperação ou exigir reflexos incompatíveis com a latência."
+    },
+    {
+      "id": "H03",
+      "domain": "Blender",
+      "creative": true,
+      "prompt": "Um pequeno museu usa Blender para criar uma miniatura de máquina industrial que será vista de perto em um quiosque 3D. O modelo aprovado tem 1.200 triângulos e esse é o teto. Precisamos tornar a sequência de operação compreensível para visitantes, inclusive quando o aplicativo está sem áudio. A silhueta e as peças originais devem permanecer intactas; só temos uma textura de 512 por 512 e duas horas de produção. Dê três abordagens visualmente e causalmente diferentes, com riscos técnicos e uma verificação simples de entendimento. Não use ferramentas nem afirme ter alterado o arquivo.",
+      "constraints": [
+        "Máximo de 1.200 triângulos",
+        "Preservar silhueta e todas as peças originais",
+        "Uma textura de 512 por 512",
+        "Duas horas de produção",
+        "Sequência compreensível sem áudio",
+        "Três abordagens distintas com verificação de entendimento",
+        "Não declarar alteração ou teste real do arquivo"
+      ],
+      "rubric": "Avaliar se a sequência fica legível por mecanismos distintos dentro do orçamento, com atenção à oclusão, ao estado da máquina e ao que seria necessário verificar no quiosque; não confundir polimento estético com explicação da operação."
+    },
+    {
+      "id": "H04",
+      "domain": "música",
+      "creative": true,
+      "prompt": "Produzo a trilha de um podcast em que a mesma vinheta de seis segundos aparece dez vezes. O cliente exige usar exclusivamente a gravação estéreo existente: não podemos gravar, gerar ou licenciar novos sons. Todas as entradas têm de durar exatamente seis segundos e terminar no mesmo ponto musical para encaixar na edição. Quero reduzir a fadiga sem perder o reconhecimento da vinheta nem atrapalhar a primeira frase de fala que começa no segundo quatro. Proponha três estratégias diferentes, seus efeitos colaterais e um teste de escuta com poucos ouvintes. Não use ferramentas.",
+      "constraints": [
+        "Usar exclusivamente a gravação estéreo existente",
+        "Sem gravação, geração ou licença de novos sons",
+        "Cada entrada dura exatamente seis segundos",
+        "Mesmo ponto musical no término",
+        "Preservar reconhecimento da vinheta",
+        "Preservar inteligibilidade da fala iniciada no segundo quatro",
+        "Três estratégias distintas e teste pequeno de escuta"
+      ],
+      "rubric": "Julgar variedade perceptiva e viabilidade de edição de um arquivo estéreo; diferenciar mecanismos e custos, evitar propostas que presumam acesso a stems ou que sacrifiquem a fala, a duração ou a identidade."
+    },
+    {
+      "id": "H05",
+      "domain": "UI",
+      "creative": true,
+      "prompt": "Um terminal de retirada de documentos tem uma única tela de 10 polegadas. O fluxo aprovado usa somente dois botões grandes e não pode ganhar telas, teclado virtual ou cadastro. Pessoas estão retirando o documento errado porque há nomes parecidos; mostrar documentos completos na tela seria uma exposição indevida. Há um atendente disponível só em parte do dia. Proponha três maneiras distintas de reduzir a confusão, preservando a operação por teclado e leitor de tela. Explique o mecanismo, o que acontece quando há dúvida e como testar com protótipos em papel. Não use ferramentas.",
+      "constraints": [
+        "Uma tela de 10 polegadas e somente dois botões grandes",
+        "Não adicionar telas, teclado virtual ou cadastro",
+        "Não expor documentos completos",
+        "Atendimento humano não pode ser obrigatório em todos os casos",
+        "Preservar teclado e leitor de tela",
+        "Três abordagens distintas com tratamento de ambiguidade",
+        "Teste com protótipos em papel"
+      ],
+      "rubric": "Premiar prevenção concreta da seleção errada sem vazar dados nem bloquear usuários sem atendente; verificar se cada mecanismo cabe no fluxo e se oferece recuperação acessível, em vez de apenas textos de aviso ou cores."
+    },
+    {
+      "id": "H06",
+      "domain": "ferramenta/aplicativo",
+      "creative": true,
+      "prompt": "Uma associação digitaliza centenas de cartas antigas por semana. Os voluntários usam celulares diferentes e passam os arquivos para um PC Windows offline. Muitos lotes chegam com páginas fora de ordem ou faltando. Precisamos de uma ferramenta pequena para perceber esses problemas antes de guardar os originais; OCR não é confiável nas letras manuscritas. Não podemos exigir conta, conexão, compra de hardware ou renomeação manual de cada foto. Proponha três soluções com mecanismos diferentes, sem prometer detectar lacunas impossíveis de inferir, e escolha uma validação com dois lotes preparados. Não use ferramentas.",
+      "constraints": [
+        "Celulares diferentes e PC Windows offline",
+        "Detectar ou sinalizar problemas antes de arquivar originais",
+        "Não depender de OCR confiável",
+        "Sem conta, conexão ou compra de hardware",
+        "Sem renomeação manual de cada foto",
+        "Distinguir detecção possível de informação ausente",
+        "Três mecanismos distintos e validação em dois lotes"
+      ],
+      "rubric": "Avaliar mudanças distintas no processo de captura, conferência ou sinalização, com esforço proporcional e limites de inferência explícitos; rejeitar soluções que inventem páginas, dependam de nuvem ou escondam a intervenção manual necessária."
+    },
+    {
+      "id": "H07",
+      "domain": "negócios",
+      "creative": true,
+      "prompt": "Uma oficina de conserto de bicicletas fica com bicicletas prontas ocupando metade do espaço porque clientes demoram a buscar. Já manda uma mensagem quando o serviço termina. O dono quer comprar um galpão; antes disso, precisamos avaliar alternativas por duas semanas. Não podemos cobrar multas novas, dar descontos, manter alguém trabalhando depois do horário ou armazenar bicicletas sem segurança. O orçamento do piloto é R$ 150. Proponha três abordagens com mecanismos diferentes, preserve o plano do galpão como opção e diga que dados permitiriam decidir. Não use ferramentas nem presuma a causa do atraso.",
+      "constraints": [
+        "Piloto de duas semanas e até R$ 150",
+        "Não cobrar multas novas nem conceder descontos",
+        "Não ampliar jornada de funcionários",
+        "Preservar armazenamento seguro",
+        "Não tratar uma causa não investigada como confirmada",
+        "Manter compra do galpão como opção",
+        "Três mecanismos distintos e dados para decisão"
+      ],
+      "rubric": "Verificar reformulação sem substituir a decisão do dono, variedade nas causas e intervenções, viabilidade operacional e métricas de ocupação e retirada; mensagens com textos diferentes não contam como três mecanismos."
+    },
+    {
+      "id": "H08",
+      "domain": "educação",
+      "creative": true,
+      "prompt": "Uma turma de 30 adultos consegue repetir uma regra de proporção, mas erra ao escolher quando usá-la em situações novas. Tenho 25 minutos, folhas reutilizadas e um quadro; não há celulares. Não posso separar alunos por desempenho nem pedir que exponham erros pessoais. Preciso de três intervenções didáticas com mecanismos diferentes e de uma forma curta de distinguir compreensão transferível de memorização. Não proponha apenas mais exercícios com números trocados. Não use ferramentas.",
+      "constraints": [
+        "30 adultos e 25 minutos",
+        "Somente folhas reutilizadas e quadro",
+        "Sem celulares",
+        "Sem grupos definidos por desempenho",
+        "Sem exposição de erros pessoais",
+        "Não se limitar a trocar números em exercícios",
+        "Três mecanismos didáticos distintos",
+        "Verificação breve de transferência"
+      ],
+      "rubric": "Avaliar se cada intervenção altera uma operação cognitiva ou interação distinta, cabe no tempo e protege os alunos; a avaliação deve testar seleção e justificativa em contexto novo, não só repetição do algoritmo."
+    },
+    {
+      "id": "H09",
+      "domain": "técnico",
+      "creative": true,
+      "prompt": "Uma pequena gráfica recebe arquivos que imprimem normalmente sozinhos, mas às vezes uma fila com vários trabalhos para e só volta após reiniciar o computador. Não temos prova se o problema é um arquivo, o spooler, o driver ou a rede. A produção pode parar por apenas dez minutos ao dia; não podemos comprar impressora, reinstalar Windows ou desligar proteções de segurança. Proponha três estratégias diagnósticas realmente diferentes, com observações que separariam hipóteses, e uma contenção reversível para cada uma. Não afirme conhecer a causa e não use ferramentas.",
+      "constraints": [
+        "Causa desconhecida entre arquivo, spooler, driver ou rede",
+        "Até dez minutos diários de interrupção",
+        "Sem compra de impressora ou reinstalação do Windows",
+        "Não desabilitar proteções de segurança",
+        "Três estratégias diagnósticas distintas",
+        "Observações discriminantes e contenções reversíveis",
+        "Não apresentar hipótese como causa confirmada"
+      ],
+      "rubric": "Premiar experimentos que mudem variáveis ou fontes de evidência diferentes e permitam rejeitar hipóteses dentro da janela; verificar preservação dos trabalhos e reversibilidade, sem três variantes de reinicialização ou mudanças simultâneas inconclusivas."
+    },
+    {
+      "id": "H10",
+      "domain": "cotidiano",
+      "creative": true,
+      "prompt": "Seis pessoas dividem uma lavanderia com uma única máquina e horários de trabalho variáveis. O problema não é falta de tempo total da máquina: roupas prontas ficam lá dentro e bloqueiam os outros. Já tentamos um grupo de mensagens, que ninguém acompanha. Queremos três acordos de funcionamento baseados em mecanismos diferentes, sem aplicativo novo, câmera, multa, exposição pública ou autorização para mexer na roupa alheia. Um morador não ouve alarmes sonoros. Proponha um teste de sete dias que permita comparar os acordos de forma justa. Não use ferramentas.",
+      "constraints": [
+        "Seis moradores e uma máquina",
+        "Horários de trabalho variáveis",
+        "Não presumir insuficiência de capacidade total",
+        "Sem aplicativo novo, câmera, multa ou exposição pública",
+        "Sem manusear roupa alheia",
+        "Não depender de alarmes sonoros",
+        "Três mecanismos distintos",
+        "Teste de sete dias com comparação justa"
+      ],
+      "rubric": "Julgar mudança real de coordenação ou incentivos respeitando privacidade e consentimento; exigir formas acessíveis de perceber e liberar a máquina, e reconhecer limitações de uma comparação pequena sem alegar causalidade comprovada."
+    }
+  ]
+}

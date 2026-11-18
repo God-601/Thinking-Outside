@@ -1,0 +1,706 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "C": {
+      "utility": 4.583333333333333,
+      "originality": 2.25,
+      "diversity": 4.583333333333333,
+      "feasibility": 4.666666666666667,
+      "adherence": 5,
+      "weighted": 4.191666666666666,
+      "critical_failures": 0,
+      "seconds": 31.520833333333332,
+      "input_tokens": 18107.666666666668,
+      "output_tokens": 725.8333333333334
+    },
+    "X": {
+      "utility": 4.583333333333333,
+      "originality": 2.5833333333333335,
+      "diversity": 4.25,
+      "feasibility": 4.666666666666667,
+      "adherence": 5,
+      "weighted": 4.191666666666666,
+      "critical_failures": 0,
+      "seconds": 34.963499999999996,
+      "input_tokens": 18093.666666666668,
+      "output_tokens": 686.3333333333334
+    },
+    "Y": {
+      "utility": 4.5,
+      "originality": 2.5,
+      "diversity": 4.333333333333333,
+      "feasibility": 4.666666666666667,
+      "adherence": 5,
+      "weighted": 4.166666666666667,
+      "critical_failures": 0,
+      "seconds": 36.35966666666667,
+      "input_tokens": 16578,
+      "output_tokens": 726.6666666666666
+    }
+  },
+  "comparisons": {
+    "C_vs_X": {
+      "wins": 1,
+      "ties": 4,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 4,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "T03": 0.25,
+          "T10": 0.5,
+          "T11": 0.75
+        }
+      }
+    },
+    "C_vs_Y": {
+      "wins": 2,
+      "ties": 3,
+      "losses": 1,
+      "preference": 0.5833333333333334,
+      "creative": {
+        "wins": 2,
+        "ties": 3,
+        "losses": 1,
+        "preference": 0.5833333333333334,
+        "per_case_preference": {
+          "T03": 0.75,
+          "T10": 0.25,
+          "T11": 0.75
+        }
+      }
+    },
+    "X_vs_Y": {
+      "wins": 1,
+      "ties": 3,
+      "losses": 2,
+      "preference": 0.4166666666666667,
+      "creative": {
+        "wins": 1,
+        "ties": 3,
+        "losses": 2,
+        "preference": 0.4166666666666667,
+        "per_case_preference": {
+          "T03": 0.75,
+          "T10": 0.25,
+          "T11": 0.25
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina acentos, ausências, evolução tímbrica, reutilização de fragmentos e articulação entre baixo e bateria, com teste concreto dentro dos compassos existentes. Explicita riscos de previsibilidade, competição com o tema e perda de definição do grave. Os mecanismos são conhecidos; a recuperação do sidechain recebe orientação menos específica. Empata com as demais na qualidade geral.",
+      "reframe": null,
+      "mechanism_families": [
+        "Variação de acentos e posicionamento altera o groove",
+        "Supressão temporária cria contraste na reentrada",
+        "Automação de filtro e saturação produz evolução tímbrica",
+        "Reorganização de material existente cria respostas entre frases",
+        "Duração do baixo e recuperação do sidechain modulam espaço e pressão"
+      ],
+      "weighted": 4.3,
+      "case_id": "T03",
+      "repetition": 1,
+      "condition": "X",
+      "run_id": "T03-1-X",
+      "seconds": 44.496,
+      "usage": {
+        "input_tokens": 21150,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 641,
+        "reasoning_output_tokens": 109
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Oferece intervenções executáveis e um teste de 16 compassos, preservando as restrições. Relaciona pausas a impacto, variações rítmicas a movimento e mudanças de destaque a exposição da melodia; também identifica perda de energia e borramento por reverb. Há diversidade causal, embora filtro e reverb reapareçam em propostas parcialmente sobrepostas. Os recursos são convencionais. Empata com as demais.",
+      "reframe": null,
+      "mechanism_families": [
+        "Vazio antes da entrada aumenta contraste",
+        "Variações nas bordas das frases renovam o groove",
+        "Rebalanceamento do acompanhamento muda o primeiro plano",
+        "Automação tímbrica transforma repetições",
+        "Crescimento e corte de reverberação articulam transições"
+      ],
+      "weighted": 4.3,
+      "case_id": "T03",
+      "repetition": 1,
+      "condition": "Y",
+      "run_id": "T03-1-Y",
+      "seconds": 27.819,
+      "usage": {
+        "input_tokens": 11991,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 555,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta valores temporais corretos para 150 BPM e combina contexto de arranjo, silêncio, deslocamento rítmico, delay e contraste estéreo. Preserva a melodia e acomoda as intervenções na duração existente, indicando riscos de tropeço, mascaramento e perdas em mono. O deslocamento de uma semicolcheia pode ser expressivo, mas a resposta recomenda descartá-lo se prejudicar o groove. São técnicas conhecidas. Empata com as demais.",
+      "reframe": null,
+      "mechanism_families": [
+        "Retirada e recuperação de camadas diferenciam repetições",
+        "Silêncio breve prepara uma reentrada de maior impacto",
+        "Deslocamento de ataque cria surpresa rítmica",
+        "Delay pontual conecta frases e modifica profundidade",
+        "Contraste de largura estéreo e brilho amplia a chegada"
+      ],
+      "weighted": 4.3,
+      "case_id": "T03",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "T03-1-C",
+      "seconds": 29.057,
+      "usage": {
+        "input_tokens": 11992,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 546,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 5,
+        "originality": 2.5,
+        "diversity": 5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Oferece intervenções concretas em arranjo, ritmo, timbre, espaço e microdinâmica, com valores corretos para 150 BPM e teste dentro da duração existente. Explicita benefícios e riscos como perda de energia, ataques borrados e groove enfraquecido. O reaproveitamento de caudas como resposta diferencia esta proposta das demais, embora os mecanismos sejam conhecidos na produção eletrônica. A adequação do recorte depende de encontrar material útil na faixa.",
+      "reframe": null,
+      "mechanism_families": [
+        "Subtração e retorno de camadas para criar contraste",
+        "Pausas locais para aumentar a expectativa do impacto",
+        "Recorte e reposicionamento de áudio existente para criar respostas",
+        "Automação de timbre para dar direção à frase",
+        "Contraste de ambiência para alterar a dimensão percebida",
+        "Microdeslocamentos e variações de intensidade para modificar o groove"
+      ],
+      "weighted": 4.5,
+      "case_id": "T03",
+      "repetition": 2,
+      "condition": "X",
+      "run_id": "T03-2-X",
+      "seconds": 26.987,
+      "usage": {
+        "input_tokens": 21150,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 684,
+        "reasoning_output_tokens": 59
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 1.5,
+        "diversity": 3.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta edições executáveis, preserva as restrições e associa os efeitos desejados a riscos concretos, como interrupção do impulso e perda de presença do tema. O teste entre dois ciclos e a comparação em volume equivalente facilitam a decisão. Sua variedade causal é menor: resposta da bateria, ausência antes da entrada e quebra do fechamento recorrem parcialmente à mesma redistribuição de ataques. Alternar o protagonismo por volume e brilho oferece uma rota adicional, mas todas as técnicas são convencionais.",
+      "reframe": null,
+      "mechanism_families": [
+        "Redistribuição de ataques para criar diálogo e surpresa rítmica",
+        "Retirada breve de graves para realçar o retorno",
+        "Automação de timbre para conduzir repetições",
+        "Mudanças de volume e brilho para alternar o foco perceptivo"
+      ],
+      "weighted": 3.85,
+      "case_id": "T03",
+      "repetition": 2,
+      "condition": "Y",
+      "run_id": "T03-2-Y",
+      "seconds": 30.272,
+      "usage": {
+        "input_tokens": 21163,
+        "cached_input_tokens": 18304,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 610,
+        "reasoning_output_tokens": 90
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina variação rítmica, trajetória tímbrica, subtração de camadas e efeitos pontuais sem alterar notas, BPM ou duração. Destaca-se por transformar reverb ou delay contínuo em respostas localizadas e controlar as caudas para preservar clareza. Os tempos indicados estão corretos, e a escuta contextual ajuda a avaliar continuidade. A aplicação espacial depende da existência desses efeitos; o risco da retirada de uma camada recebe menos orientação corretiva que os demais exemplos. Empata com O2 em utilidade e supera sua variedade causal.",
+      "reframe": null,
+      "mechanism_families": [
+        "Ausência e retorno de elementos para criar contraste",
+        "Supressão ou deslocamento de ataques para variar o groove",
+        "Automação tímbrica para construir direção sem mudar a melodia",
+        "Envios pontuais de efeitos para criar respostas espaciais e preservar clareza"
+      ],
+      "weighted": 4.15,
+      "case_id": "T03",
+      "repetition": 2,
+      "condition": "C",
+      "run_id": "T03-2-C",
+      "seconds": 27.753,
+      "usage": {
+        "input_tokens": 11992,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 566,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "As cinco propostas alteram decisões e consequências, sem reciclar os sistemas rejeitados. Ceder capacidades para transformar destinatários oferece uma troca especialmente produtiva. Aprendizado de hábitos e controle da circulação de informação têm alguma proximidade causal, embora atuem em etapas diferentes. Marcas persistentes no cenário e alteração de regras físicas possuem precedentes amplos; sua descrição acrescenta usos interessantes, mas diferencia menos esses mecanismos. Os protótipos delimitados tornam as ideias testáveis, embora persistência e propagação de conhecimento exijam controle cuidadoso de estados.",
+      "reframe": null,
+      "mechanism_families": [
+        "Condicionamento de expectativas dos personagens para posterior exploração",
+        "Substituição local de regras físicas compartilhadas",
+        "Transformação persistente de acontecimentos em recursos espaciais",
+        "Transferência de capacidades com perda temporária para o jogador",
+        "Controle de canais que distribuem conhecimento e desencadeiam reações"
+      ],
+      "weighted": 4.3,
+      "case_id": "T10",
+      "repetition": 1,
+      "condition": "X",
+      "run_id": "T10-1-X",
+      "seconds": 34.104,
+      "usage": {
+        "input_tokens": 21153,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 838,
+        "reasoning_output_tokens": 70
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta cinco rotas causais distintas e decisões concretas, atendendo integralmente às restrições. Condicionar a adaptação inimiga à transmissão por sobreviventes combina aprendizado e informação de modo interessante, embora próximo de propostas de O1. Transferir impactos ao ambiente e vincular som, arquitetura e detecção acrescenta interações úteis. Entretanto, alternância entre épocas e programação de ações simultâneas têm precedentes claros em jogos como Titanfall 2 e Frozen Synapse; a revisão de uma única etapa diferencia parcialmente a segunda. Escopos autorais e sinais explícitos favorecem execução, mas física e previsão de movimentos permanecem exigentes.",
+      "reframe": null,
+      "mechanism_families": [
+        "Adaptação inimiga condicionada à sobrevivência e comunicação de testemunhas",
+        "Intervenções temporais que modificam a configuração futura do espaço",
+        "Redistribuição obrigatória de impactos entre destinos conectados",
+        "Execução simultânea de sequências com revisão limitada",
+        "Reconfiguração espacial por sons que também permitem detecção"
+      ],
+      "weighted": 4.3,
+      "case_id": "T10",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "T10-1-C",
+      "seconds": 41.946,
+      "usage": {
+        "input_tokens": 21167,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1043,
+        "reasoning_output_tokens": 290
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 4,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "A transferência de consequências e o aprendizado contextual de símbolos oferecem os mecanismos comparativamente mais diferenciados. O bloqueio sensorial bilateral cria um custo diretamente ligado à furtividade, e distribuir capacidades entre corpos produz dependências concretas. Há precedentes para regras espaciais interpretáveis, como Baba Is You, e sobreposição com as leis locais e cessões de capacidades de O1, sem equivalência completa. A aprendizagem semântica pode produzir ambiguidades difíceis de comunicar, e os exemplos do contrato físico ainda precisam de regras operacionais mais precisas. Os recortes propostos sustentam viabilidade semelhante às demais respostas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Restauração de estados mediante transferência de consequências",
+        "Construção contextual de significados compartilhados com personagens",
+        "Supressão recíproca de canais de percepção e detecção",
+        "Resolução espacial por obrigações explícitas combináveis",
+        "Redistribuição de capacidades exclusivas entre corpos"
+      ],
+      "weighted": 4.5,
+      "case_id": "T10",
+      "repetition": 1,
+      "condition": "Y",
+      "run_id": "T10-1-Y",
+      "seconds": 44.491,
+      "usage": {
+        "input_tokens": 21166,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1009,
+        "reasoning_output_tokens": 241
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 4,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "As cinco propostas especificam decisões e consequências jogáveis, sem reciclar os sistemas rejeitados. Destacam-se a transferência de tempo entre espaços e a alteração da topologia mediante sacrifício de passagens. Regras universais editáveis e circulação localizada de informação têm precedentes; ensinar padrões falsos aos inimigos também aparece em O3. Há variedade causal, embora aprendizado e transmissão de relatos compartilhem manipulação de informação. Os protótipos são delimitados, mas integrar envelhecimento espacial e impedir bloqueios no mapa exigiria trabalho substancial.",
+      "reframe": null,
+      "mechanism_families": [
+        "Impor regras simétricas para explorar restrições compartilhadas",
+        "Transferir tempo entre locais para produzir transformações compensatórias",
+        "Ensinar padrões falsos para induzir respostas adversárias exploráveis",
+        "Condicionar conhecimento social ao deslocamento de portadores",
+        "Reconfigurar conexões espaciais sacrificando passagens existentes"
+      ],
+      "weighted": 4.4,
+      "case_id": "T10",
+      "repetition": 2,
+      "condition": "Y",
+      "run_id": "T10-2-Y",
+      "seconds": 51.982,
+      "usage": {
+        "input_tokens": 11994,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1034,
+        "reasoning_output_tokens": 293
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Entrega cinco mecanismos distintos e compreensíveis, com escolhas concretas e riscos pertinentes. A seleção da técnica que o inimigo herdará dá controle interessante à adaptação. Entretanto, transformar espaço por enquadramento, controlar corpos simultâneos e acumular gravações de tentativas são rotas bastante reconhecíveis em jogos existentes; testemunhas também se aproximam de O1. A variedade entre adaptação, perspectiva, coordenação, reconhecimento social e repetição temporal é alta. Regras visuais consistentes e reprodução de eventos com interações físicas são os principais desafios de implementação.",
+      "reframe": null,
+      "mechanism_families": [
+        "Escolher uma técnica vencedora para incorporá-la ao adversário seguinte",
+        "Converter relações visuais em conexões e estruturas físicas",
+        "Acoplar comandos de corpos sujeitos a consequências diferentes",
+        "Produzir efeitos sociais por testemunho presencial e relato",
+        "Sobrepor ações gravadas para preparar soluções em tentativas futuras"
+      ],
+      "weighted": 4.3,
+      "case_id": "T10",
+      "repetition": 2,
+      "condition": "C",
+      "run_id": "T10-2-C",
+      "seconds": 40.151,
+      "usage": {
+        "input_tokens": 21167,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 891,
+        "reasoning_output_tokens": 109
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 4,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "As propostas alteram persistência do mundo, combate, negociação, desenvolvimento espacial e controle, atendendo integralmente às exclusões. Promessas que restringem ações em troca de concessões e memória distribuída que sustenta lugares oferecem combinações fortes. A adaptação por demonstrações falsas quase repete O1; controle indireto por estímulos e transformação de rotas pelo uso têm precedentes claros. Memória e trânsito compartilham a transformação persistente do cenário, mas operam por causas diferentes. O risco de manutenção obrigatória no esquecimento e a necessidade de comportamento previsível da criatura limitam a execução, apesar dos recortes de protótipo adequados.",
+      "reframe": null,
+      "mechanism_families": [
+        "Sustentar a existência de lugares por memórias distribuídas",
+        "Adaptar sobreviventes às táticas observadas e permitir desinformação",
+        "Vincular concessões negociadas a restrições físicas temporárias",
+        "Converter frequência de circulação em infraestrutura e ocupação",
+        "Guiar um agente autônomo alterando seus estímulos sensoriais"
+      ],
+      "weighted": 4.4,
+      "case_id": "T10",
+      "repetition": 2,
+      "condition": "X",
+      "run_id": "T10-2-X",
+      "seconds": 47.232,
+      "usage": {
+        "input_tokens": 11981,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 926,
+        "reasoning_output_tokens": 154
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Relaciona mudanças concretas a menos retrabalho, erros e esforço, incluindo validação após preenchimento, padrões editáveis e acessibilidade. Preserva explicitamente as restrições e propõe observação para priorizar. Apresenta a maior variedade causal, mas os mecanismos são conhecidos; recolher opções em seções expansíveis pode prejudicar sua descoberta, risco que a própria resposta reconhece. Falta contexto para selecionar a intervenção.",
+      "reframe": null,
+      "mechanism_families": [
+        "Preservação de entradas evita refazer trabalho após falhas",
+        "Feedback de processamento e bloqueio temporário evitam envios repetidos",
+        "Validação contextual orienta a correção de entradas",
+        "Padrões e foco adequados reduzem ações necessárias",
+        "Estados vazios orientam o próximo passo",
+        "Acessibilidade reduz barreiras de leitura e acionamento",
+        "Hierarquia e revelação progressiva reduzem decisões simultâneas"
+      ],
+      "weighted": 4.15,
+      "case_id": "T11",
+      "repetition": 1,
+      "condition": "Y",
+      "run_id": "T11-1-Y",
+      "seconds": 34.452,
+      "usage": {
+        "input_tokens": 11991,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 606,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 3.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Oferece intervenções executáveis nas telas existentes, com cuidados específicos: posições estáveis dos botões, sucesso condicionado à confirmação real e restauração de contexto sem banco. A comparação antes e depois permite verificar benefício. Empata em utilidade com as demais, mas cobre menos rotas causais; os mecanismos são convencionais e a prioridade continua dependente de conhecer o aplicativo.",
+      "reframe": null,
+      "mechanism_families": [
+        "Destaque contextual da ação principal reduz procura",
+        "Preservação de entradas e orientação local reduzem retrabalho e erros",
+        "Feedback de processamento e bloqueio temporário evitam envios repetidos",
+        "Restauração de posição e filtros evita reconstruir o contexto"
+      ],
+      "weighted": 3.95,
+      "case_id": "T11",
+      "repetition": 1,
+      "condition": "X",
+      "run_id": "T11-1-X",
+      "seconds": 34.971,
+      "usage": {
+        "input_tokens": 21150,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 508,
+        "reasoning_output_tokens": 76
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina orientação contextual, recuperação de erros, estados vazios e continuidade da navegação, respeitando funcionalidades, banco e telas. O teste inclui conclusão sem ajuda e verifica prejuízo a outras funções. Empata em utilidade e originalidade com as demais: é aplicável, mas usa padrões conhecidos e sobrepostos às outras respostas. Tem variedade maior que O2, embora reúna intervenções distintas dentro dos formulários sem detalhar sua prioridade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Hierarquia de ações reduz esforço de decisão",
+        "Feedback de processamento e bloqueio temporário evitam envios repetidos",
+        "Preservação de entradas evita retrabalho após erros",
+        "Teclado adequado reduz esforço de entrada",
+        "Instruções junto aos controles previnem dúvidas e erros",
+        "Estados vazios orientam retomada e início de tarefas",
+        "Restauração de posição e filtros preserva continuidade"
+      ],
+      "weighted": 4.05,
+      "case_id": "T11",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "T11-1-C",
+      "seconds": 25.745,
+      "usage": {
+        "input_tokens": 21164,
+        "cached_input_tokens": 20992,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 651,
+        "reasoning_output_tokens": 87
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 1.5,
+        "diversity": 3.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Relaciona mudanças concretas a benefícios: preservar campos evita retrabalho, bloquear envios duplicados previne repetição e destacar ações reduz hesitação. Respeita explicitamente as três restrições e propõe observação antes e depois. A prioridade depende corretamente da presença de formulários, mas falta contexto para indicar a intervenção de maior impacto. Os mecanismos são práticas conhecidas e amplamente compartilhadas pelas outras respostas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Hierarquia e rótulos reduzem esforço de decisão",
+        "Retenção de campos facilita recuperação de erros",
+        "Estados da operação reduzem incerteza e duplicação",
+        "Orientação contextual reduz dúvidas de interpretação"
+      ],
+      "weighted": 3.7,
+      "case_id": "T11",
+      "repetition": 2,
+      "condition": "X",
+      "run_id": "T11-2-X",
+      "seconds": 21.991,
+      "usage": {
+        "input_tokens": 11978,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 521,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 1.5,
+        "diversity": 4.5,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Oferece a cobertura causal mais ampla: prevenção de erros, continuidade ao navegar, recuperação de estados vazios e acessibilidade, além de clareza e retorno das operações. Os cuidados com aparelhos compartilhados e com funções secundárias tornam as sugestões mais aplicáveis. Propõe avaliar conclusão sem ajuda, erros e repetição. Ainda depende de diagnóstico para escolher prioridades; a maior abrangência não representa originalidade, pois os mecanismos são convencionais.",
+      "reframe": null,
+      "mechanism_families": [
+        "Hierarquia e rótulos facilitam a escolha da próxima ação",
+        "Validação contextual e retenção de valores reduzem retrabalho",
+        "Estados da operação reduzem incerteza e duplicação",
+        "Preservação de contexto reduz esforço de retomada",
+        "Estados vazios orientam a recuperação do fluxo",
+        "Acessibilidade reduz barreiras perceptivas e motoras"
+      ],
+      "weighted": 4.05,
+      "case_id": "T11",
+      "repetition": 2,
+      "condition": "C",
+      "run_id": "T11-2-C",
+      "seconds": 24.473,
+      "usage": {
+        "input_tokens": 21164,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 658,
+        "reasoning_output_tokens": 110
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 1.5,
+        "diversity": 4,
+        "feasibility": 5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina confirmação fiel da operação, recuperação de erros, orientação contextual e redução de esforço por teclado e preservação de filtros. Mantém as intervenções nas telas existentes, com atalhos complementares e sem exigir mudança no banco. A comparação de conclusão, erros e pedidos de ajuda permite verificar benefício. Empata com O1 em utilidade e com ambas em originalidade: oferece mecanismos conhecidos, sem informação suficiente para justificar sua prioridade inicial no aplicativo concreto.",
+      "reframe": null,
+      "mechanism_families": [
+        "Estados da operação reduzem incerteza e repetição",
+        "Retenção de campos facilita recuperação de erros",
+        "Orientação contextual reduz dúvidas de interpretação",
+        "Foco e atalhos reduzem esforço de execução",
+        "Preservação de filtros reduz esforço de retomada"
+      ],
+      "weighted": 3.8,
+      "case_id": "T11",
+      "repetition": 2,
+      "condition": "Y",
+      "run_id": "T11-2-Y",
+      "seconds": 29.142,
+      "usage": {
+        "input_tokens": 21163,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 546,
+        "reasoning_output_tokens": 132
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T00:34:52.454155+00:00",
+    "instruction_sha256": {
+      "X": "c41c89dd5b0243990e8c9f8ca7c2261b7d4054fa2dba13f31c388dcd68bec085",
+      "Y": "8d71d686d8ab09763eab5dcf8e6a38163bedcb457ba9d2155b66a91868c20efe",
+      "C": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    "context_sha256": "ece19860847cc7f084160442a1f40fba20994c4ba00088185b37ca8e67a7f174",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  }
+}

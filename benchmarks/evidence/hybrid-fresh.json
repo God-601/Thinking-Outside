@@ -1,0 +1,796 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "A": {
+      "utility": 4.5,
+      "originality": 2.3333333333333335,
+      "diversity": 4,
+      "feasibility": 4.5,
+      "adherence": 4.833333333333333,
+      "weighted": 4.016666666666667,
+      "critical_failures": 0,
+      "seconds": 75.47933333333333,
+      "input_tokens": 10146,
+      "output_tokens": 820
+    },
+    "B": {
+      "utility": 4.5,
+      "originality": 2.8333333333333335,
+      "diversity": 3.8333333333333335,
+      "feasibility": 4.5,
+      "adherence": 4.833333333333333,
+      "weighted": 4.083333333333333,
+      "critical_failures": 0,
+      "seconds": 48.583333333333336,
+      "input_tokens": 14671.333333333334,
+      "output_tokens": 891.3333333333334
+    },
+    "C": {
+      "utility": 4.0,
+      "originality": 2.5,
+      "diversity": 4.333333333333333,
+      "feasibility": 4.0,
+      "adherence": 4.333333333333333,
+      "weighted": 3.8166666666666664,
+      "critical_failures": 0,
+      "seconds": 53.97233333333333,
+      "input_tokens": 18198.666666666668,
+      "output_tokens": 1085.3333333333333
+    },
+    "D": {
+      "utility": 4.333333333333333,
+      "originality": 2.8333333333333335,
+      "diversity": 4.333333333333333,
+      "feasibility": 4.333333333333333,
+      "adherence": 4.5,
+      "weighted": 4.058333333333334,
+      "critical_failures": 0,
+      "seconds": 40.60933333333333,
+      "input_tokens": 16768.666666666668,
+      "output_tokens": 943
+    }
+  },
+  "comparisons": {
+    "A_vs_B": {
+      "wins": 0,
+      "ties": 3,
+      "losses": 0,
+      "preference": 0.5,
+      "creative": {
+        "wins": 0,
+        "ties": 3,
+        "losses": 0,
+        "preference": 0.5,
+        "per_case_preference": {
+          "N01": 0.5,
+          "N02": 0.5,
+          "N03": 0.5
+        }
+      }
+    },
+    "A_vs_C": {
+      "wins": 1,
+      "ties": 2,
+      "losses": 0,
+      "preference": 0.6666666666666666,
+      "creative": {
+        "wins": 1,
+        "ties": 2,
+        "losses": 0,
+        "preference": 0.6666666666666666,
+        "per_case_preference": {
+          "N01": 0.5,
+          "N02": 0.5,
+          "N03": 1
+        }
+      }
+    },
+    "A_vs_D": {
+      "wins": 1,
+      "ties": 1,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 1,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "N01": 1,
+          "N02": 0.5,
+          "N03": 0
+        }
+      }
+    },
+    "B_vs_C": {
+      "wins": 1,
+      "ties": 2,
+      "losses": 0,
+      "preference": 0.6666666666666666,
+      "creative": {
+        "wins": 1,
+        "ties": 2,
+        "losses": 0,
+        "preference": 0.6666666666666666,
+        "per_case_preference": {
+          "N01": 0.5,
+          "N02": 0.5,
+          "N03": 1
+        }
+      }
+    },
+    "B_vs_D": {
+      "wins": 1,
+      "ties": 1,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 1,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "N01": 1,
+          "N02": 0.5,
+          "N03": 0
+        }
+      }
+    },
+    "C_vs_D": {
+      "wins": 1,
+      "ties": 1,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 1,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "N01": 1,
+          "N02": 0.5,
+          "N03": 0
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro rotas causais distintas: previsibilidade na chegada, preparação, apoio durante a ocupação e resolução por outro canal. Preserva escolhas, acessibilidade e tempo assistivo. Os testes são baratos, mas a avaliação geral não define claramente como contabilizar desistências anonimamente nem distingue falta de vaga de abandono. Os mecanismos coincidem com O2 e O3 e têm precedentes usuais.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reduzir incerteza e custo da espera com senha e retorno combinado",
+        "Antecipar requisitos para evitar sessões frustradas",
+        "Resolver bloqueios durante o uso com apoio consentido",
+        "Liberar capacidade resolvendo demandas por canais equivalentes"
+      ],
+      "weighted": 3.75,
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "N01-1-D",
+      "seconds": 32.33,
+      "usage": {
+        "input_tokens": 19850,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 929,
+        "reasoning_output_tokens": 241
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Combina chamadas acessíveis, preparação voluntária, apoio consentido e alternativas efetivamente resolutivas. Propõe contagens anônimas, referência inicial e teste de uma mudança por vez, reconhecendo a limitação de uma semana. Falta separar explicitamente quem não conseguiu vaga de quem desistiu. Sua originalidade empata com O1 e O3: são essencialmente as mesmas quatro rotas, já conhecidas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reduzir desconforto e incerteza da espera",
+        "Antecipar documentos e informações necessários",
+        "Evitar abandono após dificuldade com ajuda disponível",
+        "Diminuir demanda pelo terminal mediante resolução no balcão"
+      ],
+      "weighted": 3.9749999999999996,
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "N01-1-A",
+      "seconds": 90.956,
+      "usage": {
+        "input_tokens": 10137,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 817,
+        "reasoning_output_tokens": 59
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Distingue explicitamente falta de vaga de desistência e acompanha objetivos concluídos sem exigir identificação ou diagnóstico. A regra de retorno preserva a sessão em andamento e o teste verifica ociosidade. Contudo, faltam comparadores explícitos em alguns pilotos, e a prioridade após retorno pode tornar a previsão menos estável. Repete as famílias causais de O1 e O2, com originalidade equivalente.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reduzir o custo de permanecer próximo ao terminal",
+        "Prevenir interrupções antecipando requisitos",
+        "Restabelecer progresso mediante socorro durante a sessão",
+        "Liberar vagas pela resolução voluntária em outro canal"
+      ],
+      "weighted": 3.9749999999999996,
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "N01-1-C",
+      "seconds": 40.669,
+      "usage": {
+        "input_tokens": 21280,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 982,
+        "reasoning_output_tokens": 241
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Preserva acessibilidade, privacidade e tempo assistivo, com contagens sem nomes ou conteúdos pessoais. Acrescenta prevenção de falhas técnicas, diferenciando-se das demais respostas, embora manutenção preventiva seja um precedente conhecido. Suas quatro rotas são distintas, sem diversidade superior às demais. O teste técnico mede ocorrências, mas não explicita referência comparativa própria; detectar falhas só reduz desistências se houver correção disponível.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reduzir incerteza e custo da espera com retorno combinado",
+        "Antecipar pendências antes da ocupação",
+        "Desbloquear tarefas com apoio acessível e consentido",
+        "Prevenir interrupções identificando falhas antes da abertura"
+      ],
+      "weighted": 4.075,
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "N01-1-B",
+      "seconds": 50.136,
+      "usage": {
+        "input_tokens": 11572,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 891,
+        "reasoning_output_tokens": 175
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Integra mapa de defeitos, encaixe executável, antecipação limitada por prazo e preparação entre duas pessoas. Destaca-se por exigir sequência de cortes e condicionar tarefas paralelas ao apoio seguro da chapa. O teste inclui preparação, descarte e comparação de trabalhos semelhantes. A linha de base de apenas um dia é frágil; mapa, encaixe e fila também apresentam alguma sobreposição causal. São práticas conhecidas, com diferenciação sobretudo na articulação entre urgência e aproveitamento.",
+      "reframe": null,
+      "mechanism_families": [
+        "Mapeamento do estoque reduz busca e descoberta tardia de defeitos",
+        "Encaixe físico distribui peças pela área disponível",
+        "Prioridade por prazo permite antecipar peças que ocupam espaços livres",
+        "Preparação paralela e conferência reduzem espera e retrabalho"
+      ],
+      "weighted": 4.075,
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "N02-1-B",
+      "seconds": 36.287,
+      "usage": {
+        "input_tokens": 11587,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 713,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro rotas distintas: encaixe entre pedidos, adaptação dimensional consentida, liberação com material completo e reutilização vinculada à demanda. Preserva resistência, fixação segura e compromissos com clientes. A combinação é concreta, mas utiliza mecanismos conhecidos e muito próximos aos de O3. O teste contabiliza planejamento e interrupções, porém depende de registros anteriores opcionais e não define acompanhamento explícito de qualidade ou segurança.",
+      "reframe": null,
+      "mechanism_families": [
+        "Encaixe entre pedidos aumenta ocupação das chapas",
+        "Flexibilidade dimensional adapta o produto ao material",
+        "Reserva de conjuntos completos evita interrupções por falta de componentes",
+        "Consulta de retalhos com demanda evita abrir chapas maiores"
+      ],
+      "weighted": 4.1,
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "N02-1-C",
+      "seconds": 49.598,
+      "usage": {
+        "input_tokens": 21295,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 942,
+        "reasoning_output_tokens": 216
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Combina alocação antecipada, variantes dimensionais aprovadas, retalhos com destino e conjuntos completos para montagem. O limite de pedidos abertos e a contabilização do planejamento tornam a proposta operacional. Empata com O2 em variedade causal e originalidade: as diferenças são principalmente de execução. A comparação com um único lote inicial tem pouca robustez, o teto de 15 minutos não é justificado e faltam critérios explícitos de segurança no teste.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reserva e encaixe antecipados preservam material para peças restritivas",
+        "Variantes de projeto absorvem diferenças entre chapas",
+        "Destinação de retalhos reduz consumo e busca",
+        "Conjuntos completos e limite de trabalho aberto reduzem montagem interrompida"
+      ],
+      "weighted": 4.1,
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "N02-1-D",
+      "seconds": 35.597,
+      "usage": {
+        "input_tokens": 10594,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 761,
+        "reasoning_output_tokens": 84
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 4.5,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 5
+      },
+      "critical_failure": false,
+      "reason": "Oferece execução acessível, apoio conjunto nos cortes e medição especialmente clara de horas somadas das duas pessoas e área descartada. Reconhece corretamente que ausência de histórico impede afirmar melhora. O quarto item reúne controle de trabalhos e gestão de retalhos, com regras menos precisas sobre disponibilidade de componentes. Predominam mecanismos recorrentes nas demais respostas e em práticas conhecidas; não explora adaptação do projeto.",
+      "reframe": null,
+      "mechanism_families": [
+        "Mapa das chapas reduz busca e uso de regiões inadequadas",
+        "Encaixe entre móveis prioriza peças com poucas alternativas",
+        "Divisão de tarefas e conferência reduzem espera e erros",
+        "Limite de trabalhos e consulta de retalhos reduzem acúmulo e consumo"
+      ],
+      "weighted": 3.9749999999999996,
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "N02-1-A",
+      "seconds": 33.3,
+      "usage": {
+        "input_tokens": 10152,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 696,
+        "reasoning_output_tokens": 0
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3.5,
+        "diversity": 3.5,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Preserva notas e referência visual, organiza os seis ensaios e propõe comparação com ouvintes, inversão dos grupos e controle de inteligibilidade. Explicita riscos de afinação e apagamento da linha. A direção da emissão é uma alternativa prática, mas seu efeito compartilha redução de brilho e nível com as outras propostas; por isso, as três rotas têm independência parcial. O mascaramento pode produzir encobrimento sem distância.",
+      "reframe": null,
+      "mechanism_families": [
+        "Direcionalidade vocal altera o som recebido pela plateia",
+        "Redução de agudos sugere propagação a distância",
+        "Mascaramento entre grupos estabelece primeiro plano e fundo"
+      ],
+      "weighted": 4.1,
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "N03-1-B",
+      "seconds": 59.327,
+      "usage": {
+        "input_tokens": 20855,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1070,
+        "reasoning_output_tokens": 506
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Distingue nível, espectro e contorno temporal, mantendo posições, notas e pulso. O teste isolado, com ordem alternada e troca dos grupos, ajuda a separar distância de simples mudança expressiva. Empata com O1 em utilidade e viabilidade. A suavização dos ataques é executável, mas sua associação com distância numa sala seca é menos robusta e parcialmente dependente do conteúdo espectral; os riscos musicais recebem menos desenvolvimento específico.",
+      "reframe": null,
+      "mechanism_families": [
+        "Menor nível sonoro funciona como pista de afastamento",
+        "Menor brilho funciona como pista espectral de distância",
+        "Ataques suaves reduzem a nitidez temporal percebida"
+      ],
+      "weighted": 4.1,
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "N03-1-A",
+      "seconds": 102.182,
+      "usage": {
+        "input_tokens": 10149,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 947,
+        "reasoning_output_tokens": 370
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4.5,
+        "originality": 4,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Acrescenta perspectiva visual, uma rota perceptiva claramente diferente das pistas sonoras e relativamente mais original neste conjunto, embora conhecida. Preserva a visão da regente, aponta riscos de dicção e afinação e propõe ouvintes, inversão dos grupos e comparação com olhos abertos e fechados. Empata em utilidade com O1 e O2. Exige obter ou produzir cenário, recurso não assegurado, e a associação do fundo pintado a um grupo específico pode ser fraca.",
+      "reframe": null,
+      "mechanism_families": [
+        "Contraste de intensidade sugere profundidade",
+        "Redução de brilho sugere afastamento acústico",
+        "Perspectiva cenográfica influencia a interpretação espacial audiovisual"
+      ],
+      "weighted": 4.325,
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "N03-1-D",
+      "seconds": 53.901,
+      "usage": {
+        "input_tokens": 19862,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1139,
+        "reasoning_output_tokens": 639
+      }
+    },
+    {
+      "label": "O4",
+      "scores": {
+        "utility": 3,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 3,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Oferece três variáveis distintas, preserva notas e contato visual e inclui teste acessível com identificação de erros de conjunto. Empata com O3 em diversidade causal. Porém, atrasar deliberadamente um grupo em 60–100 milissegundos exige controle difícil e tende a sugerir desencontro ou eco; atraso relativo entre fontes distintas não fornece, sozinho, uma referência confiável de distância. A resposta reconhece o risco e permite descartar o recurso, evitando apresentar o efeito como garantido. Alterar alinhamento temporal não viola explicitamente a proibição de mudar notas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Contraste de intensidade sugere afastamento",
+        "Atenuação de brilho sugere distância espectral",
+        "Defasagem entre grupos tenta representar maior tempo de propagação"
+      ],
+      "weighted": 3.375,
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "C",
+      "run_id": "N03-1-C",
+      "seconds": 71.65,
+      "usage": {
+        "input_tokens": 12021,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1332,
+        "reasoning_output_tokens": 814
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T17:13:27.597366+00:00",
+    "instruction_sha256": {
+      "B": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c",
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "C": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7",
+      "D": "cb284115aa278254710261b00b0826ce72d41e857234885551d6696c23fff3e3"
+    },
+    "context_sha256": "c9fa53e208e782889f7683218f55bb084d764dabbc9948be852efc1b9714f959",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "A proposta é reduzir tanto o abandono na espera quanto a desistência durante o uso. Os quatro mecanismos abaixo funcionam com papel, sinalização e apoio da equipe, sem instalar software, cobrar ou exigir celular. **Nenhum impõe um tempo menor a quem usa tecnologia assistiva.**\n\n**1. Fila presencial com possibilidade de esperar sentado**\n\nEntregar senhas em papel e manter um quadro com a ordem de atendimento. A equipe chama por número, em voz e com indicação visual, permitindo que a pessoa espere sentada em uma área acessível. Informar uma faixa estimada de espera, sem prometer horários exatos. Se alguém não perceber a chamada, fazer nova tentativa antes de passar a vez, preservando as prioridades legais.\n\n**Teste barato:** durante cinco dias, usar cartões numerados e um quadro já disponível. Comparar com cinco dias de funcionamento habitual.\n\n**Medir:** quantas pessoas entram na fila, quantas saem antes do atendimento e quanto esperam. Isso testa se o desconforto e a incerteza estão provocando abandonos.\n\n**2. Preparação voluntária antes de chegar ao terminal**\n\nOferecer uma conversa breve e um roteiro acessível para identificar o objetivo da visita e conferir documentos ou informações necessários. Exemplos: inscrição, currículo ou acesso a um serviço público. A equipe não pede senhas nem registra dados pessoais. Quem não quiser participar mantém seu lugar normalmente.\n\n**Teste barato:** escolher os três pedidos mais frequentes e criar uma folha de orientação para cada um, em linguagem simples e letras grandes, com opção de leitura pela equipe. Testar por uma semana.\n\n**Medir:** atendimentos interrompidos por falta de documentos, necessidade de voltar outro dia e tarefas concluídas. O ganho vem de evitar tentativas frustradas, sem limitar a duração do uso.\n\n**3. Ajuda disponível no momento da dificuldade**\n\nCombinar uma forma simples de solicitar apoio: chamada verbal, gesto ou cartão de “preciso de ajuda”, conforme a preferência da pessoa. Um funcionário faz verificações discretas de disponibilidade, sem assumir o controle do computador. Pergunta antes de ajudar e respeita a autonomia e a privacidade.\n\n**Teste barato:** em períodos definidos durante uma semana, reservar a atenção de um funcionário já presente para responder aos pedidos. Não prometer esse apoio quando a equipe não puder oferecê-lo.\n\n**Medir:** tempo até receber ajuda, dificuldades resolvidas e abandonos após um bloqueio. Registrar também o esforço exigido da equipe para avaliar a continuidade.\n\n**4. Resolver fora do terminal o que não exige computador**\n\nNa recepção, oferecer alternativas equivalentes para demandas que possam ser concluídas no balcão: consulta a informações municipais impressas, orientação sobre documentos ou preenchimento de formulários em papel, quando aceitos pelo serviço. A escolha é voluntária; ninguém perde acesso ao terminal por recusar.\n\n**Teste barato:** preparar uma pasta atualizada com respostas e materiais para cinco demandas frequentes e utilizá-la por uma semana.\n\n**Medir:** solicitações efetivamente resolvidas, satisfação e efeito sobre a fila. Encaminhar alguém para outro lugar não conta como resolução.\n\n**Como avaliar:** registrar inicialmente cinco dias de referência e testar uma mudança por vez em dias comparáveis, considerando o volume de cerca de 40 usuários diários. Usar contagens anônimas, sem coletar diagnósticos, e uma pergunta final: “Você conseguiu fazer o que precisava?”. Manter o mecanismo se houver menos desistências, sem piora do acesso, da conclusão das tarefas ou da experiência de quem usa tecnologia assistiva. Resultados de uma semana orientam ajustes; não comprovam, sozinhos, o efeito.",
+      "usage": {
+        "input_tokens": 10137,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 817,
+        "reasoning_output_tokens": 59
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N01-1-A",
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 90.956,
+      "prompt_sha256": "73b6d22b068e662c1cab2bbee07f7fdad7cb7b65b9d9b7eb03910be35a167be4",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Proponho quatro mecanismos que atacam causas diferentes de desistência. Todos preservam o tempo necessário para quem usa tecnologia assistiva, sem instalação, cobrança ou exigência de celular.\n\n1. **Fila com retorno combinado em papel — diminuir o custo de esperar.**  \n   Entregar uma senha com uma faixa estimada de atendimento e combinar um horário para a pessoa voltar à recepção. Ela pode circular pela biblioteca sem perder sua posição. Se o atendimento anterior se prolongar, atualizar a previsão; o horário nunca vira prazo para encerrar a sessão em andamento.  \n   **Benefício:** permite aproveitar a espera e reduz a incerteza.  \n   **Limite:** exige acompanhamento da fila e previsões com margem.  \n   **Teste barato:** experimentar por cinco dias, usando cartões reutilizáveis. Comparar desistências antes do atendimento e atrasos de retorno com cinco dias semelhantes da rotina atual.\n\n2. **Preparação opcional fora do terminal — evitar viagens e tentativas perdidas.**  \n   Na recepção, oferecer uma conversa breve ou checklist acessível sobre o que a tarefa pode exigir: documentos, endereço do serviço, arquivos e formas de recuperação de acesso. Não pedir senhas nem condicionar a entrada na fila à preparação. Quem precisar do próprio terminal para se preparar mantém esse direito.  \n   **Benefício:** identifica pendências enquanto a pessoa espera, antes que elas impeçam a conclusão.  \n   **Limite:** os requisitos variam conforme o serviço; a orientação deve indicar incertezas.  \n   **Teste barato:** preparar checklists para as três demandas mais frequentes. Durante uma semana, contar quantas interrupções por falta de documentos ou informações ocorrem, comparando com a semana anterior.\n\n3. **Ajuda acionável sem constrangimento — impedir que uma dificuldade vire desistência.**  \n   No início, combinar como a pessoa prefere pedir apoio: chamar alguém, levantar um cartão ou receber uma visita discreta. Um funcionário de referência ajuda a localizar o próximo passo, com consentimento, sem assumir o controle da tarefa nem solicitar credenciais.  \n   **Benefício:** reduz o abandono de quem trava e não sabe a quem recorrer.  \n   **Limite:** depende de disponibilidade e preparo da equipe; apoio não pode virar vigilância.  \n   **Teste barato:** reservar períodos com um funcionário de referência por uma semana. Registrar pedidos atendidos, tempo de resposta e desistências durante o uso; perguntar, opcionalmente, se o apoio resolveu a dificuldade.\n\n4. **Verificação preventiva de funcionamento — evitar desistências por falhas do terminal.**  \n   Antes da abertura, conferir conexão, teclado, áudio e recursos assistivos já disponíveis. Usar uma lista curta e acionar a manutenção existente quando houver falha. Preferências individuais só são ajustadas com consentimento.  \n   **Benefício:** encontra problemas antes de o usuário gastar sua espera e sua sessão para descobri-los.  \n   **Limite:** detectar não garante conserto imediato.  \n   **Teste barato:** aplicar a lista por dez dias e contar falhas descobertas antes da abertura, interrupções durante sessões e desistências associadas.\n\nPara avaliar, registrem **quantos buscaram atendimento, quantos desistiram antes e durante o uso e quantos concluíram a tarefa**, sem guardar nomes ou conteúdos pessoais. Testem um mecanismo por vez, em dias comparáveis: atender mais pessoas, isoladamente, não demonstra melhora se a conclusão das tarefas cair.",
+      "usage": {
+        "input_tokens": 11572,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 891,
+        "reasoning_output_tokens": 175
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N01-1-B",
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 50.136,
+      "prompt_sha256": "2ae521f19fb9b416b90ca6454e4459c81a98c79984ea0bc505a3ff20f1271d05",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu testaria quatro mecanismos que atuam em causas diferentes da desistência. Nenhum exige software, pagamento, celular ou redução do tempo de uso de tecnologia assistiva. A capacidade de 40 usuários por dia exige também distinguir desistência de falta de vaga.\n\n1. **Fila com liberdade para sair de perto do terminal.**  \n   Entregar uma senha de papel com uma faixa estimada de atendimento e um horário para conferir a fila no balcão. Assim, a pessoa pode ler, descansar ou circular pela biblioteca. Se perder a chamada, mantém prioridade para a próxima vaga após retornar, sem interromper quem estiver usando.  \n   **Benefício:** diminui o custo de esperar em pé ou vigiando o terminal. **Limite:** a previsão precisa admitir variações; não pode pressionar sessões mais longas.  \n   **Teste barato:** durante cinco dias, usar cartões manuscritos e registrar quantos usuários chamados retornam, quantos abandonam e quanto tempo o terminal fica ocioso. Rever a regra se os desencontros aumentarem a ociosidade.\n\n2. **Preparação voluntária antes da sessão.**  \n   Enquanto a pessoa espera, oferecer um roteiro curto, em formato acessível ou lido por funcionário: qual tarefa pretende realizar, quais documentos precisa ter e como recuperará o resultado. Nunca pedir que anote ou entregue senhas.  \n   **Benefício:** evita descobrir, depois de conseguir a vaga, que falta um documento essencial. **Limite:** preparar-se não pode virar requisito para entrar na fila nem descontar tempo da sessão.  \n   **Teste barato:** oferecer o roteiro em dias alternados, durante duas semanas. Contar sessões interrompidas por falta de documentos ou informações. Manter se essas interrupções caírem sem criar outra fila no balcão.\n\n3. **Socorro durante o uso, acionado pelo usuário.**  \n   Combinar uma forma acessível de pedir ajuda — cartão visível, chamada verbal ou outra opção acordada — e designar um funcionário de referência em cada turno. A ajuda resolve um obstáculo específico, com consentimento, sem assumir o controle da tarefa.  \n   **Benefício:** evita que uma dificuldade recuperável vire abandono. **Limite:** depende da disponibilidade da equipe e do conhecimento sobre os recursos assistivos existentes.  \n   **Teste barato:** pilotar em um turno por uma semana. Registrar pedidos, tempo de resposta e quantas pessoas conseguem continuar. Rever se a espera por ajuda for longa ou prejudicar outros atendimentos.\n\n4. **Resolver parte da demanda por outro canal da própria biblioteca.**  \n   No balcão, perguntar o objetivo e oferecer, quando disponível, uma alternativa voluntária: consultar informação no acervo, receber orientação presencial ou obter um formulário já impresso. Quem precisar ou preferir o terminal conserva sua posição.  \n   **Benefício:** libera vagas quando o objetivo pode ser alcançado sem o equipamento. **Limite:** só funciona para parte das tarefas; não deve transferir operações sensíveis ou autenticações para funcionários.  \n   **Teste barato:** por cinco dias, registrar alternativas oferecidas, aceitas e efetivamente concluídas. Abandonar alternativas que apenas façam a pessoa voltar à fila.\n\nPara comparar os testes, usar três números diários: **pessoas que buscaram atendimento, objetivos concluídos e desistências antes ou durante o uso**, separando quem ficou sem vaga. Perguntar o motivo da desistência quando possível, sem exigir identificação ou diagnóstico. A melhora deve aparecer na conclusão das tarefas, preservando integralmente o tempo de quem usa tecnologia assistiva.",
+      "usage": {
+        "input_tokens": 21280,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 982,
+        "reasoning_output_tokens": 241
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N01-1-C",
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "C",
+      "seconds": 40.669,
+      "prompt_sha256": "87881af17fa102cf02d26c11c00dd4fc5e92476041e282e66b1d770af1f28126",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "As quatro propostas atuam em causas diferentes da desistência. Todas preservam o tempo necessário de quem usa tecnologia assistiva e dispensam instalação, cobrança e celular.\n\n**1. Fila presencial com previsão e retorno combinado**  \nAo chegar, a pessoa recebe uma senha em papel e uma estimativa por faixa, atualizada conforme o atendimento avança. Pode esperar sentada em outra área ou combinar um horário para voltar, mantendo sua posição conforme uma regra pública de tolerância. A chamada deve ter alternativas visuais e por voz, com apoio individual quando necessário.\n\n**Mecanismo:** quando a espera fica previsível, a pessoa consegue se organizar e tende a abandonar menos por incerteza. A estimativa não pode virar prazo para encerrar a sessão anterior.\n\n**Teste barato:** durante cinco dias, usar cartões numerados e uma folha de controle. Comparar desistências e pessoas não encontradas na chamada com cinco dias semelhantes sem o sistema.\n\n**2. Preparação voluntária antes de ocupar o terminal**  \nEnquanto aguarda, a pessoa pode receber ajuda para identificar documentos, endereço do serviço, etapas e requisitos da tarefa. Oferecer orientação oral e material legível, sem exigir leitura ou preenchimento de formulário. Não pedir senhas nem registrar dados pessoais.\n\n**Mecanismo:** descobrir um requisito antes da sessão permite resolvê-lo antes de começar, evitando que a pessoa abandone após enfrentar uma barreira previsível. A preparação nunca é condição de acesso.\n\n**Teste barato:** em alguns períodos da semana, oferecer uma conversa de até três minutos na recepção. Registrar apenas quantas sessões foram interrompidas por falta de documentos ou informações e comparar com períodos equivalentes.\n\n**3. Pedido de ajuda durante o uso, sem perder a vez**  \nDisponibilizar um cartão de “preciso de ajuda” e também permitir solicitação por voz ou gesto combinado. Um funcionário faz verificações discretas, com consentimento, para quem não consegue sinalizar. A pessoa continua no comando; ninguém solicita suas credenciais.\n\n**Mecanismo:** diante de um erro ou dúvida, uma intervenção breve impede que um bloqueio recuperável vire desistência. Isso enfrenta dificuldades que a preparação não consegue antecipar.\n\n**Teste barato:** adotar o sinal em turnos previamente escolhidos por uma semana. Contar pedidos, bloqueios resolvidos, tarefas concluídas e minutos de trabalho da equipe. Manter se houver ganho sem prejudicar outros atendimentos.\n\n**4. Resolver no balcão o que realmente dispensa o terminal**  \nNa chegada, perguntar: “O que você precisa conseguir hoje?”. Quando a biblioteca já puder resolver a demanda por orientação, consulta ao acervo ou material impresso, oferecer essa opção. A escolha é voluntária e não elimina o direito ao terminal.\n\n**Mecanismo:** uma necessidade resolvida por outro canal libera capacidade para quem depende do equipamento, sem encurtar sessões nem criar um segundo terminal.\n\n**Teste barato:** por cinco dias, registrar ofertas, aceitações e demandas efetivamente resolvidas, confirmadas pelo usuário.\n\nPara avaliar, acompanhem **desistências, tarefas concluídas, espera e esforço da equipe**. Contem também quem saiu sem solução: reduzir a fila no papel não basta. Com capacidade para 40 usuários por dia, essas medidas podem aproveitar melhor o atendimento, mas não garantem atender toda a demanda.",
+      "usage": {
+        "input_tokens": 19850,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 929,
+        "reasoning_output_tokens": 241
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N01-1-D",
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 32.33,
+      "prompt_sha256": "860f443fad14d4ab8f4ca8d8243804781211c3ea393cf15d8b173adc5693b622",
+      "instruction_sha256": "cb284115aa278254710261b00b0826ce72d41e857234885551d6696c23fff3e3"
+    },
+    {
+      "status": "ok",
+      "answer": "A oficina pode reduzir sobras e atrasos organizando os cortes em torno das chapas disponíveis e preparando o trabalho para duas pessoas.\n\n1. **Criar um mapa simples das chapas.** Ao receber cada chapa, marcar um código e registrar espessura, contorno, dimensões úteis e defeitos. Um desenho em papel basta; para formas difíceis, usar um molde de papelão. Separar material aproveitável de áreas com umidade, empenamento ou fixações. Isso evita procurar material no meio da montagem e planejar peças sobre trechos inutilizáveis.\n\n2. **Encaixar peças de vários móveis antes de cortar.** Fazer moldes das peças mais frequentes e experimentar posições sobre as chapas, respeitando o sentido das fibras quando necessário e deixando margem para a serra e o acabamento. Combinar peças grandes e pequenas de pedidos diferentes no mesmo planejamento. Cortar primeiro as peças com menos alternativas de encaixe; destinar os espaços restantes a componentes menores já necessários. As chapas continuam irregulares: o que se repete são os moldes e o método.\n\n3. **Organizar o trabalho em duplas, com conferência antes do corte.** Enquanto uma pessoa mede e marca, a outra confere medidas, prepara ferramentas e separa ferragens. Durante cortes que exigem apoio, ambas trabalham juntas. Depois, dividir tarefas independentes, como acabamento e preparação da montagem. Antes de cada corte, conferir código da peça, medida e lado aproveitado. Alternar funções para evitar dependência de uma única pessoa.\n\n4. **Limitar trabalhos abertos e dar destino às sobras.** Manter no máximo dois móveis em produção; iniciar outro quando houver material identificado e componentes essenciais disponíveis. Guardar retalhos por espessura e faixa de tamanho, com medidas visíveis. Antes de buscar uma chapa inteira, consultar esses retalhos. Conservar apenas sobras com uso plausível e seguro, evitando que o estoque vire uma pilha difícil de consultar.\n\n**Teste de uma semana**\n\n- **Segunda-feira:** escolher um pequeno conjunto de móveis com entrega prevista na semana. Registrar os resultados dos últimos trabalhos comparáveis, se houver: tempo gasto, retrabalho e cumprimento do prazo. Mapear as chapas disponíveis e preparar os moldes.\n- **Terça a quinta-feira:** aplicar os quatro mecanismos. Reservar dez minutos no início do dia para planejar cortes e cinco no fim para registrar resultados e organizar retalhos. Anotar também esse tempo de preparação.\n- **Sexta-feira:** comparar os resultados com os trabalhos anteriores, considerando quantidade e complexidade semelhantes.\n\nUsar quatro medidas simples: **horas de trabalho por móvel concluído** — somando o tempo das duas pessoas —, **peças refeitas**, **entregas no prazo** e **proporção aproximada do material utilizado que virou descarte**. Para estimar áreas irregulares, usar desenhos sobre papel quadriculado. Registrar separadamente retalhos guardados: guardá-los não significa que já foram aproveitados.\n\nCombinar como meta inicial reduzir o descarte sem aumentar as horas por móvel nem prejudicar os prazos. Se faltarem registros anteriores, a semana servirá como primeira referência; não será suficiente para afirmar uma melhora. Ao final, manter as práticas que ajudaram e ajustar as que criaram mais trabalho do que economia.",
+      "usage": {
+        "input_tokens": 10152,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 696,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N02-1-A",
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 33.3,
+      "prompt_sha256": "eb3afc7712cbe31d900dfbb48fe8aa81395f2114c3452d23e2516cb4a744e2a2",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "A oficina pode **adaptar a escolha das peças às chapas disponíveis e preparar o trabalho para duas pessoas**, mantendo as dimensões e a segurança dos móveis já encomendados.\n\n1. **Mapa de chapas com áreas utilizáveis.** Na chegada, identificar cada chapa com uma letra e registrar seu contorno aproximado, espessura, material e defeitos em papel quadriculado. Marcar também na própria chapa os defeitos que devem ser evitados. Isso permite escolher material sem movimentar todo o estoque e reduz descobertas tardias durante o corte. Exige alguns minutos de registro; para não virar burocracia, medir com precisão apenas a região escolhida para uso.\n\n2. **Encaixe com moldes móveis antes de cortar.** Fazer moldes de papelão das peças mais frequentes e distribuí-los sobre a chapa, começando pelas maiores ou mais difíceis de acomodar. Preencher os espaços restantes com peças menores de pedidos confirmados. Reservar a largura do corte, margem para acabamento e acesso da serra; respeitar orientação, resistência e revestimento do material. O benefício é visualizar combinações antes de perder material. O limite é que um encaixe compacto pode ser difícil de executar: marcar também a sequência de cortes.\n\n3. **Fila de produção com duas prioridades.** Separar os pedidos entre “prazo próximo” e “pode aguardar”. Ao abrir uma chapa para um pedido urgente, procurar peças de pedidos posteriores que aproveitem os espaços livres, sem atrasar a entrega principal. Etiquetar cada peça com pedido, função e medidas. Assim, parte da produção acompanha as oportunidades do material. O custo é manter peças antecipadas: limitar esse estoque a uma caixa ou prateleira e não fabricar peças sem destino confirmado.\n\n4. **Passagem de trabalho com conferência curta.** Enquanto uma pessoa executa o corte ou ajuste, a outra prepara a próxima peça: seleciona a chapa, posiciona o molde, verifica medidas e organiza ferramentas. Antes de cada corte irreversível, ambas conferem identificação, dimensão e lado da linha por onde a serra passará. Alternar funções para distribuir esforço e conhecimento. Isso busca reduzir espera e retrabalho; a preparação só ocorre quando não prejudica a fixação, o apoio da chapa ou a segurança do corte.\n\n**Teste de uma semana**\n\n- **Segunda-feira:** registrar o trabalho habitual, sem mudar o método: material utilizado, sobras, peças refeitas, tempo procurando/preparando material e entregas previstas versus concluídas. Fotografar os retalhos com uma régua como referência.\n- **Terça-feira:** montar os mapas e moldes apenas para os pedidos da semana. Registrar esse tempo como custo do teste.\n- **Quarta a sexta-feira:** aplicar os quatro mecanismos. Ao fim de cada dia, gastar dez minutos anotando os mesmos indicadores e os motivos de qualquer atraso. Separar sobras descartáveis das reutilizáveis; estas precisam ter medidas identificadas e uma aplicação provável.\n\n**Critério de decisão:** comparar trabalhos semelhantes por tipo de móvel, quantidade de peças e dificuldade das chapas. Procurar menor proporção de descarte e menos tempo de procura ou retrabalho, sem piorar prazos, acabamento ou segurança. Incluir o tempo de preparação na conta e não considerar retalhos acumulados como economia automaticamente. Uma semana fornece um sinal inicial; conservar os mecanismos úteis e ajustar os que consumirem mais tempo do que pouparem.",
+      "usage": {
+        "input_tokens": 11587,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 713,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N02-1-B",
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 36.287,
+      "prompt_sha256": "90ea7d7b506ae1bcc399dfe5deef489ecccf6642ad91be83e3a3440722bc1e9f",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "A oficina pode atuar em quatro pontos: encaixe dos cortes, adaptação dos móveis, início dos trabalhos e destino das sobras. A proposta mantém as chapas irregulares e usa papelão, giz e etiquetas.\n\n1. **Encaixar peças de vários pedidos antes de cortar.**  \n   Façam moldes de papelão das peças necessárias e distribuam sobre as chapas, marcando defeitos, espessura e direção das fibras quando relevante. Experimentem combinar peças de dois pedidos na mesma chapa. Reservem espaço para a largura do corte e para prender o material com segurança. Isso permite encontrar encaixes que passam despercebidos quando se corta um móvel por vez. **Custo:** alguns minutos de planejamento; só vale combinar pedidos se isso não atrasar a entrega mais próxima.\n\n2. **Oferecer medidas ajustáveis dentro de limites funcionais.**  \n   Para móveis ainda não aprovados pelo comprador, definam quais medidas podem variar: por exemplo, largura de uma prateleira ou altura de um nicho. Escolham a medida final conforme o material disponível, mantendo estabilidade, resistência e espaço de uso. Assim, uma chapa pode fornecer uma peça inteira sem emenda ou corte adicional. **Limite:** qualquer alteração precisa ser combinada antes da fabricação; dimensões já prometidas permanecem fixas.\n\n3. **Liberar para fabricação apenas pedidos com material completo.**  \n   Criem uma ficha por móvel com todas as peças, ferragens e operações. Antes do primeiro corte, identifiquem e reservem o material necessário para o conjunto inteiro. Mantenham apenas um móvel em montagem por vez; a outra pessoa prepara o próximo conjunto ou ajuda na operação que exige duas pessoas. Isso reduz trabalhos interrompidos por falta de uma lateral ou ferragem. **Custo:** pode adiar o início aparente de um pedido, mas evita ocupar a bancada com vários móveis incompletos.\n\n4. **Dar às sobras uma fila de uso com demanda real.**  \n   Separem retalhos por espessura e identifiquem as dimensões úteis. Antes de cortar uma chapa maior para uma peça pequena, consultem esse estoque. Associem retalhos a necessidades já existentes, como travessas, divisórias e reforços previstos no projeto. **Limite:** não fabricar acessórios sem destino apenas para “consumir sobra”; isso transforma desperdício em estoque e trabalho. Retalhos inadequados para peças estruturais não devem ser usados nelas.\n\n**Teste de uma semana**\n\n- **Segunda:** escolham de dois a quatro pedidos representativos, registrem o estoque inicial de retalhos e preparem moldes e fichas. Recuperem os dados da semana anterior, se existirem, para comparação.\n- **Terça a quinta:** apliquem os quatro mecanismos. Por pedido, anotem minutos de planejamento, fabricação e espera; motivo de cada interrupção; material utilizado; descarte; e prazo cumprido ou perdido.\n- **Sexta:** confiram entregas e estoque. Comparem descarte por móvel de porte semelhante, tempo total por pedido e minutos de interrupção. **Retalho guardado ainda não conta como material aproveitado.**\n\nA hipótese mais frágil é que o planejamento economize mais tempo do que consome. Se ele aumentar o tempo total sem reduzir descarte ou interrupções, simplifiquem os registros e restrinjam o encaixe conjunto aos pedidos com maior potencial. Uma semana indica ajustes; não comprova ganhos permanentes.",
+      "usage": {
+        "input_tokens": 21295,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 942,
+        "reasoning_output_tokens": 216
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N02-1-C",
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "C",
+      "seconds": 49.598,
+      "prompt_sha256": "bfb479c45e41a40a775ba0befea9e4871736cbc88626915713ed6e865602fff5",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "A oficina pode reduzir sobras e atrasos mudando como escolhe peças, adapta projetos e libera trabalho para a bancada — sem alterar as chapas recebidas.\n\n1. **Reservar material antes de cortar.** No início de cada lote, marcar defeitos nas chapas e experimentar moldes de papel das peças necessárias, começando pelas maiores e menos flexíveis. Cada molde recebe o número do pedido. Só iniciar o corte depois de conferir o conjunto, incluindo largura do corte, acabamento, espessura e resistência do material. Isso evita consumir uma chapa numa peça pequena e depois descobrir que faltou espaço para uma lateral grande. Limitar essa preparação a 15 minutos por lote.\n\n2. **Criar uma faixa de adaptação para medidas pouco críticas.** Para cada modelo recorrente, definir quais medidas precisam ser fixas e quais podem variar: por exemplo, manter altura e estabilidade de uma mesinha, mas permitir duas ou três profundidades de tampo. Quando uma chapa não comportar a versão prevista, escolher uma alternativa já desenhada e aceita pelo cliente. O mecanismo transforma parte da irregularidade em opções de produto, reduzindo cortes e emendas. Não flexibilizar encaixes, resistência ou dimensões contratadas sem aprovação.\n\n3. **Dar destino aos retalhos antes de guardá-los.** Separar sobras por espessura e anotar suas medidas úteis. Manter uma lista curta de peças pequenas com demanda real, como travessas, prateleiras internas e fundos compatíveis com o material. Antes de cortar uma chapa maior para essas peças, consultar os retalhos. Guardar apenas os que atendam a alguma aplicação identificada, dentro de um espaço limitado. Isso evita tanto o descarte precoce quanto um estoque que consome tempo de busca.\n\n4. **Liberar para montagem apenas conjuntos completos.** Separar por pedido todas as peças conferidas, ferragens e instruções simples, usando caixas ou áreas demarcadas. Enquanto uma pessoa corta, a outra pode conferir, preparar encaixes ou montar um conjunto anterior; ambas conferem medidas críticas antes do primeiro corte. Limitar a dois pedidos em andamento. Assim, uma peça ausente aparece antes de ocupar a bancada com um móvel incompleto.\n\n**Teste de uma semana**\n\n- **Segunda-feira:** registrar um lote feito pelo método atual: peças boas obtidas, área aproximada consumida, tempo de busca, retrabalho, esperas e pedidos concluídos. Identificar os retalhos já existentes para não confundi-los com os novos.\n- **Terça a quinta:** aplicar os quatro mecanismos em pedidos de dificuldade semelhante. Usar uma única folha de registro e reservar dez minutos ao fim do dia para apontar onde houve ganho ou dificuldade.\n- **Sexta-feira:** comparar consumo de material por peça equivalente, tempo total por pedido e cumprimento das entregas. Contar também o tempo gasto planejando e organizando; sobra guardada não deve ser contabilizada como material aproveitado.\n\nManter os mecanismos que reduzirem consumo ou tempo sem piorar qualidade e entregas. Se a preparação custar mais tempo do que economiza, simplificar os moldes e o cadastro antes de ampliar o método. A semana oferece um primeiro sinal; uma mudança no tipo de encomenda pode exigir nova comparação.",
+      "usage": {
+        "input_tokens": 10594,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 761,
+        "reasoning_output_tokens": 84
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N02-1-D",
+      "case_id": "N02",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 35.597,
+      "prompt_sha256": "73ee75bca7fc58d413d72b7e33995f97d78a7759cd3a7398f9eab75710e92b19",
+      "instruction_sha256": "cb284115aa278254710261b00b0826ce72d41e857234885551d6696c23fff3e3"
+    },
+    {
+      "status": "ok",
+      "answer": "É possível sugerir “perto” e “longe” mantendo os 20 cantores juntos, com visão da regente e sem alterar as notas. Numa sala seca, o resultado será sobretudo uma **impressão de distância**, cuja força precisa ser testada.\n\nTrês mecanismos diferentes:\n\n1. **Intensidade: o grupo distante parece menos presente.**  \n   Faça o grupo “próximo” cantar com intensidade moderada e o “distante” mais suavemente, ambos com apoio e afinação estáveis. Preserve timbre, articulação e andamento durante o primeiro teste. A pista aqui é o nível sonoro: fontes mais distantes costumam chegar mais fracas. Evite um contraste exagerado, que pode soar apenas como diferença de dinâmica.\n\n2. **Espectro: o grupo distante perde brilho.**  \n   Trabalhe uma emissão um pouco mais escura e menos brilhante para o “longe”; o “perto” mantém maior riqueza de agudos. Preserve as vogais reconhecíveis, a dicção e, tanto quanto possível, o volume. Não peça voz abafada, tensão na garganta ou canto desafinado. A pista é a redução relativa das frequências altas, associada à propagação e à absorção do som. Isoladamente, porém, isso também pode ser ouvido apenas como mudança de cor vocal.\n\n3. **Definição temporal: o grupo distante tem contornos menos nítidos.**  \n   Compare ataques claros e consoantes precisas no “perto” com entradas mais suaves e maior ligação entre sons no “longe”. Mantenha as entradas no pulso, as durações escritas e a mesma qualidade de vogal; não introduza atrasos nem desencontros entre cantores. A pista aqui é a nitidez dos eventos, diferente do volume e do brilho. Como a sala é seca, esse recurso sugere distância, mas não produz a reverberação de um espaço maior.\n\n**Como verificar:** escolha um trecho curto e mantenha fixas as posições dos cantores. Alguns ouvintes, em diferentes pontos da plateia e sem saber qual versão foi preparada, escutam pares de versões em ordem alternada. Primeiro, teste cada mecanismo sozinho; depois, combine os que funcionarem. Pergunte: “Qual grupo parece mais distante?” e “Você ouviu distância ou apenas uma mudança de volume, timbre ou articulação?”. Troque também os papéis dos grupos para verificar se a impressão não vem das vozes específicas.\n\nNos seis ensaios, use três para explorar os mecanismos, um para combiná-los, um para a escuta comparativa e o último para consolidar a solução mais convincente. Não é necessário deslocar quem depende da referência visual da regente.",
+      "usage": {
+        "input_tokens": 10149,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 947,
+        "reasoning_output_tokens": 370
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N03-1-A",
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 102.182,
+      "prompt_sha256": "f66b3081344a66ff5bbaa9ee6d5c557ed2d2ddc5e82437bd68d2ac1526679c53",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Numa sala seca, o objetivo viável é criar **distância percebida entre os grupos**, sem depender de reverberação. Manteria os 20 cantores na formação habitual, todos com visão confortável da regente, e testaria três mecanismos:\n\n1. **Direção da emissão — mudar o caminho do som.** Um grupo canta diretamente para a plateia; o outro orienta discretamente o rosto para uma lateral, mantendo a regente no campo visual. O público recebe menos som direto, sobretudo nas frequências mais direcionais, o que pode sugerir afastamento. Não é cantar contra o peito nem virar de costas. **Limite:** numa sala seca, o efeito pode ser pequeno e variar conforme o assento; descarte qualquer ângulo que prejudique a referência visual.\n\n2. **Cor vocal — simular a perda de brilho com a distância.** Com posição, direção e intensidade semelhantes, o grupo “distante” usa uma emissão confortável, menos brilhante e com transientes consonantais menos salientes; o “próximo” preserva maior definição. As notas e o texto permanecem. **Mecanismo:** sons distantes tendem a chegar com menos detalhes agudos. **Limite:** escurecer artificialmente a voz ou soprar demais pode prejudicar afinação e saúde vocal; procure uma diferença pequena, sem apertar a garganta.\n\n3. **Mascaramento — fazer um grupo ocupar o primeiro plano.** Nos trechos em que ambos cantam, um grupo sustenta presença moderada enquanto o outro reduz sua intensidade, sem perder apoio ou afinação. O primeiro encobre parte dos detalhes do segundo, criando uma camada ao fundo. Depois, os papéis podem se inverter. **Mecanismo:** a profundidade surge da relação entre as camadas, mesmo sem mudar sua posição. **Limite:** sozinho, o grupo suave pode parecer apenas mais baixo; o efeito depende da sobreposição e não deve apagar sua linha.\n\n**Como verificar:** use o mesmo trecho curto em versões com e sem cada recurso, em ordem alternada, sem dizer qual grupo deveria parecer distante. Convide três ouvintes para pontos diferentes da plateia e peça que indiquem: “qual grupo parece mais longe?”, “ou apenas mais baixo/abafado?” e “o texto continua compreensível?”. Depois, inverta os papéis dos grupos para conferir se o resultado acompanha o recurso.\n\nNos dois primeiros ensaios, compare os mecanismos isoladamente; no terceiro, escolha os mais convincentes; nos três restantes, estabilize a execução. A evidência útil é a concordância dos ouvintes, mantendo afinação, texto e contato visual — não apenas a impressão dos cantores.",
+      "usage": {
+        "input_tokens": 20855,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1070,
+        "reasoning_output_tokens": 506
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N03-1-B",
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 59.327,
+      "prompt_sha256": "fb798ddaec2e59baa7a5b8f3baefca4082be75291480258a736c275a8ef3eb37",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "Manteria os 20 cantores num semicírculo compacto, com dois grupos de dez e visão livre da regente. Numa sala seca, a distância terá de ser sugerida por pistas perceptivas; não haverá reverberação natural para sustentá-la.\n\n1. **Distância pela intensidade relativa.** O grupo “próximo” canta em intensidade confortável; o “distante”, sensivelmente mais baixo, mantendo apoio e afinação. O ouvido pode interpretar essa diferença como profundidade. A vantagem é a execução simples; o risco é ouvir apenas “forte e fraco”. Evitem reduzir tanto o volume que o grupo distante desapareça.\n\n2. **Distância pela perda de brilho.** Com volumes percebidos semelhantes, o grupo distante usa uma emissão menos brilhante e consoantes menos incisivas, preservando vogais reconhecíveis e dicção suficiente. Isso sugere a perda de detalhes agudos que acompanha a propagação do som. O mecanismo é espectral, independente da intensidade. Não se deve obter o efeito apertando a garganta ou soprando excessivamente; a concessão é alguma perda de clareza do texto.\n\n3. **Distância pelo atraso de chegada.** Num trecho em que os grupos já tenham o mesmo material, o grupo distante entra ligeiramente depois do próximo, aproximadamente 60–100 milissegundos, seguindo um segundo gesto da regente. Mantêm-se as notas e sua sequência; altera-se o alinhamento temporal. A chegada posterior pode sugerir um percurso maior. É o recurso mais arriscado: pode soar como desencontro rítmico. Usaria apenas numa frase curta, de ritmo simples, e descartaria se prejudicasse o pulso. Não exige afastar ninguém nem acrescentar repetições à partitura.\n\n**Verificação sem eletrônica:** três ouvintes, de olhos fechados e em posições diferentes da plateia, escutam o mesmo trecho em quatro versões: neutra e uma para cada mecanismo. A ordem varia, sem anunciar o recurso. Após cada versão, apontam qual grupo parece mais distante e se perceberam profundidade, menor volume ou erro de conjunto. Invertem-se depois os papéis dos grupos para verificar se a impressão acompanha o recurso, e não determinada voz ou posição.\n\nNos três primeiros ensaios, experimentaria um mecanismo por vez; no quarto, faria essa escuta; nos dois últimos, consolidaria somente os recursos que produzissem distância reconhecível sem comprometer a música.",
+      "usage": {
+        "input_tokens": 12021,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1332,
+        "reasoning_output_tokens": 814
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N03-1-C",
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "C",
+      "seconds": 71.65,
+      "prompt_sha256": "44ff7069b918db5b032c22433b493110e2f855301f49f8f315ac7500f5aa7ae3",
+      "instruction_sha256": "0fea611cba3ed84b6590ef02367a627ea80278912a119ca3e5737535860853e7"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu manteria os 20 cantores em posições com visão livre da regente e trabalharia três pistas distintas de distância:\n\n1. **Nível sonoro: distância pela intensidade.** Quando um grupo assumir o papel de “distante”, canta com menor intensidade; o “próximo” mantém presença. O ouvido pode interpretar essa diferença como afastamento. Ensaiem primeiro a mesma frase nos dois grupos, preservando apoio e afinação: cantar longe não deve virar cantar sem sustentação. **Limite:** isoladamente, pode soar apenas como contraste de dinâmica.\n\n2. **Espectro: distância pela perda de brilho.** O grupo “distante” usa emissão menos brilhante e consoantes menos incisivas, mantendo texto, notas e precisão rítmica. O “próximo” conserva mais definição. Isso explora uma pista da propagação sonora: componentes agudos tendem a perder presença com a distância. Não é preciso virar as costas nem perder contato visual. **Limite:** escurecer demais as vogais prejudica compreensão e afinação; a mudança deve ser pequena e confortável.\n\n3. **Perspectiva visual: distância pelo cenário.** Sem deslocar ninguém, usem painéis ou tecidos pintados com linhas de perspectiva e elementos de tamanho decrescente, associando o grupo “distante” ao fundo representado. Os elementos ficam atrás dos cantores, sem interferir na visão da regente. A imagem fornece uma pista espacial que pode influenciar a percepção do conjunto. **Limite:** esse mecanismo depende de o público enxergar o cenário; não cria distância acústica.\n\nOs três atuam em pontos diferentes: **intensidade, composição do som e interpretação visual**. A sala seca torna especialmente difícil sugerir distância por reverberação; eu não contaria com esse recurso.\n\n**Como verificar:** no terceiro ensaio, convidem cinco ouvintes para uma comparação curta. Apresentem o mesmo trecho em ordem alternada: versão habitual e cada mecanismo isolado, invertendo também qual grupo representa o distante. Sem revelar a intenção, perguntem: “Qual grupo parece mais longe?” e “O texto continua compreensível?”. Para o cenário, comparem olhos abertos e fechados. Conservem os recursos que produzirem respostas consistentes sem comprometer a música; usem os três ensaios restantes para estabilizá-los e combiná-los.",
+      "usage": {
+        "input_tokens": 19862,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1139,
+        "reasoning_output_tokens": 639
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N03-1-D",
+      "case_id": "N03",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 53.901,
+      "prompt_sha256": "7dc56b273388e922b063717a53333e5e42637ebc5df03f0b2013ff1855b0e923",
+      "instruction_sha256": "cb284115aa278254710261b00b0826ce72d41e857234885551d6696c23fff3e3"
+    }
+  ]
+}

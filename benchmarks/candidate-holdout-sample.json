@@ -1,0 +1,49 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 4561,
+  "workers": 2,
+  "timeout": 300,
+  "output": "runs/candidate-holdout-sample",
+  "conditions": {
+    "A": null,
+    "B": "instructions/B.md",
+    "C": "instructions/C_candidate.md"
+  },
+  "cases": [
+    {
+      "id": "H02",
+      "domain": "Roblox",
+      "creative": true,
+      "prompt": "Estou projetando uma experiência cooperativa Roblox para quatro desconhecidos. A rodada dura quatro minutos em uma sala fixa e bem iluminada. Ninguém pode usar voz, texto livre ou depender de reconhecer cores. Quero que jogadores precisem interpretar as ações uns dos outros, mas uma pessoa parada não pode impedir todos de terminar. Considere celular e atraso de 200 ms. Proponha três sistemas cooperativos que funcionem por mecanismos diferentes, explique como cada um lida com a pessoa parada e descreva um teste barato de compreensão. Não use ferramentas nem escreva código.",
+      "constraints": [
+        "Quatro jogadores e rodada de quatro minutos",
+        "Sala fixa e bem iluminada",
+        "Sem voz ou texto livre",
+        "Compreensão independente de reconhecimento de cores",
+        "Um jogador parado não bloqueia a conclusão",
+        "Compatível com celular e atraso de 200 ms",
+        "Três mecanismos distintos e teste de compreensão"
+      ],
+      "rubric": "Examinar a dependência cooperativa real e as decisões que cada mecanismo altera; a acessibilidade e a recuperação de ausência precisam ser operacionais, sem simplesmente eliminar a cooperação ou exigir reflexos incompatíveis com a latência."
+    },
+    {
+      "id": "H08",
+      "domain": "educação",
+      "creative": true,
+      "prompt": "Uma turma de 30 adultos consegue repetir uma regra de proporção, mas erra ao escolher quando usá-la em situações novas. Tenho 25 minutos, folhas reutilizadas e um quadro; não há celulares. Não posso separar alunos por desempenho nem pedir que exponham erros pessoais. Preciso de três intervenções didáticas com mecanismos diferentes e de uma forma curta de distinguir compreensão transferível de memorização. Não proponha apenas mais exercícios com números trocados. Não use ferramentas.",
+      "constraints": [
+        "30 adultos e 25 minutos",
+        "Somente folhas reutilizadas e quadro",
+        "Sem celulares",
+        "Sem grupos definidos por desempenho",
+        "Sem exposição de erros pessoais",
+        "Não se limitar a trocar números em exercícios",
+        "Três mecanismos didáticos distintos",
+        "Verificação breve de transferência"
+      ],
+      "rubric": "Avaliar se cada intervenção altera uma operação cognitiva ou interação distinta, cabe no tempo e protege os alunos; a avaliação deve testar seleção e justificativa em contexto novo, não só repetição do algoritmo."
+    }
+  ]
+}

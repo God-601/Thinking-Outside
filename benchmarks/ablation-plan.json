@@ -1,0 +1,32 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 1701,
+  "workers": 3,
+  "timeout": 240,
+  "output": "runs/ablation",
+  "cases": [
+    {
+      "id": "D01",
+      "prompt": "Proponha quatro mecanismos diferentes para reduzir abandonos de um curso de programação gratuito. Só há um professor, 30 alunos, sem monitor, sem recompensas e sem novas plataformas. Explique funcionamento, limite e um teste barato.",
+      "creative": true
+    },
+    {
+      "id": "D02",
+      "prompt": "Proponha quatro alternativas realmente distintas para um pequeno comércio reduzir filas no almoço sem contratar, comprar equipamentos, mudar preços ou coletar dados pessoais. Preserve atendimento presencial sem smartphone.",
+      "creative": true
+    },
+    {
+      "id": "D03",
+      "prompt": "Crie quatro mecanismos distintos para uma ferramenta offline permitir comparar decisões de arquitetura de software. Não use agentes extras, nuvem, pontuação arbitrária ou dashboards genéricos. Equipe de duas pessoas, uma semana.",
+      "creative": true
+    }
+  ],
+  "conditions": {
+    "B": "instructions/B.md",
+    "C": "instructions/C.md",
+    "C_abstract": "instructions/C_abstract.md",
+    "C_concrete": "instructions/C_concrete.md"
+  }
+}

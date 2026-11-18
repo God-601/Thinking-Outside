@@ -1,0 +1,733 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "A": {
+      "utility": 4,
+      "originality": 2.75,
+      "diversity": 4.125,
+      "feasibility": 4,
+      "adherence": 4.125,
+      "weighted": 3.79375,
+      "critical_failures": 0,
+      "seconds": 61.600750000000005,
+      "input_tokens": 17130.75,
+      "output_tokens": 1096.5
+    },
+    "B": {
+      "utility": 3.875,
+      "originality": 2.875,
+      "diversity": 4.125,
+      "feasibility": 3.875,
+      "adherence": 3.875,
+      "weighted": 3.725,
+      "critical_failures": 0,
+      "seconds": 68.826,
+      "input_tokens": 18565.75,
+      "output_tokens": 1114.75
+    },
+    "D": {
+      "utility": 4.25,
+      "originality": 3.125,
+      "diversity": 4.5,
+      "feasibility": 3.75,
+      "adherence": 4.25,
+      "weighted": 4.0,
+      "critical_failures": 0,
+      "seconds": 61.296,
+      "input_tokens": 15283,
+      "output_tokens": 1110.5
+    }
+  },
+  "comparisons": {
+    "A_vs_B": {
+      "wins": 1,
+      "ties": 2,
+      "losses": 1,
+      "preference": 0.5,
+      "creative": {
+        "wins": 1,
+        "ties": 2,
+        "losses": 1,
+        "preference": 0.5,
+        "per_case_preference": {
+          "P01": 0.75,
+          "P02": 0.25
+        }
+      }
+    },
+    "A_vs_D": {
+      "wins": 0,
+      "ties": 2,
+      "losses": 2,
+      "preference": 0.25,
+      "creative": {
+        "wins": 0,
+        "ties": 2,
+        "losses": 2,
+        "preference": 0.25,
+        "per_case_preference": {
+          "P01": 0,
+          "P02": 0.5
+        }
+      }
+    },
+    "B_vs_D": {
+      "wins": 0,
+      "ties": 1,
+      "losses": 3,
+      "preference": 0.125,
+      "creative": {
+        "wins": 0,
+        "ties": 1,
+        "losses": 3,
+        "preference": 0.125,
+        "per_case_preference": {
+          "P01": 0,
+          "P02": 0.25
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Combina época, reconhecimento auditivo, conteúdo temático e revisão de hipóteses, preservando arquivos e explicitando cobertura parcial. Distingue datas digitais de época confirmada e inclui candidatos fora da hipótese inicial. Os testes verificam recuperação e reconhecimento, mas não definem comparador explícito nem medição sistemática do tempo; os quatro minutos são sobretudo limites. A obtenção de candidatos continua dependente de pistas disponíveis ou escuta exploratória.",
+      "reframe": null,
+      "mechanism_families": [
+        "Restrição temporal por marcos e evidências verificadas",
+        "Reconhecimento de voz por comparação auditiva",
+        "Recuperação temática por referências de trechos ouvidos",
+        "Revisão de hipóteses por relaxamento seletivo de pistas"
+      ],
+      "weighted": 3.7,
+      "case_id": "P01",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "P01-1-B",
+      "seconds": 64.107,
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1114,
+        "reasoning_output_tokens": 243
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "A consulta às relações e testemunhas presentes acrescenta uma fonte causal distinta das pistas dos arquivos e do reconhecimento auditivo, diferenciando esta resposta das demais, embora seja uma prática conhecida. Trata datas e lembranças como hipóteses e reserva exploração fora do conjunto favorito. Compara dois métodos e registra tempo, acertos e falsos acertos. Entretanto, usa casos diferentes por método, sem equivalência demonstrada; preparar alvos e pedidos dentro dos oito minutos também pode ser apertado. A rota social depende de conhecimento comunitário disponível.",
+      "reframe": null,
+      "mechanism_families": [
+        "Restrição temporal por marcos biográficos e locais",
+        "Reconhecimento auditivo de vozes e ambientes",
+        "Recuperação por conhecimento social distribuído",
+        "Exploração por contraste e revisão de pistas"
+      ],
+      "weighted": 4.125,
+      "case_id": "P01",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "P01-1-D",
+      "seconds": 56.67,
+      "usage": {
+        "input_tokens": 10657,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1290,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Oferece quatro rotas sustentadas por evidências distintas, referências precisas e separação entre hipótese e confirmação. O plano de amostragem torna explícita a cobertura limitada, e as rodadas de contraste permitem corrigir lembranças sem confiar cegamente nos metadados. Empata com O1 em originalidade e diversidade: compartilham essencialmente as mesmas famílias causais. O teste registra tempo e acerto, mas compara métodos em tipos diferentes de pedido, confundindo desempenho com adequação à pista. As quatro tentativas ocupam integralmente os seis minutos, sem margem para transições.",
+      "reframe": null,
+      "mechanism_families": [
+        "Recuperação temática por trechos previamente classificados",
+        "Reconhecimento auditivo de vozes",
+        "Localização temporal por acontecimentos",
+        "Revisão de hipóteses por contraste entre candidatos"
+      ],
+      "weighted": 3.7,
+      "case_id": "P01",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "P01-1-A",
+      "seconds": 59.817,
+      "usage": {
+        "input_tokens": 10187,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1266,
+        "reasoning_output_tokens": 473
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 3.5,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Oferece referências verificáveis por arquivo e tempo, distingue desconhecimento de ausência e trata datas como hipóteses. As quatro rotas usam evidências diferentes, embora a tolerância ao erro dependa dos candidatos já encontrados pelas demais. Relaxar uma pista por vez é um mecanismo convencional, mas operacionalmente claro. O cronograma soma 40 minutos; contudo, o teste usa fichário e relaxamento em sequência, sem separar seus resultados ou definir um comparador claro. Isso impede avaliar quais dos dois mecanismos realmente melhoram tempo e acertos. A cobertura inicial de apenas doze arquivos limita o atendimento, limitação reconhecida pela resposta.",
+      "reframe": null,
+      "mechanism_families": [
+        "Recuperação temática por etiquetas ligadas a trechos ouvidos",
+        "Reconhecimento auditivo de vozes com referências",
+        "Restrição temporal por acontecimentos comunitários verificados",
+        "Relaxamento sucessivo de pistas para recuperar candidatos excluídos"
+      ],
+      "weighted": 3.475,
+      "case_id": "P01",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "P01-2-B",
+      "seconds": 56.967,
+      "usage": {
+        "input_tokens": 11622,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1323,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 3.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Combina procedência, sondagem direta, reconhecimento de voz e comparação adaptativa, evitando reduzir tudo a formatos de índice. O contraste inclui a opção nenhuma e amostras externas à hipótese favorita, permitindo corrigir lembranças sem confiar nos metadados. Essa exploração é um diferencial relativo a O1, embora compartilhe a família causal de O3 e tenha precedentes conhecidos. O teste explicita abertura livre como comparador e mede tempo e acertos. Entretanto, os blocos já somam 40 minutos sem acomodar claramente a tentativa adicional de dois minutos; a execução das rodadas também precisa de melhor coordenação para um único computador. As diferenças de duração entre condições prejudicam a comparação.",
+      "reframe": null,
+      "mechanism_families": [
+        "Priorização por procedência e pistas temporais incertas",
+        "Sondagem de pontos do áudio seguida de expansão local",
+        "Reconhecimento auditivo de vozes com referências",
+        "Comparação adaptativa com exploração fora da hipótese dominante"
+      ],
+      "weighted": 4.05,
+      "case_id": "P01",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "P01-2-D",
+      "seconds": 56.533,
+      "usage": {
+        "input_tokens": 19928,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1140,
+        "reasoning_output_tokens": 311
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Preserva as restrições, distribui funções compatíveis com um computador e fecha o cronograma em 40 minutos. Voz, contexto temporal, características do áudio e contraste oferecem rotas causais distintas. Empata com O2 em originalidade: ambos usam reconhecimento adaptativo e mantêm alternativas fora da hipótese favorita. O teste compara fichas e contraste, alterna sua ordem e registra tempo e acertos. Sua execução depende, porém, de quatro trechos já terem sido encontrados; quem os localizou pode reconhecê-los durante o teste. Quatro pedidos também não permitem equilibrar adequadamente mecanismo, dificuldade e presença de pista falsa, limitando a interpretação dos resultados.",
+      "reframe": null,
+      "mechanism_families": [
+        "Filtragem por características temáticas e acústicas observadas",
+        "Reconhecimento auditivo de vozes com confirmação ampliada",
+        "Restrição temporal por marcos comunitários sustentados por evidências",
+        "Comparação adaptativa com flexibilização de pistas e alternativas contraditórias"
+      ],
+      "weighted": 3.875,
+      "case_id": "P01",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "P01-2-A",
+      "seconds": 64.637,
+      "usage": {
+        "input_tokens": 19458,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1037,
+        "reasoning_output_tokens": 268
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Combina quatro intervenções distinguíveis: disponibilidade antecipada, explicação das atividades, preparação de segunda escolha e distribuição alternada dos indecisos. A alternância é opcional e condicionada a vagas confirmadas, preservando escolha e capacidade. O ensaio inclui referência habitual e mede novas chegadas a salas cheias, mas não conta realocações bem-sucedidas; intenção declarada de desistir não equivale a desistência efetiva. A comunicação entre salas depende de alcance auditivo não estabelecido. Empata com O2 e O3 em utilidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Aviso antecipado reduz deslocamentos para salas cheias",
+        "Descrição concreta reduz incerteza sobre as atividades",
+        "Segunda preferência mental antecipa a decisão",
+        "Sugestões alternadas distribuem pessoas entre destinos"
+      ],
+      "weighted": 3.8,
+      "case_id": "P02",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "P02-1-B",
+      "seconds": 68.891,
+      "usage": {
+        "input_tokens": 20874,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1041,
+        "reasoning_output_tokens": 439
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Atua na preparação da escolha, na informação de disponibilidade, na adequação das alternativas ao interesse e na ocupação física da passagem. Separar decisão e circulação oferece uma rota causal adicional clara, embora dependa de espaço existente e alcance da fala. O ensaio compara com atendimento básico e verifica pressão percebida, mas exige participantes e observador disponíveis. Mede hesitação e intenção de saída, sem distinguir ingresso efetivo em outra oficina de pessoas que continuam sem solução. Empata com O1 e O3 em utilidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Preparação de alternativas reduz decisão sob frustração",
+        "Avisos de lotação evitam espera por informação",
+        "Encaminhamento por interesse aumenta atratividade das alternativas",
+        "Deslocamento voluntário da decisão libera a passagem"
+      ],
+      "weighted": 3.9,
+      "case_id": "P02",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "P02-1-A",
+      "seconds": 66.525,
+      "usage": {
+        "input_tokens": 19439,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1045,
+        "reasoning_output_tokens": 467
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Acrescenta às rotas informacionais e de preparação da escolha um mecanismo social: mudar de oficina em companhia pode reduzir o receio de entrar sozinho. Isso a diferencia das demais, embora a formação de grupos possa concentrar chegadas. A troca oral de vagas depende da disposição física das salas. O teste usa referência observada e proporções, reconhecendo a redução das vagas e as saídas silenciosas como limitações. Contudo, não identifica realocações bem-sucedidas, e pessoas paradas por dez segundos não caracterizam necessariamente fila não resolvida. Empata com O1 e O2 em utilidade.",
+      "reframe": null,
+      "mechanism_families": [
+        "Segunda preferência antecipada reduz hesitação",
+        "Troca oral de disponibilidade reduz busca entre portas",
+        "Descrição da experiência aumenta interesse por alternativas",
+        "Companhia voluntária reduz barreira social à realocação"
+      ],
+      "weighted": 4.0,
+      "case_id": "P02",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "P02-1-D",
+      "seconds": 56.158,
+      "usage": {
+        "input_tokens": 10638,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 939,
+        "reasoning_output_tokens": 385
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 3.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Atua em quatro pontos distintos: preparação da escolha, informação sobre vagas, encaminhamento e acolhimento após o início. O acolhimento enfrenta uma causa específica de desistência e preserva o horário, condicionado à segurança da atividade. Gestos exigem visibilidade, e recomendar outra sala depende de verificar sua disponibilidade sem deslocamento. O teste tem referência habitual e preferências controladas, mas mede escolha de destino sem confirmar entrada em outra oficina; tampouco contabiliza separadamente quem permanece sem solução. Desistências em simulação têm alcance limitado.",
+      "reframe": null,
+      "mechanism_families": [
+        "Antecipar uma alternativa para reduzir indecisão",
+        "Sinalizar disponibilidade antes da aproximação",
+        "Oferecer destino concreto para facilitar realocação",
+        "Reduzir a barreira de entrada após perder o começo"
+      ],
+      "weighted": 3.825,
+      "case_id": "P02",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "P02-2-D",
+      "seconds": 75.823,
+      "usage": {
+        "input_tokens": 19909,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1073,
+        "reasoning_output_tokens": 516
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Combina informação comparável, aviso de capacidade, alternativa antecipada e organização espacial, preservando escolha e recursos. Apresentação e segunda opção se sobrepõem parcialmente na preparação da decisão, mas há rotas causais distintas. O teste observa realocação efetiva, usa referência e ajusta pelo volume de chegadas; também reconhece corretamente que sair não comprova desistência. Falta apurar desistências e pessoas ainda sem destino como resultados separados. A comparação sequencial pode sofrer com mudanças de ocupação, e pressupõe organizador externo já disponível.",
+      "reframe": null,
+      "mechanism_families": [
+        "Reduzir incerteza sobre conteúdo e localização",
+        "Informar lotação antes de formar espera",
+        "Preparar alternativa sem compromisso",
+        "Separar deliberação e circulação no espaço"
+      ],
+      "weighted": 3.7,
+      "case_id": "P02",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "P02-2-A",
+      "seconds": 55.424,
+      "usage": {
+        "input_tokens": 19439,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1038,
+        "reasoning_output_tokens": 394
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 4,
+        "originality": 3.5,
+        "diversity": 4.5,
+        "feasibility": 3.5,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "A companhia voluntária acrescenta uma rota social relativamente distinta das demais respostas, enquanto convites das salas disponíveis facilitam encontrar alternativas. Empata com O1 na diversidade causal. Explicita limites de acústica, espaço e capacidade total, mas não resolve a coordenação para evitar anúncios sobrepostos; grupos podem concentrar chegadas em poucas vagas. O teste inclui referência habitual, porém grupos apenas semelhantes oferecem controle limitado. Mede intenção de desistir e tempo para escolher, sem confirmar realocação nem separar fila não resolvida.",
+      "reframe": null,
+      "mechanism_families": [
+        "Preparar escolha alternativa antes do gargalo",
+        "Atrair público por anúncios de vagas disponíveis",
+        "Retirar a deliberação da passagem",
+        "Reduzir hesitação mediante companhia voluntária"
+      ],
+      "weighted": 3.925,
+      "case_id": "P02",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "P02-2-B",
+      "seconds": 85.339,
+      "usage": {
+        "input_tokens": 20874,
+        "cached_input_tokens": 18432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 981,
+        "reasoning_output_tokens": 426
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T18:19:46.925955+00:00",
+    "instruction_sha256": {
+      "B": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c",
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f",
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "context_sha256": "9385d1e050a7b181d292024f6c581f7b134c02df24d7155bdf2cd12cfcc40f41",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "**A saída viável é criar pistas para uma parte do acervo enquanto se atende aos pedidos.** Em 40 minutos, não dá para conhecer 500 gravações. O resultado será uma busca assistida, com cobertura parcial explícita e sem prometer que um trecho ausente da amostra não exista.\n\nNo papel, cada descoberta recebe o **nome exato do arquivo, pasta e minuto aproximado**. Podem ser anotados rótulos como “festa”, “entrevista” ou “voz grave”, sem copiar falas nem produzir transcrições.\n\n### Quatro mecanismos distintos\n\n1. **Busca por intervalo de época**\n\n   O morador aponta referências: antes de uma enchente, durante certa gestão, quando determinado apresentador ainda participava. Um voluntário procura pistas já existentes nas pastas, nomes e propriedades dos arquivos; depois verifica candidatos ouvindo pequenas amostras.\n\n   **Benefício:** pode eliminar grandes grupos rapidamente. **Limite:** datas digitais podem indicar cópia ou digitalização. No papel, separar “época confirmada por escuta” de “data apenas sugerida pelo computador”.\n\n2. **Reconhecimento por audição comparativa**\n\n   Para pedidos centrados numa voz, tocar amostras curtas de quatro candidatos por rodada. O morador escolhe “mais parecido”, “menos parecido” ou “nenhum”. O voluntário explora outros pontos dos candidatos mais próximos, procurando mudança de locutor ou participação de convidados.\n\n   **Benefício:** permite reconhecer sem saber descrever timbre, sotaque ou nome. **Limite:** uma abertura pode esconder a voz procurada; rejeitar a amostra não significa rejeitar todo o arquivo. Começar com arquivos que tenham alguma pista útil; sem pistas, variar a seleção entre pastas.\n\n3. **Mapa de temas com atalhos para trechos**\n\n   Ao ouvir candidatos, registrar cartões com poucos rótulos temáticos e localização: “arquivo X — 12:40 — transporte; reclamação; entrevista”. Agrupar os cartões por tema, permitindo que um mesmo trecho apareça em mais de um grupo. Quando surgir “era sobre o ônibus”, consultar esses atalhos.\n\n   **Benefício:** cada atendimento deixa caminhos reutilizáveis para outros moradores. **Limite:** o mapa cobre somente os trechos ouvidos. Não é necessário catalogar arquivos inteiros nem preencher fichas vazias para os 500.\n\n4. **Busca por contraprovas, para lembranças erradas**\n\n   Dividir o pedido em pistas independentes: tema, voz e época. Perguntar qual parece mais segura. Se a combinação falhar, manter essa pista e testar alternativas para as demais, **uma por vez**: mesmo tema em outra época; mesma voz tratando de outro assunto; mesmo evento com outro participante. Incluir um candidato fora da hipótese inicial.\n\n   **Benefício:** encontra caminhos quando o morador mistura duas transmissões ou confunde datas. **Limite:** ampliar tudo simultaneamente torna a busca ilimitada; restringir cada rodada a três candidatos e registrar o que foi efetivamente descartado.\n\n### Uso dos 40 minutos\n\n- **5 minutos:** recolher dois pedidos reais, identificar pistas e preparar a folha de localizações.\n- **23 minutos:** um voluntário conversa e registra; o outro opera o computador. Usar os quatro mecanismos conforme cada pedido.\n- **8 minutos:** testar os dois mecanismos mais promissores para lembranças vagas: audição comparativa e contraprovas.\n- **4 minutos:** reunir os atalhos, candidatos pendentes e áreas ainda não examinadas.\n\n### Testes breves\n\n**Audição comparativa — 4 minutos:** usar uma voz que um morador reconheça e cuja localização um voluntário tenha acabado de confirmar. Apresentar quatro amostras sem revelar os arquivos. Verificar se ele identifica a voz e se o registro permite reabrir o ponto correto.\n\n**Contraprovas — 4 minutos:** com um trecho já localizado, montar um pedido de teste alterando deliberadamente apenas a época. O outro voluntário tenta recuperá-lo. O teste passa se relaxar a pista errada e chegar ao trecho dentro do tempo; registrar quantos candidatos precisou ouvir.",
+      "usage": {
+        "input_tokens": 20893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1114,
+        "reasoning_output_tokens": 243
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P01-1-B",
+      "case_id": "P01",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 64.107,
+      "prompt_sha256": "3452efa573e56429af2abf78a8b0c31bc58ddbf8f5031a3672cdef8779b128b3",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "**A meta viável em 40 minutos é localizar alguns pedidos e deixar pistas reutilizáveis**, sem tentar catalogar integralmente as 500 gravações. No papel, cada pista deve apontar para o nome original do arquivo e o tempo aproximado do trecho. Registrar assunto, voz ou ambiente não exige copiar falas.\n\nQuatro mecanismos distintos:\n\n1. **Funil de época por pistas externas.**  \n   Um voluntário pergunta por marcos: “Foi antes da enchente?”, “Você ainda estudava?”, “Era época de eleição?”. Cruza essas respostas com nomes originais, pastas e datas disponíveis no computador. Isso reduz o conjunto antes de ouvir. Datas de modificação são pistas fracas: podem indicar uma cópia, não a gravação. Funciona melhor quando existe alguma organização prévia; sem ela, abandonar rapidamente esse caminho.\n\n2. **Galeria auditiva de vozes e ambientes.**  \n   O voluntário reproduz amostras curtas de arquivos diferentes; o morador procura reconhecer timbre, sotaque, vinheta, música ou ruído de local. No papel, marca-se apenas a característica e a localização. Uma voz reconhecida permite procurar outras participações da mesma pessoa, mesmo sem saber o tema. É preciso variar os pontos de escuta: uma abertura musical pode esconder a voz procurada. O limite é claro: silêncio numa amostra não elimina o arquivo.\n\n3. **Busca por testemunhas e relações.**  \n   Em vez de exigir que o morador lembre o programa, perguntar: “Quem provavelmente participou?”, “Quem mais estava lá?”, “Qual evento poderia ter provocado essa conversa?”. Entre os moradores presentes, alguém pode ligar a lembrança a um apresentador, festa ou entrevista. O voluntário transforma essa ligação em candidatos para ouvir. Esse mecanismo usa conhecimento distribuído na comunidade, sem depender de datas digitais corretas. Cada indicação fica marcada como hipótese até a confirmação auditiva.\n\n4. **Busca tolerante ao erro por contraste.**  \n   Quando os candidatos óbvios falham, suspender uma pista por vez: manter o assunto e variar a época; depois manter a época e variar a voz. Apresentar também uma pequena seleção diversa, escolhida fora do conjunto inicialmente favorito. Perguntar “Qual se aproxima mais?” permite reconhecimento mesmo quando a descrição estava errada. Uma descoberta atualiza a busca; nenhuma lembrança vira filtro definitivo. Reservar algumas amostras fora dos candidatos evita repetir indefinidamente o mesmo erro.\n\n**Eu testaria primeiro o funil de época e a busca por contraste:** o primeiro pode economizar escuta; o segundo cobre lembranças equivocadas.\n\nDistribuição dos 40 minutos:\n\n- **5 minutos:** preparar a folha de referências e verificar quais pistas os arquivos oferecem.\n- **8 minutos:** teste comparativo.\n- **27 minutos:** atender pedidos com o método mais promissor, usando os demais conforme a pista disponível.\n\n**Teste breve:** cada voluntário escolhe dois trechos que consegue reencontrar e prepara dois pedidos para o colega: um fiel e outro com uma pista deliberadamente errada. O local correto fica oculto. Distribuir os quatro casos entre os dois métodos, com um caso fiel e um errado para cada método; limitar cada tentativa a 90 segundos.\n\nContar **trechos corretos encontrados, tempo gasto e falsos acertos**. Confirmar pelo trecho ouvido, não apenas pelo assunto. Preferir o método que localizar mais casos; em empate, o mais rápido. Se o funil falhar no caso adulterado e o contraste funcionar, estabelecer uma regra prática: após uma rodada sem resultado, flexibilizar a lembrança. O teste é pequeno e serve para orientar o atendimento, não para provar superioridade geral.",
+      "usage": {
+        "input_tokens": 10657,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1290,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P01-1-D",
+      "case_id": "P01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 56.67,
+      "prompt_sha256": "d7af17759514e9bfd39c5571362c31c1f8941ab34f800ae81f9f6efcad325469",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "**A meta dos 40 minutos é criar um ponto de partida útil e localizar alguns trechos.** Não é possível conhecer as 500 gravações nesse tempo. Toda indicação deve distinguir “conferido por escuta” de “hipótese”.\n\nOs arquivos permanecem no computador, com seus nomes originais. No papel, cada referência registra **nome exato, pasta e posição no áudio**. Usam-se apenas descritores curtos, sem copiar falas ou produzir transcrições.\n\n### Quatro mecanismos de busca\n\n**1. Índice por assunto: procurar pelo conteúdo**\n\nCriar fichas com categorias amplas, como saúde, festas, trabalho, agricultura e política local. Cada ficha aponta para arquivos e posições efetivamente ouvidos. Uma gravação pode aparecer em várias categorias.\n\nO morador escolhe um assunto e refina com uma pergunta: “Era entrevista, debate ou anúncio?”. Isso transforma uma lembrança vaga em uma pequena lista de candidatos.\n\n**2. Reconhecimento por voz: procurar pelo ouvido**\n\nMontar uma lista de posições em que diferentes vozes aparecem com clareza. Registrar características perceptíveis, como voz grave, ritmo lento ou participação de várias pessoas, sem atribuir identidade não confirmada.\n\nO operador reproduz amostras de cinco a dez segundos diretamente dos arquivos originais. O morador indica a voz mais familiar; a busca continua nas gravações em que ela foi reconhecida. Não é necessário criar novos arquivos.\n\n**3. Linha do tempo por acontecimentos: procurar pela época**\n\nDesenhar no papel uma linha do tempo com marcos locais: enchente, aniversário do bairro, eleição, inauguração da escola. Associar gravações somente quando houver indícios disponíveis ou confirmação por escuta.\n\nO morador situa a lembrança em relação a esses marcos: “Antes ou depois da enchente?”. Trabalhar com intervalos e graus de confiança. A data de modificação do arquivo, sozinha, não comprova a data da gravação.\n\n**4. Rodadas de contraste: procurar mesmo com uma lembrança errada**\n\nTratar tema, voz e época como pistas revisáveis, não como filtros obrigatórios. Após tentativas sem resultado, apresentar três candidatos diferentes: um compatível com o tema, outro com a voz e outro com o ambiente lembrado — música, plateia ou gravação externa.\n\nPerguntar “Qual parece mais próximo? O que combina ou não combina?”. Na rodada seguinte, seguir a pista reconhecida e abandonar uma suposição por vez. Assim, alguém que lembra “uma professora falando de saúde” pode encontrar uma agente comunitária falando de saneamento. Reservar também um candidato fora das hipóteses iniciais evita repetir sempre o mesmo erro.\n\n### Organização dos 40 minutos\n\n- **0–4 minutos:** preparar fichas e recolher alguns pedidos reais.\n- **4–20 minutos:** um voluntário opera o computador; o outro registra referências e conversa com moradores. Examinar cerca de 12–16 arquivos, ouvindo pequenas amostras em diferentes posições. Marcar claramente a cobertura parcial.\n- **20–32 minutos:** atender pedidos com os quatro mecanismos e acrescentar descobertas às fichas.\n- **32–38 minutos:** testar os dois mecanismos prioritários.\n- **38–40 minutos:** organizar as fichas e anotar buscas ainda abertas.\n\n### Teste breve dos dois mais promissores\n\nPriorizar **assunto e reconhecimento de voz**: aproveitam diretamente duas lembranças comuns e podem receber confirmação imediata do morador.\n\nUsar quatro pedidos com alvos previamente conferidos no conjunto amostrado: dois por tema e dois por voz. Limitar cada tentativa a 90 segundos. Registrar tempo, candidatos ouvidos e acerto confirmado. Comparar a utilidade em cada tipo de pedido; a amostra é pequena demais para declarar um vencedor universal.",
+      "usage": {
+        "input_tokens": 10187,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1266,
+        "reasoning_output_tokens": 473
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P01-1-A",
+      "case_id": "P01",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 59.817,
+      "prompt_sha256": "84cff6742d69d941e1ab1bed73f6bc5d7c711411483ee52e87ddf98313f71340",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu montaria uma busca que acumula pistas a cada atendimento. **Em 40 minutos, não é realista conhecer as 500 gravações**; é possível localizar alguns trechos e deixar um índice inicial útil. Os registros em papel conteriam apenas referências, etiquetas e tempos, sem transcrever falas nem alterar arquivos.\n\n1. **Fichário de temas com localização exata.**  \n   Ao ouvir um trecho, o voluntário anota o nome original do arquivo, o tempo aproximado e até três etiquetas: “enchente”, “entrevista”, “bairro norte”. As fichas ficam agrupadas por tema; uma referência pode aparecer em mais de um grupo. Pedidos como “era sobre falta de água” passam a levar diretamente a candidatos já ouvidos.  \n   **Benefício:** cada atendimento facilita os seguintes. **Limite:** ausência de ficha significa “ainda não examinado”, nunca “não existe”.\n\n2. **Reconhecimento de voz por comparação.**  \n   Separar alguns exemplos curtos de vozes recorrentes, anotando arquivo e tempo. O morador escuta dois exemplos por vez e indica qual se aproxima da lembrança; os voluntários seguem pelas gravações em que reconheceram aquela voz. Não é necessário saber o nome da pessoa.  \n   **Benefício:** atende quem lembra do timbre, sotaque ou jeito de falar, mas esqueceu o assunto. **Limite:** a mesma pessoa pode soar diferente conforme idade e qualidade da gravação; uma comparação negativa não deve eliminar definitivamente um candidato.\n\n3. **Calendário de acontecimentos como ponte para a época.**  \n   Em papel, construir uma linha do tempo com referências que moradores consigam situar: “antes da ponte”, “na eleição da associação”, “depois da grande enchente”. Relacionar esses acontecimentos a pistas efetivamente ouvidas nos áudios. Datas dos arquivos entram apenas como pistas, pois podem indicar cópia ou digitalização.  \n   **Benefício:** transforma lembranças relativas em uma faixa de busca, mesmo sem ano preciso. **Limite:** exige alguma referência local verificável; uma associação sugerida pelo morador permanece marcada como hipótese.\n\n4. **Busca com uma pista possivelmente errada.**  \n   Registrar separadamente tema, voz e época. Se a combinação não produzir candidatos, fazer três buscas: ignorar a época; depois a voz; depois o tema. Apresentar trechos que combinam com duas pistas, explicando qual diverge. Por exemplo, procurar uma entrevista sobre enchente com outra voz, ou a voz lembrada falando de deslizamento.  \n   **Benefício:** encontra candidatos apesar de uma lembrança incorreta, sem exigir que o morador primeiro descubra seu erro. **Limite:** amplia o trabalho; limitar cada rodada a três candidatos e confirmar pela escuta, sem sugerir que a lembrança esteja necessariamente errada.\n\n**Teste breve dos dois mais promissores: fichário temático e busca com pista errada.**\n\nReservaria os primeiros 12 minutos para cada voluntário examinar pequenas amostras de seis arquivos diferentes e criar fichas. Cada referência precisa apontar para um trecho realmente ouvido; o restante do arquivo fica como desconhecido.\n\nNos oito minutos seguintes, cada voluntário apresenta ao outro dois pedidos referentes aos trechos que examinou: um com pistas corretas e outro com uma pista deliberadamente trocada. O colega tenta localizar o trecho usando o fichário e, quando necessário, relaxando uma pista. Medir tempo até o trecho correto, quantidade de candidatos ouvidos e sucesso com a pista errada.\n\nOs 20 minutos restantes servem ao atendimento, incorporando as descobertas ao papel. O teste demonstra utilidade apenas no conjunto amostrado; não mede a cobertura das 500 gravações. Para pedidos não resolvidos, deixar anotados candidatos e partes já verificadas evita recomeçar do zero.",
+      "usage": {
+        "input_tokens": 11622,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1323,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P01-2-B",
+      "case_id": "P01",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 56.967,
+      "prompt_sha256": "3452efa573e56429af2abf78a8b0c31bc58ddbf8f5031a3672cdef8779b128b3",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "A meta viável em 40 minutos é **reduzir o universo de busca e localizar alguns trechos**, criando pistas reutilizáveis. Não dá para garantir a localização de qualquer pedido entre 500 gravações nesse prazo.\n\nOs voluntários podem criar um índice separado, em papel: nome original do arquivo, posição aproximada do áudio e etiquetas como “saúde”, “voz grave” ou “anos 1990?”. Isso registra pistas, sem renomear arquivos nem transcrever falas. Toda pista deve indicar se foi ouvida ou apenas inferida.\n\n### Quatro mecanismos distintos\n\n**1. Busca por procedência e época**\n\nQuando alguém lembra uma década, programa ou acontecimento, um voluntário examina nomes existentes, pastas, duração e datas disponíveis no computador. No papel, organiza grupos candidatos e os relaciona a marcos lembrados pelos moradores: eleições, enchentes, festas ou mudanças na rádio.\n\nO mecanismo transforma uma lembrança temporal em um conjunto menor de arquivos. **Datas de arquivo podem indicar cópia ou digitalização**; só devem orientar a ordem da busca, nunca excluir definitivamente gravações. Funciona melhor quando existe alguma organização original preservada.\n\n**2. Busca temática por sondagem**\n\nPara pedidos como “uma conversa sobre água”, o voluntário ouve pequenas amostras em pontos diferentes dos arquivos candidatos — começo, meio e fim, por exemplo. Marca assuntos gerais e posições promissoras no papel. Quando aparece uma pista, amplia a escuta ao redor daquele ponto.\n\nO mecanismo usa amostragem para encontrar “ilhas” temáticas sem ouvir cada gravação inteira. Depende de o assunto ocupar uma parte suficiente do áudio; por isso, uma sondagem negativa significa “não apareceu nas amostras”, e não “não existe aqui”.\n\n**3. Busca por reconhecimento de voz**\n\nQuando a lembrança principal é uma pessoa ou um jeito de falar, monta-se uma pequena lista de referências sonoras: arquivo e posição de vozes distintas já encontradas. O morador escuta alguns segundos de cada referência e indica semelhanças. Uma voz reconhecida leva à busca de outras participações dela nos arquivos examinados.\n\nAqui, **o morador reconhece diretamente o som**, em vez de precisar descrever a voz com precisão. As referências são reproduzidas nos arquivos originais, sem criar montagens. Funciona melhor se a pessoa conhecer os participantes e se houver vozes recorrentes.\n\n**4. Busca por contraste, tolerante à lembrança errada**\n\nSe as primeiras pistas falham, o voluntário oferece pares de amostras deliberadamente diferentes: entrevista e festa, estúdio e rua, voz individual e grupo. Pergunta: “Qual se aproxima mais?” e “O que você reconheceu?”. Mantém também uma opção “nenhuma”.\n\nCada escolha muda a próxima comparação. Uma lembrança de “entrevista política antiga” pode revelar-se uma conversa recente durante uma festa. Para evitar um caminho fechado, parte das amostras seguintes vem de fora da hipótese favorita. O mecanismo depende de reconhecimento parcial, sem exigir que tema, voz ou época estejam corretos.\n\n### Teste breve dos dois mais promissores\n\nTestaria **sondagem temática e contraste**, pois ambos funcionam mesmo com metadados pobres.\n\n- **Primeiros 8 minutos:** cada voluntário localiza dois pequenos trechos e anota arquivo e posição como gabarito.\n- **Próximos 16 minutos:** trocam pedidos baseados nesses trechos. Cada voluntário faz uma rodada de quatro minutos com cada mecanismo. Um pedido contém uma pista deliberadamente errada, revelada depois.\n- **Medidas:** trecho correto encontrado, tempo até encontrá-lo e quantidade de arquivos abertos. Compare também com uma tentativa inicial de dois minutos por abertura livre de arquivos.\n- **16 minutos finais:** aplicar o mecanismo que encontrar mais trechos por minuto aos pedidos reais. Se o contraste não recuperar o pedido com pista errada, ampliar a diversidade das amostras antes de adotá-lo.",
+      "usage": {
+        "input_tokens": 19928,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1140,
+        "reasoning_output_tokens": 311
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P01-2-D",
+      "case_id": "P01",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 56.533,
+      "prompt_sha256": "d7af17759514e9bfd39c5571362c31c1f8941ab34f800ae81f9f6efcad325469",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "A solução é criar caminhos de busca durante o atendimento, sem tentar catalogar as 500 gravações em 40 minutos. Os arquivos permanecem intactos no computador offline. No papel, anotam-se apenas identificador original, tempos, categorias e grau de certeza — sem transcrever falas.\n\n**1. Fichas por características: tema, formato e sons**\n\nPara cada pedido, o voluntário pergunta duas ou três coisas: era entrevista, música ou debate? Havia público? Qual era o assunto provável? Ele consulta as fichas já feitas e escuta pequenas amostras de arquivos ainda desconhecidos.\n\nCada ficha registra características gerais, como “saúde; entrevista; ruído de rua”, e os tempos efetivamente ouvidos. Um trecho encontrado gera uma referência: “arquivo X, 12:40–14:10”.\n\nEsse mecanismo cruza pistas independentes. Uma amostra sem o tema procurado não elimina o restante do arquivo.\n\n**2. Reconhecimento por voz**\n\nQuando a principal lembrança é uma pessoa, o voluntário reproduz amostras curtas de vozes diferentes. O morador compara ritmo, sotaque e timbre, sem precisar saber o nome.\n\nNo papel, as vozes recebem códigos provisórios, ligados aos arquivos e tempos em que aparecem. O reconhecimento aponta candidatos; ouvir um trecho maior confirma ou rejeita a identificação. Voz parecida não basta como prova.\n\n**3. Linha do tempo comunitária**\n\nUma folha reúne marcos lembrados pelos moradores: enchente, eleição, festa local, mudança de apresentador ou inauguração. A pergunta deixa de ser “em que ano?” e passa a ser “antes ou depois daquele acontecimento?”.\n\nOs arquivos são ligados a esses marcos somente quando houver evidência disponível na gravação ou nos dados existentes. Datas inferidas ficam assinaladas como incertas. Esse caminho ajuda quem lembra a ocasião melhor que o conteúdo.\n\n**4. Busca por contraste, para lembranças erradas**\n\nDepois de duas tentativas frustradas, uma pista deixa de ser obrigatória: talvez fosse outra pessoa, outra época ou outro assunto.\n\nO voluntário oferece três amostras contrastantes, incluindo uma que contradiga a lembrança inicial. O morador indica “mais parecido”, “menos parecido” ou “nenhum”, considerando voz, ambiente e formato. A próxima rodada segue a comparação, mantendo uma alternativa fora da hipótese favorita.\n\nIsso permite corrigir a lembrança pelo reconhecimento do áudio. Não garante encontrar o trecho, mas evita excluir a resposta por uma pista falsa.\n\n**Como usar os 40 minutos**\n\n- **4 minutos:** preparar folhas, divisão de funções e perguntas iniciais.\n- **24 minutos:** um voluntário conversa com moradores e registra pistas; o outro opera o áudio e registra candidatos. Alternam funções na metade.\n- **8 minutos:** testar os dois mecanismos mais promissores.\n- **4 minutos:** organizar referências encontradas e buscas pendentes.\n\n**Teste breve: fichas e contraste**\n\nEscolher quatro trechos já localizados durante o atendimento. Para cada um, preparar um pedido curto, sem citar suas palavras: dois com pistas corretas e dois com uma pista deliberadamente errada. Guardar as referências como gabarito.\n\nCada voluntário recebe dois pedidos e dispõe de dois minutos por pedido. Um começa pelas fichas; o outro, pelo contraste; depois trocam. Ambos experimentam cada mecanismo, com pedidos diferentes para evitar vantagem por reconhecimento.\n\nRegistrar: trecho correto localizado, tempo gasto e quantidade de amostras ouvidas. Nos pedidos com erro, observar também se conseguiram abandonar a pista falsa. O resultado orienta o próximo atendimento; quatro casos servem como diagnóstico inicial, sem demonstrar eficácia em todo o acervo.",
+      "usage": {
+        "input_tokens": 19458,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1037,
+        "reasoning_output_tokens": 268
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P01-2-A",
+      "case_id": "P01",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 64.637,
+      "prompt_sha256": "84cff6742d69d941e1ab1bed73f6bc5d7c711411483ee52e87ddf98313f71340",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu combinaria quatro mecanismos: informar a lotação, facilitar a decisão e distribuir o movimento. As orientações seriam faladas pelos voluntários de dentro das próprias salas; ninguém precisaria sair.\n\n1. **Lotação anunciada antes de a pessoa chegar à porta.** Cada sala informa em voz alta, de forma curta, quando restarem três vagas e quando atingir 12 participantes: “Oficina de cerâmica: três vagas”; “Cerâmica completa”. Combinar uma ordem entre as salas evita anúncios sobrepostos. Isso reduz caminhadas inúteis e filas diante de uma oficina cheia. A contagem corresponde a pessoas que entraram, sem guardar lugares.\n\n2. **Uma frase concreta para explicar cada alternativa.** Antes do início, cada voluntário apresenta sua oficina no mesmo formato: “Aqui você vai fazer ___; não precisa saber ___”. Por exemplo: “Aqui você vai criar uma pequena colagem; não precisa saber desenhar”. Isso ajuda quem conhece apenas o nome da atividade a escolher e reduz desistências por insegurança. A apresentação deve durar poucos segundos, aproveitando a chegada do público, sem atrasar as oficinas.\n\n3. **Segunda opção escolhida antecipadamente, sem compromisso.** Na acolhida oral, incluir: “Pense em uma oficina que quer fazer e em outra que também gostaria de experimentar. Você pode mudar de ideia”. Assim, a decisão seguinte começa antes de surgir a frustração com a primeira sala cheia. Não se registra a escolha nem se cria prioridade: a pessoa continua livre para esperar informações, trocar de opção ou sair.\n\n4. **Encaminhamento dividido quando uma sala lotar.** Em vez de mandar todo mundo para a mesma alternativa, o voluntário anuncia duas oficinas com vagas confirmadas pelos avisos: “Há vagas em desenho e percussão”. Para quem disser que tanto faz, oferece alternadamente uma ou outra: “Você pode experimentar desenho”; para a próxima pessoa, “Você pode experimentar percussão”. A sugestão distribui os indecisos e reduz a transferência da aglomeração. Deve ficar explícito: “É uma sugestão; escolha a que preferir”. Se não houver informação atual sobre vagas, não prometer disponibilidade.\n\n**Teste rápido:** antes da abertura, fazer duas simulações de dois minutos com um pequeno grupo de pessoas já disponíveis, mantendo os voluntários nas salas. Simular uma oficina cheia: primeiro, usar o atendimento habitual; depois, aplicar os quatro mecanismos, variando qual sala lotou. Sem nomes ou registros individuais, contar apenas quantas pessoas ficam paradas por mais de dez segundos, quantas chegam a outra sala cheia e quantas dizem que desistiriam.\n\nO teste indica se as orientações são compreensíveis e o fluxo melhora; a redução real das desistências precisa ser observada durante o festival. Se a soma das 48 vagas acabar, os mecanismos ajudam a comunicar isso, mas não resolvem a falta de capacidade.",
+      "usage": {
+        "input_tokens": 20874,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1041,
+        "reasoning_output_tokens": 439
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P02-1-B",
+      "case_id": "P02",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 68.891,
+      "prompt_sha256": "736e988cf95edb2965c983eafd359fe45eb66bbf0b9084a421d8ce78b3ccf919",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "A proposta combina informação clara, alternativas e espaço para decidir, sem distribuir vagas antecipadamente nem obrigar ninguém a seguir uma rota.\n\n1. **Preparar uma segunda opção na chegada.** Na apresentação oral já prevista, explicar cada oficina em uma frase concreta: o que a pessoa fará e se precisa de experiência. Convidar cada participante a pensar em duas opções: “Qual você quer experimentar? E qual também despertou sua curiosidade?”. A segunda escolha é apenas uma preferência mental, sem registro ou garantia de vaga. Isso reduz a decisão do zero diante de uma sala cheia.\n\n2. **Informar a lotação antes que alguém pare na porta.** Um voluntário de cada sala, permanecendo dentro dela e próximo à entrada, anuncia em voz audível quando restarem três vagas e quando as 12 estiverem ocupadas. Repetir brevemente a informação se novas pessoas se aproximarem. Usar números reais, contando quem está na sala, sem identificar participantes. Se surgir uma vaga, anunciá-la também. Assim, ninguém precisa esperar para descobrir se ainda pode entrar.\n\n3. **Oferecer percursos diferentes, sempre opcionais.** Quando uma oficina lotar, o voluntário pode sugerir outra conforme o interesse declarado: “Se você veio pela atividade manual, talvez goste de X; se prefere conversar, pode conhecer Y”. Alternar sugestões quando as opções forem igualmente adequadas, para evitar encaminhar todos à mesma porta. Só afirmar que outra sala tem vagas se houver confirmação atual; caso contrário, dizer “vale consultar”. Cada pessoa continua livre para escolher qualquer oficina.\n\n4. **Separar o lugar de decidir do caminho de passagem.** Orientar verbalmente quem ainda está escolhendo a conversar alguns passos ao lado da entrada, em um espaço existente que mantenha livres portas, circulação e acessibilidade. Da própria sala, o voluntário responde a dúvidas com explicações curtas e acolhedoras: “Esta lotou; você ainda pode conhecer as outras”. Não formar fila para uma eventual vaga nem prometer entrada. A pessoa pode reconsiderar sua escolha sem bloquear quem já decidiu.\n\n**Teste rápido:** antes da abertura, sem atrasar o início, fazer um ensaio de três minutos com seis a oito pessoas dispostas a participar. Simular verbalmente uma oficina cheia, deixando explícito que é um ensaio. Primeiro, apresentar apenas “lotou”; depois, repetir com os quatro mecanismos. Uma pessoa observa, sem anotar nomes, quantas pessoas ficam paradas na passagem, quanto demoram aproximadamente para escolher um próximo destino e quantas dizem que iriam embora. Perguntar também: “Você se sentiu livre para escolher?”. Manter os mecanismos se reduzirem a hesitação e a intenção de desistir sem gerar pressão ou deslocar a aglomeração para outra porta.",
+      "usage": {
+        "input_tokens": 19439,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1045,
+        "reasoning_output_tokens": 467
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P02-1-A",
+      "case_id": "P02",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 66.525,
+      "prompt_sha256": "58cbdd4881ee1d3c19dc934bcc0610685c4a19e7ba200c81159fcc69d4cde062",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Os quatro mecanismos abaixo usam a fala dos responsáveis pelas oficinas, que permanecem nas salas, e a colaboração espontânea do público. Nenhum garante vaga antes da entrada nem obriga alguém a aceitar uma alternativa.\n\n1. **Escolher uma segunda opção antes de encontrar uma sala cheia.** Enquanto ainda há vagas, cada responsável convida quem chega: “Se esta lotar, qual outra você gostaria de conhecer?”. A pessoa apenas pensa na resposta, sem informar ou registrar nada. Isso antecipa a decisão que costuma travar na porta. A segunda opção continua sendo uma preferência, sem compromisso.\n\n2. **Fazer a disponibilidade chegar ao público.** Quando uma oficina lotar, seu responsável anuncia da porta: “Aqui completou”. Os demais respondem, de dentro das respectivas salas, quantas vagas estão livres naquele momento. Assim, quem encontra uma oficina cheia pode escolher sem percorrer várias portas. A contagem considera somente lugares efetivamente ocupados; vaga anunciada não fica reservada.\n\n3. **Oferecer alternativas pelo interesse, não apenas pela vaga.** Cada responsável prepara uma frase concreta sobre o que o participante fará: “Aqui você vai montar…”, “Aqui poderá experimentar…”. Ao informar disponibilidade, acrescenta essa frase. Isso ajuda quem conhece apenas o nome das oficinas a encontrar outra atividade atraente, reduzindo a sensação de aceitar “o que sobrou”. As apresentações devem durar poucos segundos, sem adiar os horários.\n\n4. **Permitir decidir e mudar de direção em companhia.** Diante de uma sala cheia, o responsável convida: “Quem quiser outra oficina pode combinar de ir junto; quem ainda estiver pensando, deixe a passagem livre”. Participantes que desejarem anunciam seu destino aos demais. Isso reduz tanto o bloqueio da porta quanto a desistência por receio de entrar sozinho em outra atividade. Ninguém precisa conduzir um grupo, seguir alguém ou abandonar sua escolha.\n\n**Teste rápido:** antes do início, use dois intervalos consecutivos de um minuto: primeiro observe o funcionamento habitual; depois ative os mecanismos. Os responsáveis fazem contagens simples, de suas portas, de pessoas paradas por mais de dez segundos e de desistências explicitamente comunicadas. Contem também quantas pessoas chegam a cada porta, para comparar proporções, e não apenas totais.\n\nMantenha a combinação se cair a proporção de pessoas paradas e não aumentarem as desistências declaradas. Se os anúncios provocarem deslocamentos repetidos ou confusão, encurte-os e atualize a disponibilidade. Esse teste dá um sinal inicial: como as vagas diminuem durante a observação, ele não comprova sozinho o efeito nem captura desistências silenciosas.",
+      "usage": {
+        "input_tokens": 10638,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 939,
+        "reasoning_output_tokens": 385
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P02-1-D",
+      "case_id": "P02",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 56.158,
+      "prompt_sha256": "bb4ee6d967f8e170ab53e19ae45d72b7b23427fd816a4a65a6f7b1489bd14ad9",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Usaria quatro mecanismos complementares, todos por fala ou gestos, com os voluntários dentro das salas e limite de 12 participantes:\n\n1. **Escolha com alternativa mental.** Na orientação oral já feita ao público, acrescentar: “Escolha a oficina que prefere e uma segunda opção. Se a primeira lotar, você pode seguir para a segunda ou escolher outra.” Isso antecipa a decisão que hoje acontece diante da porta cheia. Ninguém registra preferências nem ganha prioridade.\n\n2. **Vagas visíveis por gestos.** O voluntário, de dentro da sala e visível pela porta, indica com os dedos quantas vagas restam; mão fechada significa lotação completa. A orientação inicial explica o código. O sinal é atualizado a cada entrada, reduzindo a necessidade de perguntar ou se aproximar para conferir. **Indicação de vaga não vale como reserva.**\n\n3. **Uma sugestão concreta quando a oficina lota.** Em vez de apenas anunciar “lotou”, o voluntário oferece um próximo passo: “Se quiser uma sugestão, há indicação de vaga na oficina X; você também pode escolher qualquer outra.” Entre alternativas com disponibilidade visível, alterna a recomendação para não mandar todo mundo à mesma porta. Isso cria uma saída fácil para quem está indeciso, sem impor destino. Só se anuncia disponibilidade que seja possível verificar naquele momento.\n\n4. **Entrada acolhedora após uma primeira tentativa frustrada.** Nas oficinas que permitam acompanhar a atividade chegando alguns minutos depois, o voluntário recebe quem chega com uma frase breve: “Ainda há vaga; pode entrar, estamos nesta etapa.” Uma pessoa já participante pode explicar o primeiro passo, se quiser. O mecanismo reduz a desistência de quem encontra outra oficina disponível, mas acha que “já perdeu o começo”. As quatro começam no horário previsto; não há reinício nem lugar guardado. Essa opção depende de a atividade admitir entrada após o início com segurança.\n\n**Teste rápido:** antes da abertura, simular duas rodadas curtas com participantes da organização fazendo o papel do público, sem retirar voluntários das salas durante o atendimento. Manter as mesmas preferências simuladas e o mesmo cenário de lotação: primeiro usar o atendimento habitual; depois, os quatro mecanismos.\n\nContar apenas totais anônimos: pessoas paradas diante da sala cheia, tempo até escolherem outro destino e desistências declaradas. Conferir também se alguém se sentiu obrigado a aceitar a sugestão. Adotar o conjunto se diminuir a espera e as desistências, sem ultrapassar 12 vagas nem restringir escolhas. Se apenas transferir a aglomeração para outra porta, rever primeiro as recomendações de destino.",
+      "usage": {
+        "input_tokens": 19909,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1073,
+        "reasoning_output_tokens": 516
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P02-2-D",
+      "case_id": "P02",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 75.823,
+      "prompt_sha256": "bb4ee6d967f8e170ab53e19ae45d72b7b23427fd816a4a65a6f7b1489bd14ad9",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "A proposta é ajudar cada pessoa a decidir antes de chegar à porta e evitar que uma oficina lotada vire um ponto de espera. Os quatro mecanismos podem funcionar juntos, sem celular, placas novas ou voluntários saindo das salas.\n\n1. **Apresentação oral comparável das quatro oficinas.** Na orientação de chegada que já houver, apresentar cada oficina com a mesma fórmula: “Aqui você vai fazer X, usando Y; não precisa ter experiência”, conforme o caso. Informar também onde ficam as salas, usando referências existentes, e explicar que todas começam juntas e têm 12 vagas. Evitar chamar uma delas de “melhor” ou “mais procurada”. Isso reduz decisões demoradas por falta de informação.\n\n2. **Avisos de lotação feitos de dentro das salas.** Cada voluntário acompanha apenas a ocupação da própria oficina e anuncia, em voz audível para quem se aproxima: “Restam três vagas”, “Resta uma” e “Esta oficina está completa”. Ao lotar, acrescenta: “Não há fila de espera aqui; você pode conhecer as outras opções”. Só anunciar vaga efetivamente disponível, sem prometer lugar em outra sala. Assim, o público recebe informação antes de se acumular na porta.\n\n3. **Uma alternativa escolhida antecipadamente, sem compromisso.** Na orientação inicial, sugerir: “Pense numa oficina que você gostaria de fazer e numa segunda opção, caso a primeira esteja cheia”. Para quem estiver indeciso, oferecer uma pergunta concreta: “Hoje você prefere experimentar qual atividade?”. Se houver empate, a pessoa pode usar qualquer critério próprio — inclusive sortear entre suas favoritas. A segunda opção não é reserva, obrigação nem autorização para encaminhar alguém sem consultar.\n\n4. **Separar circulação e conversa usando o espaço existente.** Pedir oralmente que as pessoas mantenham livres as portas e o caminho entre as salas. Quem quiser conversar ou decidir com calma pode usar um trecho lateral já disponível, sem bloquear passagem nem acessibilidade. Não formar uma fila central: cada pessoa pode seguir diretamente à oficina escolhida. Na entrada de uma sala cheia, o voluntário oferece uma indicação curta das outras salas, sem iniciar uma discussão longa na porta. Ninguém é impedido de perguntar, mudar de ideia ou sair.\n\n**Teste rápido:** durante a chegada, antes do horário comum de início, um organizador que já esteja na área externa observa dois minutos do funcionamento habitual e depois três minutos com os mecanismos. Sem registrar dados pessoais, conta apenas:\n\n- pessoas paradas bloqueando portas ou passagem, a cada 30 segundos;\n- pessoas que encontram uma sala cheia e entram em outra;\n- saídas do festival após encontrar lotação, quando forem diretamente observáveis.\n\nComparar proporções em relação ao público que chegou em cada intervalo, pois o movimento pode variar. Perguntar também, oralmente e sem registrar nomes: “Ficou claro quais eram suas opções?”. O teste indica se o fluxo melhorou; uma saída observada, sozinha, não prova desistência. Manter os mecanismos se reduzirem bloqueios e facilitarem escolhas, sem relatos de pressão para aceitar outra oficina.",
+      "usage": {
+        "input_tokens": 19439,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1038,
+        "reasoning_output_tokens": 394
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P02-2-A",
+      "case_id": "P02",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 55.424,
+      "prompt_sha256": "58cbdd4881ee1d3c19dc934bcc0610685c4a19e7ba200c81159fcc69d4cde062",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "Usaria quatro mecanismos combinados, todos por orientação oral e com os voluntários permanecendo dentro das salas:\n\n1. **Escolha alternativa antes do gargalo.** Na recepção oral já existente, apresentar as quatro oficinas em uma frase cada e sugerir: “Pense na sua preferida e em outra que também gostaria de fazer”. Essa segunda opção é apenas mental, sem reserva ou compromisso. Isso antecipa parte da decisão que hoje acontece diante da sala cheia. O cuidado é apresentar todas com o mesmo destaque.\n\n2. **As vagas chamam o público.** Em vez de só anunciar que uma oficina lotou, os voluntários das salas com lugares disponíveis fazem convites curtos, de dentro delas: “Oficina de desenho: quatro lugares disponíveis”. Repetem apenas quando a disponibilidade mudar, evitando falas sobrepostas. Assim, o público recebe uma opção concreta para agir. Funciona onde as entradas ficam ao alcance da voz; o anúncio informa a situação daquele momento e não garante vaga.\n\n3. **Decisão fora da passagem.** Ao completar 12 participantes, o voluntário orienta: “Esta oficina completou. Para escolher outra, podem usar aquele espaço junto à parede, deixando a entrada livre”. O ponto deve ser um recuo existente, visível e fora das rotas de saída. Isso separa quem está pensando de quem está circulando, sem impor destino. Não basta deslocar a aglomeração: se não houver um recuo adequado, esse mecanismo deve ser descartado.\n\n4. **Companhia voluntária para mudar de oficina.** Quando alguém decidir seguir para outra sala, convidar, sem insistência: “Quem também quiser essa oficina pode ir junto”. Duplas ou trios que já estão saindo ajudam pessoas hesitantes a se movimentar sem precisarem decidir e caminhar sozinhas. Ninguém vira guia obrigatório, espera formar grupo ou recebe prioridade. O limite é evitar que o convite vire pressão para acompanhar os demais.\n\n**Teste rápido:** fazer duas simulações de três minutos, com pequenos grupos de tamanho semelhante e uma sala tratada como cheia: primeiro com a orientação habitual, depois com os quatro mecanismos. Um observador, sem retirar voluntários das oficinas, registra em papel apenas totais: maior número de pessoas paradas diante da entrada, tempo aproximado até escolherem outro destino e quantas dizem que desistiriam. Não registrar nomes nem características pessoais.\n\nAdotar o conjunto se diminuir o bloqueio sem aumentar desistências ou relatos de pressão. Na edição real, conferir os mesmos sinais. Se as 48 vagas estiverem ocupadas, esses mecanismos podem melhorar a circulação e a clareza, mas não criar capacidade para novos participantes.",
+      "usage": {
+        "input_tokens": 20874,
+        "cached_input_tokens": 18432,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 981,
+        "reasoning_output_tokens": 426
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P02-2-B",
+      "case_id": "P02",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 85.339,
+      "prompt_sha256": "736e988cf95edb2965c983eafd359fe45eb66bbf0b9084a421d8ce78b3ccf919",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    }
+  ]
+}

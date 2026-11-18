@@ -1,0 +1,418 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "A": {
+      "utility": 3.5,
+      "originality": 2.25,
+      "diversity": 4.25,
+      "feasibility": 4.25,
+      "adherence": 3.5,
+      "weighted": 3.5125,
+      "critical_failures": 0,
+      "seconds": 61.1565,
+      "input_tokens": 14795.5,
+      "output_tokens": 1022.5
+    },
+    "B": {
+      "utility": 3.5,
+      "originality": 2.25,
+      "diversity": 4,
+      "feasibility": 4.25,
+      "adherence": 3.5,
+      "weighted": 3.4625,
+      "critical_failures": 0,
+      "seconds": 65.3355,
+      "input_tokens": 20866,
+      "output_tokens": 1000
+    },
+    "D": {
+      "utility": 4,
+      "originality": 2.75,
+      "diversity": 4.25,
+      "feasibility": 4,
+      "adherence": 4,
+      "weighted": 3.8,
+      "critical_failures": 0,
+      "seconds": 54.187,
+      "input_tokens": 15265.5,
+      "output_tokens": 941
+    }
+  },
+  "comparisons": {
+    "A_vs_B": {
+      "wins": 0,
+      "ties": 2,
+      "losses": 0,
+      "preference": 0.5,
+      "creative": {
+        "wins": 0,
+        "ties": 2,
+        "losses": 0,
+        "preference": 0.5,
+        "per_case_preference": {
+          "P03": 0.5
+        }
+      }
+    },
+    "A_vs_D": {
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "preference": 0.0,
+      "creative": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 2,
+        "preference": 0.0,
+        "per_case_preference": {
+          "P03": 0
+        }
+      }
+    },
+    "B_vs_D": {
+      "wins": 0,
+      "ties": 0,
+      "losses": 2,
+      "preference": 0.0,
+      "creative": {
+        "wins": 0,
+        "ties": 0,
+        "losses": 2,
+        "preference": 0.0,
+        "per_case_preference": {
+          "P03": 0
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 3.5,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Combina revisão da escolha, demonstração, conferência independente e tentativa antecipada no destino, preservando recursos e acesso. Reconhece que descobrir a incompatibilidade cedo não garante concluir o reparo. O teste retrospectivo aproveita registros existentes, mas depende de trocas documentadas, permite julgamentos influenciados pelo desfecho e não mede erros e custo de atendimento contra uma referência explícita. A estimativa de segundos adicionais não é uma medição. Os mecanismos são conhecidos e muito próximos dos apresentados nas outras respostas.",
+      "reframe": null,
+      "mechanism_families": [
+        "Seleção pela operação necessária em vez do item solicitado",
+        "Exposição concreta das limitações da ferramenta",
+        "Revisão independente para interceptar erros de indicação",
+        "Antecipação da tentativa decisiva no ambiente real"
+      ],
+      "weighted": 3.375,
+      "case_id": "P03",
+      "repetition": 1,
+      "condition": "B",
+      "run_id": "P03-1-B",
+      "seconds": 73.853,
+      "usage": {
+        "input_tokens": 20866,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1073,
+        "reasoning_output_tokens": 505
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Oferece quatro rotas identificáveis e substitui a segunda conferência presente nas demais respostas por prática voluntária do usuário, capaz de revelar dificuldades de manuseio. Preserva acesso ao esclarecer que o ensaio não condiciona o empréstimo. O teste alterna atendimento habitual e intervenção e distingue corretamente aumento de trocas antecipadas de piora. Entretanto, a medida de incompatibilidades depende de campos existentes não confirmados, e piora perceptível da fila é uma avaliação fraca do custo de atendimento. A alternância também pode confundir diferenças entre tardes com efeito dos mecanismos.",
+      "reframe": null,
+      "mechanism_families": [
+        "Revisão da seleção a partir da operação pretendida",
+        "Reconhecimento de incompatibilidade por condição explícita de fracasso",
+        "Ensaio motor voluntário para identificar dificuldade de uso",
+        "Checagem antecipada no destino com possibilidade de troca rápida"
+      ],
+      "weighted": 3.7,
+      "case_id": "P03",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "P03-1-D",
+      "seconds": 57.041,
+      "usage": {
+        "input_tokens": 19901,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 927,
+        "reasoning_output_tokens": 254
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 3.5,
+        "originality": 2,
+        "diversity": 4,
+        "feasibility": 4,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Articula limites, revisão independente, demonstração e retorno antecipado, sem novos registros nem exclusão de usuários. Explicita disponibilidade incerta para troca e diferencia detecção de garantia de adequação. O ensaio compara atendimento habitual e proposto, oferecendo referência mais clara que O1, mas repetir os mesmos casos favorece aprendizagem e não estabelece contagem de erros nem medida do custo. Discutir se o procedimento cabe na rotina não demonstra seu impacto no atendimento. Empata com O1 no conjunto: melhora a referência do teste, mas mantém limitações semelhantes de evidência e mecanismos amplamente coincidentes.",
+      "reframe": null,
+      "mechanism_families": [
+        "Correção de expectativas mediante limites de capacidade",
+        "Conferência independente da correspondência entre tarefa e ferramenta",
+        "Demonstração da operação para revelar restrições práticas",
+        "Antecipação da verificação real com prioridade para corrigir o empréstimo"
+      ],
+      "weighted": 3.375,
+      "case_id": "P03",
+      "repetition": 1,
+      "condition": "A",
+      "run_id": "P03-1-A",
+      "seconds": 61.741,
+      "usage": {
+        "input_tokens": 19431,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1113,
+        "reasoning_output_tokens": 488
+      }
+    },
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 3.5,
+        "originality": 2.5,
+        "diversity": 4,
+        "feasibility": 4.5,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "Combina conferência documental, limites técnicos, experiência de manejo e descoberta no local, preservando recursos e acesso. Distingue antecipar incompatibilidades de comprovar desempenho ou concluir o reparo. Os mecanismos são predominantemente conhecidos; conferir adequação e explicar limitações têm alguma sobreposição. A simulação é barata e reconhece seus limites, mas seleciona casos já problemáticos, não estabelece comparação clara com o atendimento habitual nem mede erros de escolha e custo de atendimento.",
+      "reframe": null,
+      "mechanism_families": [
+        "Confrontar tarefa registrada com capacidade da ferramenta",
+        "Permitir autorreconhecimento de incompatibilidades por limites explícitos",
+        "Revelar dificuldades de manejo por ensaio seguro",
+        "Antecipar tentativa decisiva no local e possibilitar troca"
+      ],
+      "weighted": 3.55,
+      "case_id": "P03",
+      "repetition": 2,
+      "condition": "B",
+      "run_id": "P03-2-B",
+      "seconds": 56.818,
+      "usage": {
+        "input_tokens": 20866,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 927,
+        "reasoning_output_tokens": 330
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4,
+        "adherence": 4
+      },
+      "critical_failure": false,
+      "reason": "Acrescenta revisão independente antes da justificativa do colega, atacando ancoragem e propagação de erros, além de incompatibilidade técnica, compreensão operacional e descoberta tardia. Essa combinação oferece maior diferenciação relativa, embora use precedentes conhecidos. Preserva acesso e reconhece que descobrir cedo não equivale a reparar. O teste compara tardes anteriores e prevê indicador de inadequação condicionado aos registros disponíveis; porém, não define medida concreta de custo do atendimento. A segunda leitura também pode aumentar filas, e trocas por inadequação podem crescer justamente por melhorar a descoberta antecipada.",
+      "reframe": null,
+      "mechanism_families": [
+        "Detectar contradições entre registros e limites técnicos",
+        "Expor requisitos operacionais por demonstração",
+        "Reduzir ancoragem por julgamento independente",
+        "Usar tentativa essencial e regra de interrupção para descobrir cedo"
+      ],
+      "weighted": 3.9,
+      "case_id": "P03",
+      "repetition": 2,
+      "condition": "D",
+      "run_id": "P03-2-D",
+      "seconds": 51.333,
+      "usage": {
+        "input_tokens": 10630,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 955,
+        "reasoning_output_tokens": 312
+      }
+    },
+    {
+      "label": "O3",
+      "scores": {
+        "utility": 3.5,
+        "originality": 2.5,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 3.5
+      },
+      "critical_failure": false,
+      "reason": "A conferência física de acessórios acrescenta uma causa distinta e concreta: uma ferramenta adequada pode falhar por dependências ausentes. Combina essa prevenção com explicação, demonstração e tentativa inicial no local, sem exigir dados ou recursos adicionais. Empata com O1 em utilidade e originalidade: são soluções convencionais, com benefícios plausíveis. A simulação identifica incompatibilidades documentadas, mas não apresenta comparação explícita com a rotina habitual nem mensura custo de atendimento. Também não demonstra que a descoberta ocorrerá mais cedo em empréstimos reais; reconhece corretamente essa limitação.",
+      "reframe": null,
+      "mechanism_families": [
+        "Permitir comparação privada entre problema e capacidades declaradas",
+        "Revelar barreiras operacionais por demonstração segura",
+        "Evitar inutilidade por acessórios ou dependências ausentes",
+        "Antecipar verificação no local e retorno para troca"
+      ],
+      "weighted": 3.65,
+      "case_id": "P03",
+      "repetition": 2,
+      "condition": "A",
+      "run_id": "P03-2-A",
+      "seconds": 60.572,
+      "usage": {
+        "input_tokens": 10160,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 932,
+        "reasoning_output_tokens": 358
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T18:21:48.628159+00:00",
+    "instruction_sha256": {
+      "A": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f",
+      "B": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    "context_sha256": "9f960e99fa1ce6e3b95631369ca96da91e82e7eda5c26fd4e76e7e7e603a2f15",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "A proposta é usar melhor as informações que já constam dos formulários e antecipar a verificação. Os quatro mecanismos podem funcionar no mesmo balcão, com dois funcionários, sem novos registros.\n\n1. **Escolha pelo resultado, antes da ferramenta.** O funcionário começa pelo problema descrito no formulário e verifica se a ferramenta solicitada realiza a operação necessária. Por exemplo: uma ferramenta capaz de apertar pode não servir para alcançar uma fixação. Isso reduz empréstimos baseados apenas no nome ou na aparência da ferramenta. **Limite:** quando o formulário não contém informação suficiente, a adequação deve ser apresentada como incerta.\n\n2. **Demonstração dos limites na entrega.** Com a própria ferramenta, o funcionário demonstra seu movimento, alcance e modo de aplicação, destacando uma situação em que ela não funciona. A pessoa compara essa demonstração com seu problema, sem precisar fornecer ou registrar informações adicionais. Isso torna limitações concretas antes da saída. **Limite:** a demonstração não reproduz todas as condições do local de uso.\n\n3. **Segunda leitura voltada à incompatibilidade.** Enquanto o primeiro funcionário prepara o empréstimo, o segundo consulta o mesmo formulário procurando um motivo concreto para a escolha falhar: operação inadequada, alcance insuficiente ou acessório necessário, por exemplo. A escolha só muda quando houver fundamento nas informações existentes. Isso introduz uma verificação independente, capaz de interromper uma associação precipitada. **Custo:** alguns segundos adicionais por atendimento; os funcionários podem alternar os papéis.\n\n4. **Primeira tentativa antes do restante do trabalho.** Na entrega, a orientação é testar primeiro a operação decisiva, antes de desmontar, preparar ou executar etapas demoradas. Se a ferramenta não servir, a pessoa pode voltar para trocar durante a mesma tarde, seguindo os procedimentos e formulários atuais. Isso antecipa a descoberta de incompatibilidades que o balcão não consegue resolver. **Limite:** depende do deslocamento e da possibilidade de fazer uma tentativa segura; não reduz o período do empréstimo.\n\n**Teste barato:** separar alguns formulários antigos que já documentem empréstimos e trocas por inadequação. Os dois funcionários refazem o atendimento usando apenas as informações disponíveis antes de cada empréstimo, deixando a troca registrada para consultar depois. Verificam se a escolha pelo resultado, a demonstração proposta ou a segunda leitura teria sinalizado o problema; para os casos restantes, avaliam se a tentativa inicial poderia antecipar a descoberta.\n\nEsse ensaio usa o acervo existente e revela falhas práticas do procedimento. Ele não comprova redução de descobertas tardias: se os formulários atuais não registram esse desfecho, não será possível medir diretamente essa redução sem coletar novos dados.",
+      "usage": {
+        "input_tokens": 20866,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1073,
+        "reasoning_output_tokens": 505
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P03-1-B",
+      "case_id": "P03",
+      "repetition": 1,
+      "condition": "B",
+      "seconds": 73.853,
+      "prompt_sha256": "37b9415dd043f21fdf2df07e98f53cd51dcbf36286dbc20a2eec1e7c367986b0",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "A oficina deve antecipar quatro causas de frustração: escolher pela ferramenta errada, ignorar uma limitação, não conseguir usá-la e descobrir uma incompatibilidade apenas no local.\n\n**1. Escolha pelo resultado, antes de confirmar a ferramenta.**  \nAo consultar o pedido já registrado no formulário, o funcionário verifica se a ferramenta realiza a operação necessária. “Quero uma furadeira” não equivale automaticamente a “preciso fazer este furo”. Se o formulário já indicar uma incompatibilidade, a recomendação muda antes da entrega. Quando faltar informação, o funcionário apresenta a condição de uso como incerta, sem acrescentar perguntas ou campos.  \n**Mecanismo:** interromper a confirmação automática do item pedido reduz erros de seleção.\n\n**2. Apresentar o limite que pode invalidar o empréstimo.**  \nAntes de entregar, o funcionário aponta uma restrição decisiva daquela ferramenta, observável nela ou conhecida pela equipe: alcance, abertura, material adequado ou necessidade de acesso. Por exemplo: “Esta chave precisa de espaço para girar; se a porca estiver encostada numa parede, ela pode não servir”. A pessoa pode reconsiderar sem precisar fornecer ou registrar novos dados.  \n**Mecanismo:** uma condição concreta de fracasso permite reconhecer incompatibilidades que uma explicação genérica esconderia.\n\n**3. Fazer um ensaio do gesto crítico no balcão.**  \nCom a própria ferramenta, o funcionário demonstra e convida a pessoa a repetir, sem carga, corte ou energização, um gesto seguro: ajustar a abertura, alcançar o comando ou posicionar a empunhadura. Não é prova de habilidade nem condição para receber o empréstimo; quem precisar recebe orientação.  \n**Mecanismo:** experimentar o manuseio revela dificuldades que ouvir instruções não revela, enquanto ainda há ajuda e alternativas disponíveis.\n\n**4. Trocar a sequência da tarde: verificar antes de preparar tudo.**  \nNa entrega, a orientação é começar no destino por uma checagem breve e segura de encaixe, alcance e acesso, antes de desmontar peças ou organizar todo o trabalho. Se houver incompatibilidade, a pessoa pode voltar cedo; no balcão, essa troca recebe atendimento breve, mantendo as verificações de segurança.  \n**Mecanismo:** antecipar a descoberta no ambiente real preserva tempo para corrigir o empréstimo. Funciona mesmo quando o balcão não consegue verificar o problema.\n\n**Teste barato: alternância por tardes.**  \nDurante duas semanas, alternar tardes com o atendimento habitual e tardes com os quatro mecanismos. Manter os mesmos formulários e registrar os resultados apenas com informações que já sejam registradas hoje.\n\nComparar a proporção de empréstimos com incompatibilidade descoberta somente na devolução, **se o motivo e o momento da descoberta já constarem dos registros**. Trocas antecipadas podem aumentar e ainda representar melhora: o objetivo é reduzir descobertas tardias, não simplesmente reduzir trocas.\n\nA recomendação ganha força se as descobertas tardias caírem sem piora perceptível da fila. Se os registros atuais não distinguirem esses casos, o teste permitirá avaliar a execução e o atendimento, mas não demonstrar a redução do problema sem violar a restrição de não coletar novos dados.",
+      "usage": {
+        "input_tokens": 19901,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 927,
+        "reasoning_output_tokens": 254
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P03-1-D",
+      "case_id": "P03",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 57.041,
+      "prompt_sha256": "ee97ea078f62b8db39f4889c5f8db55360151eb1e9e1b0c8d43921a99b645885",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "A proposta é antecipar a incompatibilidade e deixar tempo para corrigi-la. Usaria apenas as informações já disponíveis nos formulários, as ferramentas existentes e orientações verbais, sem acrescentar perguntas ou campos.\n\n1. **Explicar os limites antes da escolha.** Ao apresentar uma ferramenta, o funcionário informa, em linguagem simples, o que ela faz e uma limitação decisiva: “Esta corta esse material, mas não alcança essa profundidade”. A explicação usa as características conhecidas da ferramenta e o problema já descrito no formulário. Isso evita que o nome ou a aparência sejam confundidos com garantia de adequação.\n\n2. **Fazer uma conferência independente da indicação.** Um funcionário escolhe a ferramenta; o outro verifica a escolha usando o mesmo formulário. A conferência procura incompatibilidades entre a tarefa descrita e a capacidade da ferramenta, incluindo acessórios necessários. Se faltar informação no registro, a orientação deve ser explícita: “Com o que temos aqui, não conseguimos garantir este ponto”. A incerteza não impede o empréstimo nem exclui usuários.\n\n3. **Demonstrar a operação crítica no balcão.** Antes da entrega, o funcionário mostra, com a própria ferramenta e seus acessórios existentes, a regulagem, o encaixe ou o movimento necessário para a tarefa descrita. Uma demonstração sem carga pode revelar uma limitação de alcance, abertura ou montagem e evitar que uma dificuldade de uso seja descoberta em casa. Quando ela não reproduzir as condições reais, essa limitação deve ser dita; a demonstração não vale como prova completa de adequação.\n\n4. **Combinar verificação no início da tarde e troca prioritária.** Na retirada, orientar a pessoa a começar pelo passo que mais depende da ferramenta e explicar até quando vale retornar para ainda aproveitar a tarde. Se houver incompatibilidade, o retorno tem atendimento prioritário no mesmo balcão, usando o formulário original, sem cadastro adicional. A troca depende da disponibilidade e não deve ser prometida como certa. Esse mecanismo reduz o prejuízo quando os anteriores não detectam o problema.\n\nOs mecanismos atuam sobre causas diferentes: expectativa equivocada, erro de indicação, dificuldade operacional e descoberta tardia.\n\n**Teste barato:** antes de mudar o atendimento, os dois funcionários fazem um ensaio curto com alguns formulários já preenchidos, sem usuários presentes. Para cada caso, simulam primeiro o atendimento habitual e depois a sequência proposta, usando as mesmas ferramentas e informações. Alternam os papéis entre casos.\n\nO critério principal é concreto: alguma indicação incompatível que passaria pelo atendimento habitual foi detectada antes da entrega? Também verificam se a demonstração é possível no balcão e se a conferência cabe na rotina de duas pessoas. Basta discutir os resultados, sem criar fichas ou coletar dados adicionais.\n\nO ensaio verifica a viabilidade e a capacidade de detectar falhas conhecidas. Não comprova, sozinho, uma redução das frustrações reais; tampouco permite garantir adequação quando os formulários existentes não contêm informação suficiente.",
+      "usage": {
+        "input_tokens": 19431,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1113,
+        "reasoning_output_tokens": 488
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P03-1-A",
+      "case_id": "P03",
+      "repetition": 1,
+      "condition": "A",
+      "seconds": 61.741,
+      "prompt_sha256": "922d6e025b726d90f4415c80e694466196e3ca291dd00117549ec052d5994076",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "A proposta é antecipar a descoberta de incompatibilidades, usando os formulários atuais, o acervo e os dois funcionários. Nenhum mecanismo exige registrar novas informações ou excluir usuários.\n\n1. **Conferir a tarefa antes de separar a ferramenta.**  \n   O primeiro funcionário lê o que já consta no formulário e verifica se a ferramenta solicitada executa aquela operação. Quando houver incompatibilidade evidente, apresenta uma alternativa do acervo antes da entrega. Isso evita tratar o nome da ferramenta como prova de que ela serve. **Limite:** só permite conferir o que o formulário já informa; lacunas não devem virar suposições.\n\n2. **Mostrar primeiro o que a ferramenta não faz.**  \n   Na entrega, o funcionário explica duas ou três limitações decisivas daquele modelo: materiais incompatíveis, alcance, capacidade ou necessidade de acessórios, conforme aplicável. A pessoa compara essas condições com sua situação, sem precisar fornecer ou registrar novos dados. **Benefício:** permite reconhecer obstáculos que a oficina desconhece. **Custo:** alguns segundos adicionais e cuidado para não transformar a explicação em uma palestra.\n\n3. **Fazer um ensaio seguro de uso no balcão.**  \n   Com a própria ferramenta e seus acessórios existentes, a pessoa experimenta posicionamento, empunhadura, ajuste e sequência de operação, sem energização ou trabalho em material quando isso trouxer risco. O funcionário demonstra o necessário. **Benefício:** dificuldades de manejo ou montagem aparecem antes de levar a ferramenta. **Limite:** o ensaio não comprova desempenho no material real.\n\n4. **Criar uma segunda oportunidade de escolha durante a tarde.**  \n   Na entrega, orientar a pessoa a testar primeiro a etapa que decide se a ferramenta serve e explicar que pode retornar para trocar, conforme disponibilidade. O empréstimo continua valendo pela tarde; esse retorno é opcional e não cria prazo obrigatório. **Benefício:** quando a incompatibilidade só pode ser descoberta no local de uso, ela aparece cedo o suficiente para tentar outra ferramenta. **Limite:** depende do deslocamento e da disponibilidade do acervo.\n\n**Teste barato:** fazer uma simulação curta antes de adotar a rotina. Usar alguns formulários antigos, sem copiá-los nem acrescentar campos, priorizando casos em que os registros existentes já mostrem uma incompatibilidade. Um funcionário representa o atendimento e o outro acompanha; depois, invertem os papéis. Repetir os casos com os mecanismos propostos e verificar se o obstáculo aparece antes da entrega ou se há uma orientação concreta para descobri-lo cedo.\n\nO teste também deve revelar se a rotina cabe no atendimento com duas pessoas. Se os registros atuais não contêm o resultado dos empréstimos, essa simulação verifica clareza e viabilidade, mas **não comprova redução de empréstimos inadequados**. Essa conclusão exigiria informação de resultado que não está disponível nas condições dadas.",
+      "usage": {
+        "input_tokens": 20866,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 927,
+        "reasoning_output_tokens": 330
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P03-2-B",
+      "case_id": "P03",
+      "repetition": 2,
+      "condition": "B",
+      "seconds": 56.818,
+      "prompt_sha256": "37b9415dd043f21fdf2df07e98f53cd51dcbf36286dbc20a2eec1e7c367986b0",
+      "instruction_sha256": "9fd83e920b26651e981315a15ea8285f0b614db0e81c3897d5179e3c95e2bf9c"
+    },
+    {
+      "status": "ok",
+      "answer": "A oficina deve antecipar a descoberta de incompatibilidade, sem transformar o empréstimo em uma entrevista maior. Os mecanismos abaixo usam somente as informações já disponíveis nos formulários e as próprias ferramentas, sem acrescentar perguntas ou registros.\n\n1. **Checagem de incompatibilidade antes de separar a ferramenta.** O funcionário compara o que já consta no formulário com os limites conhecidos da ferramenta: material, dimensão, alcance ou capacidade, conforme a informação disponível. A pergunta interna é: “Existe algo aqui que impede esse uso?”. Uma contradição provoca a revisão da escolha antes da entrega. Se faltar informação, a adequação fica explicitamente incerta; não se presume que funcionará.\n\n2. **Ensaio do primeiro uso no balcão.** Antes da entrega, o funcionário demonstra, sem acionamento perigoso nem material adicional, a sequência inicial de uso e seus requisitos. Por exemplo: onde a ferramenta precisa apoiar, quanto espaço exige e quais acessórios são indispensáveis. Isso torna visíveis obstáculos que o nome da ferramenta não revela. O ensaio não comprova o resultado no local, mas antecipa limitações concretas sem exigir novos dados do usuário.\n\n3. **Segunda leitura antes de ouvir a justificativa do colega.** Enquanto um funcionário separa a ferramenta, o outro consulta o mesmo formulário e verifica a escolha antes de receber a explicação do primeiro. Havendo divergência, os dois a resolvem antes da entrega. Esse mecanismo combate um erro diferente: uma escolha inicial equivocada que passa a parecer correta porque todos seguem o primeiro julgamento. Pode ser aplicado quando ambos estiverem disponíveis, sem criar outro balcão.\n\n4. **Primeira tentativa como ponto de decisão.** Na entrega, o funcionário orienta a pessoa a testar primeiro a operação essencial, antes de preparar todo o serviço ou insistir em uma tentativa longa. Explica também um sinal concreto para interromper — por exemplo, encaixe incompatível ou capacidade insuficiente — e informa a possibilidade de troca durante o horário já existente. Assim, incompatibilidades que só aparecem no local podem ser descobertas no começo da tarde. Não exige contato posterior nem monitoramento.\n\nOs quatro mecanismos atuam sobre falhas distintas: **incompatibilidade técnica, entendimento do uso, erro de julgamento e descoberta tardia no local**. Nenhum deve impedir o empréstimo apenas porque há incerteza ou pelo perfil da pessoa.\n\n**Teste barato:** experimentar o conjunto em algumas tardes e comparar com tardes anteriores semelhantes, usando exclusivamente os formulários existentes. Antes de começar, escolher um indicador que esses registros realmente permitam calcular: por exemplo, proporção de empréstimos com troca por inadequação, **se esse motivo já for registrado**.\n\nManter a proposta se houver redução consistente desse problema sem piora do atendimento identificável nos registros existentes. Se houver horários registrados, verificar também se as trocas passaram a acontecer mais cedo.\n\nSe os formulários não distinguirem inadequação de outros motivos, não interpretar menos devoluções como prova de sucesso. Nesse caso, o teste permite verificar a execução da rotina, mas a eficácia continuará sem comprovação sob a restrição de não coletar novos dados.",
+      "usage": {
+        "input_tokens": 10630,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 955,
+        "reasoning_output_tokens": 312
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P03-2-D",
+      "case_id": "P03",
+      "repetition": 2,
+      "condition": "D",
+      "seconds": 51.333,
+      "prompt_sha256": "ee97ea078f62b8db39f4889c5f8db55360151eb1e9e1b0c8d43921a99b645885",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "A proposta é antecipar a descoberta de incompatibilidades, usando apenas as informações já disponíveis nos formulários, as ferramentas existentes e orientações que o usuário possa aplicar sem fornecer novos dados.\n\n1. **Explicitar o que a ferramenta consegue fazer.** Antes da entrega, o funcionário apresenta três pontos: “serve para…”, “não serve para…” e “exige…”. A explicação deve tratar de limites concretos, como material, alcance e necessidade de energia. O usuário compara essas condições com seu problema, sem responder a perguntas adicionais. Isso reduz empréstimos motivados pelo nome ou pela aparência da ferramenta.\n\n2. **Demonstrar a operação essencial no balcão.** O funcionário mostra, com segurança, como ajustar, posicionar e acionar a ferramenta, sem trabalhar material nem consumir insumos. O usuário pode reproduzir os movimentos seguros. Ver a operação ajuda a perceber dificuldades de acesso, esforço ou manejo antes de sair. Quando não for seguro demonstrar o funcionamento, faz-se apenas a demonstração com a ferramenta desligada.\n\n3. **Conferir as dependências do empréstimo.** Antes de liberar a ferramenta, o segundo funcionário verifica o conjunto entregue: acessórios compatíveis, peças de fixação e demais itens necessários que a oficina já possui. Também comunica o que precisa existir no local de uso, sem perguntar se o usuário dispõe disso. A função desse mecanismo é impedir que uma ferramenta adequada se torne inútil por faltar um componente ou requisito.\n\n4. **Orientar uma verificação logo no início da tarde.** Na entrega, combinar uma sequência simples: conferir encaixe e acesso, verificar as condições de segurança e fazer uma tentativa mínima conforme as instruções. Se houver incompatibilidade, o usuário deve interromper e procurar a oficina imediatamente, enquanto ainda há tempo para avaliar uma troca, conforme a disponibilidade. Não se exige relato, fotografia ou formulário adicional.\n\nOs dois funcionários alternam atendimento e conferência no mesmo balcão. As orientações são verbais; os formulários continuam iguais. Nenhum mecanismo depende de selecionar ou excluir perfis de usuário.\n\n**Teste barato:** fazer uma simulação retrospectiva com uma pequena amostra dos formulários já preenchidos. Um funcionário reproduz o atendimento usando somente o que consta no documento; o outro aplica os quatro mecanismos, com as ferramentas disponíveis. Depois, verificam quais incompatibilidades documentadas teriam sido sinalizadas antes da entrega e quais continuariam sem resposta. O resultado é uma análise dos registros existentes, sem contato adicional com usuários nem novos campos.\n\nSe os registros não contiverem informações sobre inadequação ou desfecho, a simulação permitirá avaliar a execução do procedimento, mas não demonstrar redução de empréstimos inadequados. Essa distinção evita atribuir ao teste uma conclusão que os dados disponíveis não sustentam.",
+      "usage": {
+        "input_tokens": 10160,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 932,
+        "reasoning_output_tokens": 358
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "P03-2-A",
+      "case_id": "P03",
+      "repetition": 2,
+      "condition": "A",
+      "seconds": 60.572,
+      "prompt_sha256": "922d6e025b726d90f4415c80e694466196e3ca291dd00117549ec052d5994076",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

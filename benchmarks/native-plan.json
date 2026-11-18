@@ -1,0 +1,31 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 1,
+  "order_seed": 4503,
+  "workers": 2,
+  "timeout": 240,
+  "output": "runs/native",
+  "conditions": {
+    "native": null
+  },
+  "cases": [
+    {
+      "id": "explicit",
+      "prompt": "Use $thinking-outside para propor três formas distintas de reduzir filas em uma biblioteca sem contratar e sem coletar dados pessoais."
+    },
+    {
+      "id": "implicit",
+      "prompt": "Preciso de quatro abordagens não óbvias para ensinar frações a adultos sem usar aplicativos e com apenas papel. Cada abordagem deve funcionar por um mecanismo diferente."
+    },
+    {
+      "id": "negative-math",
+      "prompt": "Simplifique a raiz quadrada de 72. Responda em uma linha."
+    },
+    {
+      "id": "negative-translation",
+      "prompt": "Traduza exatamente para inglês: O livro está na mesa. Só a tradução."
+    }
+  ],
+  "native_skill": "../thinking-outside"
+}

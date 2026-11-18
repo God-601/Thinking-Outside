@@ -3,14 +3,14 @@
 
 Input JSON:
 {
-  "provenance": {"kind": "real" or "synthetic", "notes": "..."},
+  "provenance": {"kind": "real" or "synthetic", "review_kind": "human", "blinded": true},
   "records": [
     {"case_id": 1, "round": 1, "reviewer": "r1",
      "condition": "baseline" or "thinking-outside",
      "scores": {"utility": 4, "originality": 3, "diversity": 3,
                 "feasibility": 5, "adherence": 5},
      "critical_failure": false,
-     "evidence": "path-or-link-to-actual-output"}
+     "evidence": "path/to/actual-output", "evidence_sha256": "<SHA-256>"}
   ]
 }
 The comparison is a screening aid, NOT an automatic certificate for release.
@@ -19,6 +19,8 @@ from __future__ import annotations
 
 import argparse
 import json
+import hashlib
+import math
 from collections import defaultdict
 from pathlib import Path
 
@@ -31,23 +33,36 @@ def score(record: dict) -> float:
     if set(ratings) != set(WEIGHTS):
         raise ValueError("Each record must rate all five criteria")
     for key, value in ratings.items():
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 5:
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 5 or not math.isfinite(value):
             raise ValueError(f"Rating {key} must be numeric from 0 to 5")
     if not isinstance(record.get("critical_failure"), bool):
         raise ValueError("critical_failure must be a boolean")
     return sum(ratings[key] * weight for key, weight in WEIGHTS.items())
 
 
-def assess(data: dict) -> dict:
+def assess(data: dict, evidence_root: Path | None = None) -> dict:
     if not isinstance(data, dict) or not isinstance(data.get("records"), list):
         raise ValueError("Expected object with a records array")
+    declared = data.get("creative_case_ids")
+    creative_ids = CREATIVE
+    if declared is not None:
+        if (not isinstance(declared, list) or not declared
+                or any(not isinstance(case, str) or not case.strip() for case in declared)
+                or len(set(declared)) != len(declared)):
+            raise ValueError("creative_case_ids must list distinct nonempty case IDs")
+        creative_ids = set(declared)
     grouped = defaultdict(dict)
     critical = 0
     reviewers = set()
     evidence_missing = False
+    evidence_verified = True
+    evidence_root = (evidence_root or Path.cwd()).resolve()
     for r in data["records"]:
         case = r.get("case_id")
-        if isinstance(case, bool) or not isinstance(case, int) or case not in range(1, 16):
+        if declared is not None:
+            if not isinstance(case, str) or case not in creative_ids:
+                raise ValueError("case_id must appear in creative_case_ids")
+        elif isinstance(case, bool) or not isinstance(case, int) or case not in range(1, 16):
             raise ValueError("case_id must be an integer from 1 to 15")
         repetition = r.get("round")
         reviewer = r.get("reviewer")
@@ -56,6 +71,7 @@ def assess(data: dict) -> dict:
             raise ValueError("round must be a positive integer")
         if not isinstance(reviewer, str) or not reviewer.strip():
             raise ValueError("A reviewer ID is required")
+        reviewer = reviewer.strip()
         if condition not in ("baseline", "thinking-outside"):
             raise ValueError("Condition must be baseline or thinking-outside")
         _ = score(r)
@@ -63,21 +79,47 @@ def assess(data: dict) -> dict:
         reviewers.add(reviewer)
         if not isinstance(r.get("evidence"), str) or not r["evidence"].strip():
             evidence_missing = True
+            evidence_verified = False
+        else:
+            path = (evidence_root / r["evidence"]).resolve()
+            if not path.is_relative_to(evidence_root) or not path.is_file():
+                evidence_verified = False
+            elif hashlib.sha256(path.read_bytes()).hexdigest() != r.get("evidence_sha256"):
+                evidence_verified = False
         key = (case, repetition, reviewer)
         if condition in grouped[key]:
             raise ValueError(f"Duplicate rating for {key}, {condition}")
         grouped[key][condition] = r
     if any(set(v) != {"baseline", "thinking-outside"} for v in grouped.values()):
         raise ValueError("Every case/round/reviewer must have both conditions")
+    panels = defaultdict(list)
+    for (case, repetition, _reviewer), pair in grouped.items():
+        panels[(case, repetition)].append(
+            tuple(pair[condition].get("evidence_sha256") for condition in ("baseline", "thinking-outside"))
+        )
+    matched_panel = bool(panels) and all(
+        len(hashes) >= 2 and all(hashes[0]) and all(h == hashes[0] for h in hashes)
+        for hashes in panels.values()
+    )
     wins = ties = losses = 0
     creative_pairs = 0
     creative_families = set()
     for (case, _round, _reviewer), pair in grouped.items():
-        if case not in CREATIVE:
+        if case not in creative_ids:
             continue
         creative_pairs += 1
         creative_families.add(case)
-        diff = score(pair["thinking-outside"]) - score(pair["baseline"])
+        candidate, baseline = pair["thinking-outside"], pair["baseline"]
+        # Critical failures outrank weighted scores; invalid output cannot win.
+        if candidate["critical_failure"] or baseline["critical_failure"]:
+            if candidate["critical_failure"] == baseline["critical_failure"]:
+                ties += 1
+            elif candidate["critical_failure"]:
+                losses += 1
+            else:
+                wins += 1
+            continue
+        diff = round(score(candidate) - score(baseline), 10)
         if diff > .15:
             wins += 1
         elif diff < -.15:
@@ -86,8 +128,13 @@ def assess(data: dict) -> dict:
             ties += 1
     preference = (wins + .5 * ties) / creative_pairs if creative_pairs else 0
     provenance = data.get("provenance", {})
+    if not isinstance(provenance, dict):
+        raise ValueError("provenance must be an object")
     real = isinstance(provenance, dict) and provenance.get("kind") == "real"
-    eligible = bool(real and not evidence_missing and critical == 0 and creative_pairs >= 15
+    independent_pairs = sum(case in creative_ids for case, _ in panels)
+    human_blind = (provenance.get("review_kind") == "human" and provenance.get("blinded") is True)
+    eligible = bool(real and human_blind and matched_panel and evidence_verified and not evidence_missing
+                    and critical == 0 and independent_pairs >= 15
                     and len(creative_families) >= 5 and len(reviewers) >= 2
                     and preference >= .60)
     return {
@@ -95,6 +142,9 @@ def assess(data: dict) -> dict:
         "reviewers": len(reviewers), "wins": wins, "ties": ties, "losses": losses,
         "pairwise_preference": round(preference, 4), "critical_failures": critical,
         "evidence_missing": evidence_missing, "real_data_claimed": real,
+        "evidence_verified": evidence_verified, "human_blind_claimed": human_blind,
+        "independent_pairs": independent_pairs,
+        "matched_review_panel": matched_panel,
         "eligible_for_maintainer_review": eligible,
         "note": "Eligibility is NOT proof of unbiased evaluation or authorization to publish a release."
     }

@@ -1,0 +1,28 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 6553,
+  "workers": 2,
+  "timeout": 300,
+  "output": "runs/pending-extra",
+  "conditions": {
+    "A": null,
+    "B": "instructions/B.md",
+    "D": "instructions/D-revised.md"
+  },
+  "cases": [
+    {
+      "id": "P03",
+      "family": "service recovery",
+      "creative": true,
+      "prompt": "Uma oficina de reparo empresta ferramentas por uma tarde. A oficina deve evitar que pessoas descubram só no fim que a ferramenta emprestada não resolve seu problema. Com um balcão, dois funcionários, os mesmos formulários e sem coletar novos dados, comprar equipamentos ou limitar o tipo de usuário, proponha quatro mecanismos distintos e um teste barato.",
+      "rubric": [
+        "Preserva dados, equipe, equipamento e acesso",
+        "Mecanismos atuam em momentos ou causas diferentes, sem apenas mudar a apresentação da orientação",
+        "Distingue descoberta antecipada de completar o reparo",
+        "Mede erros de escolha e custo de atendimento contra uma referência"
+      ]
+    }
+  ]
+}
