@@ -1,5 +1,7 @@
 # 1.0 review handoff
 
+> Historical snapshot from before the prerelease. On the v1.0.0-rc.1 branch, the canonical `thinking-outside/SKILL.md` is now the exact frozen revised D, while the C snapshot remains archived in `benchmarks/instructions/C.md`. The comparisons below are unchanged evidence, not post-release reruns.
+
 The candidate is the pinned revised D entrypoint. The candidate ZIP contains that exact file, its references and the MIT license. Its recorded SHA-256 is `a4d3db4ddd9fc9ea76f0acde3cf9af6eabb05d422675bfc3f5d0261a0a6c73c8`. The [installation and release draft](install-candidate.md) describes the archive and promotion. C remains the canonical install path on the review branch.
 
 ## Audit and compatibility
