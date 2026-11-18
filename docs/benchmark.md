@@ -27,18 +27,20 @@ Two human reviewers should judge anonymized outputs independently, with a mappin
 Review data format (JSON object):
 
     {
-      "provenance": {"kind": "real", "notes": "actual agent versions and environment"},
+      "provenance": {"kind": "real", "review_kind": "human", "blinded": true,
+                     "notes": "actual agent versions and environment"},
       "records": [
         {"case_id": 1, "round": 1, "reviewer": "rater-1",
          "condition": "baseline",
          "scores": {"utility": 3, "originality": 2, "diversity": 2,
                     "feasibility": 4, "adherence": 5},
          "critical_failure": false,
-         "evidence": "path-or-url-to-actual-output"}
+         "evidence": "path/to/actual-output.json",
+         "evidence_sha256": "<SHA-256 of the file>"}
       ]
     }
 
-Include one matching record for the Thinking Outside condition, for the same case, round and reviewer. Complete the full set before scoring.
+Include one matching record for the Thinking Outside condition, for the same case, round and reviewer. Evidence paths are relative to the working directory and must remain inside it. Complete the full set before scoring.
 
 Run:
 

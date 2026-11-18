@@ -64,6 +64,13 @@ class QualityTest(unittest.TestCase):
         result = assess(data)
         self.assertEqual(result["losses"], 2)
 
+    def test_exact_preference_margin_counts_as_tie(self):
+        data = make_review()
+        data["records"] = data["records"][:2]
+        baseline, candidate = data["records"]
+        candidate["scores"] = dict(baseline["scores"], utility=2.5)
+        self.assertEqual(assess(data)["ties"], 1)
+
     def test_nonfinite_rejected(self):
         for value in (float("nan"), float("inf")):
             data = make_review()

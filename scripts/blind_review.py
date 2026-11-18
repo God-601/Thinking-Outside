@@ -101,7 +101,7 @@ def summarize(run_dir):
                 if ra["critical_failure"] or rb["critical_failure"]:
                     diff = int(rb["critical_failure"]) - int(ra["critical_failure"])
                 else:
-                    diff = ra["weighted"] - rb["weighted"]
+                    diff = round(ra["weighted"] - rb["weighted"], 10)
                 if diff > .15:
                     wins += 1
                     if case_id in creative_ids:

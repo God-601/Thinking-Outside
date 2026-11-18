@@ -3,14 +3,14 @@
 
 Input JSON:
 {
-  "provenance": {"kind": "real" or "synthetic", "notes": "..."},
+  "provenance": {"kind": "real" or "synthetic", "review_kind": "human", "blinded": true},
   "records": [
     {"case_id": 1, "round": 1, "reviewer": "r1",
      "condition": "baseline" or "thinking-outside",
      "scores": {"utility": 4, "originality": 3, "diversity": 3,
                 "feasibility": 5, "adherence": 5},
      "critical_failure": false,
-     "evidence": "path-or-link-to-actual-output"}
+     "evidence": "path/to/actual-output", "evidence_sha256": "<SHA-256>"}
   ]
 }
 The comparison is a screening aid, NOT an automatic certificate for release.
@@ -33,7 +33,7 @@ def score(record: dict) -> float:
     if set(ratings) != set(WEIGHTS):
         raise ValueError("Each record must rate all five criteria")
     for key, value in ratings.items():
-        if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or not 0 <= value <= 5:
+        if isinstance(value, bool) or not isinstance(value, (int, float)) or not 0 <= value <= 5 or not math.isfinite(value):
             raise ValueError(f"Rating {key} must be numeric from 0 to 5")
     if not isinstance(record.get("critical_failure"), bool):
         raise ValueError("critical_failure must be a boolean")
@@ -98,7 +98,7 @@ def assess(data: dict, evidence_root: Path | None = None) -> dict:
             else:
                 wins += 1
             continue
-        diff = score(candidate) - score(baseline)
+        diff = round(score(candidate) - score(baseline), 10)
         if diff > .15:
             wins += 1
         elif diff < -.15:
