@@ -1,71 +1,78 @@
+<div align="center">
+
+<img src="assets/thinking-outside-hero.svg" alt="Thinking Outside: caminhos distintos atravessam os limites de uma estrutura geométrica" width="100%" />
+
 # Thinking Outside
 
-**A universal creative-thinking skill for AI agents.**  
-Skill universal de pensamento criativo aplicado: ideias menos óbvias, solução de problemas, reformulação útil de perguntas e respeito às restrições reais.
+**Beyond the obvious. Built for what works.**
 
-**Status:** pré-1.0, candidato em validação — sem promessa de melhoria comprovada até testes comparativos.  
-**Custo de infraestrutura:** R$ 0 para a própria skill; o uso do agente segue os limites e custos do provedor escolhido.
+Uma skill de pensamento criativo aplicado para agentes de IA. Explora mecanismos diferentes, questiona premissas quando necessário e transforma ideias em soluções viáveis — sem ignorar restrições.
 
-## Por que existe?
+[Começar](#instalação) · [Como funciona](#como-funciona) · [Validação](docs/review-1.0.md) · [Licença](LICENSE)
 
-Agentes podem sugerir dez versões da mesma ideia, insistir em soluções já rejeitadas ou tentar inovar quando basta resolver algo diretamente. Thinking Outside orienta o agente a:
+</div>
 
-- entender o objetivo e as restrições antes de propor alternativas;
-- explorar mecanismos **diferentes**, não só nomes diferentes;
-- questionar a formulação do problema **quando isso ajudar** — sem mudar o escopo por conta própria;
-- escolher técnicas criativas conforme a tarefa, sem ritual de brainstorming;
-- filtrar repetição, inviabilidade e promessas de originalidade sem evidências;
-- complementar skills especializadas de código, Blender, Roblox, música ou design.
+---
 
-Não cria um novo modelo de IA, não garante ideias inéditas e não depende de APIs pagas.
+## Como funciona
 
-## Exemplo
+Em vez de produzir várias versões da mesma ideia, Thinking Outside busca **alternativas que funcionam de maneiras diferentes**.
 
-**Pedido:** “Me dê oito sistemas diferentes para um jogo Roblox competitivo. Não quero inventário, níveis nem missões diárias.”
+- **Explore** — encontra mecanismos distintos, não apenas novos nomes ou temas.
+- **Evaluate** — compara utilidade, viabilidade, restrições e evidências.
+- **Evolve** — melhora propostas com testes, medidas e feedback.
+- **Direct** — responde diretamente quando não é preciso explorar alternativas.
 
-**Comportamento desejado:** oito propostas com mecanismos distintos e regras concretas, justificando como mudam decisões dos jogadores; sem reciclar os sistemas rejeitados. Se não houver oito ideias boas, esclarecer a limitação em vez de inventar sugestões ruins.
+Complementa skills de programação, design, jogos e outras áreas. Não exige servidor, banco de dados ou API própria.
 
-**Pedido:** “Mude apenas a cor deste botão, sem alterar layout nem lógica.”
+## Na prática
 
-**Comportamento desejado:** cumprir objetivamente; não propor redesign.
+> **Pedido:** “Quero três mecânicas para um jogo competitivo no Roblox, sem inventário, níveis ou sorte.”
 
-## Instalação e uso
+**Resultado esperado:** três mecanismos com regras e decisões realmente diferentes, limites identificados e restrições preservadas — não três versões de captura de território.
 
-**Entrada da skill:** [thinking-outside/SKILL.md](thinking-outside/SKILL.md).
+> **Pedido:** “Quanto é 23 × 4?”
 
-Este repositório segue a estrutura de [Agent Skills](https://agentskills.io/). Instale o diretório da skill no local de skills indicado pela documentação **do seu agente**, copiando a pasta **thinking-outside/** inteira, com SKILL.md e references/ juntos; a raiz do repositório não é a pasta da skill. A descoberta/ativação automática **depende de cada cliente** e precisa ser testada.
+**Resultado esperado:** `92`. Sem brainstorming.
 
-Para testar manualmente: “Use a skill Thinking Outside para explorar soluções não genéricas para [seu problema], respeitando [restrições].”
+## Instalação
 
-**Compatibilidade pretendida:** Codex, Claude Code, OpenCode e Cursor. A compatibilidade de formato não prova resultados idênticos; ainda faltam testes reais por cliente. Veja [compatibilidade](docs/compatibility.md).
+O projeto segue o formato [Agent Skills](https://agentskills.io/).
 
-## Documentação
+1. Copie a pasta [`thinking-outside/`](thinking-outside/) **inteira** para o diretório de skills do seu agente, incluindo `SKILL.md` e `references/`.
+2. Inicie uma nova sessão.
+3. Quando o cliente permitir, invoque a skill explicitamente; caso contrário, peça: “Use Thinking Outside para explorar soluções para [problema], respeitando [restrições]”.
 
-- [Especificação](docs/specification.md)
-- [Métodos criativos e critérios de seleção](docs/creative-methods.md)
-- [Arquitetura leve](docs/architecture.md)
-- [Compatibilidade e limitações](docs/compatibility.md)
-- [Roadmap](docs/roadmap.md)
-- [15 testes de aceitação](thinking-outside/evals/ACCEPTANCE_CASES.md)
-- [Protocolo comparativo](thinking-outside/evals/BENCHMARK_PROTOCOL.md)
-- [Estado de validação](VALIDATION.md)
-- [Histórico](CHANGELOG.md)
+A descoberta automática depende do cliente. Consulte a [compatibilidade](docs/compatibility.md).
 
-Veja também o [protocolo](docs/benchmark.md), os [resultados medidos](docs/benchmark-results.md) e os [critérios para publicar a 1.0](docs/release-readiness.md).
+**Candidata D:** a versão D revisada está no ZIP de validação, mas ainda **não foi promovida** para o `thinking-outside/SKILL.md` canônico do PR #4. Para avaliá-la, veja [instalação do candidato](docs/install-candidate.md) e [teste de ativação no Claude](docs/claude-manual-check.md).
 
-Para revisar a 1.0, veja a [lista de verificações e os testes manuais](docs/review-1.0.md).
+## Validação
 
-## Teste estrutural local
+**Status: candidata à 1.0, em revisão.** Resultados automatizados não garantem criatividade superior nem substituem avaliação humana cega e verificação da ativação real.
 
-~~~bash
+```bash
 python tests/validate_repo.py
 python -m unittest discover -s tests -p "test_*.py" -v
-# Validação de referência, após instalar skills-ref:
-agentskills validate ./thinking-outside
-~~~
+```
 
-Isso valida arquivos e cenários, **não** avalia a criatividade de um modelo. Os testes comportamentais A/B são separados.
+Para validar o formato, após instalar `skills-ref`: `agentskills validate ./thinking-outside`.
+
+[Resultados e pendências](docs/review-1.0.md) · [Benchmark](docs/benchmark.md) · [Critérios de release](docs/release-readiness.md)
+
+<details>
+<summary>Mais documentação</summary>
+
+- [Especificação](docs/specification.md)
+- [Métodos criativos](docs/creative-methods.md)
+- [Arquitetura](docs/architecture.md)
+- [Compatibilidade](docs/compatibility.md)
+- [Testes de aceitação](thinking-outside/evals/ACCEPTANCE_CASES.md)
+- [Roadmap](docs/roadmap.md)
+- [Changelog](CHANGELOG.md)
+
+</details>
 
 ## Licença
 
-MIT — veja [LICENSE](LICENSE).
+[MIT](LICENSE). A skill não tem custo próprio de infraestrutura; limites e custos do agente utilizado são definidos pelo respectivo provedor.
