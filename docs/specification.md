@@ -1,6 +1,6 @@
 # Thinking Outside — Functional specification
 
-**Version:** pre-1.0 candidate. **Owner:** project maintainers. **Phase:** first implementation; behavior not yet benchmarked.
+**Version:** v1.0.0-rc.1 prerelease. **Owner:** project maintainers. **Phase:** revised D benchmarked on Codex; human validation pending.
 
 ## Goal
 
