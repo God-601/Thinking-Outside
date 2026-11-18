@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.0-rc.1] — 2026-11-18
+
+- Promote the benchmark-pinned revised D as the default Agent Skill (Explore / Evaluate / Evolve).
+- Replace the previous cover with a lightweight, accessible editorial SVG and simplify onboarding in the README.
+- Keep historical A/B/C/D comparisons and isolated, anonymized Codex evaluation evidence.
+- Package the installable skill and MIT license with a SHA-256 checksum.
+- Release as **prerelease**: two independent blind human ratings and automatic client activation remain unverified.
+
 ## Unreleased candidate
 
 - Add repeated evidence across eight task families, two review bundles, a project-local Codex check and a manual Claude procedure.
