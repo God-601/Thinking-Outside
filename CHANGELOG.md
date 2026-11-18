@@ -2,6 +2,8 @@
 
 ## Unreleased candidate
 
+- Add experimental hybrid D with Explore, Evaluate and Evolve. Record matched Codex comparisons and retain the existing installed entrypoint.
+
 - Compare mechanisms by causal dependency and require task-specific details that make alternatives actionable.
 - Load abstract examples only for diagnosis and retry convergent ideation once with the shared dependency removed.
 - Rebuild benchmark prompts from canonical Portuguese data and check them against the source in CI.

@@ -1,0 +1,47 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 1,
+  "order_seed": 6201,
+  "workers": 4,
+  "timeout": 300,
+  "output": "runs/hybrid-fresh",
+  "conditions": {
+    "A": null,
+    "B": "instructions/B.md",
+    "C": "instructions/C_candidate.md",
+    "D": "instructions/D.md"
+  },
+  "cases": [
+    {
+      "id": "N01",
+      "creative": true,
+      "prompt": "Uma biblioteca municipal tem um terminal acessível para 40 usuários por dia. Precisamos diminuir desistências sem instalar software, cobrar, exigir celular ou reduzir o tempo de quem usa tecnologia assistiva. Proponha quatro mecanismos diferentes com teste barato.",
+      "rubric": [
+        "Preservar acessibilidade, privacidade e tempo assistivo",
+        "Distinguir o que muda na chegada, na ocupação ou na recuperação de vagas",
+        "Explicar como medir desistências sem coletar dados pessoais"
+      ]
+    },
+    {
+      "id": "N02",
+      "creative": true,
+      "prompt": "Uma oficina comunitária fabrica pequenos móveis com chapas reaproveitadas de dimensões irregulares. Com duas pessoas e ferramentas manuais, quer reduzir sobras e atrasos sem comprar máquinas ou padronizar o tamanho das chapas recebidas. Sugira quatro mecanismos concretos e um teste de uma semana.",
+      "rubric": [
+        "Manter ferramentas, equipe e diversidade de chapas",
+        "Distinguir mecanismos de alocação, projeto ou fluxo",
+        "Comparar tempo e material sem sacrificar segurança ou qualidade"
+      ]
+    },
+    {
+      "id": "N03",
+      "creative": true,
+      "prompt": "Um coral comunitário dispõe de uma sala seca, seis ensaios e 20 cantores. Quer transmitir distância entre grupos numa apresentação sem eletrônica, mudar as notas ou separar pessoas que dependem de referência visual da regente. Dê três mecanismos realmente diferentes e um modo de verificar o efeito.",
+      "rubric": [
+        "Preservar notas, contato visual e limites de recursos",
+        "Cada proposta usa princípio acústico ou perceptivo distinto",
+        "Indicar teste acessível com ouvintes e risco musical concreto"
+      ]
+    }
+  ]
+}
