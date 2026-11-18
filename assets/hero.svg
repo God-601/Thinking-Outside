@@ -1,42 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" width="1280" height="430" role="img" aria-labelledby="title description">
-  <title id="title">Thinking Outside — Creative reasoning with real constraints</title>
-  <desc id="description">An editorial dark banner with clean typography and three blue routes branching beyond a thin open frame.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="480" viewBox="0 0 1280 480" role="img" aria-labelledby="hero-title hero-description">
+  <title id="hero-title">Thinking Outside — beyond the obvious</title>
+  <desc id="hero-description">A dark minimalist editorial banner with oversized typography and three cobalt-blue paths escaping an open geometric frame.</desc>
   <defs>
-    <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#263141" stroke-width=".6" opacity=".36"/></pattern>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1017"/><stop offset="1" stop-color="#101621"/></linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ad1ff"/><stop offset="1" stop-color="#568bff"/></linearGradient>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0B0E14"/>
+      <stop offset="100%" stop-color="#101622"/>
+    </linearGradient>
   </defs>
-  <rect width="1280" height="430" rx="16" fill="url(#bg)"/>
-  <rect width="1280" height="430" rx="16" fill="url(#mesh)"/>
-  <rect x="24.5" y="24.5" width="1231" height="381" rx="9" fill="none" stroke="#334354" opacity=".7"/>
-  <g font-family="Inter,Arial,Helvetica,sans-serif" font-weight="600">
-    <text x="79" y="91" font-size="15" fill="#8a9db3" letter-spacing="4">OPEN SOURCE  /  AGENT SKILL</text>
-    <text x="77" y="209" font-size="83" fill="#eef3fa" letter-spacing="-3">THINK</text>
-    <text x="77" y="301" font-size="83" fill="#eef3fa" letter-spacing="-3">OUTSIDE<tspan fill="#7aaeff">.</tspan></text>
+  <!-- Editorial field, deliberately free of textures or 3D imagery. -->
+  <rect width="1280" height="480" fill="url(#background)"/>
+  <path d="M72 88 H1208" stroke="#303845" stroke-width="1"/>
+  <path d="M72 414 H1208" stroke="#303845" stroke-width="1"/>
+  <path d="M72 88 V414" stroke="#303845" stroke-opacity=".24" stroke-width="1"/>
+  <!-- Masthead. -->
+  <g font-family="Inter, Helvetica Neue, Arial, sans-serif" fill="#A9B3C3">
+    <text x="74" y="60" font-size="13" font-weight="600" letter-spacing="2.6">T/O</text>
+    <text x="136" y="60" font-size="11" letter-spacing="2.6">OPEN-SOURCE AGENT SKILL</text>
+    <text x="1207" y="60" font-size="11" text-anchor="end" letter-spacing="2.4">EST. 2026</text>
   </g>
-  <path d="M80 325H435" fill="none" stroke="#3a4d65" stroke-width="1"/>
-  <text x="80" y="356" font-family="Inter,Arial,sans-serif" font-size="14" letter-spacing="1.9" fill="#94a9c0">DIFFERENT PATHS. PRACTICAL IDEAS.</text>
-  <g transform="translate(766 49)">
-    <path d="M26 53H113M143 53H352V330H26V53" stroke="#607185" stroke-width="2" fill="none"/>
-    <path d="M26 53H113" stroke="#dce7f4" stroke-width="3" fill="none"/>
-    <path d="M143 53H352" stroke="#dce7f4" stroke-width="3" fill="none"/>
-    <path d="M26 53V330H352" stroke="#dce7f4" stroke-width="3" fill="none"/>
-    <path d="M352 53V330" stroke="#dce7f4" stroke-width="3" fill="none"/>
-    <path d="M182 191L182 102L127 102L127 19L127 -17" stroke="#80bdff" stroke-width="18" opacity=".11" fill="none" stroke-linejoin="round"/>
-    <path d="M182 191L182 102L127 102L127 19L127 -17" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M182 191L98 191L98 253L-22 253" stroke="#80bdff" stroke-width="18" opacity=".1" fill="none"/>
-    <path d="M182 191L98 191L98 253L-22 253" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
-    <path d="M182 191L249 191L249 276L291 276L291 370" stroke="#80bdff" stroke-width="18" opacity=".1" fill="none"/>
-    <path d="M182 191L249 191L249 276L291 276L291 370" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
-    <circle cx="182" cy="191" r="9" fill="#9cc9ff" stroke="#0d131c" stroke-width="4"/>
-    <circle cx="127" cy="-17" r="6" fill="#a3d7ff"/><circle cx="-22" cy="253" r="6" fill="#a3d7ff"/><circle cx="291" cy="370" r="6" fill="#a3d7ff"/>
-    <circle cx="127" cy="-17" r="14" fill="none" stroke="#5b85b7" opacity=".7"/>
-    <circle cx="-22" cy="253" r="14" fill="none" stroke="#5b85b7" opacity=".7"/>
-    <circle cx="291" cy="370" r="14" fill="none" stroke="#5b85b7" opacity=".7"/>
-    <g font-family="Inter,Arial,sans-serif" font-size="10" fill="#91a3b7" letter-spacing="1.7">
-      <text x="149" y="17">01 / EXPLORE</text>
-      <text x="-53" y="224" text-anchor="end">02 / EVALUATE</text>
-      <text x="315" y="357">03 / EVOLVE</text>
-    </g>
+  <path d="M116 44 V65" stroke="#465367" stroke-width="1"/>
+  <!-- Hero typography. -->
+  <g font-family="Inter, Helvetica Neue, Arial, sans-serif" font-weight="750" fill="#F4F6FC" letter-spacing="-5.3">
+    <text x="68" y="213" font-size="100">THINK</text>
+    <text x="68" y="319" font-size="100">OUTSIDE<tspan fill="#81A5FF">.</tspan></text>
+  </g>
+  <text x="74" y="362" font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="17" fill="#9CAABC" letter-spacing=".2">
+    Different paths. Practical outcomes.
+  </text>
+  <!-- A single open boundary, rather than a 3D cube. -->
+  <path d="M832 134 H1076 V174 M1076 308 V350 H832 V134" fill="none" stroke="#D8DFEB" stroke-opacity=".88" stroke-width="2.4" stroke-linecap="square"/>
+  <path d="M854 154 H1054 M854 330 H1054" fill="none" stroke="#384558" stroke-width="1"/>
+  <!-- A common starting point produces three genuinely distinct routes. -->
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M948 242 H988 C1011 242 1017 220 1034 203 L1053 184 C1061 176 1071 176 1087 176 H1193" stroke="#83BFFF" stroke-width="5"/>
+    <path d="M948 242 H1196" stroke="#709DFF" stroke-width="5"/>
+    <path d="M948 242 H988 C1011 242 1017 264 1034 281 L1053 300 C1061 308 1071 308 1087 308 H1193" stroke="#8E9EFF" stroke-width="5"/>
+  </g>
+  <circle cx="948" cy="242" r="9.5" fill="#F4F6FC"/>
+  <circle cx="948" cy="242" r="18" fill="none" stroke="#8BA1C7" stroke-opacity=".48" stroke-width="1"/>
+  <g fill="#0C111B" stroke-width="3">
+    <circle cx="1193" cy="176" r="7" stroke="#83BFFF"/>
+    <circle cx="1196" cy="242" r="7" stroke="#7C9CFF"/>
+    <circle cx="1193" cy="308" r="7" stroke="#8E9EFF"/>
+  </g>
+  <g font-family="Inter, Helvetica Neue, Arial, sans-serif" fill="#8596AF" font-size="10" letter-spacing="2.2">
+    <text x="1116" y="156">01 / EXPLORE</text>
+    <text x="1116" y="221">02 / EVALUATE</text>
+    <text x="1116" y="287">03 / EVOLVE</text>
+  </g>
+  <!-- Signature, with compact, nonintrusive metadata. -->
+  <g font-family="Inter, Helvetica Neue, Arial, sans-serif" font-size="11" fill="#77869D" letter-spacing="2.25">
+    <text x="74" y="446">IDEAS / DECISIONS / EXPERIMENTS</text>
+    <text x="1206" y="446" text-anchor="end">THINKING OUTSIDE</text>
   </g>
 </svg>
