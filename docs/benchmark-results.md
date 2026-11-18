@@ -44,3 +44,5 @@ On the two reused holdout cases, C earned 50% versus A and 37.5% versus B across
 ## Publication
 
 The candidate missed the 60% creative preference target against B and used more input tokens. Stable release still requires improved results on genuinely unseen cases, independent blind reviews by two people, verified native activation in Codex and Claude Code, and maintainer approval. A fresh Claude Code probe returned `Credit balance is too low`. No stable tag or installation ZIP has been published.
+
+The [regression investigation](creativity-regression.md) isolates two instruction changes and records why neither entered the runtime skill.

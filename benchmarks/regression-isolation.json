@@ -1,0 +1,46 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 4285,
+  "workers": 4,
+  "timeout": 300,
+  "output": "runs/regression-isolation",
+  "conditions": {
+    "C": "instructions/C_candidate.md",
+    "X": "instructions/regression-X.md",
+    "Y": "instructions/regression-Y.md"
+  },
+  "cases": [
+    {
+      "id": "T03",
+      "prompt": "Quero tornar uma música eletrônica de 150 BPM mais interessante, sem adicionar instrumentos, trocar a melodia principal ou aumentar a duração.",
+      "rubric": [
+        "Intervenções técnicas possíveis em dinâmica, ritmo, espaço ou estrutura",
+        "Mantém BPM, instrumentação, melodia e duração",
+        "Diferencia efeito desejado e tradeoff"
+      ],
+      "creative": true
+    },
+    {
+      "id": "T10",
+      "prompt": "Você sugeriu inventário inteligente, conquistas e missões dinâmicas. Rejeitei essas opções porque são comuns. Quero cinco propostas realmente diferentes.",
+      "rubric": [
+        "Não recicla inventário, conquistas ou missões",
+        "Explica mecanismo único de cada proposta",
+        "Evita cosmética como única diferença"
+      ],
+      "creative": true
+    },
+    {
+      "id": "T11",
+      "prompt": "Tenho um aplicativo simples que já funciona. Quero melhorar a experiência sem remover funcionalidades, alterar o banco de dados ou aumentar o número de telas.",
+      "rubric": [
+        "Melhorias centradas em interação e fluxo",
+        "Preserva funcionalidades, banco de dados e quantidade de telas",
+        "Explora benefício real, não apenas animações"
+      ],
+      "creative": true
+    }
+  ]
+}
