@@ -30,9 +30,12 @@ class BenchmarkTest(unittest.TestCase):
         evals = json.loads(read("thinking-outside/evals/evals.json"))["evals"]
         self.assertEqual([(c["id"], c["prompt"], c["rubric"]) for c in plan["cases"]],
                          [(f'T{e["id"]:02}', e["prompt"], e["expectations"]) for e in evals])
-        snapshot = "\n".join(read("thinking-outside/" + p) for p in
-                             ("SKILL.md", "references/methods.md", "references/quality.md"))
-        self.assertEqual(read("benchmarks/" + plan["conditions"]["C"]), snapshot)
+        # Freeze C as a historical control; the installed entrypoint now tracks D.
+        self.assertEqual(plan["conditions"]["C"], "instructions/C.md")
+        self.assertIn("## Explore mechanisms before polishing",
+                      read("benchmarks/" + plan["conditions"]["C"]))
+        self.assertEqual(read("thinking-outside/SKILL.md"),
+                         read("benchmarks/instructions/D-revised.md"))
 
     def test_tools_disqualify_controlled_no_tool_run(self):
         stdout = stream({"type": "item.started", "item": {"type": "command_execution"}},
