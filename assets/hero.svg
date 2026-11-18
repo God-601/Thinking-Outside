@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 430" width="1280" height="430" role="img" aria-labelledby="title description">
+  <title id="title">Thinking Outside — Creative reasoning with real constraints</title>
+  <desc id="description">An editorial dark banner with clean typography and three blue routes branching beyond a thin open frame.</desc>
+  <defs>
+    <pattern id="mesh" width="48" height="48" patternUnits="userSpaceOnUse"><path d="M48 0H0V48" fill="none" stroke="#263141" stroke-width=".6" opacity=".36"/></pattern>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0b1017"/><stop offset="1" stop-color="#101621"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#8ad1ff"/><stop offset="1" stop-color="#568bff"/></linearGradient>
+  </defs>
+  <rect width="1280" height="430" rx="16" fill="url(#bg)"/>
+  <rect width="1280" height="430" rx="16" fill="url(#mesh)"/>
+  <rect x="24.5" y="24.5" width="1231" height="381" rx="9" fill="none" stroke="#334354" opacity=".7"/>
+  <g font-family="Inter,Arial,Helvetica,sans-serif" font-weight="600">
+    <text x="79" y="91" font-size="15" fill="#8a9db3" letter-spacing="4">OPEN SOURCE  /  AGENT SKILL</text>
+    <text x="77" y="209" font-size="83" fill="#eef3fa" letter-spacing="-3">THINK</text>
+    <text x="77" y="301" font-size="83" fill="#eef3fa" letter-spacing="-3">OUTSIDE<tspan fill="#7aaeff">.</tspan></text>
+  </g>
+  <path d="M80 325H435" fill="none" stroke="#3a4d65" stroke-width="1"/>
+  <text x="80" y="356" font-family="Inter,Arial,sans-serif" font-size="14" letter-spacing="1.9" fill="#94a9c0">DIFFERENT PATHS. PRACTICAL IDEAS.</text>
+  <g transform="translate(766 49)">
+    <path d="M26 53H113M143 53H352V330H26V53" stroke="#607185" stroke-width="2" fill="none"/>
+    <path d="M26 53H113" stroke="#dce7f4" stroke-width="3" fill="none"/>
+    <path d="M143 53H352" stroke="#dce7f4" stroke-width="3" fill="none"/>
+    <path d="M26 53V330H352" stroke="#dce7f4" stroke-width="3" fill="none"/>
+    <path d="M352 53V330" stroke="#dce7f4" stroke-width="3" fill="none"/>
+    <path d="M182 191L182 102L127 102L127 19L127 -17" stroke="#80bdff" stroke-width="18" opacity=".11" fill="none" stroke-linejoin="round"/>
+    <path d="M182 191L182 102L127 102L127 19L127 -17" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M182 191L98 191L98 253L-22 253" stroke="#80bdff" stroke-width="18" opacity=".1" fill="none"/>
+    <path d="M182 191L98 191L98 253L-22 253" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M182 191L249 191L249 276L291 276L291 370" stroke="#80bdff" stroke-width="18" opacity=".1" fill="none"/>
+    <path d="M182 191L249 191L249 276L291 276L291 370" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+    <circle cx="182" cy="191" r="9" fill="#9cc9ff" stroke="#0d131c" stroke-width="4"/>
+    <circle cx="127" cy="-17" r="6" fill="#a3d7ff"/><circle cx="-22" cy="253" r="6" fill="#a3d7ff"/><circle cx="291" cy="370" r="6" fill="#a3d7ff"/>
+    <circle cx="127" cy="-17" r="14" fill="none" stroke="#5b85b7" opacity=".7"/>
+    <circle cx="-22" cy="253" r="14" fill="none" stroke="#5b85b7" opacity=".7"/>
+    <circle cx="291" cy="370" r="14" fill="none" stroke="#5b85b7" opacity=".7"/>
+    <g font-family="Inter,Arial,sans-serif" font-size="10" fill="#91a3b7" letter-spacing="1.7">
+      <text x="149" y="17">01 / EXPLORE</text>
+      <text x="-53" y="224" text-anchor="end">02 / EVALUATE</text>
+      <text x="315" y="357">03 / EVOLVE</text>
+    </g>
+  </g>
+</svg>
