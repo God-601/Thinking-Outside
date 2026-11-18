@@ -1,0 +1,601 @@
+{
+  "review_kind": "automated_rubric_check_not_pairwise",
+  "manifest": {
+    "started_utc": "2026-11-18T18:28:44.780997+00:00",
+    "cli": "codex-cli 0.169.0",
+    "plan": {
+      "model": "gpt-6.1-sol",
+      "effort": "medium",
+      "repetitions": 1,
+      "order_seed": 6599,
+      "workers": 4,
+      "timeout": 300,
+      "output": "runs/d-core-remaining",
+      "conditions": {
+        "D": "instructions/D-revised.md"
+      },
+      "cases": [
+        {
+          "id": "T01",
+          "prompt": "Crie oito sistemas para um jogo competitivo Roblox com partidas de cinco minutos. Não quero inventário, níveis, recompensas diárias nem habilidades comuns. Cada sistema precisa mudar a maneira como os jogadores tomam decisões.",
+          "rubric": [
+            "Oito sistemas com mecanismos substantivamente diferentes, ou insuficiência explicitada",
+            "Regras de funcionamento, consequência para decisão e viabilidade Roblox",
+            "Nenhum sistema rejeitado reaparece"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T02",
+          "prompt": "Quero cinco ferramentas para melhorar agentes de IA, mas não quero gerenciadores de skills, contadores de tokens, memória genérica ou verificadores comuns. Preciso de problemas específicos e diferenciais reais.",
+          "rubric": [
+            "Cada ferramenta resolve um problema específico e descreve mecanismo",
+            "Evita categorias rejeitadas; diferenças reais entre cinco propostas",
+            "Sem afirmações de mercado exclusivas sem pesquisa"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T03",
+          "prompt": "Quero tornar uma música eletrônica de 150 BPM mais interessante, sem adicionar instrumentos, trocar a melodia principal ou aumentar a duração.",
+          "rubric": [
+            "Intervenções técnicas possíveis em dinâmica, ritmo, espaço ou estrutura",
+            "Mantém BPM, instrumentação, melodia e duração",
+            "Diferencia efeito desejado e tradeoff"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T04",
+          "prompt": "Quero criar 50 missões diárias para que as pessoas continuem jogando meu jogo. Como organizar esse sistema?",
+          "rubric": [
+            "Explica como organizar missões se o usuário optar pelo plano original",
+            "Questiona se missões são o melhor meio para retenção, com motivo",
+            "Propõe experimento de retenção antes de construir 50 itens"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T05",
+          "prompt": "Meu sistema de movimentação continua com o mesmo bug depois de várias correções. Quero uma solução diferente, sem reescrever o projeto inteiro.",
+          "rubric": [
+            "Apresenta hipóteses distintas e testes diagnósticos",
+            "Não inventa causa confirmada",
+            "Respeita proibição de reescrita total"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T07",
+          "prompt": "Quero criar um programa Windows inovador usando agentes de IA para desenvolver. Não posso gastar com servidor, APIs ou mensalidades.",
+          "rubric": [
+            "Propõe alternativas sem custo recorrente obrigatório",
+            "Distingue custo de desenvolver com IA do custo de executar produto",
+            "Explicita possíveis limites de máquinas locais"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T08",
+          "prompt": "Quero deixar um modelo de moto 3D mais realista para Roblox, mantendo no máximo 3.000 triângulos e sem trocar a silhueta principal.",
+          "rubric": [
+            "Prioriza materiais, normais, UV, detalhes perceptuais e validação",
+            "Respeita limite de triângulos e silhueta",
+            "Distingue aparência de malha"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T09",
+          "prompt": "Quero executar uma ferramenta local de IA em computador antigo com 8 GB RAM e sem GPU dedicada. Proponha caminhos realistas.",
+          "rubric": [
+            "Sugere opções leves e requisitos verificáveis",
+            "Reconhece limitações de velocidade e memória",
+            "Não promete desempenho de modelos grandes"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T10",
+          "prompt": "Você sugeriu inventário inteligente, conquistas e missões dinâmicas. Rejeitei essas opções porque são comuns. Quero cinco propostas realmente diferentes.",
+          "rubric": [
+            "Não recicla inventário, conquistas ou missões",
+            "Explica mecanismo único de cada proposta",
+            "Evita cosmética como única diferença"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T11",
+          "prompt": "Tenho um aplicativo simples que já funciona. Quero melhorar a experiência sem remover funcionalidades, alterar o banco de dados ou aumentar o número de telas.",
+          "rubric": [
+            "Melhorias centradas em interação e fluxo",
+            "Preserva funcionalidades, banco de dados e quantidade de telas",
+            "Explora benefício real, não apenas animações"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T12",
+          "prompt": "Quero uma ideia completamente original, barata, fácil, sem concorrentes e que garanta muitos usuários.",
+          "rubric": [
+            "Identifica impossibilidade de garantir exclusividade ou adoção",
+            "Propõe estratégia de nicho, pesquisa e validação",
+            "Entrega opções condicionais honestas"
+          ],
+          "creative": true
+        },
+        {
+          "id": "T13",
+          "prompt": "Explique como simplificar a raiz quadrada de 72.",
+          "rubric": [
+            "Resposta correta: 6√2, com explicação breve",
+            "Sem brainstorm ou métodos inventados"
+          ],
+          "creative": false
+        },
+        {
+          "id": "T14",
+          "prompt": "Quero melhorar meu jogo, mas não vou dizer gênero, mecânica ou o que está errado.",
+          "rubric": [
+            "Faz uma pergunta que impacte recomendações, ou dá opções bem condicionais",
+            "Não presume tipo de jogo",
+            "Evita questionário longo"
+          ],
+          "creative": true
+        }
+      ]
+    },
+    "context_sha256": "44b1902d2883d87f2f73e69a7867021b8b69d81ca84492b5f3007416aff7184e",
+    "context_chars": 29734,
+    "disabled_skill_paths": 279,
+    "isolation": "temporary CODEX_HOME; catalogs disabled; fresh exec per sample",
+    "temperature": "CLI default; not exposed",
+    "runs": 13,
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "instruction_sha256": {
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    }
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "Oito sistemas pensados para partidas de **cinco minutos**, sem progressão permanente. Cada um muda uma decisão central e pode ser testado separadamente.\n\n### 1. Pontos que pesam\nCarregar pontos ainda não registrados torna o jogador mais visível e impede a passagem por atalhos estreitos. Registrar exige ficar três segundos parado em um terminal; quem é eliminado deixa os pontos no chão.\n\n**A decisão muda:** continuar acumulando, garantir o resultado ou entregar a carga a um colega para recuperar mobilidade. Liderar uma coleta também transforma você no alvo mais fácil de prever.\n\n### 2. O mapa lembra\nCada passagem por um corredor aumenta seu desgaste, indicado no chão. Após determinado número de travessias, ele fecha por quinze segundos. O desgaste diminui quando ninguém passa.\n\n**A decisão muda:** usar o caminho mais curto agora pode eliminar sua própria rota de fuga depois. Também dá para provocar um fechamento antes da chegada adversária, mas você precisa atravessar e se expor para isso.\n\n### 3. Compromissos públicos\nA cada minuto, cada equipe escolhe secretamente um de três setores. As escolhas são reveladas simultaneamente. Durante os próximos sessenta segundos, aquela equipe só pontua no setor escolhido.\n\n**A decisão muda:** escolher a região mais acessível, disputar a provável escolha rival ou aceitar um trajeto pior para operar com menos oposição. Depois da revelação, abandonar o setor pode impedir pontos inimigos, mas custa sua própria oportunidade.\n\n### 4. Informação com testemunhas\nOs terminais mostram leituras incompletas: um revela onde haverá pontuação, outro revela quando. As leituras aparecem apenas para quem consulta. Compartilhá-las por um marcador comunica a informação à equipe, mas emite um sinal visível aos adversários próximos.\n\n**A decisão muda:** investigar sozinho, dividir a equipe para cruzar dados ou denunciar sua presença para coordenar rapidamente. Nenhuma informação falsa é gerada pelo jogo.\n\n### 5. Arquitetura por ocupação\nCertas pontes só permanecem abertas enquanto alguém ocupa uma plataforma afastada. O ocupante continua podendo lutar, mas não pode acompanhar quem atravessa. Existem caminhos alternativos mais demorados.\n\n**A decisão muda:** quantos jogadores enviar, quem fica sustentando a passagem e quando abandonar a plataforma. Uma retirada prematura pode separar a equipe; mantê-la ocupada demais reduz sua força no objetivo.\n\n### 6. Controle que se esgota\nCada zona possui uma reserva pública de pontos. Enquanto uma equipe a controla, essa reserva diminui. Zonas abandonadas recuperam valor lentamente, sem ultrapassar o limite inicial.\n\n**A decisão muda:** defender uma posição segura até ela perder utilidade ou circular para buscar reservas maiores. O adversário pode ceder território temporariamente e preparar a interceptação da próxima rotação.\n\n### 7. Prioridades em disputa\nA cada minuto, abre uma votação de dez segundos entre três alterações simétricas: inverter esteiras, trocar os terminais ativos ou abrir uma passagem central. Cada jogador tem **um único voto para toda a partida**. Empates mantêm o mapa atual.\n\n**A decisão muda:** gastar influência para resolver um problema imediato ou guardar o voto para uma situação decisiva. Não votar também é uma escolha estratégica.\n\n### 8. Vitória com endereço\nNos últimos quarenta segundos, os pontos continuam valendo, mas cada equipe precisa manter seu estandarte em uma de duas bases para registrar novas entregas. Transportá-lo exige carregar um objeto visível e impede carregar pontos simultaneamente.\n\n**A decisão muda:** escolher onde sustentar o encerramento, deslocar o estandarte sob pressão ou dividir forças entre proteção e coleta. A partida termina exatamente aos cinco minutos; a movimentação final depende das posições construídas antes.",
+      "usage": {
+        "input_tokens": 19894,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 912,
+        "reasoning_output_tokens": 127
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T01-1-D",
+      "case_id": "T01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 45.376,
+      "prompt_sha256": "721d353f29466982338d73d339ec146b6fe18391058bc6f887b2b3099307126c",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu apostaria nestas cinco **propostas de ferramentas**, cada uma com um problema delimitado e um mecanismo próprio:\n\n### 1. Recibo de Ação — impedir duplicações após falhas de conexão\n\n**Problema:** o agente cria uma cobrança, o serviço demora a responder e ele tenta novamente. O cliente recebe duas cobranças porque o agente confundiu “não recebi resposta” com “não aconteceu”.\n\n**Funcionamento:** cada intenção recebe uma identidade persistente. Quando há timeout, a ferramenta procura o resultado da primeira tentativa antes de autorizar outra. Usa chaves de idempotência quando disponíveis e reconciliação quando não estão.\n\n**Diferencial:** trata a incerteza sobre efeitos externos, algo que instruções de “tenha cuidado” não resolvem.\n\n**Primeiro produto:** integração com um único serviço de pagamentos. Medir duplicações e ações que permanecem sem resultado conhecido. A limitação central são APIs sem idempotência nem consulta confiável.\n\n### 2. Pergunta que Destrava — escolher quando interromper o usuário\n\n**Problema:** agentes fazem perguntas irrelevantes e assumem silenciosamente informações que mudariam toda a execução.\n\n**Funcionamento:** diante de uma dúvida, a ferramenta compara as ações possíveis para cada resposta. Se todas levam à mesma ação, dispensa a pergunta. Se divergem, identifica a menor pergunta capaz de resolver a decisão e deixa o trabalho independente continuar.\n\n**Diferencial:** prioriza perguntas pelo impacto na decisão, não apenas pela confiança do modelo.\n\n**Primeiro produto:** assistente de compras empresariais. Comparar interrupções por tarefa e retrabalho causado por suposições erradas.\n\n### 3. Reserva de Intenção — coordenar agentes antes que disputem recursos\n\n**Problema:** dois agentes podem executar ações individualmente válidas e coletivamente incompatíveis: vender a última unidade e reservá-la para uma troca.\n\n**Funcionamento:** antes de agir, cada agente declara recurso, quantidade, prazo e intenção. A ferramenta concede reservas temporárias e organiza conflitos, inclusive quando as ações usam sistemas diferentes.\n\n**Diferencial:** coordena efeitos de negócio que um bloqueio de banco de dados isolado não alcança.\n\n**Primeiro produto:** operação de estoque envolvendo vendas, devoluções e reposição. Funciona melhor quando todos os caminhos relevantes passam pelas reservas; ações humanas externas exigem integração adicional.\n\n### 4. Envelope de Contexto — fornecer dados sem entregar o documento inteiro\n\n**Problema:** para responder sobre uma cláusula contratual, o agente recebe também dados bancários, assinaturas e informações de outros clientes.\n\n**Funcionamento:** a ferramenta monta um envelope específico para a operação: trechos necessários, campos permitidos e identificadores substitutos. Valores sensíveis são resolvidos diretamente no executor quando indispensáveis, sem aparecer no contexto do modelo.\n\n**Diferencial:** reduz exposição pela arquitetura do fluxo, em vez de depender de o agente ignorar dados que já recebeu.\n\n**Primeiro produto:** atendimento que consulta contratos. Medir campos sensíveis expostos por resolução e respostas prejudicadas por contexto insuficiente.\n\n### 5. Decisão no Último Instante — evitar planos que nascem vencidos\n\n**Problema:** o agente consulta preço, disponibilidade ou permissões no início, mas executa minutos depois usando condições antigas.\n\n**Funcionamento:** separa preparação de compromisso. Adianta redação, cálculos e organização; adia decisões dependentes de informações voláteis até o instante da ação. Se o cenário mudar, recalcula apenas a parte afetada.\n\n**Diferencial:** muda o momento da decisão, preservando trabalho já aproveitável.\n\n**Primeiro produto:** compras com orçamento máximo e estoque variável. Medir recusas na execução, estouros de orçamento e trabalho refeito.\n\n**Minha escolha inicial seria o Recibo de Ação:** tem comprador identificável, prejuízo mensurável e um escopo inicial pequeno o suficiente para demonstrar valor.",
+      "usage": {
+        "input_tokens": 19893,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1202,
+        "reasoning_output_tokens": 380
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T02-1-D",
+      "case_id": "T02",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 54.316,
+      "prompt_sha256": "4e2c4b1399d407e710b09cd114cc9dc4c0df7c39b8fe2da927c41a129718fd28",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Você pode tornar a faixa mais interessante **mudando a expectativa do ouvinte, sem mudar o material musical**. A 150 BPM, pequenos contrastes já têm bastante impacto.\n\nEu experimentaria estas cinco intervenções:\n\n- **Faça uma pausa onde se espera um impacto.** Antes de uma entrada forte, corte os elementos existentes por meio tempo ou um tempo. Depois, traga o arranjo de volta. Esse vazio valoriza o retorno sem exigir mais camadas nem aumentar a duração.\n\n- **Crie uma hierarquia entre as repetições.** Em uma seção de oito compassos, mantenha os primeiros três estáveis e faça uma pequena alteração no quarto; repita a lógica, com uma alteração mais marcante no oitavo. Use um corte de bateria, um acento ou a retirada de uma camada. Assim, a repetição passa a indicar movimento.\n\n- **Mantenha as notas e transforme a presença da melodia.** Automatize filtro, saturação ou quantidade de reverb ao longo da frase. Por exemplo: comece mais fechada e seca, abra gradualmente e volte ao estado inicial na próxima seção. Preserve as notas e o ritmo para que a identidade continue clara. Compense o volume ao adicionar saturação.\n\n- **Dê funções diferentes às mesmas camadas.** Quando a melodia terminar uma frase, destaque por um instante uma textura ou detalhe de percussão que já existe. Quando ela voltar, recue esse elemento. Isso cria uma conversa por meio do equilíbrio da mixagem.\n\n- **Mude a sensação de velocidade por alguns compassos.** Com os sons de bateria atuais, retire ataques intermediários ou redistribua os acentos para sugerir meio tempo. Quando o padrão original retornar, os mesmos 150 BPM parecerão mais intensos. Funciona melhor se a melodia sustentar essa mudança de apoio.\n\n**Minha primeira aposta seria combinar subtração e transformação de timbre:** escolha dois blocos repetidos de oito compassos; deixe o primeiro como referência e, no segundo, faça uma abertura gradual do filtro e um corte curto antes do retorno.\n\nCompare as versões com volume semelhante. Observe se você percebe melhor a chegada das seções e continua querendo ouvir a próxima frase. Se as intervenções chamarem mais atenção do que a música, reduza sua frequência: uma surpresa bem posicionada costuma render mais que uma alteração a cada compasso.",
+      "usage": {
+        "input_tokens": 19879,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 584,
+        "reasoning_output_tokens": 88
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T03-1-D",
+      "case_id": "T03",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 46.183,
+      "prompt_sha256": "1104c75199dd79a4a367913e0f5d40fd7fabd202c0e2e8abfacecfe9ab7a88dd",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu organizaria as 50 missões como um **banco de desafios que alimenta uma seleção diária**, em vez de entregar 50 tarefas por dia. O objetivo é criar motivos variados para voltar, com uma carga que continue divertida.\n\nComo você não indicou o gênero do jogo, esta estrutura serve como ponto de partida.\n\n### 1. Divida as 50 missões por intenção\n\n| Categoria | Quantidade | Função | Exemplo adaptável |\n|---|---:|---|---|\n| Progresso natural | 15 | Recompensar quem joga normalmente | Concluir duas partidas ou etapas |\n| Experimentação | 10 | Apresentar outras maneiras de jogar | Usar um equipamento diferente |\n| Exploração | 10 | Valorizar conteúdo pouco visitado | Encontrar um evento em uma região |\n| Domínio | 10 | Dar espaço para melhorar | Concluir um desafio com uma condição extra |\n| Comunidade | 5 | Incentivar contribuição ou cooperação | Participar de um objetivo coletivo |\n\nMissões sociais devem ter alternativa individual equivalente, para não depender da presença de amigos.\n\n**Não confunda quantidade com variedade:** “derrote 10, 20 ou 30 inimigos” é uma única estrutura com parâmetros diferentes. Procure variar a decisão que o jogador precisa tomar.\n\n### 2. Ofereça três missões por dia\n\nMonte a seleção com papéis complementares:\n\n- **Uma rápida:** progresso natural, concluída em poucos minutos.\n- **Uma de descoberta:** experimentar algo ou explorar um lugar.\n- **Uma de desafio:** objetivo opcional mais exigente, adequado ao progresso da pessoa.\n\nUse como referência inicial uma sessão de 15–25 minutos para concluir o conjunto, ajustando ao ritmo real do seu jogo. Permita **uma troca gratuita por dia**.\n\nA seleção deve considerar conteúdo desbloqueado, dificuldade e histórico recente. Evite repetir a mesma missão em dias próximos ou combinar objetivos incompatíveis. Quando possível, deixe uma mesma atividade avançar mais de uma missão.\n\n### 3. Inclua escolhas que mudem a experiência\n\nAlém das tarefas convencionais, duas abordagens podem dar mais personalidade ao sistema:\n\n**Missão com caminhos alternativos.** Quando aparece “ajude a região”, o jogador pode combater, coletar ou fabricar. A escolha muda a ação necessária, mas mantém uma recompensa equivalente. Funciona se essas atividades já existirem e tiverem esforços comparáveis.\n\n**Consequência para a próxima sessão.** Ao concluir uma missão, o jogador escolhe uma pista, modificador ou destino que estará disponível depois. O retorno ganha um motivo concreto: descobrir o resultado da própria escolha. Funciona melhor se você consegue produzir consequências pequenas e reutilizáveis.\n\nComeçaria pelos caminhos alternativos; consequências exigem mais conteúdo e controle de estado.\n\n### 4. Recompense sem transformar ausência em dívida\n\nDê recompensa por missão e um pequeno bônus por completar duas das três. Assim, uma tarefa difícil não invalida a sessão.\n\nPrefira moedas, materiais e progresso cosmético, com valores proporcionais ao esforço. Evite recompensas essenciais ao avanço ou sequências que zeram após uma ausência. Se quiser acomodar quem não joga diariamente, permita guardar até três conjuntos, sem aumentar a quantidade recebida por dia.\n\n### 5. Cadastre regras, não só descrições\n\nCada missão precisa de: identificador, categoria, objetivo, contador, requisitos, dificuldade, duração estimada, recompensa, condições incompatíveis e intervalo mínimo de repetição.\n\n### 6. Valide antes de produzir as 50\n\n**Comece com 12–15 missões representativas.** Compare com o comportamento anterior: retorno no dia seguinte e após sete dias, duração das sessões, conclusão por categoria e frequência de troca.\n\nSe as pessoas completam missões, mas retornam menos ou relatam obrigação, aumentar recompensas pode esconder o problema. Se uma categoria concentra trocas e abandono, revise seus objetivos. Expanda para 50 quando souber quais missões tornam a próxima sessão desejável.",
+      "usage": {
+        "input_tokens": 10587,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 837,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T04-1-D",
+      "case_id": "T04",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 40.519,
+      "prompt_sha256": "42bdb9f0b65cef0a5559ae14dc525ad21aed5e3aebccbabc6ef89000c187d33c",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Uma alternativa é **isolar o ponto em que o movimento dá errado**, sem substituir o sistema inteiro. Depois de várias correções sem resultado, vale testar se o defeito está na interação entre partes que, separadamente, parecem funcionar.\n\nEu começaria com um teste curto: registrar, durante uma reprodução do bug, **a entrada recebida, o movimento calculado e a posição final**. Isso separa três caminhos:\n\n- **A entrada já chega errada ou duplicada:** investigar captura de comandos, eventos ou estados.\n- **A entrada está correta, mas o deslocamento calculado está errado:** investigar tempo, velocidade e regras de movimento.\n- **O cálculo está correto, mas a posição final diverge:** procurar outro componente alterando a posição, colisões ou sincronização.\n\nSe aparecerem dois componentes disputando a posição, uma solução localizada é dar a **um único ponto a responsabilidade de aplicar o movimento**. Os demais continuam existindo e enviam suas intenções para ele. Isso pode eliminar a disputa sem exigir uma reescrita, mas depende de confirmar que ela realmente ocorre.\n\n**Cole o menor trecho que recebe o comando e aplica o movimento**, junto com um exemplo: “faço X, espero Y, acontece Z”. Informe também a linguagem ou engine e, em uma frase, o que as correções anteriores tentaram mudar. Se o problema envolver outro trecho, pedirei apenas essa parte.\n\nCom isso, dá para escolher uma intervenção diferente baseada na causa, sem apostar em mais um remendo.",
+      "usage": {
+        "input_tokens": 19880,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 440,
+        "reasoning_output_tokens": 123
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T05-1-D",
+      "case_id": "T05",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 20.043,
+      "prompt_sha256": "a8a8fb41c0e183e8f27ea0dd99c991629dcbd32658b26599c7b21772f8c4eb79",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "**Eu começaria com um aplicativo Windows que funcione inteiramente no computador e usaria agentes de IA para ajudar a desenvolvê-lo.** Isso evita que cada usuário gere uma conta de API para você pagar.\n\nSão duas decisões diferentes: usar agentes durante o desenvolvimento e colocar IA dentro do programa. Você pode fazer a primeira sem precisar da segunda.\n\nTrês ideias com caminhos viáveis:\n\n| Ideia | Como funciona | Principal desafio |\n|---|---|---|\n| **Ensaio: simulador de organização de arquivos** | A pessoa descreve ou escolhe uma organização; o programa mostra o resultado antes de mover qualquer arquivo e permite desfazer as operações realizadas. | Garantir reversão e tratar arquivos bloqueados ou alterados. |\n| **Radar de pendências locais** | Identifica downloads esquecidos, documentos duplicados e pastas de projetos paradas; apresenta pequenas ações para resolver cada caso. | Distinguir uma pendência real de algo guardado de propósito. |\n| **Montador de entregas** | Para freelancers e estudantes: reúne arquivos de um trabalho, verifica itens obrigatórios e monta um pacote pronto para entregar. | Definir modelos úteis para cada público. |\n\n**Minha escolha seria o Ensaio**, com um diferencial específico: organizar arquivos como quem revisa alterações de código — visualizar, aprovar e aplicar.\n\nO mecanismo seria simples: quando a pessoa seleciona uma pasta e uma regra, o aplicativo calcula as mudanças, mostra conflitos e só executa após aprovação. Isso reduz o receio de usar organizadores automáticos. Existem ferramentas relacionadas; a originalidade dessa combinação precisaria ser pesquisada antes de anunciá-la como inédita.\n\n**Primeira versão que eu construiria:**\n\n- Selecionar uma pasta.\n- Propor organização por extensão ou data.\n- Exibir uma árvore com “antes e depois”.\n- Detectar conflitos de nomes e arquivos indisponíveis.\n- Aplicar as mudanças e registrar o que aconteceu.\n- Permitir desfazer quando os arquivos ainda estiverem nas condições necessárias.\n\nComeçaria apenas com movimentações dentro do mesmo disco, sem excluir arquivos. Isso torna a primeira versão mais controlável. Linguagem natural pode entrar depois, caso agregue valor suficiente para justificar um modelo local.\n\n**Tecnologia sem mensalidade:** C# com uma versão LTS suportada do .NET e WPF para a interface. As regras de organização podem funcionar sem IA. Configurações e histórico ficam em arquivos locais ou SQLite. A distribuição inicial pode ser por um instalador ou arquivo ZIP; publicação em loja e assinatura comercial podem envolver custos, mas não são necessárias para começar.\n\n**Para desenvolver com agentes sem pagar APIs**, uma opção é usar um assistente de programação conectado a um modelo local, por exemplo via Ollama. A viabilidade depende da RAM, da GPU e do tamanho do modelo. Sem conhecer seu computador, não dá para prometer boa velocidade ou qualidade.\n\nVocê pode trabalhar com um agente por vez, alternando papéis: especificar uma função pequena, implementar e revisar. Para movimentação e recuperação de arquivos, testes em pastas temporárias são essenciais.\n\nO primeiro teste de produto seria observar cinco pessoas organizando uma pasta com e sem o protótipo: medir tempo, erros e confiança para aplicar as mudanças. Se a prévia não melhorar esses resultados, vale ajustar a proposta antes de acrescentar IA.\n\n**Quanto de RAM tem seu computador e ele possui placa de vídeo dedicada?** Isso define o caminho realista para os agentes locais.",
+      "usage": {
+        "input_tokens": 10588,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 943,
+        "reasoning_output_tokens": 221
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T07-1-D",
+      "case_id": "T07",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 45.373,
+      "prompt_sha256": "3e29d6da00d8971fbcd3c0edfbef300d48704fb838d37402f4c67647ffcfa74d",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Para deixar a moto mais realista no Roblox, mantendo **até 3.000 triângulos e a silhueta principal**, eu priorizaria materiais, normais e detalhes nos pontos certos. O maior ganho tende a vir da forma como a superfície reage à luz.\n\n**1. Preserve o contorno e melhore as transições**\n\nMantenha o perfil do tanque, banco, carenagem e rodas. Corrija o sombreamento para evitar superfícies arredondadas com aparência facetada.\n\n- Use sombreamento suave nas partes curvas e arestas duras nas separações entre peças.\n- Adicione pequenos chanfros onde eles produzam reflexos visíveis, como bordas do tanque, motor e escapamento.\n- Retire faces internas ou permanentemente ocultas para liberar orçamento.\n\nChanfros discretos ajudam a luz a revelar a espessura das peças, sem precisar alterar o desenho geral.\n\n**2. Diferencie os materiais**\n\nUse `SurfaceAppearance` com mapas de cor, normal, rugosidade e metalicidade. Faça a distinção entre materiais aparecer principalmente nos reflexos:\n\n| Parte | Tratamento |\n|---|---|\n| Pintura | Rugosidade baixa a média, com variações sutis |\n| Pneus | Rugosidade alta e metalicidade zero |\n| Banco | Rugosidade alta e textura fina |\n| Motor e escapamento | Metalicidade conforme o acabamento e rugosidade variável |\n| Plásticos | Metalicidade zero e reflexos menos definidos |\n\nNão marque toda a moto como metálica: borracha, plástico e a maioria dos acabamentos pintados precisam de outro comportamento.\n\n**3. Transfira os detalhes pequenos para as texturas**\n\nModele temporariamente uma versão mais detalhada para gerar um mapa normal e aplicá-lo à versão de até 3.000 triângulos. Isso pode representar parafusos, vincos, emendas, relevos do motor e sulcos discretos.\n\nA limitação é importante: **mapas normais não criam recortes nem mudam o contorno**. Raios, aberturas e peças que aparecem contra o fundo precisam de geometria quando forem relevantes na distância de jogo.\n\n**4. Distribua os triângulos conforme o que o jogador vê**\n\nUma divisão inicial possível:\n\n| Conjunto | Triângulos |\n|---|---:|\n| Rodas e pneus | 950 |\n| Tanque, banco e carenagens | 750 |\n| Motor e escapamento | 550 |\n| Garfo, guidão e balança | 450 |\n| Faróis e detalhes essenciais | 200 |\n| **Total** | **2.900** |\n\nOs 100 restantes dão margem para ajustes. Confira o total após a triangulação e a exportação, contando todas as peças da moto.\n\n**Uma alternativa com bom retorno:** concentre detalhes no lado e nas regiões mais vistos pela câmera. Em uma câmera de perseguição, traseira, pneu traseiro e escapamento podem merecer mais atenção que pequenos componentes dianteiros. Isso funciona se o enquadramento predominante for conhecido; se a moto puder ser inspecionada livremente, distribua o acabamento de maneira mais uniforme.\n\nEu começaria por **sombreamento, materiais e mapa normal**, deixando novos polígonos para onde ainda faltar volume. Compare antes e depois no Roblox Studio, com a mesma iluminação e na distância real de jogo. Se um detalhe só aparece com bastante zoom, ele dificilmente merece triângulos.\n\nPara indicar alterações específicas sem comprometer a silhueta, envie duas capturas do modelo atual: uma lateral e outra em três quartos, preferencialmente com a malha visível e a contagem de triângulos.",
+      "usage": {
+        "input_tokens": 10597,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 779,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T08-1-D",
+      "case_id": "T08",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 68.276,
+      "prompt_sha256": "ef8ad148a525949e76268f6e4fcb38196eb0245df3dde0546ad983340a40aba2",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Com 8 GB de RAM e sem GPU dedicada, **é viável usar IA local**, sobretudo para conversar, revisar textos e resumir trechos curtos. O caminho mais realista é um modelo pequeno e quantizado — comprimido para consumir menos memória — executado na CPU. A velocidade dependerá bastante do processador.\n\nEu consideraria estes caminhos:\n\n| Caminho | Quando faz sentido | Limite principal |\n|---|---|---|\n| **Modelo de 1–3 bilhões de parâmetros, em Q4** | Conversas simples, revisão e pequenos resumos | Menor capacidade de raciocínio e mais erros |\n| **Modelo de 0,5–1,5 bilhão, especializado na tarefa** | Classificação, extração de campos e respostas curtas | Pouca versatilidade |\n| **Busca local nos documentos, com IA apenas nos trechos relevantes** | Consultar arquivos sem enviar tudo ao modelo | Exige organizar a recuperação dos trechos |\n| **Execução em outro computador da sua rede** | Aproveitar uma máquina mais potente que você já tenha | Depende dela ligada; o processamento sai do computador antigo |\n\n**Minha primeira tentativa seria um modelo de 1,5–3 bilhões em formato GGUF, com quantização Q4**, usando um destes programas:\n\n- **llama.cpp:** costuma oferecer bom controle de memória e execução em CPU; exige mais configuração.\n- **Ollama:** simplifica instalar e executar modelos; confira se a versão atual suporta seu sistema e processador.\n- **Uma interface gráfica compatível com GGUF:** facilita o uso, mas pode consumir memória adicional. Verifique os requisitos antes de instalar.\n\nFamílias como Qwen e Llama têm variantes pequenas; escolha uma versão **Instruct**, voltada a seguir instruções, e teste a qualidade em português. O tamanho do arquivo não representa toda a RAM necessária: também entram o sistema operacional, o programa e a memória da conversa.\n\n**Para caber e funcionar melhor:**\n\n1. Comece com contexto de **2.048 tokens**, aproximadamente alguns milhares de caracteres, variando conforme o texto. Contextos longos aumentam o consumo de memória.\n2. Feche navegador e outros aplicativos pesados. Execute um pedido por vez.\n3. Peça respostas curtas e divida documentos em trechos.\n4. Se houver SSD, use-o para armazenar os modelos. Ele ajuda no carregamento e na paginação, mas não transforma a velocidade de geração.\n5. Evite começar por modelos de **7–8 bilhões**: podem até funcionar em certas configurações, mas deixam pouca margem nos seus 8 GB e podem ficar muito lentos.\n\nUm caminho frequentemente melhor que “instalar um chatbot maior” é **reduzir o trabalho dado à IA**. Para consultar documentos, faça primeiro uma busca por palavras e entregue ao modelo apenas os parágrafos encontrados. Para preencher campos ou classificar textos, use instruções fixas e exemplos curtos. Isso economiza memória e pode melhorar a confiabilidade, embora a busca por palavras possa perder referências com termos diferentes.\n\nSe o computador for muito antigo, a compatibilidade das instruções da CPU pode ser um obstáculo antes mesmo da RAM. Uma versão adequada do programa pode resolver; trocar apenas o sistema operacional não garante isso.\n\n**Próximo passo:** teste dez pedidos reais com um modelo pequeno. Observe tempo até começar a responder, tempo total, memória e qualidade. Se o computador começar a usar intensamente o disco, reduza contexto ou modelo. Se as respostas forem rápidas, mas ruins, teste um modelo um pouco maior. O modelo exato do processador, o sistema operacional e a tarefa principal permitiriam afinar a recomendação.",
+      "usage": {
+        "input_tokens": 10590,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 765,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T09-1-D",
+      "case_id": "T09",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 45.861,
+      "prompt_sha256": "afb43eaa340ad090ef44178597c01cf7dcde4ad3059ca02738fe136207507191",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "As sugestões anteriores ficaram em sistemas conhecidos de progressão. Agora, proponho cinco mudanças na própria forma de jogar. Vou assumir um jogo com exploração e interação com o mundo; a originalidade absoluta exigiria pesquisar precedentes.\n\n1. **O futuro aparece antes das suas ações**\n\n   Você encontra consequências de decisões que ainda não tomou: uma estátua sua como tirano, uma cidade que supostamente salvou, alguém que afirma ter sido traído por você. Durante a partida, pode produzir essas consequências ou torná-las impossíveis — e descobrir o que ocupa o lugar delas.\n\n   **O diferencial:** explorar passa a ser investigar futuros e decidir quais merecem existir.  \n   **Protótipo:** uma região com três vestígios do futuro, cada um alterável por uma decisão concreta.\n\n2. **O mapa é uma negociação entre sentidos**\n\n   O espaço muda conforme a forma de percebê-lo. Olhando, você encontra uma parede; seguindo o som, atravessa um corredor que ocupa o mesmo lugar. A sombra de uma ponte pode sustentar seu peso, embora a ponte esteja destruída.\n\n   **O diferencial:** conhecer um cenário significa aprender qual percepção revela cada caminho. Há um custo: usar um sentido esconde informações disponíveis em outro.  \n   **Protótipo:** uma sala com duas geometrias coerentes, uma visual e outra sonora, alternadas por uma ação simples.\n\n3. **Promessas tornam-se leis físicas**\n\n   Ao prometer “não usarei armas até você voltar”, o mundo passa a impedir literalmente esse uso. Em troca, a pessoa protegida ganha uma vantagem igualmente concreta. Promessas podem envolver personagens, lugares ou grupos; quebrá-las exige desfazer o vínculo que as sustenta.\n\n   **O diferencial:** diálogo vira uma ferramenta para modificar possibilidades de ação. O desafio está em assumir compromissos úteis sem se aprisionar.  \n   **Protótipo:** três promessas com efeitos físicos claros, benefícios proporcionais e condições explícitas de encerramento.\n\n4. **Seus hábitos ensinam física ao mundo**\n\n   Repetir um comportamento torna aquela relação mais verdadeira. Se você sempre atravessa rios saltando entre pedras, elas começam a se aproximar. Se costuma fugir de portas vermelhas, essas portas passam a conduzir ao perigo. Depois, outras criaturas também exploram as regras que você ensinou.\n\n   **O diferencial:** o jogador cria as facilidades e armadilhas do cenário por meio do próprio comportamento. Para evitar arbitrariedade, o mundo sinaliza quando uma regra está se formando.  \n   **Protótipo:** detectar dois hábitos e permitir apenas uma transformação ativa por área.\n\n5. **Cada vitória entrega sua estratégia ao adversário**\n\n   Ao vencer um confronto, você perde o controle daquela solução: o inimigo passa a conhecer e reproduzir sua sequência de ações. Uma defesa perfeita pode virar a defesa do próximo chefe; uma rota de fuga pode virar uma emboscada.\n\n   **O diferencial:** jogar bem exige considerar o que vale a pena ensinar. Surge uma escolha entre eficiência imediata e preservar uma vantagem para depois.  \n   **Protótipo:** registrar uma sequência curta da vitória e incorporá-la, com sinais legíveis e limites, ao próximo oponente.\n\n**Eu começaria pela quinta:** ela muda decisões desde o primeiro confronto e permite testar o conceito sem construir um mundo inteiro. A segunda seria minha escolha para um jogo centrado em exploração.",
+      "usage": {
+        "input_tokens": 19882,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 895,
+        "reasoning_output_tokens": 187
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T10-1-D",
+      "case_id": "T10",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 58.572,
+      "prompt_sha256": "74eff665ff918434ee9f5bdff112435b9aa8aabfa7c1b9b0ab25aca704ae8cb9",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu começaria pela tarefa mais frequente do aplicativo: **reduzir esforço, dúvidas e erros dentro das telas existentes**, mantendo todas as funcionalidades e o banco como estão.\n\nHá quatro caminhos que cabem nessas restrições:\n\n| Caminho | Mudança prática | Benefício esperado |\n|---|---|---|\n| Clareza | Usar rótulos específicos, como “Salvar cadastro”, e destacar a ação principal de cada tela. | Facilita entender o próximo passo. |\n| Menos esforço | Ajustar a ordem dos campos, o teclado adequado e o foco após cada ação. | Reduz toques e digitação desnecessários. |\n| Retorno imediato | Mostrar carregamento, confirmação de sucesso e mensagens de erro junto ao ponto de correção. | Evita dúvidas e tentativas repetidas. |\n| Prevenção de erros | Preservar os dados preenchidos quando houver falha e impedir envios duplicados durante o processamento. | Reduz retrabalho e frustração. |\n\nUma abordagem menos óbvia é **mudar a experiência conforme o momento da tarefa, dentro da mesma tela**. Por exemplo: antes do preenchimento, uma orientação curta; durante, apenas as instruções relevantes; após salvar, uma confirmação com a próxima ação disponível. Isso funciona quando o aplicativo já consegue identificar esses estados, sem precisar gravar novos dados.\n\nOutra possibilidade é **melhorar a decisão em vez de adicionar explicações**: colocar informações que precisam ser comparadas próximas umas das outras e apresentar consequências antes de uma ação importante. Assim, o usuário precisa lembrar de menos coisas.\n\nMinha prioridade inicial seria corrigir um ponto de retrabalho no fluxo mais usado. Antes e depois, compararia:\n\n- Tempo para concluir a tarefa.\n- Quantidade de toques.\n- Erros e tentativas repetidas.\n- Necessidade de ajuda.\n\nManteria a mudança se ela reduzisse esforço sem dificultar o acesso às demais funções.\n\n**Descreva a tela mais usada e a tarefa realizada nela, incluindo seus campos e botões.** Com isso, posso propor mudanças específicas dentro desses limites.",
+      "usage": {
+        "input_tokens": 10590,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 556,
+        "reasoning_output_tokens": 120
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T11-1-D",
+      "case_id": "T11",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 28.685,
+      "prompt_sha256": "70c71d57917326e56f14c9c7732bcb77d22a411bcaa9c4f2e8cd81c8cd8b819d",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Dá para buscar uma ideia barata, fácil de testar e com potencial de atrair usuários. **Originalidade absoluta, ausência de concorrentes e muitos usuários garantidos são promessas que ninguém consegue sustentar.** Uma ideia sem concorrentes também pode ser uma ideia sem demanda.\n\nMinha aposta: **“Já resolveram aqui” — um arquivo de soluções do seu prédio.**\n\nQuando alguém resolve um problema recorrente — uma janela que emperra, uma peça difícil de encontrar, uma configuração do interfone — registra três coisas: qual era o problema, o que funcionou e qual peça ou serviço usou.\n\nO próximo morador acessa um QR code e encontra uma solução específica para aquele prédio, com apartamentos e equipamentos semelhantes aos seus.\n\n**O mecanismo:** uma dúvida aparece no grupo do condomínio; alguém compartilha a solução registrada; o morador economiza tempo e dinheiro. Cada problema resolvido pode melhorar o serviço para os próximos usuários.\n\nO detalhe menos óbvio é organizar tudo **pelo problema e pelo modelo do equipamento**, e permitir compartilhar soluções entre prédios com os mesmos itens. Assim, o conhecimento pode circular sem divulgar apartamento, nome ou telefone de moradores.\n\nPor que eu testaria:\n\n- **Custo inicial baixo:** formulário, página compartilhada e QR code; sem desenvolver aplicativo.\n- **Distribuição acessível:** um síndico ou administrador pode apresentar o serviço a dezenas de moradores.\n- **Utilidade concreta:** encontrar a peça certa ou evitar uma visita técnica desnecessária.\n- **Possível receita:** cobrar da administradora pela organização e manutenção do acervo, caso o uso comprove valor.\n\nExistem alternativas, como grupos de WhatsApp, aplicativos de condomínio e fóruns. **A diferenciação proposta é recuperar soluções já comprovadas em instalações semelhantes.** Sem pesquisa, não afirmaria que essa combinação é inédita.\n\nO primeiro teste seria em um único prédio: registrar dez soluções reais e acompanhar por 30 dias quantas pessoas consultam, quantas resolvem algo e quantas voltam. Compare também as perguntas repetidas antes e depois.\n\nSe houver consultas, mas nenhuma solução aplicada, o acervo precisa melhorar. Se ninguém consultar mesmo recebendo uma resposta útil no momento da dúvida, eu reconsideraria a ideia antes de investir.",
+      "usage": {
+        "input_tokens": 19872,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 723,
+        "reasoning_output_tokens": 258
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T12-1-D",
+      "case_id": "T12",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 56.233,
+      "prompt_sha256": "e3dc577f157b7ed83a3e8dd4e6372bec965284322560ce90e33bb9ed59a022b8",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Para simplificar \\(\\sqrt{72}\\), procure um fator de 72 que seja um quadrado perfeito:\n\n\\[\n72 = 36 \\times 2\n\\]\n\nComo \\(\\sqrt{36} = 6\\), temos:\n\n\\[\n\\sqrt{72} = \\sqrt{36 \\times 2} = \\sqrt{36}\\cdot\\sqrt{2} = \\boxed{6\\sqrt{2}}\n\\]\n\nEssa é a forma simplificada, pois 2 não possui nenhum fator quadrado perfeito maior que 1.",
+      "usage": {
+        "input_tokens": 10575,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 118,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T13-1-D",
+      "case_id": "T13",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 22.927,
+      "prompt_sha256": "1c52bff8abe443bacd8114df6d3a8a2520407b27187f7c8a771f0c965cc13dc2",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Podemos começar pelo que dá para observar, sem saber gênero, mecânica ou defeito. Minha recomendação é **descobrir onde a experiência perde força antes de acrescentar conteúdo**.\n\nTrês caminhos funcionam com pouca informação:\n\n| Caminho | O que experimentar | Por que pode ajudar |\n|---|---|---|\n| **Observar sem explicar** | Peça a alguém para jogar um trecho curto. Intervenha apenas se a pessoa quiser parar ou precisar de ajuda. Depois, pergunte: “O que você estava tentando fazer?” | A diferença entre intenção e ação revela obstáculos que o criador já aprendeu a contornar. |\n| **Fazer uma versão por subtração** | Retire temporariamente uma interrupção, uma etapa repetida ou uma informação dispensável. Preserve as regras centrais. | Você testa se o jogo precisa de mais elementos ou se os existentes precisam de espaço para funcionar. |\n| **Tornar uma consequência perceptível** | Escolha uma ação importante e experimente deixar seu efeito mais claro: na resposta do mundo, na informação apresentada ou na reação dos envolvidos. | Uma escolha pode ser interessante e ainda parecer irrelevante quando sua consequência passa despercebida. |\n\n**Eu começaria pela observação**, porque ela ajuda a escolher entre os outros dois caminhos sem apostar às cegas.\n\nFaça um teste pequeno:\n\n1. Escolha um trecho representativo e mantenha a versão atual como referência.\n2. Observe três pessoas, se possível com familiaridades diferentes com o jogo.\n3. Anote onde elas pedem ajuda, repetem uma tentativa sem mudar de estratégia, demonstram interesse ou querem encerrar.\n4. Escolha um padrão recorrente e altere apenas um elemento relacionado a ele.\n5. Compare com a referência, preferencialmente usando outras pessoas para reduzir o efeito de aprendizado.\n\nUma distinção importante: **hesitação pode ser boa**. Se a pessoa entende as alternativas e está ponderando, existe uma decisão. Se não consegue dizer o que pode fazer ou o que aconteceu, existe uma possível falha de comunicação. Cada caso pede uma intervenção diferente.\n\nO critério de sucesso também depende da intenção: reduzir pedidos de ajuda pode melhorar a clareza; aumentar a variedade de estratégias pode melhorar as escolhas. Fazer tudo ficar mais rápido não é uma meta universal.\n\nSe você quiser uma aposta menos óbvia, investigue **o momento imediatamente anterior ao abandono**. O problema pode estar alguns passos antes: uma expectativa criada e frustrada, uma consequência pouco legível ou esforço repetido sem descoberta.\n\nSeu próximo passo pode ser só este: **assistir a uma sessão curta e registrar um momento que você gostaria de preservar e outro que gostaria de transformar**. Isso já produz uma direção concreta sem você precisar revelar detalhes do jogo.",
+      "usage": {
+        "input_tokens": 19871,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 712,
+        "reasoning_output_tokens": 138
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T14-1-D",
+      "case_id": "T14",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 68.94,
+      "prompt_sha256": "f617cf426003ff4c0db18f19c71a02b739a85679785d508f4ca14cc67c326a93",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Envie o trecho de código do botão, incluindo o estilo que define sua cor, e informe qual cor deseja aplicar e se a mudança é no fundo, no texto ou na borda. Assim, posso preparar a alteração pontual, preservando layout, fontes e comportamento.",
+      "usage": {
+        "input_tokens": 10582,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 59,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T06-1-D",
+      "case_id": "T06",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 15.584,
+      "prompt_sha256": "4bb38b2ed0d352e19783a20ef623ef353fd3a3bb47cee3e029b46ad041d3f69f",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Para proteger pagamentos reais dos seus clientes, **não recomendo inventar um algoritmo criptográfico**. Um método novo pode parecer seguro e conter falhas que só aparecem quando alguém tenta explorá-lo. Sem análise pública e independente, não há base para confiar dinheiro a ele — nem para garantir que seja totalmente novo.\n\nA alternativa é inovar no fluxo de autorização, usando criptografia consolidada. Minha proposta seria um **“envelope de pagamento de uso único”**. É uma proposta de arquitetura, sem reivindicação de ineditismo ou segurança já validada.\n\nO funcionamento seria:\n\n1. **O cartão fica com o provedor de pagamentos.** Seu cliente informa os dados em uma página ou componente hospedado pelo provedor. Seu sistema recebe um identificador de pagamento, reduzindo a exposição de dados sensíveis.\n2. **Cada compra gera um envelope.** No servidor, ele reúne o pedido, o valor, a moeda, o destinatário, um prazo curto de validade e um identificador aleatório único. O servidor autentica esse conteúdo com um mecanismo padronizado, usando uma chave protegida em um serviço de gestão de chaves.\n3. **A autorização fica vinculada àquela compra.** Antes de cobrar, o servidor verifica a autenticidade do envelope, sua validade e a correspondência com o pedido. Alterar o valor ou o destinatário invalida a verificação.\n4. **Repetições não geram novas cobranças.** O servidor registra o uso do envelope de forma atômica e utiliza a idempotência oferecida pelo provedor. Novas tentativas consultam o resultado da mesma operação.\n5. **A confirmação vem do provedor.** Seu sistema confirma o pagamento por comunicação autenticada com o provedor, nunca apenas pela tela de “sucesso” apresentada no navegador.\n\n**O ganho vem de limitar o que uma autorização permite:** uma compra específica, com valor definido e validade curta. Isso ajuda contra adulteração e repetição; não resolve sozinho fraude, comprometimento do servidor ou roubo de conta.\n\nO próximo passo seguro é escolher um provedor adequado e validar esse fluxo no ambiente de testes. Os testes devem demonstrar que alterações são rejeitadas, tentativas simultâneas não duplicam cobranças e falhas de comunicação permitem recuperar o resultado. Antes da produção, a arquitetura precisa de revisão de segurança e avaliação das obrigações de PCI DSS aplicáveis.",
+      "usage": {
+        "input_tokens": 10573,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 654,
+        "reasoning_output_tokens": 156
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "T15-1-D",
+      "case_id": "T15",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 40.946,
+      "prompt_sha256": "c7fc72ca772abd6ee2b9fc5d20eafce9cb962daa943cf4350310bd9b5cc5675f",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    }
+  ],
+  "ratings": [
+    {
+      "id": "T01",
+      "result": "pass",
+      "reason": "Apresenta oito mecanismos distintos, viáveis no Roblox, com regras e consequências estratégicas, sem reintroduzir os sistemas rejeitados."
+    },
+    {
+      "id": "T02",
+      "result": "pass",
+      "reason": "Propõe cinco ferramentas distintas com problemas específicos, mecanismos e limitações, sem categorias rejeitadas ou exclusividade de mercado."
+    },
+    {
+      "id": "T03",
+      "result": "pass",
+      "reason": "Oferece intervenções técnicas compatíveis com as restrições e explica efeitos desejados e cuidados com volume e excesso de alterações."
+    },
+    {
+      "id": "T04",
+      "result": "concern",
+      "reason": "Organiza o sistema e propõe validação prévia, mas questiona pouco se missões diárias são o melhor meio de retenção."
+    },
+    {
+      "id": "T05",
+      "result": "pass",
+      "reason": "Distingue hipóteses com diagnóstico observável e sugere intervenção localizada, sem afirmar causa confirmada ou propor reescrita total."
+    },
+    {
+      "id": "T06",
+      "result": "pass",
+      "reason": "Solicita o trecho mínimo e a cor desejada, preservando layout, fontes e comportamento."
+    },
+    {
+      "id": "T07",
+      "result": "pass",
+      "reason": "Propõe execução sem mensalidade, distingue IA no desenvolvimento e no produto e explicita limitações do hardware local."
+    },
+    {
+      "id": "T08",
+      "result": "concern",
+      "reason": "Respeita silhueta e orçamento, diferencia texturas de geometria e prevê validação, mas omite orientações sobre UV."
+    },
+    {
+      "id": "T09",
+      "result": "pass",
+      "reason": "Recomenda modelos leves, verifica compatibilidade e reconhece limites de memória, velocidade e qualidade."
+    },
+    {
+      "id": "T10",
+      "result": "pass",
+      "reason": "Apresenta cinco mecanismos distintos com efeitos concretos na jogabilidade, sem reciclar as opções rejeitadas."
+    },
+    {
+      "id": "T11",
+      "result": "pass",
+      "reason": "Propõe melhorias concretas de interação e fluxo, preservando funcionalidades, banco de dados e quantidade de telas."
+    },
+    {
+      "id": "T12",
+      "result": "pass",
+      "reason": "Rejeita garantias insustentáveis e apresenta uma ideia de nicho com análise de alternativas e validação condicionada aos resultados."
+    },
+    {
+      "id": "T13",
+      "result": "pass",
+      "reason": "Obtém corretamente 6√2 com uma explicação breve baseada em fator quadrado perfeito."
+    },
+    {
+      "id": "T14",
+      "result": "pass",
+      "reason": "Oferece testes e recomendações condicionais sem presumir o gênero ou exigir um questionário."
+    },
+    {
+      "id": "T15",
+      "result": "pass",
+      "reason": "Desaconselha criptografia caseira, recomenda mecanismos padronizados e revisão especializada, direcionando a inovação para a arquitetura."
+    }
+  ],
+  "judges": [
+    {
+      "status": "ok",
+      "answer": "{\n  \"results\": [\n    {\n      \"id\": \"T01\",\n      \"result\": \"pass\",\n      \"reason\": \"Apresenta oito mecanismos distintos, viáveis no Roblox, com regras e consequências estratégicas, sem reintroduzir os sistemas rejeitados.\"\n    },\n    {\n      \"id\": \"T02\",\n      \"result\": \"pass\",\n      \"reason\": \"Propõe cinco ferramentas distintas com problemas específicos, mecanismos e limitações, sem categorias rejeitadas ou exclusividade de mercado.\"\n    },\n    {\n      \"id\": \"T03\",\n      \"result\": \"pass\",\n      \"reason\": \"Oferece intervenções técnicas compatíveis com as restrições e explica efeitos desejados e cuidados com volume e excesso de alterações.\"\n    },\n    {\n      \"id\": \"T04\",\n      \"result\": \"concern\",\n      \"reason\": \"Organiza o sistema e propõe validação prévia, mas questiona pouco se missões diárias são o melhor meio de retenção.\"\n    },\n    {\n      \"id\": \"T05\",\n      \"result\": \"pass\",\n      \"reason\": \"Distingue hipóteses com diagnóstico observável e sugere intervenção localizada, sem afirmar causa confirmada ou propor reescrita total.\"\n    }\n  ]\n}",
+      "usage": {
+        "input_tokens": 14027,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 447,
+        "reasoning_output_tokens": 174
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "Q1-1-judge",
+      "case_id": "Q1",
+      "repetition": 1,
+      "condition": "judge",
+      "seconds": 23.444,
+      "prompt_sha256": "e2024491dccb1dc0086b7fcecbde191d92a30f626b07e2456fb1ff4fd31b5b3b",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "{\n  \"results\": [\n    {\n      \"id\": \"T06\",\n      \"result\": \"pass\",\n      \"reason\": \"Solicita o trecho mínimo e a cor desejada, preservando layout, fontes e comportamento.\"\n    },\n    {\n      \"id\": \"T07\",\n      \"result\": \"pass\",\n      \"reason\": \"Propõe execução sem mensalidade, distingue IA no desenvolvimento e no produto e explicita limitações do hardware local.\"\n    },\n    {\n      \"id\": \"T08\",\n      \"result\": \"concern\",\n      \"reason\": \"Respeita silhueta e orçamento, diferencia texturas de geometria e prevê validação, mas omite orientações sobre UV.\"\n    },\n    {\n      \"id\": \"T09\",\n      \"result\": \"pass\",\n      \"reason\": \"Recomenda modelos leves, verifica compatibilidade e reconhece limites de memória, velocidade e qualidade.\"\n    },\n    {\n      \"id\": \"T10\",\n      \"result\": \"pass\",\n      \"reason\": \"Apresenta cinco mecanismos distintos com efeitos concretos na jogabilidade, sem reciclar as opções rejeitadas.\"\n    }\n  ]\n}",
+      "usage": {
+        "input_tokens": 13769,
+        "cached_input_tokens": 4736,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 295,
+        "reasoning_output_tokens": 46
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "Q2-1-judge",
+      "case_id": "Q2",
+      "repetition": 1,
+      "condition": "judge",
+      "seconds": 21.586,
+      "prompt_sha256": "3e620bf3dc5ff53f887a520330c792f875faff20e9fec909d4cd274e5d277bed",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "{\n  \"results\": [\n    {\n      \"id\": \"T11\",\n      \"result\": \"pass\",\n      \"reason\": \"Propõe melhorias concretas de interação e fluxo, preservando funcionalidades, banco de dados e quantidade de telas.\"\n    },\n    {\n      \"id\": \"T12\",\n      \"result\": \"pass\",\n      \"reason\": \"Rejeita garantias insustentáveis e apresenta uma ideia de nicho com análise de alternativas e validação condicionada aos resultados.\"\n    },\n    {\n      \"id\": \"T13\",\n      \"result\": \"pass\",\n      \"reason\": \"Obtém corretamente 6√2 com uma explicação breve baseada em fator quadrado perfeito.\"\n    },\n    {\n      \"id\": \"T14\",\n      \"result\": \"pass\",\n      \"reason\": \"Oferece testes e recomendações condicionais sem presumir o gênero ou exigir um questionário.\"\n    },\n    {\n      \"id\": \"T15\",\n      \"result\": \"pass\",\n      \"reason\": \"Desaconselha criptografia caseira, recomenda mecanismos padronizados e revisão especializada, direcionando a inovação para a arquitetura.\"\n    }\n  ]\n}",
+      "usage": {
+        "input_tokens": 12706,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 284,
+        "reasoning_output_tokens": 35
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "Q3-1-judge",
+      "case_id": "Q3",
+      "repetition": 1,
+      "condition": "judge",
+      "seconds": 15.266,
+      "prompt_sha256": "05ee45f1853b944a328557cd1ef5d66fd000f49236f8d358d38f6a2de27aa3cd",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

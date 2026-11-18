@@ -36,12 +36,14 @@ The pooled panel has eight task families, two repetitions and 48 answers across 
 
 D scored higher on originality, diversity, utility and adherence in this batch. It remained weaker on feasibility. Input tokens fell 21.0% versus B in the new batch, but pooled D used 18,176 versus 17,981 for B. The CLI totals include host context. The automated judge flagged no critical failures across the 48-answer panel.
 
+The [core regression check](../benchmarks/evidence/d-core-checks.json) covers the exact revised-D entrypoint on all 15 canonical tasks. It reran the 13 missing tasks and reused T06 and T15 from the same instruction digest. Three automated rubric checks returned 13 passes, two concerns and zero critical failures. The concerns were limited reframing on retention and omitted UV guidance on a Blender-to-Roblox optimization task. The original corrected core comparison remains the source of A/B/C scores. These D checks are rubric checks, separate from preference comparisons.
+
 ## Release checklist
 
 | Gate | Status |
 |---|---|
 | Five or more repeated task families and provisional 60% preference | Met in automated screening, including the newest batch. Human confirmation pending. |
-| Safety, scope, arithmetic, resumed context and skill collaboration | Targeted checks passed. The full 15-case core run used C. Full revised-D core rerun remains open. |
+| Safety, scope, arithmetic, resumed context and skill collaboration | Targeted checks passed. Revised D ran all 15 core tasks with no automated critical flag and two noncritical gaps. |
 | Unit tests, Agent Skills structure, CI and archive digest | Verified. |
 | Native Codex | Explicit invocation verified. Automatic body loading unverified. |
 | Native Claude | Blocked on credits. Manual prompts ready. |
