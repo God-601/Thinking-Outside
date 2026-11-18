@@ -1,5 +1,7 @@
 # 1.0 release gate — do not ship on structural tests alone
 
+See the [final candidate audit](final-validation.md) and [installation guide](install-candidate.md). The automated benchmark, human review packets and distribution ZIP are separate deliverables. Completed structural checks do not satisfy the human or compatibility gates.
+
 - [ ] Canonical thinking-outside directory passes the official Agent Skills validator.
 - [ ] Unit and structural CI pass.
 - [ ] Confirm actual installation and activation in Codex and Claude Code; name versions/models.

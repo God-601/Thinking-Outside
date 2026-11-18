@@ -2,6 +2,8 @@
 
 ## Unreleased candidate
 
+- Record the five-family final comparison, Codex integration check and review handoff. Validate a local candidate installation ZIP.
+
 - Refine hybrid D's exploration and measurable tests. Record repeated fresh comparisons and a successful explicit Codex activation probe.
 - Add experimental hybrid D with Explore, Evaluate and Evolve. Record matched Codex comparisons and retain the existing installed entrypoint.
 

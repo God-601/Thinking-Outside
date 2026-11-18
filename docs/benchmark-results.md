@@ -48,3 +48,5 @@ The candidate missed the 60% creative preference target against B and used more 
 The [regression investigation](creativity-regression.md) isolates two instruction changes and records why neither entered the runtime skill.
 
 The [Hybrid D experiment](hybrid-d.md) compares A/B/C/D in a small screen and three fresh cases. D remains experimental.
+
+The [final candidate audit](final-validation.md) covers five repeated families, client probes, human-review preparation and the candidate ZIP.
