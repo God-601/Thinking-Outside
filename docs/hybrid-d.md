@@ -48,3 +48,5 @@ The [fresh plan](../benchmarks/hybrid-fresh.json) completed 12 answers and three
 D won the coral case, tied on manual production and lost the library case against each control. Its library response left the anonymous abandonment metric underspecified. No fresh response was flagged as critical. D matched B's originality and C's diversity. It used 7.9% fewer input tokens than C and 14.3% more than B. Measured tokens include host context and times reflect concurrent CLI runs.
 
 Fresh creative preference reached 50% against each control, below 60%. Keep D and its evidence as experimental assets. Keep C as the installed entrypoint pending a repeatable quality improvement, blind human review, native compatibility checks and maintainer approval. This experiment supports the hybrid architecture's potential and the observed cost reduction against C. It does not establish gains in all 14 dimensions.
+
+The [follow-up revision](d-revision.md) tests measurable baselines, targeted exploration and explicit Codex activation.

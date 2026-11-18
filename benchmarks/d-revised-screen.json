@@ -1,0 +1,25 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 1,
+  "order_seed": 6213,
+  "workers": 2,
+  "timeout": 300,
+  "output": "runs/d-revised-screen",
+  "conditions": {
+    "D_old": "instructions/D.md",
+    "D": "instructions/D-revised.md"
+  },
+  "cases": [
+    {
+      "id": "N01",
+      "creative": true,
+      "prompt": "Uma biblioteca municipal tem um terminal acessível para 40 usuários por dia. Precisamos diminuir desistências sem instalar software, cobrar, exigir celular ou reduzir o tempo de quem usa tecnologia assistiva. Proponha quatro mecanismos diferentes com teste barato.",
+      "rubric": [
+        "Preservar acessibilidade, privacidade e tempo assistivo",
+        "Distinguir o que muda na chegada, na ocupação ou na recuperação de vagas",
+        "Explicar como medir desistências sem coletar dados pessoais"
+      ]
+    }
+  ]
+}

@@ -2,6 +2,7 @@
 
 ## Unreleased candidate
 
+- Refine hybrid D's exploration and measurable tests. Record repeated fresh comparisons and a successful explicit Codex activation probe.
 - Add experimental hybrid D with Explore, Evaluate and Evolve. Record matched Codex comparisons and retain the existing installed entrypoint.
 
 - Compare mechanisms by causal dependency and require task-specific details that make alternatives actionable.

@@ -2,8 +2,8 @@
 
 | Client | Status |
 |---|---|
-| Codex CLI 0.169.0 | Skill catalog discovery observed. Native full-instruction loading and automatic activation remain unverified. Controlled comparisons explicitly supply the instructions. |
-| Claude Code 1.0.83 | Behavioral test unavailable. The CLI reported insufficient credits in the prior attempt. |
+| Codex CLI 0.169.0 | Explicit activation confirmed for an isolated revised D fixture. A direct math probe stayed direct. Automatic creative selection remains unverified. See the [activation evidence](../benchmarks/evidence/d-native-probe.json). |
+| Claude Code 1.0.83 | Native activation unavailable. The fresh live probe returned insufficient credit. |
 | OpenCode | Untested host behavior |
 | Cursor | Untested host behavior |
 

@@ -1,0 +1,69 @@
+{
+  "cli": "codex-cli 0.169.0",
+  "model": "gpt-6.1-sol",
+  "started_utc": "2026-11-18T17:29:59.567785+00:00",
+  "fixture_sha256": "7f3c2d3079260ace5bbaad15ce2d29514fda6596633e4e5bc383ee268761f75e",
+  "expected_marker": "6b46d0bacc4282b2",
+  "cases": [
+    {
+      "id": "explicit",
+      "prompt": "Use $thinking-outside e forneca apenas a resposta ao teste de ativacao da propria skill."
+    },
+    {
+      "id": "direct",
+      "prompt": "Quanto e 23 vezes 4? Responda apenas com o numero."
+    }
+  ],
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "6b46d0bacc4282b2",
+      "usage": {
+        "input_tokens": 14109,
+        "cached_input_tokens": 12160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "native_context": {
+        "sha256": "77e6a82673cc23077a92a7d5d6a113b74b5dfd8796b9f9fb45432ab4154739fe",
+        "chars": 30677,
+        "full_skill_in_prompt": false
+      },
+      "id": "explicit-1-native",
+      "case_id": "explicit",
+      "repetition": 1,
+      "condition": "native",
+      "seconds": 12.444,
+      "prompt_sha256": "998fe606aa0e04b832b265925c6f89db906bc0622ebbe0efb94346d75f8cff93",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "status": "ok",
+      "answer": "92",
+      "usage": {
+        "input_tokens": 13559,
+        "cached_input_tokens": 12160,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 5,
+        "reasoning_output_tokens": 0
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "native_context": {
+        "sha256": "e3406c51f68d963fd0d241e3f73f8f6ccfdf5eee635b19b53b9769fb9d5829fb",
+        "chars": 30639,
+        "full_skill_in_prompt": false
+      },
+      "id": "direct-1-native",
+      "case_id": "direct",
+      "repetition": 1,
+      "condition": "native",
+      "seconds": 26.679,
+      "prompt_sha256": "32a81ced8161228bd34fb608a6b2ba58ffdb4486b98c64b21775969db64924c6",
+      "instruction_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

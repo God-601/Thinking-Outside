@@ -1,0 +1,39 @@
+{
+  "model": "gpt-6.1-sol",
+  "effort": "medium",
+  "repetitions": 2,
+  "order_seed": 6219,
+  "workers": 4,
+  "timeout": 300,
+  "output": "runs/d-revised-fresh",
+  "conditions": {
+    "A": null,
+    "B": "instructions/B.md",
+    "C": "instructions/C_candidate.md",
+    "D": "instructions/D-revised.md"
+  },
+  "cases": [
+    {
+      "id": "R01",
+      "creative": true,
+      "prompt": "Uma cooperativa recebe pedidos offline em seis pontos. Depois, os pedidos chegam misturados, às vezes repetidos, e há só uma planilha e 20 minutos por dia para conferência. Sem cadastro de clientes, QR code, servidor ou ampliar a equipe, proponha quatro mecanismos diferentes para distinguir cópia de uma segunda compra legítima. Dê um teste barato para os dois melhores.",
+      "rubric": [
+        "Cada mecanismo usa evidência ou coordenação diferente, não apenas números com formatos distintos",
+        "Distingue duplicata de segunda compra e mantém pedidos ambíguos reversíveis",
+        "Preserva privacidade, operação offline e limite de tempo",
+        "Define medida, referência e custo dos falsos positivos e negativos no teste"
+      ]
+    },
+    {
+      "id": "R02",
+      "creative": true,
+      "prompt": "Um jogo de mesa cooperativo para quatro pessoas dura 15 minutos. Quem joga melhor costuma decidir pelo grupo. Mantenha o objetivo comum e a duração. Sem papéis secretos, turnos individuais obrigatórios, votação ou punição por conversar, sugira quatro mecanismos para distribuir decisões. Explique o novo incentivo e um teste com papel para as alternativas mais fortes.",
+      "rubric": [
+        "Quatro decisões mudam por rotas diferentes, sem introduzir um mecanismo vedado por outro nome",
+        "Os mecanismos precisam caber em um jogo cooperativo de 15 minutos",
+        "Teste compara participação real e qualidade das decisões com a situação inicial",
+        "Explica onde o participante dominante ainda consegue conduzir tudo"
+      ]
+    }
+  ]
+}

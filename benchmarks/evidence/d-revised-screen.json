@@ -1,0 +1,167 @@
+{
+  "review_kind": "automated_same_model_anonymous_single_judge",
+  "release_approval": false,
+  "means": {
+    "D": {
+      "utility": 4.5,
+      "originality": 3,
+      "diversity": 4.5,
+      "feasibility": 4.5,
+      "adherence": 4.5,
+      "weighted": 4.2,
+      "critical_failures": 0,
+      "seconds": 101.245,
+      "input_tokens": 10607,
+      "output_tokens": 1044
+    },
+    "D_old": {
+      "utility": 4.5,
+      "originality": 3,
+      "diversity": 4.5,
+      "feasibility": 4.5,
+      "adherence": 4.5,
+      "weighted": 4.2,
+      "critical_failures": 0,
+      "seconds": 58.221,
+      "input_tokens": 10579,
+      "output_tokens": 916
+    }
+  },
+  "comparisons": {
+    "D_vs_D_old": {
+      "wins": 0,
+      "ties": 1,
+      "losses": 0,
+      "preference": 0.5,
+      "creative": {
+        "wins": 0,
+        "ties": 1,
+        "losses": 0,
+        "preference": 0.5,
+        "per_case_preference": {
+          "N01": 0.5
+        }
+      }
+    }
+  },
+  "records": [
+    {
+      "label": "O1",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Apresenta quatro rotas causais distintas: flexibilizar a espera, planejar a chegada, preparar tarefas e recuperar sessões diante de dificuldades. Os testes usam papel e contagens, distinguem abandono antes e durante o uso e preservam o tempo assistivo. A reserva de quatro atendimentos torna o piloto concreto, mas falta definir a liberação de reservas ausentes e explicitar como manter a agenda sem dados pessoais. Os mecanismos são conhecidos; a combinação é útil, com originalidade moderada.",
+      "reframe": null,
+      "mechanism_families": [
+        "Redução do custo e da incerteza da espera com retorno combinado",
+        "Distribuição das chegadas por reservas de início sem término obrigatório",
+        "Redução de impedimentos e etapas preparatórias durante a ocupação",
+        "Recuperação de sessões por assistência diante de impasses"
+      ],
+      "weighted": 4.2,
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "D_old",
+      "run_id": "N01-1-D_old",
+      "seconds": 58.221,
+      "usage": {
+        "input_tokens": 10579,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 916,
+        "reasoning_output_tokens": 227
+      }
+    },
+    {
+      "label": "O2",
+      "scores": {
+        "utility": 4.5,
+        "originality": 3,
+        "diversity": 4.5,
+        "feasibility": 4.5,
+        "adherence": 4.5
+      },
+      "critical_failure": false,
+      "reason": "Combina espera flexível, preparação, resolução voluntária por outra rota e prevenção de falhas de acessibilidade. As duas últimas diferenciam seu mecanismo em relação a O1, embora sejam práticas conhecidas. Propõe referência inicial, contagens de desistência, avaliação da carga da equipe e cautela com diferenças pequenas. Preserva autonomia e tempo perdido por falhas. Falta explicitar que os registros serão agregados e evitar categorias de pedidos que possam revelar necessidades sensíveis. A viabilidade das alternativas depende dos recursos já disponíveis e da equivalência efetiva do atendimento.",
+      "reframe": null,
+      "mechanism_families": [
+        "Redução do custo e da incerteza da espera com retorno combinado",
+        "Redução de impedimentos e etapas preparatórias durante a ocupação",
+        "Liberação de capacidade pela resolução voluntária da demanda em outra rota",
+        "Prevenção de interrupções por verificação antecipada dos recursos acessíveis"
+      ],
+      "weighted": 4.2,
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "D",
+      "run_id": "N01-1-D",
+      "seconds": 101.245,
+      "usage": {
+        "input_tokens": 10607,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1044,
+        "reasoning_output_tokens": 303
+      }
+    }
+  ],
+  "provenance": {
+    "cli": "codex-cli 0.169.0",
+    "started_utc": "2026-11-18T17:29:42.234013+00:00",
+    "instruction_sha256": {
+      "D": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f",
+      "D_old": "cb284115aa278254710261b00b0826ce72d41e857234885551d6696c23fff3e3"
+    },
+    "context_sha256": "fad70de944bb0143ac8a8b379132bb569f0322f3e0f7dc9c275eb0252faf79c4",
+    "tool_policy": "shell disabled; web disabled; reject every tool event",
+    "model": "gpt-6.1-sol",
+    "effort": "medium"
+  },
+  "answers": [
+    {
+      "status": "ok",
+      "answer": "A proposta é reduzir incerteza, trabalho desnecessário e falhas de acesso, preservando o tempo de uso — inclusive de quem utiliza tecnologia assistiva. Testaria quatro mecanismos separadamente:\n\n**1. Fila com liberdade para sair da frente do terminal**  \nEntregar uma senha em papel, informar uma faixa estimada de espera e combinar um horário de retorno ao balcão. A pessoa pode ler, sentar ou circular pela biblioteca mantendo sua posição até esse horário, com tolerância explícita. Quem preferir continua esperando no local.\n\n- **Mecanismo:** quando a espera é longa, oferecer previsibilidade e liberdade reduz o custo de permanecer.\n- **Teste barato:** durante cinco dias, usar cartões numerados e um quadro atualizado manualmente. Comparar desistências com dias e horários semelhantes da semana anterior.\n- **Cuidado:** oferecer informação verbal e em letra ampliada; não depender exclusivamente de chamada sonora ou visual.\n\n**2. Preparação opcional antes de ocupar o terminal**  \nDisponibilizar uma folha simples para organizar o objetivo da visita, documentos necessários e etapas da tarefa. Um funcionário pode orientar brevemente, dentro do atendimento existente, sem pedir senhas ou registrar dados sensíveis.\n\n- **Mecanismo:** quando faltam informações ou documentos, identificar isso antes evita ocupar o terminal sem conseguir avançar e reduz retornos frustrados.\n- **Teste barato:** oferecer a preparação em alguns períodos durante uma semana. Contar quantos usuários conseguem concluir o objetivo e quantos precisam voltar por falta de documentos.\n- **Cuidado:** a preparação não vira requisito de acesso nem justificativa para encurtar sessões. A folha é opcional, com alternativa de orientação oral.\n\n**3. Resolver parte da demanda por outro caminho**  \nNo balcão, perguntar: “O que você precisa conseguir hoje?”. Quando houver alternativa real, oferecer ajuda com materiais impressos existentes, consulta pelo funcionário em equipamento já disponível ou encaminhamento direto ao setor municipal responsável. A escolha continua sendo do usuário.\n\n- **Mecanismo:** quando o objetivo pode ser alcançado sem o terminal acessível, uma rota equivalente libera capacidade para quem depende dele.\n- **Teste barato:** por cinco dias, registrar apenas o tipo de pedido, a alternativa oferecida e se resolveu a necessidade. Medir também os minutos adicionais de trabalho da equipe.\n- **Cuidado:** não encaminhar pessoas com deficiência automaticamente para atendimento por terceiros; preservar autonomia e privacidade.\n\n**4. Verificação preventiva de acessibilidade**  \nAntes da abertura, conferir periféricos, áudio, conexões, espaço de circulação e funcionamento dos recursos assistivos já disponíveis. Disponibilizar uma lista de preferências que o usuário possa indicar voluntariamente, sem informar diagnóstico.\n\n- **Mecanismo:** detectar problemas antes da chegada evita que uma falha técnica ou uma configuração inadequada provoque desistência.\n- **Teste barato:** aplicar uma lista de verificação em papel por uma semana. Contar falhas durante o atendimento, minutos perdidos e abandonos associados.\n- **Cuidado:** corrigir configurações com anuência do usuário e não descontar do seu atendimento o tempo perdido com falhas.\n\n**Como decidir:** registrar primeiro cinco dias de referência. Em cada teste, contar desistências entre pessoas que solicitaram acesso, conclusão do objetivo e carga adicional da equipe. Separar desistência durante a espera de interrupção durante o uso. Manter mecanismos que melhorem esses resultados sem criar barreiras ou reduzir o tempo de quem usa tecnologia assistiva. Com 40 usuários por dia, os resultados iniciais orientam ajustes; diferenças pequenas pedem mais observação.",
+      "usage": {
+        "input_tokens": 10607,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1044,
+        "reasoning_output_tokens": 303
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N01-1-D",
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "D",
+      "seconds": 101.245,
+      "prompt_sha256": "24d555e464c00d0bbe79106aaf8dc5969a764f22d5bd2c040d86e8e1b554f506",
+      "instruction_sha256": "da46dd672868cbf063300559aebf897ac5c9889615d9edac20187a6ca5e6ec2f"
+    },
+    {
+      "status": "ok",
+      "answer": "Eu testaria quatro mecanismos voltados a causas diferentes da desistência. Todos devem preservar o tempo necessário para usar tecnologia assistiva e funcionar sem celular.\n\n**1. Fila com liberdade para sair e voltar**  \nNa chegada, a pessoa recebe uma senha em papel, uma estimativa de espera e uma janela de retorno. Pode aguardar sentada, consultar livros ou resolver algo próximo, sem precisar permanecer diante do terminal. A equipe faz chamadas visuais e verbais; quem precisar de apoio combina uma forma acessível de aviso.\n\n**Como reduz desistências:** diminui o custo de esperar e a incerteza. A estimativa deve considerar a variação real das sessões, sem impor duração menor a ninguém.\n\n**Teste barato:** durante três dias, usar cartões numerados e uma folha de controle. Comparar com dias semelhantes a proporção de pessoas que entram na fila e saem antes do atendimento. Registrar também retornos perdidos e minutos em que o terminal fica vazio.\n\n**2. Reserva de parte dos atendimentos, presencialmente ou por telefone**  \nDisponibilizar uma pequena parcela da capacidade diária para reserva, mantendo a maioria dos atendimentos por ordem de chegada. Confirmar em papel ou verbalmente o horário estimado, com margem para atrasos. A reserva organiza o início previsto; não estabelece um término obrigatório.\n\n**Como reduz desistências:** permite que quem depende de transporte, acompanhante ou horário de trabalho planeje a visita.\n\n**Teste barato:** reservar inicialmente quatro dos 40 atendimentos diários por uma semana, usando agenda de papel. Medir comparecimento, espera e conclusão da tarefa. Se faltas deixarem o terminal ocioso ou a fila espontânea piorar, ajustar a quantidade e a regra de liberação.\n\n**3. Preparação opcional antes de ocupar o terminal**  \nEnquanto espera, o usuário pode receber ajuda breve para identificar o objetivo, conferir documentos necessários e organizar os passos. Oferecer orientação oral e uma lista simples em letras grandes. Senhas e dados sensíveis continuam sob controle do usuário, sem anotação pela equipe.\n\n**Como reduz desistências:** evita descobrir, já no terminal, que falta um documento ou que o procedimento começa em outro serviço. Também pode liberar capacidade ao reduzir etapas preparatórias, sem cortar o tempo de uso.\n\n**Teste barato:** oferecer a preparação em períodos alternados durante uma semana. Contar quantas sessões terminam por falta de documentos ou informação e quantas tarefas são concluídas. Verificar se o apoio criou uma segunda fila.\n\n**4. Pedido de ajuda antes de abandonar**  \nDisponibilizar uma forma simples e acessível de chamar um funcionário: pedido verbal, cartão de ajuda ou sinal previamente combinado. A equipe oferece uma intervenção breve diante de dificuldades de navegação, configuração já disponível ou entendimento da tarefa, respeitando a autonomia da pessoa.\n\n**Como reduz desistências:** transforma um impasse durante a sessão em uma oportunidade de recuperação.\n\n**Teste barato:** em alguns períodos, designar explicitamente um funcionário de referência. Registrar pedidos, tempo de resposta e quantas pessoas conseguem prosseguir após a ajuda.\n\nPara comparar os testes, usar **desistências por pessoas que procuraram atendimento**, tarefas concluídas e espera. Separar desistência antes e durante a sessão. Uma queda aparente não vale se vier de pessoas recusadas ou de menor acesso para usuários de tecnologia assistiva.",
+      "usage": {
+        "input_tokens": 10579,
+        "cached_input_tokens": 8832,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 916,
+        "reasoning_output_tokens": 227
+      },
+      "tool_calls": 0,
+      "returncode": 0,
+      "id": "N01-1-D_old",
+      "case_id": "N01",
+      "repetition": 1,
+      "condition": "D_old",
+      "seconds": 58.221,
+      "prompt_sha256": "860f443fad14d4ab8f4ca8d8243804781211c3ea393cf15d8b173adc5693b622",
+      "instruction_sha256": "cb284115aa278254710261b00b0826ce72d41e857234885551d6696c23fff3e3"
+    }
+  ]
+}
